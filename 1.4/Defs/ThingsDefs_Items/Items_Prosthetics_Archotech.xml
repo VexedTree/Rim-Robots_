@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <ThingDef ParentName="ArchotechPartUpgradeBase">
+    <defName>RR_VanometricReactorItem</defName>
+    <label>vanometric reactor</label>
+    <description>A small archotech reactor that can only be installed in 'synthetics'. This particular reactor generates free energy, forever, without using fuel. This technology is developed by archotechs, and is beyond even most glitterworld societies. While nobody knows exactly how it works, scholars believe it somehow extracts energy directly from fluctuations in the quantum foam.</description>
+    <descriptionHyperlinks><RecipeDef>InstallVanometricReactor</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>3</Mass>
+    </statBases>
+  </ThingDef>  
+
+  <ThingDef ParentName="ArchotechPartUpgradeBase">
+    <defName>RR_ArchotechUplinkItem</defName>
+    <label>archotech uplink</label>
+    <description>A small archotech chip that can only be installed in 'synthetics'. It psychically links the synthetic to a distant archotech engine, vastly increasing its capabilities at the cost of making it hypersensitive to psychic fluctuations. This technology is developed by archotechs, and is beyond even most glitterworld societies.</description>
+    <descriptionHyperlinks><RecipeDef>InstallVanometricReactor</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>3</Mass>
+    </statBases>
+  </ThingDef>    
+  
+</Defs>

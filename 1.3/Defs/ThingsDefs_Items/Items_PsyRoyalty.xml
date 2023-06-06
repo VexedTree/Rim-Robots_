@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Royalty required! Do not remove this tag. -->
+  <ThingDef MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>PsylinkFormerSynth</defName>
+    <label>overengineered psylink-former</label>
+    <description>A consumable archotech-created device that forms or upgrades a psylink in the user's mind.\n\nThis particular one however has an added interface to accommodate robotic beings, allowing one to tap its persona core directly into the artifact, forming a psychic uplink. Afterwards, the device disintegrates into worthless ash.</description>
+    <descriptionHyperlinks><HediffDef>PsychicAmplifier</HediffDef></descriptionHyperlinks>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <drawerType>MapMeshOnly</drawerType>
+    <techLevel>Archotech</techLevel>
+    <useHitPoints>true</useHitPoints>
+    <pathCost>14</pathCost>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+    <alwaysHaulable>true</alwaysHaulable>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <tradeability>None</tradeability>	
+    <thingCategories>
+      <li>BodyPartsArchotech</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Beauty>-5</Beauty>
+      <Mass>1</Mass>
+      <MarketValue>2600</MarketValue>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <graphicData>
+      <texPath>Items/Prosthetics/SynthPsy</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Use psylink-former to create uplink</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>PsychicAmplifier</hediffDef>
+        <bodyPart>MechanicalBrain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>PsyAmpInstalled</soundOnUsed>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_DestroySelf</compClass>
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+  </ThingDef>
+  
+  <RecipeDef MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Make_PsylinkFormerSynth</defName>
+    <label>make overengineered psylink-former</label>
+    <description>Attempt to cautiously 'alter' a psychic amplifier to accommodate robotic beings.</description>
+    <jobString>Overengineering psychic amplifier.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>CrashedShipPart_Ambience</soundWorking>
+    <workAmount>10000</workAmount>
+	<ingredients>
+	    <li>
+			<filter>
+				<thingDefs>
+					<li>PsychicAmplifier</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	    <li>
+			<filter>
+				<thingDefs>
+					<li>ComponentIndustrial</li>
+				</thingDefs>
+			</filter>
+			<count>4</count>
+		</li>		
+	</ingredients>
+    <fixedIngredientFilter>
+	    <thingDefs>
+            <li>PsychicAmplifier</li>
+			<li>ComponentIndustrial</li>
+		</thingDefs>
+    </fixedIngredientFilter>	
+    <products>
+      <PsylinkFormerSynth>1</PsylinkFormerSynth>
+    </products>	
+    <researchPrerequisite>AdvancedFabrication</researchPrerequisite>
+    <recipeUsers>
+        <li>FabricationBench</li>
+    </recipeUsers>	
+    <skillRequirements>
+      <Crafting>9</Crafting>
+	  <Intellectual>3</Intellectual>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>	
+  </RecipeDef>  
+</Defs>

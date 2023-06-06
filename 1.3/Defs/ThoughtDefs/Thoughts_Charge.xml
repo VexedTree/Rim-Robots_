@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>FullyCharged</defName>
+    <showBubble>true</showBubble>
+    <icon>Gizmos/OpinionOfSynth</icon>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>fully charged</label>
+        <description>Energy is coursing through me.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

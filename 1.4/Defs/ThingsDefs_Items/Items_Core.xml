@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ComponentMechanent</defName>
+    <label>mechanent component</label>
+    <description>An advanced catalytic component used in the creation of various ultratech robotics. Once inserted into a mechanoid-casket the casket will accept the component and unleash a swarm of printer mechanites. Printing the metal shell of the mechanent molecule-by-molecule.\n\nUseless on its own, but invaluable to those looking to utilize a mechanoid-casket.</description>
+    <graphicData>
+      <texPath>Items/Cores/ComponentMechanent</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+	<statBases>
+		<Mass>0.45</Mass>
+		<MaxHitPoints>20</MaxHitPoints>
+		<DeteriorationRate>1</DeteriorationRate>
+		<Flammability>0.5</Flammability>
+		<WorkToMake>26000</WorkToMake>
+	</statBases>	
+    <tickerType>Normal</tickerType>	
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>5</stackLimit>		
+    <techLevel>Spacer</techLevel>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <costList>
+      <Steel>150</Steel>
+	  <Plasteel>70</Plasteel>
+      <ComponentIndustrial>10</ComponentIndustrial>
+	  <ComponentSpacer>1</ComponentSpacer>
+    </costList>		
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedComponentMechanent</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>MechanentCreation</researchPrerequisite>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>	
+  </ThingDef>
+  
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedComponentMechanent</defName>
+    <label>unfinished mechanent component</label>
+    <description>An unfinished mechanent component.</description>
+    <statBases>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedComponent</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories Inherit="false" />
+  </ThingDef>   
+  
+  
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>ComponentPersona</defName>
+    <label>persona component</label>
+    <description>An ultratech catalytic component used in the creation of various ultratech synthetics. Once inserted into a mechanoid-casket the casket will accept the component and unleash a swarm of printer mechanites. Printing the synthetic body of the persona molecule-by-molecule.\n\nUseless on its own, but invaluable to those looking to utilize a mechanoid-casket.</description>
+    <graphicData>
+      <texPath>Items/Cores/ComponentPersona</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+	<statBases>
+		<Mass>0.45</Mass>
+		<MaxHitPoints>20</MaxHitPoints>
+		<DeteriorationRate>1</DeteriorationRate>
+		<Flammability>0.5</Flammability>
+		<WorkToMake>26000</WorkToMake>
+	</statBases>	
+    <tickerType>Normal</tickerType>	
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>5</stackLimit>		
+    <techLevel>Ultra</techLevel>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <costList>
+      <Plasteel>75</Plasteel>
+	  <Neutroamine>80</Neutroamine>
+	  <ComponentSpacer>5</ComponentSpacer>	  
+      <AIPersonaCore>1</AIPersonaCore>
+    </costList>		
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <unfinishedThingDef>UnfinishedComponentPersonae</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>14</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>PersonaCreation</researchPrerequisite>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>	
+  </ThingDef>
+  
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedComponentPersonae</defName>
+    <label>unfinished persona component</label>
+    <description>An unfinished persona component.</description>
+    <statBases>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedComponent</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories Inherit="false" />
+  </ThingDef>    
+
+</Defs>

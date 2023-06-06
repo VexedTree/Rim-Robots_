@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <BodyDef>
+    <defName>CasteBody</defName>
+    <label>mechanent</label>
+    <corePart>
+      <def>MechanicalThorax</def>
+	  <customLabel>mechanical thorax</customLabel>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <groups>
+        <li>Torso</li>
+      </groups>
+      <parts>
+        <li>
+          <def>Reactor</def>
+          <coverage>0.020</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+          <def>FluidReprocessor</def>
+          <coverage>0.025</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+        <li>
+          <def>MechanicalNeck</def>
+          <coverage>0.075</coverage>
+          <height>Top</height>
+          <groups>
+            <li>Neck</li>
+          </groups>
+          <parts>
+            <li>
+              <def>MechanicalHead</def>
+              <coverage>0.80</coverage>
+              <groups>
+                <li>UpperHead</li>
+                <li>FullHead</li>
+                <li>HeadAttackTool</li>
+              </groups>
+                  <parts>
+                    <li>
+                      <def>MechanicalBrain</def>
+					  <customLabel>subpersona core</customLabel>
+                      <coverage>0.07</coverage>
+                      <groups>
+                        <li>UpperHead</li>
+                        <li>FullHead</li>
+                      </groups>
+                    </li>
+                  </parts>
+                </li>
+                <li>
+                  <def>MechEye</def>
+                  <customLabel>left visual sensor</customLabel>
+                  <coverage>0.06</coverage>
+                  <groups>
+                    <li>FullHead</li>
+                    <li>Eyes</li>
+                  </groups>
+                  <woundAnchorTag>LeftEye</woundAnchorTag>
+                </li>
+                <li>
+                  <def>MechEye</def>
+                  <customLabel>right visual sensor</customLabel>
+                  <coverage>0.06</coverage>
+                  <groups>
+                    <li>FullHead</li>
+                    <li>Eyes</li>
+                  </groups>
+                  <woundAnchorTag>RightEye</woundAnchorTag>
+                </li>
+                <li>
+                  <def>HearingSensor</def>
+                  <customLabel>vibrations analyzer</customLabel>
+                  <coverage>0.02</coverage>
+                  <groups>
+                    <li>UpperHead</li>
+                    <li>FullHead</li>
+                  </groups>
+                </li>
+                <li>
+                  <def>MechanicalJaw</def>
+                  <customLabel>linguistics driver</customLabel>				  
+                  <coverage>0.03</coverage>
+                  <groups>
+                    <li>Teeth</li>
+                    <li>FullHead</li>
+                    <li>Mouth</li>					
+                  </groups>
+                </li>				
+                <li>
+                  <def>SmellSensor</def>
+                  <customLabel>vapor analyzers</customLabel>				  
+                  <coverage>0.02</coverage>
+                  <groups>
+                    <li>FullHead</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+            <li>
+            <def>MechShoulder</def>
+            <customLabel>left mechanical shoulder</customLabel>
+            <coverage>0.12</coverage>
+            <woundAnchorTag>LeftShoulder</woundAnchorTag>
+            <groups>
+              <li>Shoulders</li>
+			  <li MayRequire="CETeam.CombatExtended">LeftShoulder</li>			
+            </groups>
+            <parts>
+            <li>
+              <def>MechArm</def>
+              <customLabel>left mechanical arm</customLabel>
+              <coverage>0.77</coverage>
+              <groups>
+                <li>Arms</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>MechanicalHand</def>
+                  <customLabel>left mechanical hand</customLabel>
+                  <coverage>0.14</coverage>
+                  <height>Bottom</height>
+                  <groups>
+                    <li>Hands</li>
+                  </groups>
+                  <parts>
+                    <li>
+                      <def>MechanicalFinger</def>
+                      <customLabel>left last mechanical finger</customLabel>
+                      <coverage>0.07</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>LeftHand</li>
+                      </groups>
+                    </li>
+                    <li>
+                      <def>MechanicalFinger</def>
+                      <customLabel>left middle mechanical finger</customLabel>
+                      <coverage>0.08</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>LeftHand</li>
+                        <li>MiddleFingers</li>
+                      </groups>
+                    </li>
+                    <li>
+                      <def>MechanicalFinger</def>
+                      <customLabel>left mechanical finger</customLabel>
+                      <coverage>0.07</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>LeftHand</li>
+                      </groups>
+                    </li>
+                    <li>
+                      <def>MechanicalFinger</def>
+                      <customLabel>left mechanical thumb</customLabel>
+                      <coverage>0.08</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>LeftHand</li>
+                      </groups>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+            </parts>
+            </li>
+            <li>
+            <def>MechShoulder</def>
+            <customLabel>right mechanical shoulder</customLabel>
+            <coverage>0.12</coverage>
+            <woundAnchorTag>RightShoulder</woundAnchorTag>
+            <groups>
+              <li>Shoulders</li>
+            </groups>
+            <parts>
+            <li>
+              <def>MechArm</def>
+              <customLabel>right mechanical arm</customLabel>
+              <coverage>0.77</coverage>
+              <groups>
+                <li>Arms</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>MechanicalHand</def>
+                  <customLabel>right mechanical hand</customLabel>
+                  <coverage>0.14</coverage>
+                  <height>Bottom</height>
+                  <groups>
+                    <li>Hands</li>
+                  </groups>
+                  <parts>
+                    <li>
+                      <def>MechanicalFinger</def>
+                      <customLabel>right last mechanical finger</customLabel>
+                      <coverage>0.07</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>RightHand</li>
+                      </groups>
+                    </li>
+                    <li>
+                      <def>MechanicalFinger</def>
+                      <customLabel>right middle mechanical finger</customLabel>
+                      <coverage>0.08</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>RightHand</li>
+                        <li>MiddleFingers</li>
+                      </groups>
+                    </li>
+                    <li>
+                      <def>MechanicalFinger</def>
+                      <customLabel>right mechanical finger</customLabel>
+                      <coverage>0.07</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>RightHand</li>
+                      </groups>
+                    </li>
+                    <li>
+                      <def>MechanicalFinger</def>
+                      <customLabel>right mechanical thumb</customLabel>
+                      <coverage>0.08</coverage>
+                      <groups>
+                        <li>Hands</li>
+                        <li>RightHand</li>
+                      </groups>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+            </parts>
+            </li>
+            <li>
+            <def>MechWaist</def>
+            <coverage>0</coverage>
+            <height>Bottom</height>
+            <groups>
+                <li>Waist</li>
+            </groups>
+            </li>
+            <li>
+            <def>MechLeg</def>
+            <customLabel>left mechanical leg</customLabel>
+            <coverage>0.14</coverage>
+            <height>Bottom</height>
+            <groups>
+                <li>Legs</li>
+            </groups>
+            <woundAnchorTag>LeftLeg</woundAnchorTag>
+            <parts>
+            <li>
+              <def>MechanicalFoot</def>
+              <customLabel>left mechanical foot</customLabel>
+              <coverage>0.1</coverage>
+              <groups>
+                <li>Feet</li>
+              </groups>
+            </li>
+            </parts>
+            </li>
+            <li>
+            <def>MechLeg</def>
+            <customLabel>right mechanical leg</customLabel>
+            <coverage>0.14</coverage>
+            <height>Bottom</height>
+            <groups>
+                <li>Legs</li>
+            </groups>
+            <woundAnchorTag>RightLeg</woundAnchorTag>
+            <parts>
+            <li>
+              <def>MechanicalFoot</def>
+              <customLabel>right foot</customLabel>
+              <coverage>0.1</coverage>
+              <groups>
+                <li>Feet</li>
+              </groups>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>MechaniteCore</def>
+          <coverage>0.025</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>		
+        <li>
+          <def>SystemInputPort</def>
+          <coverage>0</coverage>
+          <depth>Outside</depth>
+          <groups>
+            <li>Neck</li>
+          </groups>
+        </li>			
+      </parts>
+    </corePart>
+  </BodyDef>
+  
+</Defs>

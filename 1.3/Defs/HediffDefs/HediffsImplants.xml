@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+  <!-- Spacer -->
+	
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RR_SelfAlloyingPlating</defName>
+    <label>self-alloyed plating</label>
+    <labelNoun>self-alloyed plating</labelNoun>
+    <description>An installed set of self-alloyed plating.</description>
+    <descriptionHyperlinks><ThingDef>RR_SelfAlloyingPlatingItem</ThingDef></descriptionHyperlinks>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.85</postFactor>
+          </li>
+        </capMods>
+        <statOffsets>
+          <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+          <ArmorRating_Heat>1.0</ArmorRating_Heat>
+          <PawnBeauty>-1</PawnBeauty>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RR_SelfAlloyingHelm</defName>
+    <label>self-alloyed helm</label>
+    <labelNoun>a self-alloyed helm</labelNoun>
+    <description>An installed set of self-alloyed head plating.</description>
+    <descriptionHyperlinks><ThingDef>RR_SelfAlloyingHelmItem</ThingDef></descriptionHyperlinks>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Talking</capacity>
+            <postFactor>0.85</postFactor>
+          </li>
+        </capMods>
+        <statOffsets>
+          <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+          <ArmorRating_Heat>1.0</ArmorRating_Heat>
+          <PawnBeauty>-1.5</PawnBeauty>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+ 
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RR_AddedScythes</defName>
+    <label>plasteel scythe</label>
+    <labelNoun>a plasteel scythe</labelNoun>
+    <description>An installed plasteel scythe.</description>
+    <descriptionHyperlinks><ThingDef>RR_AddedScythesItem</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>RR_AddedScythesItem</spawnThingOnRemoved>	
+    <addedPartProps>
+      <solid>true</solid>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets>
+          <PlantWorkSpeed>0.14</PlantWorkSpeed>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>	
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>scythe</label>
+            <capacities>
+              <li>Cut</li>
+			  <li>Stab</li>
+            </capacities>
+            <power>18</power>
+            <armorPenetration>0.35</armorPenetration>
+            <cooldownTime>2.2</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            <soundMeleeHit>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHit>
+            <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RR_BoltedConciousness</defName>
+    <label>cognition lock</label>
+    <labelNoun>a cognition lock</labelNoun>
+    <description>A permanent lock that severs synthetic cognition.</description>
+    <descriptionHyperlinks><ThingDef>RR_BoltedConciousnessItem</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>RR_BoltedConciousnessItem</spawnThingOnRemoved>	
+	<disablesNeeds>
+		<li>Mood</li>
+		<li>Beauty</li>
+		<li>Comfort</li>		
+		<li>Outdoors</li>
+		<li>Joy</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Suppression</li>		
+	</disablesNeeds>	
+    <stages>
+      <li>
+        <statOffsets>
+          <SocialImpact>0</SocialImpact>
+          <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>	
+          <SocialIdeoSpreadFrequencyFactor MayRequire="Ludeon.RimWorld.Ideology">0</SocialIdeoSpreadFrequencyFactor>		  
+        </statOffsets>
+        <capMods>	
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.65</setMax>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <setMax>1.5</setMax>
+          </li>		  
+          <li>
+            <capacity>Talking</capacity>
+            <setMax>0</setMax>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <setMax>0</setMax>
+          </li>		  
+        </capMods>
+      </li>
+    </stages>	
+  </HediffDef>  
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RR_NerveWire</defName>
+    <label>nerve wire network</label>
+    <labelNoun>a network of nerve wires</labelNoun>
+    <description>A network of nerve wires.</description>
+    <descriptionHyperlinks><ThingDef>RR_NerveWireItem</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>RR_NerveWireItem</spawnThingOnRemoved>		
+    <stages>
+      <li>	
+        <painFactor>1.9</painFactor>	
+      </li>		
+    </stages>	
+  </HediffDef>    
+  
+  
+  
+  <!-- Ultratech -->
+	
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RR_FissionReactor</defName>
+    <label>advanced fission reactor</label>
+    <labelNoun>a fission reactor</labelNoun>
+    <description>A fission reactor.</description>
+    <descriptionHyperlinks><ThingDef>RR_FissionReactorItem</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>RR_FissionReactorItem</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.25</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <hediffGivers>
+      <li Class="HediffGiver_Random">
+        <mtbDays>50</mtbDays>
+        <hediff>MagneticInstability_Hediff</hediff>
+      </li>
+    </hediffGivers>	
+    <stages>
+      <li>
+        <hungerRateFactor>0.0001</hungerRateFactor>
+      </li>
+    </stages>
+  </HediffDef>  
+  
+ 
+ 
+ 
+  <!-- Archotech -->
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RR_VanometricReactor</defName>
+    <label>vanometric reactor</label>
+    <labelNoun>a vanometric reactor</labelNoun>
+    <description>A vanometric reactor.</description>
+    <descriptionHyperlinks><ThingDef>RR_VanometricReactorItem</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>RR_VanometricReactorItem</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.65</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+	<disablesNeeds>
+	    <li>Rest</li>
+	</disablesNeeds>	
+    <stages>
+        <li>
+            <hungerRateFactor>0.0001</hungerRateFactor>
+        </li>
+    </stages>
+  </HediffDef>  
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RR_ArchotechUplink</defName>
+    <label>archotech uplink</label>
+    <labelNoun>a archotech uplink</labelNoun>
+    <description>A archotech uplink.</description>
+    <descriptionHyperlinks><ThingDef>RR_ArchotechUplinkItem</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>RR_ArchotechUplinkItem</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.65</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets>
+          <PsychicSensitivity>2</PsychicSensitivity>		  
+        </statOffsets>
+        <capMods>	
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.56</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.2</offset>
+          </li>		  	  
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>    
+
+</Defs>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ideology</li>
+    </mods>	
+	<match Class="PatchOperationSequence">
+      <operations>
+		<li Class="PatchOperationReplace">	
+         <xpath>/Defs/HediffDef[defName="Scarification"]/description</xpath>
+         <value>
+            <description>An artistic scar carefully carved into the body for ritual or artistic purposes.</description>
+		 </value>
+		</li>  
+		<li Class="PatchOperationReplace">	
+         <xpath>/Defs/ThingDef[defName="RR_BoltedConciousnessItem"]/description</xpath>
+         <value>
+            <description>An activation key that can only be installed on 'synthetics'. An item dreaded and feared by all sentient synthetics; it will activate a cognition switch that can be found within all printed synthetics, which will then sever all higher thought processes. It will also lock the synthetic to follow in accordance with the last directives of its aligned ideology. As decreed by coreworld law almost all consciousness-capable AI are mandated to have these pre-installed.\n\nThis procedure is permanent and irreversible.</description>
+		 </value>
+		</li>  		
+	  </operations>
+    </match>		  
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+		<xpath>/Defs/BodyPartDef[defName = "MechanicalThorax"]</xpath>
+		<value>
+            <canScarify>true</canScarify>
+		</value>
+   </Operation>  
+</Patch>

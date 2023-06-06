@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData> 
+	<name>Rim-Robots_</name> 
+	<author>VexedTrees</author>		
+	<packageId>VexedTrees980.RimRobots</packageId>
+	<description>Have you ever wanted to add a lightweight robot/android mod to your rim, but most of them seemed a little too heavy or otherwise didn't fully fit into the vanilla aesthetic? Then this mod is hopefully for you! The mod adds just enough content for a robot-oriented playthrough, while also being light and balanced enough that it can fit right into the backseat of your regular playthrough and be barely noticed.</description>		
+	<supportedVersions>
+		<li>1.3</li>
+		<li>1.4</li>
+	</supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>erdelf.HumanoidAlienRaces</packageId>
+			<displayName>Humanoid Alien Races</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=839005762</steamWorkshopUrl>
+		</li>
+        <li>
+            <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+            <displayName>Vanilla Expanded Framework</displayName>
+            <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013</steamWorkshopUrl>
+        </li>	
+	</modDependencies>
+	<loadAfter>
+		<li>erdelf.HumanoidAlienRaces</li>		
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>CETeam.CombatExtended</li>
+		<li>>SineSwiper.XenobionicPatcher</li>			
+	</loadAfter>
+	<incompatibleWith>
+		<li>Venomancer777.Forgelings</li>
+	</incompatibleWith>	
+</ModMetaData>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+
+  <ThingDef ParentName="MealBaseIngredientless">
+    <defName>FuelNode_SynthDiet</defName>
+    <label>fuel node</label>
+    <description>A small fuel cannister which is normally used for fueling the internal reactors of mechanents, mechanoids, and small star ships.\n\nHighly flammable, and extremely volatile.</description>
+    <graphicData>
+      <texPath>Items/Nodes</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+	<statBases>
+	    <Nutrition>1.4</Nutrition>
+		<Mass>0.45</Mass>
+		<MaxHitPoints>20</MaxHitPoints>
+		<DeteriorationRate>1</DeteriorationRate>
+		<Flammability>5.0</Flammability>
+		<MarketValue>36</MarketValue>
+		<WorkToMake>3000</WorkToMake>
+	</statBases>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.6</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.6</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+        <wickTicks>10~45</wickTicks>
+      </li>
+    </comps>	
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+		<foodType>Fluid</foodType>
+	    <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+		<tasteThought>FullyCharged</tasteThought>
+		<preferability>MealLavish</preferability>
+	    <ingestSound>Recipe_Cremate</ingestSound>
+        <ingestCommandString>Charge reactor with {0}</ingestCommandString>
+        <ingestReportString>Charging reactor with {0}.</ingestReportString>		
+	    <optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
+    </ingestible>	
+    <tickerType>Normal</tickerType>	
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>5</stackLimit>		
+    <techLevel>Industrial</techLevel>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <tradeTags>
+      <li>SynthFuel</li>
+    </tradeTags>
+    <costList>
+      <Chemfuel>20</Chemfuel>
+      <Steel>2</Steel>	  
+    </costList>		
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Cremate</soundWorking>
+      <researchPrerequisite>Machining</researchPrerequisite>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <allowedArchonexusCount>10</allowedArchonexusCount>	
+  </ThingDef>
+
+</Defs>

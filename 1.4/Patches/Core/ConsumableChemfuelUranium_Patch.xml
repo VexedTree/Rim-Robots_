@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+	
+        <!-- This patch is necessary for robots to consume these items for nourishment. -->
+        <!-- This patch also respects existing values for these things by testing to see if the desired values are already in place. -->
+		
+        <!-- This adds nutrition values and meal defs to these existing items: ■■ chemfuel and uranium. ■■ -->
+		
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName = "Chemfuel"]/statBases/Nutrition</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Chemfuel"]/statBases</xpath>
+                <value>
+                    <Nutrition>0.08</Nutrition>
+                </value>
+            </li>			
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName = "Chemfuel"]/ingestible</xpath>
+                <success>Invert</success>
+            </li>			
+			<li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Chemfuel"]</xpath>
+                <value>
+                    <socialPropernessMatters>true</socialPropernessMatters> 
+                    <ingestible>
+		                <foodType>Fluid</foodType>
+		                <maxNumToIngestAtOnce>10</maxNumToIngestAtOnce>
+		                <preferability>MealLavish</preferability>
+	                 	<ingestSound>Recipe_Cremate</ingestSound>
+                        <ingestCommandString>Fuel reactor with {0}</ingestCommandString>
+                        <ingestReportString>Fueling reactor with {0}.</ingestReportString>		
+	                 	<optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
+                    </ingestible>
+                </value>
+            </li>
+			
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName = "Uranium"]/statBases/Nutrition</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Uranium"]/statBases</xpath>
+                <value>
+                    <Nutrition>0.5</Nutrition>
+                </value>
+            </li>			
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName = "Uranium"]/ingestible</xpath>
+                <success>Invert</success>
+            </li>			
+			<li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Uranium"]</xpath>
+                <value>
+                    <socialPropernessMatters>true</socialPropernessMatters>
+                    <ingestible>
+		                <foodType>Fluid</foodType>
+		                <maxNumToIngestAtOnce>5</maxNumToIngestAtOnce>
+		                <preferability>MealLavish</preferability>
+	                 	<ingestSound>Recipe_Cremate</ingestSound>
+                        <ingestCommandString>Fuel reactor with {0}</ingestCommandString>
+                        <ingestReportString>Fueling reactor with {0}.</ingestReportString>		
+	                 	<optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
+                    </ingestible>
+                </value>
+            </li>			
+        </operations>
+    </Operation>
+</Patch>

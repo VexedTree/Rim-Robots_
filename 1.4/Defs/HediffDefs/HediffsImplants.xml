@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Basic -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>RR_OverclockedCore</defName>
+    <label>overclocked core</label>
+	<description>This synthetic pawn is utilizing an overclocked AI core, increasing its reaction time, speed, and manipulation - which vastly increases fuel consumption and the risk of internal damage.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<isBad>false</isBad>
+    <tendable>false</tendable>		
+	<everCurableByItem>false</everCurableByItem>		
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<initialSeverity>1</initialSeverity>
+	<maxSeverity>1.0</maxSeverity>
+	<defaultLabelColor>(0.6, 0.6, 0.70)</defaultLabelColor>	
+    <hediffGivers>
+      <li Class="HediffGiver_Random">
+        <mtbDays>45</mtbDays>
+        <hediff>ComponentBreakdown_Hediff</hediff>
+      </li>
+    </hediffGivers>	
+		<stages>
+		    <li>
+			    <hungerRateFactor>1.5</hungerRateFactor>
+                <capMods>
+				    <li>
+					    <capacity>Moving</capacity>
+						<offset>0.25</offset>
+					</li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.3</offset>
+                    </li>						
+				</capMods>
+				<statOffsets>
+                    <MeleeDodgeChance>0.2</MeleeDodgeChance>
+                    <MeleeHitChance>0.1</MeleeHitChance>			  
+                </statOffsets>
+		    </li>	
+        </stages>
+  </HediffDef>  
+
+
+	
+  <!-- Spacer -->
+ 
+ 
+ 
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RR_AddedScythes</defName>
+    <label>plasteel scythe</label>
+    <labelNoun>a plasteel scythe</labelNoun>
+    <description>An installed plasteel scythe.</description>
+    <descriptionHyperlinks><ThingDef>RR_AddedScythesItem</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>RR_AddedScythesItem</spawnThingOnRemoved>	
+	<hediffClass>HediffWithComps</hediffClass>
+    <addedPartProps>
+      <solid>true</solid>	
+      <partEfficiency>1.25</partEfficiency>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets>
+          <PlantWorkSpeed>0.14</PlantWorkSpeed>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>	
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>scythe</label>
+            <capacities>
+              <li>Cut</li>
+			  <li>Stab</li>
+            </capacities>
+            <power>20</power>
+            <cooldownTime>2</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            <soundMeleeHit>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHit>
+            <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>	
+  </HediffDef>  
+  
+  
+  
+  <!-- Ultratech -->
+	
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RR_FissionReactor</defName>
+    <label>advanced fission reactor</label>
+    <labelNoun>a fission reactor</labelNoun>
+    <description>A fission reactor.</description>
+    <descriptionHyperlinks><ThingDef>RR_FissionReactorItem</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>RR_FissionReactorItem</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.25</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <hediffGivers>
+      <li Class="HediffGiver_Random">
+        <mtbDays>50</mtbDays>
+        <hediff>MagneticInstability_Hediff</hediff>
+      </li>
+    </hediffGivers>	
+    <stages>
+      <li>
+        <hungerRateFactor>0.001</hungerRateFactor>
+      </li>
+    </stages>
+  </HediffDef>  
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RR_MechanoidVisualSensor</defName>
+    <label>mechanoid visual sensor</label>
+    <labelNoun>a mechanoid visual sensor</labelNoun>
+    <description>An installed mechanoid visual sensor.</description>
+    <descriptionHyperlinks><ThingDef>RR_MechanoidVisualSensorItem</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>RR_MechanoidVisualSensorItem</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.35</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+		<statOffsets>	  
+           <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+		</statOffsets>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.50</offset>
+          </li>
+        </capMods>		
+      </li>
+    </stages>	
+  </HediffDef>  
+  
+ 
+ 
+ 
+  <!-- Archotech -->
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>RR_VanometricReactor</defName>
+    <label>vanometric reactor</label>
+    <labelNoun>a vanometric reactor</labelNoun>
+    <description>A vanometric reactor.</description>
+    <descriptionHyperlinks><ThingDef>RR_VanometricReactorItem</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>RR_VanometricReactorItem</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.65</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+	<disablesNeeds>
+	    <li>Rest</li>
+	</disablesNeeds>
+    <stages>
+      <li>
+        <hungerRateFactor>0.0001</hungerRateFactor>
+      </li>
+    </stages>	
+  </HediffDef>  
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>RR_ArchotechUplink</defName>
+    <label>archotech uplink</label>
+    <labelNoun>a archotech uplink</labelNoun>
+    <description>A archotech uplink.</description>
+    <descriptionHyperlinks><ThingDef>RR_ArchotechUplinkItem</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>RR_ArchotechUplinkItem</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.65</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets>
+          <PsychicSensitivity>2</PsychicSensitivity>		  
+        </statOffsets>
+        <capMods>	
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.56</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.2</offset>
+          </li>		  	  
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef> 
+
+</Defs>

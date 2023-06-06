@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RulePackDef>
+    <defName>NamerPersonSynthNonGendered</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name(p=3)->[NameSynth] [NameSynth]</li>
+        <li>name(p=6)->[SylStart][SylEnd] [NameSynth]</li>		
+        <li>name(p=2)->[NameSynth] [Color]</li>		
+		<li>name(p=2)->[NameSynth] [Animal]</li>		
+        <li>name(p=2)->[NameSynth] [Place]</li>		
+        <li>name(p=2)->[NameSynth] the [Adjectives]</li>	
+        <li>name(p=2)->[NameSynth] [Adjectives]</li>	
+		<li>name(p=4)->[Objects][VerbSynth] [NameSynth]</li>	
+		<li>name->[Color] [NameSynth]</li>	
+		<li>name->[Color] [Place]</li>
+		<li>name->[Color] [Adjectives]</li>							
+        <li>name(p=2)->[Adjectives] [NameSynth]</li>
+		<li>name(p=2)->[Adjectives] [Color]</li>
+		<li>name(p=2)->[Adjectives] [Animal]</li>
+		<li>name(p=2)->[Adjectives] [Place]</li>		
+        <li>name->[Letter][Number] [Letter][Letter]</li>
+		<li>name->[Letter][Number][Number] [Letter][Letter]</li>
+		<li>name->[Letter][Number][Number][Number] [Letter][Letter]</li>
+		<li>name->[Letter][Letter][Number] [Letter][Letter]</li>
+		<li>name->[Letter][Letter][Number][Number] [Letter][Letter]</li>
+		<li>name->[Letter][Letter][Number][Number][Number] [Letter][Letter]</li>
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>NameSynth</keyword>
+          <path>Synth_Names/Names/NameRobotic</path>
+        </li>
+        <li Class="Rule_File">
+            <keyword>Adjectives</keyword>
+            <path>Synth_Names/AdjectivesRobot</path>
+        </li>	
+        <li Class="Rule_File">
+            <keyword>Color</keyword>
+            <path>Titles/Colors</path>
+        </li>	
+        <li Class="Rule_File">
+            <keyword>Animal</keyword>
+            <path>Titles/Animals</path>
+        </li>	
+        <li Class="Rule_File">
+            <keyword>Place</keyword>
+            <path>Titles/Places</path>
+        </li>
+        <li Class="Rule_File">
+            <keyword>Objects</keyword>
+            <path>Synth_Names/ObjectsRobot</path>
+        </li>		
+        <li Class="Rule_File">
+          <keyword>VerbSynth</keyword>
+          <path>Synth_Names/VerbsRobot</path>
+        </li>	
+        <li Class="Rule_File">
+            <keyword>Letter</keyword>
+            <path>Titles/Letters</path>
+        </li>
+        <li Class="Rule_File">
+            <keyword>Number</keyword>
+            <path>Titles/Numbers</path>
+        </li>
+        <li Class="Rule_File">
+            <keyword>SylStart</keyword>
+            <path>Synth_Syllables/SynthName_Syll</path>
+        </li>
+        <li Class="Rule_File">
+            <keyword>SylEnd</keyword>
+            <path>Synth_Syllables/SynthName_SyllEnd</path>
+        </li>		
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerPersonSynthFemale</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name(p=3)->[NameSynthF] [SynthLastName]</li>
+        <li>name(p=3)->[NameSynthF] [SylStart][SylEnd]</li>		  
+        <li>name(p=2)->[NameSynthF] [NameSynth]</li>	
+        <li>name(p=4)->[SylStart][SylEnd] [NameSynth]</li>				
+        <li>name(p=2)->[NameSynthF] [Color]</li>		
+        <li>name(p=2)->[NameSynthF] [Animal]</li>	
+        <li>name(p=2)->[NameSynthF] [Place]</li>		
+        <li>name(p=2)->[NameSynthF] [Adjectives]</li>	
+		<li>name(p=2)->[NameSynthF] [Letter][Letter]</li>
+		<li>name->[Objects][VerbSynth] [NameSynth]</li>			
+        <li>name->[Color] [SynthLastName]</li>	
+		<li>name->[Animal] [SynthLastName]</li>	
+		<li>name->[Place] [SynthLastName]</li>
+		<li>name->[Adjectives] [SynthLastName]</li>
+		<li>name->[Letter][Letter] [Number][Number]</li>
+		<li>name->[Letter][Letter][Letter] [Number][Number]</li>
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>SynthLastName</keyword>
+          <path>Synth_Names/Names/LastNameRobotic</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>NameSynthF</keyword>
+          <path>Synth_Names/Names/NameFemaleRobot</path>
+        </li>		
+        <li Class="Rule_File">
+            <keyword>Adjectives</keyword>
+            <path>Synth_Names/AdjectivesRobot</path>
+        </li>			
+        <li Class="Rule_File">
+            <keyword>Objects</keyword>
+            <path>Synth_Names/ObjectsRobot</path>
+        </li>		
+        <li Class="Rule_File">
+          <keyword>VerbSynth</keyword>
+          <path>Synth_Names/VerbsRobot</path>
+        </li>	
+        <li Class="Rule_File">
+            <keyword>SylStart</keyword>
+            <path>Synth_Syllables/SynthName_Syll</path>
+        </li>
+        <li Class="Rule_File">
+            <keyword>SylEnd</keyword>
+            <path>Synth_Syllables/SynthName_SyllEnd</path>
+        </li>				
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+ 
+  <RulePackDef>
+    <defName>NamerPersonSynthMale</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name(p=3)->[NameSynthM] [SynthLastName]</li>
+        <li>name(p=3)->[NameSynthM] [SylStart][SylEnd]</li>		  
+        <li>name(p=2)->[NameSynthM] [NameSynth]</li>		
+        <li>name(p=4)->[SylStart][SylEnd] [NameSynth]</li>				
+        <li>name(p=2)->[NameSynthM] [Color]</li>			
+        <li>name(p=2)->[NameSynthM] [Animal]</li>	
+        <li>name(p=2)->[NameSynthM] [Place]</li>					
+        <li>name(p=2)->[NameSynthM] [Adjectives]</li>	
+		<li>name(p=2)->[NameSynthM] [Letter][Letter]</li>
+		<li>name->[Objects][VerbSynth] [NameSynth]</li>			
+        <li>name->[Color] [SynthLastName]</li>
+		<li>name->[Animal] [SynthLastName]</li>		 
+		<li>name->[Place] [SynthLastName]</li>	
+		<li>name->[Adjectives] [SynthLastName]</li>
+		<li>name->[Letter][Letter] [Number][Number]</li>
+		<li>name->[Letter][Letter][Letter] [Number][Number]</li>
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>SynthLastName</keyword>
+          <path>Synth_Names/Names/LastNameRobotic</path>
+        </li>	  
+        <li Class="Rule_File">
+          <keyword>NameSynthM</keyword>
+          <path>Synth_Names/Names/NameMaleRobot</path>
+        </li>	
+        <li Class="Rule_File">
+            <keyword>Adjectives</keyword>
+            <path>Synth_Names/AdjectivesRobot</path>
+        </li>			
+        <li Class="Rule_File">
+            <keyword>Objects</keyword>
+            <path>Synth_Names/ObjectsRobot</path>
+        </li>		
+        <li Class="Rule_File">
+          <keyword>VerbSynth</keyword>
+          <path>Synth_Names/VerbsRobot</path>
+        </li>		
+        <li Class="Rule_File">
+            <keyword>SylStart</keyword>
+            <path>Synth_Syllables/SynthName_Syll</path>
+        </li>
+        <li Class="Rule_File">
+            <keyword>SylEnd</keyword>
+            <path>Synth_Syllables/SynthName_SyllEnd</path>
+        </li>				
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+ 
+</Defs>
+

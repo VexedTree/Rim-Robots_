@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Mechanents -->
+  
+  <HediffGiverSetDef>
+    <defName>MechanentStandard</defName>
+    <hediffGivers> 	
+		<li Class="HediffGiver_Birthday">
+			<hediff>MechanentNature_Hediff</hediff>			
+			<ageFractionChanceCurve>
+				<points>
+	            	<li>(0, 1)</li>
+	             	<li>(1, 1)</li>
+				</points>
+			</ageFractionChanceCurve>
+		</li>
+		<li Class="HediffGiver_RandomAgeCurved">
+			<hediff>ComponentBreakdown_Hediff</hediff>			
+            <allowOnLodgers>false</allowOnLodgers>
+            <allowOnQuestRewardPawns>true</allowOnQuestRewardPawns>
+            <allowOnQuestReservedPawns>true</allowOnQuestReservedPawns>
+            <allowOnBeggars>true</allowOnBeggars>
+            <minPlayerPopulation>2</minPlayerPopulation>
+            <ageFractionMtbDaysCurve>
+                <points>
+                    <li>(0.6, 99999)</li>
+                    <li>(0.8, 2000)</li>
+                    <li>(1, 300)</li>
+                </points>
+            </ageFractionMtbDaysCurve>
+		</li>			
+		<li Class="HediffGiver_RandomAgeCurved">
+			<hediff>Mechanites_SynthInvasive</hediff>			
+            <allowOnLodgers>false</allowOnLodgers>
+            <allowOnQuestRewardPawns>true</allowOnQuestRewardPawns>
+            <allowOnQuestReservedPawns>true</allowOnQuestReservedPawns>
+            <allowOnBeggars>true</allowOnBeggars>
+            <minPlayerPopulation>2</minPlayerPopulation>
+            <ageFractionMtbDaysCurve>
+                <points>
+                    <li>(0.6, 99999)</li>
+                    <li>(0.8, 2000)</li>
+                    <li>(1, 300)</li>
+                </points>
+            </ageFractionMtbDaysCurve>
+		</li>					
+	</hediffGivers>  
+  </HediffGiverSetDef>	 
+  
+  
+  <!-- Personae -->
+
+  <HediffGiverSetDef>
+    <defName>PersonaStandard</defName>
+    <hediffGivers> 	
+	
+      <li Class="HediffGiver_Bleeding">
+        <hediff>SyntheticBloodLoss</hediff>
+      </li>
+      <li Class="HediffGiver_Hypothermia">
+        <hediff>SyntheticHypothermia</hediff>
+      </li>
+      <li Class="HediffGiver_Heat">
+        <hediff>SyntheticHeatstroke</hediff>
+      </li>		
+	
+		<li Class="HediffGiver_Birthday">
+			<hediff>SyntheticNature_Hediff</hediff>			
+			<ageFractionChanceCurve>
+				<points>
+	            	<li>(0, 1)</li>
+	             	<li>(1, 1)</li>
+				</points>
+			</ageFractionChanceCurve>
+		</li>	
+		
+		<li Class="HediffGiver_RandomAgeCurved">
+			<hediff>ComponentBreakdown_Hediff</hediff>			
+            <allowOnLodgers>false</allowOnLodgers>
+            <allowOnQuestRewardPawns>true</allowOnQuestRewardPawns>
+            <allowOnQuestReservedPawns>true</allowOnQuestReservedPawns>
+            <allowOnBeggars>true</allowOnBeggars>
+            <minPlayerPopulation>2</minPlayerPopulation>
+            <ageFractionMtbDaysCurve>
+                <points>
+                    <li>(0.6, 99999)</li>
+                    <li>(0.8, 2000)</li>
+                    <li>(1, 300)</li>
+                </points>
+            </ageFractionMtbDaysCurve>
+		</li>		
+		<li Class="HediffGiver_RandomAgeCurved">
+			<hediff>Mechanites_SynthInvasive</hediff>			
+            <allowOnLodgers>false</allowOnLodgers>
+            <allowOnQuestRewardPawns>true</allowOnQuestRewardPawns>
+            <allowOnQuestReservedPawns>true</allowOnQuestReservedPawns>
+            <allowOnBeggars>true</allowOnBeggars>
+            <minPlayerPopulation>2</minPlayerPopulation>
+            <ageFractionMtbDaysCurve>
+                <points>
+                    <li>(0.6, 99999)</li>
+                    <li>(0.8, 2000)</li>
+                    <li>(1, 300)</li>
+                </points>
+            </ageFractionMtbDaysCurve>
+		</li>				
+	</hediffGivers>  
+  </HediffGiverSetDef>	
+  
+</Defs>

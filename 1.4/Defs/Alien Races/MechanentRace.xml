@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<AlienRace.ThingDef_AlienRace ParentName="BaseSyntheticRace">
+    <defName>Mechanent</defName>
+    <label>mechanent</label>  
+    <description>A humanoid-mechanoid which utilizes a highly sophisticated subpersona core to approach a live human in its thought complexity, however, their "minds" are of a very different nature, and are incapable of emulating complex emotions.\n\nLike any mind as complex, they carry with them a noticeable psychic presence.</description>   	
+    <statBases>
+	  <MechBandwidth MayRequire="Ludeon.RimWorld.Biotech">1</MechBandwidth>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
+      <MoveSpeed>4.15</MoveSpeed>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>250</ComfyTemperatureMax>  
+      <MarketValue>4500</MarketValue>	      
+      <CarryingCapacity>85</CarryingCapacity>
+      <MentalBreakThreshold>0.2</MentalBreakThreshold>
+      <PainShockThreshold>0.9</PainShockThreshold>	  
+	  <InjuryHealingFactor>0.8</InjuryHealingFactor>
+      <ResearchSpeed>0.8</ResearchSpeed>
+      <SocialImpact>0.5</SocialImpact>
+      <PlantHarvestYield>0.8</PlantHarvestYield>
+      <ConstructionSpeed>1.2</ConstructionSpeed>
+      <ArmorRating_Blunt>0.072</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.185</ArmorRating_Sharp>
+      <ArmorRating_Heat>2.00</ArmorRating_Heat>	 	  
+    </statBases>				
+<alienRace>
+
+<generalSettings>
+    <alienPartGenerator>
+    <headBodyPartDef>MechanicalHead</headBodyPartDef>	
+    <bodyTypes>
+	  <li>Female</li>	
+      <li>Male</li>
+      <li>Thin</li>	
+      <li>Hulk</li>	  
+    </bodyTypes>
+    <headTypes>  <!-- (15 headtypes)  Making this note just so I can be lazy and not keep track so much. -->	
+      <li>None_Basic</li>
+      <li>None_Labor</li>
+      <li>None_Medic</li>	  
+      <li>None_Recon</li>
+      <li>None_Ghost</li> 
+	  <li>None_Combat</li> 
+	  <li>None_Hakita</li>	
+      <li>None_Bipede</li>
+	  <li>None_Legion</li>	
+      <li>None_Scyther</li>	  	  
+	  <li>None_Drifter</li>
+	  <li>None_Nuclear</li>
+	  <li>None_Slasher</li>
+	  <li>None_Penitent</li>	 	  
+      <li>None_Wayfinder</li>		  
+    </headTypes>
+    <colorChannels Inherit="False">
+      <li>
+        <name>skin</name>
+        <first Class="ColorGenerator_Options">
+            <options>
+			    <!-- Mechanoid White -->
+                <li>
+					<weight>12</weight>
+                    <only>RGBA(1.0,1.0,1.0)</only>
+                </li>			
+			    <!-- Mechanoid Pale -->
+                <li>
+                   <weight>12</weight>
+				   <only>RGBA(203,207,195)</only>
+                </li>	
+			    <!-- Mechanoid -->
+                <li>
+                   <weight>8</weight>
+				   <only>RGBA(178,183,162)</only>
+                </li>	
+			    <!-- Mechanoid Dark -->
+                <li>
+                   <weight>6</weight>
+				   <only>RGBA(158,163,142)</only>
+                </li>											
+			    <!-- VFE Mechanoid / Rusted -->
+                <li>
+                   <weight>6</weight>
+				   <only>RGBA(139,122,109)</only>
+                </li>	
+			    <!-- Mechanoid Grey -->
+                <li>
+                   <weight>0.8</weight>
+				   <only>RGBA(113,114,111)</only>
+                </li>	
+			    <!-- Mechanoid Black -->
+                <li>
+                   <weight>0.4</weight>
+				   <only>RGBA(54,56,51)</only>
+                </li>					
+            </options>
+        </first>
+		<second Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>100</weight>
+					<only>RGBA(255, 255, 255, 255)</only>
+				</li>
+			</options>
+		</second>		
+      </li>
+    </colorChannels>
+    </alienPartGenerator>
+	
+    <forcedRaceTraitEntries>	
+	    <li>
+			<defName>Asexual</defName>
+			<chance>50</chance>
+		</li>	
+    </forcedRaceTraitEntries>	
+    
+ 	<disallowedTraits>
+		<li>
+			<defName>NightOwl</defName>
+		</li>			
+		<li>
+			<defName>Nudist</defName>
+		</li>	
+		<li>
+			<defName>Wimp</defName>
+		</li>			
+		<li>
+			<defName>CreepyBreathing</defName>
+		</li>		
+		<li>
+		    <defName>Gay</defName>
+		</li>
+		<li>
+			<defName>Bisexual</defName>
+		</li>		
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_ThinSkinned</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_ThickSkinned</defName>
+		</li>	
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_HeavySleeper</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Insomniac</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Insatiable</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Prude</defName>
+		</li>
+ 	</disallowedTraits>
+	
+</generalSettings>    
+
+
+<graphicPaths>
+    	<body>RobotRace/Body_Mechanent/</body>
+        <head>RobotRace/Head_Mechanent/</head>
+    	<stump>RobotRace/Stump_Mechanent/SynthNeck</stump>  <!-- This leads to a blank item canvas, so when this pawn is decapitated it won't show a 'fleshy' neck. -->
+        <skinShader>Cutout</skinShader>
+</graphicPaths>
+
+    <styleSettings Inherit="False">
+        <li>
+            <key>HairDef</key>
+            <value>
+                <hasStyle>false</hasStyle>
+            </value>
+        </li>
+        <li>
+            <key>BeardDef</key>
+            <value>
+                <hasStyle>false</hasStyle>
+            </value>
+        </li>
+        <li>
+            <key>TattooDef</key>
+            <value>
+                <hasStyle>false</hasStyle>
+            </value>
+        </li>
+    </styleSettings>
+
+<relationSettings>
+    <relationChanceModifierChild>0</relationChanceModifierChild>
+    <relationChanceModifierExLover>0</relationChanceModifierExLover>
+    <relationChanceModifierExSpouse>0</relationChanceModifierExSpouse>
+    <relationChanceModifierFiance>0</relationChanceModifierFiance>
+    <relationChanceModifierLover>0</relationChanceModifierLover>
+    <relationChanceModifierParent>0</relationChanceModifierParent>
+    <relationChanceModifierSibling>0</relationChanceModifierSibling>
+    <relationChanceModifierSpouse>0</relationChanceModifierSpouse>
+</relationSettings> 
+
+ <thoughtSettings Inherit="False">
+    <cannotReceiveThoughts>
+          <li>Naked</li>
+		  <li>Pain</li>
+		  <li>InsultedMood</li>
+		  <li>KindWordsMood</li>		  
+		  <li>AteWithoutTable</li>
+		  <li>DeadMansApparel</li>
+		  <li>HumanLeatherApparelSad</li>
+		  <li>NeedOutdoors</li>
+		  <li>SoakingWet</li>
+		  <li>SleepDisturbed</li>
+		  <li>WrongApparelGender</li>
+		  <li>WantToSleepWithSpouseOrLover</li>	  
+		  <li>NewColonyOptimism</li>
+		  <li>NewColonyHope</li>
+	      <li>SleptOnGround</li>
+          <li>FreedFromSlavery</li>
+		  <li>KnowPrisonerSold</li>
+		  <li>ReleasedHealthyPrisoner</li>
+		  <li>KnowGuestOrganHarvested</li>
+		  <li>KnowColonistOrganHarvested</li>
+		  <li>KnowBuriedInSarcophagus</li>
+		  <li>Nuzzled</li>
+		  <li>ObservedLayingCorpse</li>	
+	      <li>RotStink</li>
+	      <li>RotStinkLingering</li>		  
+		  <li>WitnessedDeathFamily</li>	  
+		  <li>WitnessedDeathNonAlly</li>
+		  <li>DeniedJoining</li>
+		  <li>ColonistBanished</li>		  		  
+		  <li>ColonistBanishedToDie</li>			  
+		  <li>PrisonerBanishedToDie</li>	
+		  <li>SoldMyLovedOne</li>
+		  <li>SoldMyBondedAnimalMood</li>
+		  <li>GotSomeLovin</li>
+		  <li>RebuffedMyRomanceAttemptMood</li>		  
+		  <li>Rescued</li>
+		  <li>RescuedRelative</li>
+		  <li>FailedToRescueRelative</li>
+		  
+		  <li MayRequire="Ludeon.RimWorld.Royalty">AteFoodInappropriateForTitle</li>
+		  	  
+		  <li MayRequire="Ludeon.RimWorld.Ideology">NeedNeuralSupercharge</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">BioSculpterDespised</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">BiosculpterPleasure</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">MasochistWearingCollar</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">MasochistWearingBodyStrap</li>	
+		  <li MayRequire="Ludeon.RimWorld.Ideology">SleptInRoomWithSlave</li>
+		  
+		  <li MayRequire="Ludeon.RimWorld.Biotech">GigglingBaby</li>
+		  <li MayRequire="Ludeon.RimWorld.Biotech">MyGigglingBaby</li>	
+		  <li MayRequire="Ludeon.RimWorld.Biotech">CryingBaby</li>		  
+		  <li MayRequire="Ludeon.RimWorld.Biotech">MyCryingBaby</li>			  
+		  <li MayRequire="Ludeon.RimWorld.Biotech">KilledChild</li>	  
+		  <li MayRequire="Ludeon.RimWorld.Biotech">NoxiousHaze</li>	 
+		  
+		  <li MayRequire="ReGrowth.BOTR.Core">RG_Wet</li>		  
+          <li MayRequire="ReGrowth.BOTR.Core">RG_ExtremelyWet</li>	
+		  <li MayRequire="ReGrowth.BOTR.Core">RG_HotSpringWet</li>
+    </cannotReceiveThoughts>
+
+    <butcherThoughtGeneral>
+	    <thought>SyntheticButcher</thought>          <!-- The colony at large doesn't give a shit if a bot is dismantled. -->
+		<knowThought>SyntheticButcher</knowThought>
+	</butcherThoughtGeneral>    
+	
+    <ateThoughtSpecific/>
+
+    <replacerList>
+        <li>
+		    <original>NeedFood</original>
+			<replacer>ReactorNeedsSynthetic</replacer>
+	    </li>
+        <li>
+		    <original>Sick</original>
+			<replacer>SynthSick</replacer>
+	    </li>
+        <li>
+		    <original>MyOrganHarvested</original>
+			<replacer>MyPartsHarvestedRobot</replacer>
+	    </li>	
+        <li>
+		    <original>WasImprisoned</original>
+			<replacer>WasImprisonedRobot</replacer>
+	    </li>
+        <li>
+		    <original>ObservedLayingRottingCorpse</original>
+			<replacer>ObservedLayingRottingCorpseRobot</replacer>
+	    </li>	
+        <li>
+		    <original>WitnessedDeathAlly</original>
+			<replacer>WitnessedDeathAllyRobot</replacer>
+	    </li>		
+        <li>
+		    <original>WitnessedDeathBloodlust</original>
+			<replacer>WitnessedDeathBloodlustRobot</replacer>
+	    </li>
+        <li>
+		    <original>KilledHumanlikeBloodlust</original>
+			<replacer>KilledHumanlikeBloodlustRobot</replacer>
+	    </li>
+        <li>
+		    <original>BrawlerUnhappy</original>
+			<replacer>BrawlerUnhappyRobot</replacer>
+	    </li>		
+        <li>
+		    <original>ColonyPrisonerEscaped</original>
+			<replacer>ColonyPrisonerEscapedRobot</replacer>
+	    </li>	
+        <li>
+		    <original>Catharsis</original>
+			<replacer>CatharsisRobot</replacer>
+	    </li>	
+        <li>
+		    <original>RescuedMeByOfferingHelp</original>
+			<replacer>RescuedMeByOfferingHelpRobot</replacer>
+	    </li>		
+        <li>
+		    <original MayRequire="Ludeon.RimWorld.Royalty">DefeatedMechCluster</original>
+			<replacer MayRequire="Ludeon.RimWorld.Royalty">MechClusterRobot</replacer>
+	    </li>
+        <li>
+		    <original MayRequire="Ludeon.RimWorld.Royalty">AnimaScream</original>
+			<replacer MayRequire="Ludeon.RimWorld.Royalty">AnimaScreamRobot</replacer>
+	    </li>		
+        <li>
+		    <original MayRequire="Ludeon.RimWorld.Royalty">Joyfuzz</original>
+			<replacer MayRequire="Ludeon.RimWorld.Royalty">JoyfuzzRobot</replacer>
+	    </li>		
+        <li>		
+			<original MayRequire="Ludeon.RimWorld.Ideology">TendedByMedicalSpecialist</original>
+			<replacer MayRequire="Ludeon.RimWorld.Ideology">MedicalSpecialistRobot</replacer>
+	    </li>
+        <li>		
+			<original MayRequire="Ludeon.RimWorld.Ideology">LookChangeDesired</original>
+			<replacer MayRequire="Ludeon.RimWorld.Ideology">StyleDesiredRobot</replacer>			
+	    </li>			
+        <li>
+		    <original MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienRaces_Horrible_Social</original>
+			<replacer MayRequire="Ludeon.RimWorld.Ideology">AlienFleshlings_Horrible_Social</replacer>
+	    </li>
+        <li>		
+			<original MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienRaces_Abhorrent</original>
+			<replacer MayRequire="Ludeon.RimWorld.Ideology">AlienFleshlings_Abhorrent</replacer>
+	    </li>
+        <li>		
+			<original MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienRaces_Abhorrent_Social</original>
+			<replacer MayRequire="Ludeon.RimWorld.Ideology">AlienFleshlings_Abhorrent_Social</replacer>			
+	    </li>				
+    </replacerList>  	
+</thoughtSettings>
+
+<raceRestriction>	
+	<blackApparelList>
+	    <li>Apparel_PsychicFoilHelmet</li>
+	    <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_PsyfocusHelmet</li>
+	    <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_EltexSkullcap</li>	  	  
+	    <li MayRequire="Ludeon.RimWorld.Ideology">Apparel_TortureCrown</li>	   
+	    <li MayRequire="Ludeon.RimWorld.Biotech">Apparel_ClothMask</li>	 	
+	    <li MayRequire="Ludeon.RimWorld.Biotech">Apparel_GasMask</li>	 		
+
+	    <li MayRequire="CETeam.CombatExtended">
+			<defName>CE_Apparel_GasMask</defName>
+	    </li>
+	    <li MayRequire="CETeam.CombatExtended">
+			<defName>CE_Apparel_ImprovGasMask</defName>
+	    </li>	    
+	    <li MayRequire="VanillaExpanded.VanillaApparelExpanded">
+			<defName>VAE_Headgear_GasMask</defName>
+	    </li> 	 		
+	    <li MayRequire="VanillaExpanded.VanillaArmourExpanded">
+			<defName>VAE_Headgear_HAZMATMask</defName>
+	    </li> 	 		
+	    <li MayRequire="VanillaExpanded.VanillaArmourExpanded">
+			<defName>VAE_Apparel_HAZMATSuit</defName>
+	    </li>	
+	    <li MayRequire="OskarPotocki.VFE.Pirates">
+			<defName>VFEP_Apparel_Rumsuit</defName>
+	    </li>		
+	</blackApparelList>
+</raceRestriction>
+</alienRace>  
+<race>
+      <nameGenerator>NamerPersonSynthNonGendered</nameGenerator>  	  	  
+      <body>CasteBody</body>
+      <fleshType>VexedMechanical</fleshType>	  
+      <bloodDef>Filth_MachineBits</bloodDef>		  
+      <baseHealthScale>1.08</baseHealthScale>  
+      <baseHungerRate>0.5</baseHungerRate>	  
+      <needsRest>false</needsRest>	  
+	  <hasGenders>false</hasGenders>		
+
+      <lifeStageAges Inherit="False">
+        <li>
+          <def>SyntheticFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>BulletImpact_Metal</soundWounded>
+          <soundDeath>BulletImpact_Metal</soundDeath>
+        </li>		
+      </lifeStageAges> 
+ 	  
+      <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+      <ageGenerationCurve>
+        <points>
+		    <li>(0,0)</li>
+			<li>(100,0)</li>
+			<li>(180,1000)</li>
+			<li>(1200,900)</li>
+			<li>(1000,300)</li>
+			<li>(1500,180)</li>
+			<li>(500,100)</li>
+			<li>(800,250)</li>
+			<li>(950,0)</li>
+			<li>(1,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>MechanentStandard</li>
+		<li MayRequire="Killathon.AndroidTiersReforged">ATR_MechanicalStandard</li>
+      </hediffGiverSets>  	  
+</race>
+	<modExtensions Inherit="False">	
+	    <li Class="VexedThings.HumanlikeMechanoidsExtension">	
+		    <canFallIll>false</canFallIll>
+			<incapableOfLove>true</incapableOfLove>
+			<canBeStunnedByEMP>true</canBeStunnedByEMP>
+			<willSpawnWithTraits>true</willSpawnWithTraits>
+			<corpseIsImperishable>true</corpseIsImperishable>
+			<corpseIsInedible>true</corpseIsInedible>
+			<corpseIsDisturbing>true</corpseIsDisturbing>
+			<disableBreathVapors>true</disableBreathVapors>			
+			<pawnCannotPerceiveBeauty>true</pawnCannotPerceiveBeauty>	
+			<disabledJobs>
+		        <li>Vomit</li>
+			</disabledJobs>	
+			<disabledHediffs>		
+			    <li>TraumaSavant</li>
+		        <li>FoodPoisoning</li>
+				<li>CryptosleepSickness</li>
+				<li MayRequire="Ludeon.RimWorld.Royalty">PsychicVertigo</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">TortureCrown</li>				
+			</disabledHediffs>		
+		</li>	
+	</modExtensions>
+</AlienRace.ThingDef_AlienRace>
+</Defs>

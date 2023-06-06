@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>ButcheredSyntheticCorpse</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>4</stackLimit>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+      <li>Bloodlust</li>
+      <li>Cannibal</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>I shredded synthlike</label>
+        <description>I dismantled a persona, even though it was a machine it still just feels wrong.. it looked so human.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>  
+
+    <!-- We use this as a very fast expiring thought so pawns don't mind taking apart mechanents. -->
+    <ThoughtDef>
+        <defName>SyntheticButcher</defName>
+        <showBubble>false</showBubble>
+        <durationDays>0.0001</durationDays>
+        <stackLimit>1</stackLimit>
+        <stackedEffectMultiplier>1</stackedEffectMultiplier>
+        <stages>
+            <li>
+                <label>_</label>
+                <description>Don't look at me, I'm naked!!! 'O'</description>
+                <baseMoodEffect>0</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef> 
+</Defs>

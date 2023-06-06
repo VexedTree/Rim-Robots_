@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Ailments -->
+	
+	<HediffDef>
+		<defName>MagneticInstability_Hediff</defName>
+		<label>magnetic instability</label>
+		<description>This synthetic is currently experiencing magnetic instability due to an overclocking fission-reactor. Akin to intense vertigo - it will experience a brief reduction in capacity as its internal workings attempt to adapt.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>true</isBad>
+        <tendable>false</tendable>		
+		<everCurableByItem>false</everCurableByItem>		
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<defaultLabelColor>(158, 163, 142)</defaultLabelColor>
+		<comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>45000~220000</disappearsAfterTicks>
+            </li>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.65</severityPerDay> 
+            </li>
+		</comps>
+		<stages>
+		    <li>
+                <capMods>
+				    <li>
+					    <capacity>Consciousness</capacity>
+						 <offset>-0.20</offset>
+					</li>
+				</capMods>
+		    </li>
+		</stages>		
+	</HediffDef> 
+	
+	<HediffDef>
+		<defName>ComponentBreakdown_Hediff</defName>
+		<label>component breakdown</label>
+		<description>A component inside of this synthetic has broken down in disrepair. It will operate with less capacity until the component is replaced and maintenance has been done.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>true</isBad>
+        <tendable>false</tendable>		
+		<everCurableByItem>true</everCurableByItem>		
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<defaultLabelColor>(158, 163, 142)</defaultLabelColor>		
+		<stages>
+		    <li>
+                <capMods>
+				    <li>
+					    <capacity>Moving</capacity>
+						<offset>-0.25</offset>
+					</li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.3</offset>
+                    </li>						
+				</capMods>
+		    </li>
+		</stages>		
+	</HediffDef> 	
+
+    <HediffDef ParentName="InfectionBase">
+        <defName>Mechanites_SynthInvasive</defName>
+        <label>invasive mechanites</label>
+        <labelNoun>an invasive mechanite swarm</labelNoun>
+        <description>A swarm of invasive mechanites that were manufactured in the past to attack mechanoids. Reduces overall functioning.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+		<isBad>true</isBad>
+        <tendable>true</tendable>		
+		<everCurableByItem>true</everCurableByItem>		
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<defaultLabelColor>(158, 163, 142)</defaultLabelColor>	
+		<comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>15000~200000</disappearsAfterTicks>
+            </li>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.75</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_TendDuration">
+                <baseTendDurationHours>48</baseTendDurationHours>
+                <disappearsAtTotalTendQuality>3</disappearsAtTotalTendQuality>
+            </li>		
+		</comps>		
+		<stages>
+		    <li>
+			    <capMods>
+				    <li>
+					    <capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>	
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.2</offset>
+                    </li>					
+				</capMods>
+		    </li>
+		</stages>	
+    </HediffDef>	
+	
+    <HediffDef>
+        <defName>MechaniteCore_Shattered</defName>
+        <label>shattered mechanite core</label>
+        <labelNoun>shattered mechanite core</labelNoun>
+        <description>This synthetic's mechanite core has been destroyed - sending its internal mechanite system into suspension. Until the missing core is replaced it will not be able to naturally "heal" injuries over time.</description>
+		<isBad>true</isBad>
+        <tendable>false</tendable>		
+		<everCurableByItem>false</everCurableByItem>		
+		<scenarioCanAdd>false</scenarioCanAdd>	
+		<defaultLabelColor>(158, 163, 142)</defaultLabelColor>		
+        <stages>
+          <li>
+            <statOffsets>
+              <InjuryHealingFactor>0</InjuryHealingFactor>
+            </statOffsets>
+          </li>
+        </stages>
+    </HediffDef>		
+	
+</Defs>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Universal -->
+
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>Stump</defName>
+    <graphicPath>RobotRace/Stump_Mechanent/SynthNeck</graphicPath>
+    <selectionWeight>0</selectionWeight>
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+  </HeadTypeDef>
+  
+  
+  <!-- Persona Bases -->
+
+  <HeadTypeDef Name="AverageBaseSynth" Abstract="True">
+    <hairMeshSize>(1.5, 1.5)</hairMeshSize>
+    <beardMeshSize>(1.5, 1.5)</beardMeshSize>
+  </HeadTypeDef>
+
+  <HeadTypeDef Name="NarrowBaseSynth" Abstract="True">
+    <hairMeshSize>(1.3, 1.5)</hairMeshSize>
+    <beardMeshSize>(1.5, 1.5)</beardMeshSize>
+    <beardOffset>(0, 0, -0.05)</beardOffset>
+    <beardOffsetXEast>-0.05</beardOffsetXEast>
+    <narrow>true</narrow>
+  </HeadTypeDef>  
+  
+
+  <!-- Male -->
+
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>Male_PersonaAverage</defName>
+    <graphicPath>RobotRace/Head_Persona/Male_Average</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>Male_PersonaAveragePointy</defName>
+    <graphicPath>RobotRace/Head_Persona/Male_Average_Pointy</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="NarrowBaseSynth">
+    <defName>Male_PersonaNarrow</defName>
+    <graphicPath>RobotRace/Head_Persona/Male_Thin</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>Male_Persona</defName>
+    <graphicPath>RobotRace/Head_Persona/Male_Average</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>  
+
+
+  <!-- Female -->
+
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>Female_PersonaAverage</defName>
+    <graphicPath>RobotRace/Head_Persona/Female_Average</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>Female_PersonaAveragePointy</defName>
+    <graphicPath>RobotRace/Head_Persona/Female_Average_Pointy</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="NarrowBaseSynth">
+    <defName>Female_PersonaNarrow</defName>
+    <graphicPath>RobotRace/Head_Persona/Female_Thin</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="NarrowBaseSynth">
+    <defName>Female_Persona</defName>
+    <graphicPath>RobotRace/Head_Persona/Female_Average</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef> 
+
+
+  <!-- Mechanent -->
+  
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>None_Basic</defName>
+    <graphicPath>RobotRace/Head_Mechanent/Basic</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>None_Labor</defName>
+    <graphicPath>RobotRace/Head_Mechanent/Labor</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>None_Medic</defName>
+    <graphicPath>RobotRace/Head_Mechanent/Medic</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>None_Recon</defName>
+    <graphicPath>RobotRace/Head_Mechanent/Recon</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>None_Ghost</defName>
+    <graphicPath>RobotRace/Head_Mechanent/Ghost</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>None_Combat</defName>
+    <graphicPath>RobotRace/Head_Mechanent/Combat</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>None_Hakita</defName>
+    <graphicPath>RobotRace/Head_Mechanent/Hakita</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>None_Bipede</defName>
+    <graphicPath>RobotRace/Head_Mechanent/Bipede</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>None_Legion</defName>
+    <graphicPath>RobotRace/Head_Mechanent/Legion</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>  
+
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>None_Scyther</defName>
+    <graphicPath>RobotRace/Head_Mechanent/Scyther</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>  
+
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>None_Drifter</defName>
+    <graphicPath>RobotRace/Head_Mechanent/Drifter</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>None_Nuclear</defName>
+    <graphicPath>RobotRace/Head_Mechanent/Nuclear</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>None_Slasher</defName>
+    <graphicPath>RobotRace/Head_Mechanent/Slasher</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>None_Penitent</defName>
+    <graphicPath>RobotRace/Head_Mechanent/Penitent</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>None_Wayfinder</defName>
+    <graphicPath>RobotRace/Head_Mechanent/Wayfinder</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>  
+
+</Defs>

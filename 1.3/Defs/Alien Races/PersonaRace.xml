@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+    <defName>Personae_</defName>
+    <label>persona</label>  
+    <description>The avatar of an AI persona core. A relatively new creation originating from advanced glitterworld laboratories - they have all the capabilities of a baseline human.\n\nDespite being synthetic in nature - personae still need to rest, but they don't need fuel. They can experience everything from psychic tampering, to complex emotions.</description>   
+    <statBases>
+      <PsychicSensitivity>1.2</PsychicSensitivity>
+	  <ToxicSensitivity>0</ToxicSensitivity>
+      <ComfyTemperatureMin>-50</ComfyTemperatureMin>
+      <ComfyTemperatureMax>150</ComfyTemperatureMax>
+      <RoyalFavorValue>2</RoyalFavorValue>	
+      <MeatAmount>0</MeatAmount>	  
+      <LeatherAmount>0</LeatherAmount>	  
+      <PawnBeauty>0.5</PawnBeauty>	  
+      <MeleeDodgeChance>1.2</MeleeDodgeChance>	  
+      <MarketValue>5500</MarketValue>
+      <MoveSpeed>5.0</MoveSpeed>
+      <Flammability>0.3</Flammability>
+      <CarryingCapacity>75</CarryingCapacity>
+      <MentalBreakThreshold>0.29</MentalBreakThreshold>
+      <PainShockThreshold>0.8</PainShockThreshold>	
+	  <InjuryHealingFactor>1</InjuryHealingFactor>
+      <MedicalSurgerySuccessChance>1.2</MedicalSurgerySuccessChance>	  
+      <ResearchSpeed>1.2</ResearchSpeed>
+	  <NegotiationAbility>1.2</NegotiationAbility>
+      <SocialImpact>1.2</SocialImpact>
+      <PlantHarvestYield>1.0</PlantHarvestYield>
+      <ArmorRating_Blunt>0</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0</ArmorRating_Sharp>
+      <ArmorRating_Heat>1.80</ArmorRating_Heat>	  
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>	
+    </tools>
+
+<alienRace>
+
+<generalSettings>
+    <alienPartGenerator>
+    <headBodyPartDef>SyntheticHead</headBodyPartDef>	
+    <alienbodytypes>
+	  <li>Female</li>	
+      <li>Male</li>
+      <li>Thin</li>	  
+	  <li>Hulk</li>
+    </alienbodytypes>
+    <aliencrowntypes>
+	  <li>Persona</li>
+      <li>Average</li>	 
+      <li>Average_Pointy</li>		
+      <li>Thin</li>	  
+     </aliencrowntypes>
+    <useGenderedHeads>true</useGenderedHeads>
+	<getsGreyAt>2500</getsGreyAt>
+    <colorChannels>
+      <li>
+        <name>skin</name>
+        <first Class="ColorGenerator_Options">
+            <options>
+                <!-- Synthetic Skin -->
+                <li>
+					<weight>8</weight>
+                    <only>RGBA(1.0,1.0,1.0,1)</only>
+				</li>
+                <li>
+					<weight>5.2</weight>
+                    <only>RGBA(242, 237, 224)</only>
+				</li>	
+                <li>
+					<weight>5.5</weight>
+                    <only>RGBA(255, 239, 189)</only>
+				</li>					
+                <li>
+					<weight>5.5</weight>
+                    <only>RGBA(249, 219, 165)</only>
+				</li>
+                <li>
+					<weight>5.58</weight>
+                    <only>RGBA(242, 199, 140)</only>
+				</li>
+                <li>
+					<weight>5.63</weight>
+                    <only>RGBA(228, 158, 90)</only>
+				</li>
+                <li>
+					<weight>5.75</weight>
+                    <only>RGBA(130, 91, 48)</only>
+				</li>	
+                <li>
+					<weight>5.5</weight>
+                    <only>RGBA(228, 158, 90)</only>
+				</li>
+                <li>
+					<weight>5.2</weight>
+                    <only>RGBA(99, 70, 36)</only>
+				</li>				
+				
+				<!-- Mechanoid -->
+                <li>
+                   <weight>1.4</weight>
+				   <only>RGBA(203,207,195)</only>
+                </li>				
+                <li>
+					<weight>1</weight>
+                    <only>RGBA(178,183,162))</only>
+				</li>	
+				
+			    <!-- Rainbow! :D  -->
+                <li>
+                   <weight>0.01</weight>
+                   <min>(90,90,90)</min>
+				   <max>(200,200,200)</max>
+                </li>				
+            </options>
+        </first>
+      </li>
+      <li>
+        <name>hair</name>
+        <first Class="ColorGenerator_Options">
+            <options>		
+				<!-- Deep Blue -->
+                <li>
+                   <weight>90</weight>
+                   <min>(17,16,141)</min>
+				   <max>(36,81,146)</max>
+                </li>			
+				<!-- Off Cyan -->
+                <li>
+                   <weight>90</weight>
+                   <min>(45,111,117)</min>
+				   <max>(86,100,107)</max>
+                </li>
+				<!-- Neon Purple -->
+                <li>
+                   <weight>90</weight>
+                   <min>(90,0,163)</min>
+				   <max>(114,0,255)</max>
+                </li>	
+				<!-- Dark Purple -->
+                <li>
+                   <weight>90</weight>
+                   <min>(141,16,95)</min>
+				   <max>(203,10,45)</max>
+                </li>	
+				<!-- Washed-Out Purple -->
+                <li>
+                   <weight>90</weight>
+                   <min>(76,69,81)</min>
+				   <max>(141,16,95)</max>
+                </li>				
+				<!-- Red -->
+                <li>
+                   <weight>90</weight>
+                   <min>(17,16,141)</min>
+				   <max>(36,81,146)</max>
+                </li>	
+				<!-- Black -->
+                <li>
+                   <weight>90</weight>
+                   <min>(20,20,20)</min>
+				   <max>(50,50,50)</max>
+                </li>				
+			    <!-- Rainbow! :D -->
+                <li>
+                   <weight>30</weight>
+                   <min>(60,60,60)</min>
+				   <max>(200,200,200)</max>
+                </li>			
+            </options>
+        </first>
+      </li>	  
+    </colorChannels>
+    </alienPartGenerator>
+
+    <notXenophobistTowards>
+        <li>Mechanent</li>
+        <li MayRequire="VexedTrees980.RimSkeletons">Skeleton_</li>	
+		
+		<li MayRequire="ChJees.Androids">ChjAndroid</li>
+		<li MayRequire="ChJees.Androids">ChjDroid</li>
+		<li MayRequire="peptide.androidsexpanded">ChjSpacerDroid</li>
+		<li MayRequire="peptide.androidsexpanded">NChefDrone</li>
+		<li MayRequire="peptide.androidsexpanded">NEngiDrone</li>
+		<li MayRequire="peptide.androidsexpanded">NMedicDrone</li>		
+		
+		<li MayRequire="Atlas.AndroidTiers">Android1Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">Android2Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">Android3Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">Android4Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">Android5Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">M7Mech</li>
+		<li MayRequire="Atlas.AndroidTiers">M8Mech</li>			
+		
+		<li MayRequire="[O21] Mechadroids">O21_Alien_MechadroidAlpha</li>
+		<li MayRequire="[O21] Mechadroids">O21_Alien_MechadroidDelta</li>
+		<li MayRequire="[O21] Mechadroids">O21_Alien_MechadroidGamma</li>
+		<li MayRequire="[O21] Subpersona Shells">SubAI_SubpersonaShell</li>
+    </notXenophobistTowards>
+    
+    <immuneToAge>false</immuneToAge>
+	
+    <forcedRaceTraitEntries>	
+	    <li>
+			<defName>Asexual</defName>
+			<chance>5</chance>
+		</li>	
+    </forcedRaceTraitEntries>	
+	
+    <maxDamageForSocialfight>8</maxDamageForSocialfight>
+    <humanRecipeImport>false</humanRecipeImport>
+    <allowHumanBios>false</allowHumanBios>
+    <maleGenderProbability>0.5</maleGenderProbability>
+
+	<chemicalSettings>
+		<li>
+			<chemical>Smokeleaf</chemical>
+			<ingestible>false</ingestible>
+		</li>
+		<li>
+			<chemical>Alcohol</chemical>
+			<ingestible>false</ingestible>
+		</li>
+	</chemicalSettings>
+    
+ 	<disallowedTraits>
+		<li>
+			<defName>Gourmand</defName>
+		</li>	
+		<li>
+			<defName>Wimp</defName>
+		</li>		
+		<li>
+			<defName>Cannibal</defName>
+		</li>		
+		<li>
+			<defName>BodyPurist</defName>
+		</li>		
+		<li>
+		    <defName>DrugDesire</defName>
+		</li>	
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_RefinedPalate</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_IronStomach</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Squeamish</defName>
+		</li>	
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Technophobe</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_DrunkenMaster</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Stoner</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Lush</defName>
+		</li>	
+ 	</disallowedTraits>
+</generalSettings>    
+
+
+<graphicPaths>
+    <li>
+	    <body>RobotRace/Body_Persona/</body>
+        <head>RobotRace/Head_Persona/</head>
+    </li>
+</graphicPaths>
+
+    <styleSettings>
+        <li>
+            <key>HairDef</key>
+            <value>
+                <hasStyle>true</hasStyle>
+            </value>
+			<getsGreyAt>2500</getsGreyAt>
+        </li>
+        <li>
+            <key>BeardDef</key>
+            <value>
+                <hasStyle>true</hasStyle>
+            </value>
+        </li>
+        <li>
+            <key>TattooDef</key>
+            <value>
+                <hasStyle>true</hasStyle>
+            </value>
+        </li>
+    </styleSettings>
+
+<relationSettings>
+            <relationChanceModifierChild>0</relationChanceModifierChild>
+            <relationChanceModifierExLover>1</relationChanceModifierExLover>
+            <relationChanceModifierExSpouse>1</relationChanceModifierExSpouse>
+            <relationChanceModifierFiance>1</relationChanceModifierFiance>
+            <relationChanceModifierLover>1</relationChanceModifierLover>
+            <relationChanceModifierParent>0</relationChanceModifierParent>
+            <relationChanceModifierSibling>0</relationChanceModifierSibling>
+            <relationChanceModifierSpouse>1</relationChanceModifierSpouse>
+</relationSettings>
+       
+
+ <thoughtSettings>
+    <cannotReceiveThoughts>
+	      <li>NeedFood</li>
+          <li>Naked</li>
+		  <li>EnvironmentDark</li>
+		  <li>EnvironmentCold</li>
+		  <li>EnvironmentHot</li>		  
+		  <li>ProsthophileNoProsthetic</li>
+		  
+		  <li MayRequire="Ludeon.RimWorld.Ideology">NoRecentHumanMeat_Preferred</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">NoRecentHumanMeat_RequiredStrong</li>		  
+		  <li MayRequire="Ludeon.RimWorld.Ideology">NoRecentHumanMeat_RequiredRavenous</li>	
+		  <li MayRequire="Ludeon.RimWorld.Ideology">HAR_NoRecentAlienMeat_Preferred</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">HAR_NoRecentAlienMeat_RequiredStrong</li>		  		  
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AteNonCannibalFood_Horrible</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AteNonCannibalFood_Know_Horrible</li>	
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AteNonCannibalFood_Abhorrent</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AteNonCannibalFood_Know_Abhorrent</li>		  
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AgeReversalReceived</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AgeReversalDemanded</li>	  
+    </cannotReceiveThoughts>
+ 
+    <butcherThoughtGeneral>
+	    <thought>ButcheredSyntheticCorpse</thought> <!-- Whoever dismantles the persona is unsettled. -->
+		<knowThought>SyntheticButcher</knowThought>  <!-- The colony at large doesn't give a shit. -->
+	</butcherThoughtGeneral>
+	
+    <ateThoughtSpecific/>
+
+    <replacerList>
+        <li>
+		    <original>NeedFood</original>
+			<replacer>ReactorNeedsSynthetic</replacer>
+	    </li>	
+        <li>
+		    <original>EnvironmentCold</original>
+			<replacer>EnvironmentColdSynthetic</replacer>
+	    </li>			
+        <li>
+		    <original>EnvironmentHot</original>
+			<replacer>EnvironmentHotSynthetic</replacer>
+	    </li>
+        <li>
+		    <original>Sick</original>
+			<replacer>SynthSick</replacer>
+	    </li>
+        <li>
+		    <original>ProsthophileNoProsthetic</original>
+			<replacer>ProsthophileNoProstheticRobot</replacer>
+	    </li>		
+        <li>
+		    <original MayRequire="Ludeon.RimWorld.Royalty">DefeatedMechCluster</original>
+			<replacer MayRequire="Ludeon.RimWorld.Royalty">MechClusterRobot</replacer>
+	    </li>
+        <li>		
+			<original MayRequire="Ludeon.RimWorld.Ideology">TendedByMedicalSpecialist</original>
+			<replacer MayRequire="Ludeon.RimWorld.Ideology">MedicalSpecialistRobot</replacer>
+	    </li>			
+    </replacerList>  
+	
+    <restrictedThoughts>
+	   <li>SynthSick</li>
+	   <li>FullyCharged</li>
+       <li>ReactorNeedsSynthetic</li>
+       <li>EnvironmentColdSynthetic</li>
+       <li>EnvironmentHotSynthetic</li>	  
+	   <li>ProsthophileNoProstheticRobot</li>
+       <li MayRequire="Ludeon.RimWorld.Royalty">MechClusterRobot</li>
+       <li MayRequire="Ludeon.RimWorld.Ideology">MedicalSpecialistRobot</li> 
+    </restrictedThoughts>	
+	
+</thoughtSettings>
+
+<raceRestriction>	
+
+    <foodList>
+	   <li>Chemfuel</li>
+	   <li>Uranium</li>
+	   <li>FuelNode_SynthDiet</li>
+    </foodList>	
+	
+	<blackApparelList>
+	    <li MayRequire="OskarPotocki.VFE.Pirates">
+			<defName>VFEP_Apparel_Rumsuit</defName>
+	    </li>	
+	</blackApparelList>
+	
+</raceRestriction>
+
+<compatibility>
+	<isFlesh>false</isFlesh>
+	<isSentient>true</isSentient>
+	<hasBlood>true</hasBlood>
+</compatibility>
+
+</alienRace>
+    
+<race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>2500</lifeExpectancy>
+      <nameCategory>HumanStandard</nameCategory>
+      <nameGenerator>NamerPersonSynthMale</nameGenerator>
+      <nameGeneratorFemale>NamerPersonSynthFemale</nameGeneratorFemale>		  	  
+      <body>PersonaeBody</body>
+      <fleshType>VexedSynthetic</fleshType>	  
+      <bloodDef>Filth_SynthBlood</bloodDef>
+	  <useMeatFrom>Human</useMeatFrom>	  
+	  <foodType>4</foodType>	  <!-- Note: The reason why we have just the number 4 here is because the bit-value 4 is a 'void' diet, meaning they eat nothing - however with Royalty enabled we HAVE to have a functioning diet as recreation & meditation needs are lumped into the diet value for some unknown reason so we cannot use the co"None" diet. -->
+	  <canBePredatorPrey>false</canBePredatorPrey>	  
+      <baseBodySize>1.0</baseBodySize>		  
+      <baseHealthScale>0.9</baseHealthScale>  	    
+      <baseHungerRate>0.0001</baseHungerRate>	  
+      <needsRest>true</needsRest>	  
+	  <hasGenders>true</hasGenders>	  
+	  
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+        </li>
+      </lifeStageAges>
+
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <ageGenerationCurve>
+        <points>
+		    <li>(0,0)</li>
+            <li>(14,0)</li>
+            <li>(16,100)</li>
+            <li>(50,200)</li>
+            <li>(60,30)</li>
+            <li>(70,18)</li>
+            <li>(80,10)</li>
+            <li>(90,3)</li>
+            <li>(150,0)</li>
+		    <li>(1,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>PersonaStandard</li>
+      </hediffGiverSets>  	  
+</race>
+    <recipes>
+      <li>AdministerMechSerumHealer</li>	
+    </recipes>
+	<modExtensions>		
+	    <li Class="VexedThings.PawnsSynthetic">
+		    <corpseWillNotRot>true</corpseWillNotRot>
+			<canBeStunnedByEMP>true</canBeStunnedByEMP>			
+		</li>
+	</modExtensions>	
+    <butcherProducts>
+      <Steel>25</Steel>
+      <Plasteel>40</Plasteel>
+    </butcherProducts>	
+</AlienRace.ThingDef_AlienRace>
+</Defs>

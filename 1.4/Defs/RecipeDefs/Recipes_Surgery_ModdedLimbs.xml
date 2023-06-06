@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ===== EPOE ===== -->
+  
+  
+   <!-- Brain -->
+ 
+    <RecipeDef ParentName="SurgeryInstallUpgradePartAddedBase" MayRequire="Ykara.EPOE">
+		<defName>InstallAIChipSynth</defName>
+		<label>install derivate AI chip</label>
+		<description>Installs derivate AI chip.</description>
+		<workerClass>Recipe_InstallImplant</workerClass>
+		<jobString>Installing AI chip.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>AIChip</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>AIChip</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>MechanicalBrain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AIChip</addsHediff>
+		<researchPrerequisite>MechanentCreation</researchPrerequisite>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="SurgeryInstallUpgradePartAddedBase" MayRequire="Ykara.EPOE">
+		<defName>InstallAIPersonaCoreSynth</defName>
+		<label>install parasite AI persona core</label>
+		<description>Installs a 'parasite AI persona core'.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
+		<jobString>Installing AI persona core.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>AIPersonaCore</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>AIPersonaCore</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>MechanicalBrain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AIPersonaCore</addsHediff>
+		<researchPrerequisite>PersonaCreation</researchPrerequisite>
+	</RecipeDef>
+	
+    <RecipeDef ParentName="SyntheticRemoveUpgradeBase" MayRequire="Ykara.EPOE">
+        <defName>RemoveAIChipSynth</defName>
+        <label>remove derivate AI chip</label>
+        <description>Removes AI chip.</description>
+        <jobString>Removing AI chip.</jobString>
+        <removesHediff>AIChip</removesHediff>
+        <successfullyRemovedHediffMessage>{0} has successfully removed {1}'s AI chip.</successfullyRemovedHediffMessage>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SyntheticRemoveUpgradeBase" MayRequire="Ykara.EPOE">
+        <defName>RemoveAICoreSynth</defName>
+        <label>remove AI persona core</label>
+        <description>Removes AI persona core.</description>
+        <jobString>Removing AI persona core.</jobString>
+        <removesHediff>AIPersonaCore</removesHediff>
+        <successfullyRemovedHediffMessage>{0} has successfully severed the persona core from {1}'s consciousness.</successfullyRemovedHediffMessage>
+    </RecipeDef> 
+
+
+	
+   <!-- Arm -->
+   
+    <RecipeDef ParentName="SurgeryInstallUpgradePartAddedBase" MayRequire="Ykara.EPOE">
+      <defName>InstallAdvancedPowerArmSynth</defName>
+      <label>install advanced power arm</label>
+      <description>Installs advanced power arm.</description>
+      <jobString>Installing advanced power arm.</jobString>
+      <ingredients>
+         <li>
+            <filter>
+               <thingDefs>
+                  <li>AdvancedPowerArm</li>
+               </thingDefs>
+            </filter>
+            <count>1</count>
+         </li>
+      </ingredients>
+      <fixedIngredientFilter>
+         <thingDefs>
+            <li>AdvancedPowerArm</li>
+         </thingDefs>
+      </fixedIngredientFilter>
+      <appliedOnFixedBodyParts>
+		<li>MechShoulder</li>
+		<li>SyntheticShoulder</li>
+      </appliedOnFixedBodyParts>
+      <addsHediff>AdvancedPowerArm</addsHediff>
+	</RecipeDef>
+	
+   <RecipeDef ParentName="SyntheticHotswapUpgradeBase" MayRequire="Ykara.EPOE">
+      <defName>InstallPowerArmSynth</defName>
+      <label>install power arm</label>
+      <description>Installs power arm.</description>
+      <jobString>Installing power arm.</jobString>
+      <ingredients>
+         <li>
+            <filter>
+               <thingDefs>
+                  <li>PowerArm</li>
+               </thingDefs>
+            </filter>
+            <count>1</count>
+         </li>
+      </ingredients>
+      <fixedIngredientFilter>
+         <thingDefs>
+            <li>PowerArm</li>
+         </thingDefs>
+      </fixedIngredientFilter>
+      <appliedOnFixedBodyParts>
+		<li>MechShoulder</li>
+		<li>SyntheticShoulder</li>
+      </appliedOnFixedBodyParts>
+      <addsHediff>PowerArm</addsHediff>
+   </RecipeDef>
+
+    <RecipeDef ParentName="SyntheticRemoveUpgradeBase" MayRequire="Ykara.EPOE">
+        <defName>RemoveAdvancedPowerArmSynth</defName>
+        <label>remove advanced power arm</label>
+        <description>Removes advanced power arm.</description>
+        <jobString>Removing advanced power arm.</jobString>
+        <removesHediff>AdvancedPowerArm</removesHediff>
+    </RecipeDef>	
+	
+    <RecipeDef ParentName="SyntheticRemoveUpgradeBase" MayRequire="Ykara.EPOE">
+        <defName>RemovePowerArmSynth</defName>
+        <label>remove power arm</label>
+        <description>Removes power arm.</description>
+        <jobString>Removing power arm.</jobString>
+        <removesHediff>PowerArm</removesHediff>
+    </RecipeDef>		
+
+	
+   <!-- Hands -->
+   
+    <RecipeDef ParentName="SyntheticHotswapUpgradeBase" MayRequire="Ykara.EPOE">
+		<defName>InstallSimpleProstheticHandSynth</defName>
+		<label>install prosthetic hand</label>
+		<description>Installs a prosthetic hand.</description>
+		<jobString>Installing prosthetic hand.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SimpleProstheticHand</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SimpleProstheticHand</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		   <li>MechanicalHand</li>
+		   <li>SyntheticHand</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>SimpleProstheticHand</addsHediff>
+	</RecipeDef>
+
+   <RecipeDef ParentName="SurgeryInstallUpgradePartAddedBase" MayRequire="Ykara.EPOE">
+      <defName>InstallAdvancedPowerClawSynth</defName>
+      <label>install advanced power claw</label>
+      <description>Installs advanced power claw.</description>
+      <jobString>Installing advanced power claw.</jobString>
+      <ingredients>
+         <li>
+            <filter>
+               <thingDefs>
+                  <li>AdvancedPowerClaw</li>
+               </thingDefs>
+            </filter>
+            <count>1</count>
+         </li>
+      </ingredients>
+      <fixedIngredientFilter>
+         <thingDefs>
+            <li>AdvancedPowerClaw</li>
+         </thingDefs>
+      </fixedIngredientFilter>
+      <appliedOnFixedBodyParts>
+		<li>MechanicalHand</li>
+		<li>SyntheticHand</li>
+      </appliedOnFixedBodyParts>
+      <addsHediff>AdvancedPowerClaw</addsHediff>
+   </RecipeDef>	
+	
+  
+  
+</Defs>

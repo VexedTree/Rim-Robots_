@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+    <RR.EnergyNeed>Energy</RR.EnergyNeed>
+	<RR.EnergyNeedDescription>Energy is the amount of retained charge output from the internal reactor. If it is hits zero, the persona will enter an inefficient low-power mode. If charge is not restored, hardware will eventually critically malfunction, and the persona will cease functioning.</RR.EnergyNeedDescription>
+	<RR.LowEnergySelfShutdown>{PAWN_nameDef} is in self-shutdown from low energy.</RR.LowEnergySelfShutdown>
+
+    <RR.MemoryNeed>Memory</RR.MemoryNeed>
+	<RR.MemoryNeedDescription>Memory is the amount of time between each system defragment. Advanced units must regularly enter a semi-comatose state to purge useless info from their persona cores to avoid memory overloads. If they go too long without it, they will involuntarily hibernate until excess memory is purged.</RR.MemoryNeedDescription>
+	
+	<RR.SelfRepair>Self-repair</RR.SelfRepair>
+    <RR.Repair>Repair {PAWN_nameDef}</RR.Repair>
+	<RR.SelfRepair>Self-repair</RR.SelfRepair>
+	<RR.SelfRepairDisabled>self-repair disabled</RR.SelfRepairDisabled>
+	<RR.MustBeCapableToRepair>{1_labelShort} must be capable of smithing to make repairs.</RR.MustBeCapableToRepair>
+	<RR.CannotRepair>{PAWN_nameDef} is incapable of repairing.</RR.CannotRepair>
+	
+	<RR.SynthCannotUtilize>Synthetic pawns cannot utilize this.</RR.SynthCannotUtilize>
+    <RR.SynthCannotIngest>{PAWN_nameDef} cannot consume this.</RR.SynthCannotIngest>
+	<RR.SynthNotBiological>{PAWN_nameDef} is not biological.</RR.SynthNotBiological>
+    <RR.SynthCannotBeImplanted>{PAWN_nameDef} cannot be genetically altered.</RR.SynthCannotBeImplanted>
+	<RR.SynthNotGenetic>Synthetic pawns do not carry a genetic code.</RR.SynthNotGenetic>
+	<RR.SynthCannotBeScanned>Synthetic pawns do not have viable neuro-patterns.</RR.SynthCannotBeScanned>
+	<RR.SynthIsIncapableOfLove>{PAWN_nameDef} is incapable of complex emotions.</RR.SynthIsIncapableOfLove>
+	<RR.SynthVsVampire>{PAWN_nameDef} is bloodless.</RR.SynthVsVampire>	
+</LanguageData>

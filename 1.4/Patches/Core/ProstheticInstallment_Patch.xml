@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- This allows us to install new limbs and prosthetics on synthetics, aka. mechanents & personae. -->
+ 
+    <!-- Mechanents -->
+ 
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Brain"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>MechanicalBrain</li>
+        </value>
+    </Operation> 
+ 
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Torso"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>MechanicalThorax</li>
+        </value>
+    </Operation>  
+	
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Heart"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>Reactor</li>
+        </value>
+    </Operation>  	
+ 
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Shoulder"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>MechShoulder</li>
+        </value>
+    </Operation>
+	
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Hand"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>MechanicalHand</li>
+        </value>
+    </Operation>	
+		
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Leg"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>MechLeg</li>
+        </value>
+    </Operation>	
+
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Foot"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>MechanicalFoot</li>
+        </value>
+    </Operation>		
+	
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Eye"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>MechEye</li>
+        </value>
+    </Operation>	
+	
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Jaw"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>MechanicalJaw</li>
+        </value>
+    </Operation>
+
+    <!-- Personae -->
+	
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Torso"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>SyntheticTorso</li>
+        </value>
+    </Operation>  	
+	
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Shoulder"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>SyntheticShoulder</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Hand"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>SyntheticHand</li>
+        </value>
+    </Operation>	
+	
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Leg"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>SyntheticLeg</li>
+        </value>
+    </Operation>
+	
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Foot"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>SyntheticFoot</li>
+        </value>
+    </Operation>	
+	
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Eye"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>SyntheticEye</li>
+        </value>
+    </Operation>	
+
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Ear"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>SyntheticEar</li>
+        </value>
+    </Operation>
+	
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Jaw"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>SyntheticJaw</li>
+        </value>
+    </Operation>	
+	
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Tongue"]</xpath>
+        <order>Append</order>
+        <value>
+            <li>SyntheticTongue</li>
+        </value>
+    </Operation>	
+
+	
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Royalty</li>
+    </mods>	
+    <match Class="PatchOperationSequence">
+    	<operations>
+		
+		  <li Class="PatchOperationInsert">
+            <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Arm"]</xpath>
+            <order>Append</order>
+            <value>
+                <li>MechArm</li>
+            </value>
+		  </li>
+		  
+          <li Class="PatchOperationInsert">
+            <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Arm"]</xpath>
+            <order>Append</order>
+            <value>
+                <li>SyntheticArm</li>
+            </value>
+		  </li>		
+
+          <li Class="PatchOperationInsert">
+            <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Nose"]</xpath>
+            <order>Append</order>
+            <value>
+                <li>SyntheticNose</li>
+            </value>
+		  </li>  
+		</operations>
+    </match>	
+  </Operation>	
+ 
+ 
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[tW] Finger and Toes for EPOE</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+    	<operations>
+		
+		  <li Class="PatchOperationInsert">
+            <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Finger"]</xpath>
+            <order>Append</order>
+            <value>
+                <li>MechanicalFinger</li>
+            </value>
+		  </li>
+		  
+          <li Class="PatchOperationInsert">
+            <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Finger"]</xpath>
+            <order>Append</order>
+            <value>
+                <li>SyntheticFinger</li>
+            </value>
+		  </li>
+		  
+          <li Class="PatchOperationInsert">
+            <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Toe"]</xpath>
+            <order>Append</order>
+            <value>
+                <li>SyntheticToe</li>
+            </value>
+		  </li>	
+		</operations>	
+    </match>			
+  </Operation>	   
+  
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Expanded Prosthetics and Organ Engineering</li>
+    </mods>	
+    <match Class="PatchOperationSequence">
+    	<operations>	
+		  <li Class="PatchOperationInsert">
+            <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Arm"]</xpath>
+            <order>Append</order>
+            <value>
+                <li>MechArm</li>
+            </value>
+		  </li>
+		  
+          <li Class="PatchOperationInsert">
+            <xpath>Defs/RecipeDef[not(@ParentName="SurgeryInstallBodyPartNaturalBase")]/appliedOnFixedBodyParts/li[text()="Arm"]</xpath>
+            <order>Append</order>
+            <value>
+                <li>SyntheticArm</li>
+            </value>
+		  </li>		
+		</operations>
+    </match>	
+  </Operation>	  
+</Patch>

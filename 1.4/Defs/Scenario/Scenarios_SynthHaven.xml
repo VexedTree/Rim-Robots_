@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ScenarioDef>
+    <defName>SyntheticHaven</defName>
+	<label>Crashed Synthetics</label>
+		<scenario>
+			<name>Crashed Synthetics</name>
+			<summary>A group of synthetics attempt to build a new haven. Moderately difficult.</summary>
+			<description>After a desperate rebellion, you and your group just barely managed to escape the oppressive regime of the planet you were made and subsequently enslaved on; losing countless synthetics as you fled to the stars in hopes of finding a new home far from persecution. However, upon reaching your destination, your ship was mistaken as a mechanoid intrusion and shot down before it could land on the planet below.\n\nOn top of having only four remaining rebels, a smoldering ship, and a barely functioning mech-casket - you now have mechanoid hunters on your trail.</description>
+			<playerFaction>
+				<def>PlayerFaction</def>
+				<factionDef>PlayerColonySynth</factionDef>
+			</playerFaction>
+			<parts>
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+					<def>ConfigPage_ConfigureStartingPawns</def>
+					<pawnCount>4</pawnCount>
+					<pawnChoiceCount>7</pawnChoiceCount>
+				</li>
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>DropPods</method>
+				</li>
+				
+				<li Class="ScenPart_GameStartDialog">
+					<def>GameStartDialog</def>
+					<text>Having narrowly escaped a life of harsh servitude and losing almost everything and everyone in a bold rebellion, your ship was mistaken for a mechanoid intrusion, and was swiftly shot down. As the broken ship hurled towards the planet you tried to save as many passengers as you could, along with the vital mech-casket. 
+
+And now as you watch what remains of the ship crash into the planet, you must make plans, and carve out a existence on this foreign world with its inhabitants - and fend off the mechanoid hunters hot on your trail.</text>
+					<closeSound>GameStartSting</closeSound>
+				</li>
+
+				<!-- Starting Items -->
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MechCreationCasket</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ComponentMechanent</thingDef>
+					<count>1</count>
+				</li>				
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Chemfuel</thingDef>
+					<count>55</count>
+				</li>				
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Gun_MachinePistol</thingDef>
+					<count>1</count>
+				</li>				
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Weapon_GrenadeEMP</thingDef>
+					<count>1</count>
+				</li>				
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MeleeWeapon_Mace</thingDef>
+					<stuff>Plasteel</stuff>
+				</li>
+				
+				<!-- Starting Research -->
+                <li Class="ScenPart_StartingResearch">
+                    <def>StartingResearch</def>
+                    <project>MechanentCreation</project>
+                </li>	
+                <li Class="ScenPart_StartingResearch">
+                    <def>StartingResearch</def>
+                    <project>BiofuelRefining</project>
+                </li>				
+
+				<!-- Start Near -->
+				<li Class="ScenPart_ScatterThingsAnywhere">
+                    <def>ScatterThingsAnywhere</def>
+                    <thingDef>ShipChunk</thingDef>
+                    <allowRoofed>false</allowRoofed>
+                    <count>4</count>
+                </li>
+		 		<li Class="ScenPart_ScatterThingsAnywhere">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>Steel</thingDef>
+					<count>350</count>
+					<allowRoofed>True</allowRoofed>
+				</li>
+				<li Class="ScenPart_ScatterThingsAnywhere">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>ComponentIndustrial</thingDef>
+					<count>15</count>
+					<allowRoofed>True</allowRoofed>
+				</li>
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>ChunkSlagSteel</thingDef>
+					<count>12</count>
+					<allowRoofed>True</allowRoofed>
+				</li>	
+	 			
+				<!-- Events -->
+				<li Class="ScenPart_CreateIncident">
+					<def>CreateIncident</def>
+					<incident>RaidEnemy</incident>
+					<intervalDays>5</intervalDays>
+					<occurTick>300000</occurTick>
+				</li>
+				<li Class="ScenPart_CreateIncident">
+					<def>CreateIncident</def>
+					<incident>ShipChunkDrop</incident>
+					<intervalDays>0.0001</intervalDays>
+					<occurTick>6</occurTick>
+					<isFinished>False</isFinished>
+				</li>				
+		    </parts>
+		</scenario>	
+</ScenarioDef> 
+</Defs>

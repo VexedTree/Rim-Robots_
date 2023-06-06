@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+ 
+	<!-- Allowing synthetics to spawn alongside vanilla factions, or modded if need be. -->
+	<!-- Uses pawnkinds as a injection into desired factions. -->
+	
+	<!-- Outlanders -->
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[1 or 2 or 4]/options</xpath>
+		<order>Append</order>
+		<value>
+			<Mechanent_Villager>0.01</Mechanent_Villager>
+			<Mechanent_Guard>0.05</Mechanent_Guard>			
+			<Mechanent_Labor>0.15</Mechanent_Labor>	
+            <Persona_Villager>0.025</Persona_Villager>			
+		</value>
+	</Operation>	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[3]/guards</xpath>
+		<order>Append</order>
+		<value>
+			<Mechanent_Guard>0.085</Mechanent_Guard>
+		</value>
+	</Operation>
+
+	<!-- Pirates -->
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[1 or 4 or 7]/options</xpath>
+		<order>Append</order>
+		<value>
+			<Mechanent_Scavenger>0.25</Mechanent_Scavenger>
+			<Mechanent_Thrasher>0.15</Mechanent_Thrasher>			
+			<Mechanent_Pirate>0.05</Mechanent_Pirate>
+			<Persona_Pirate>0.02</Persona_Pirate>			
+		</value>
+	</Operation> 	
+
+	<!-- Empire -->	
+	
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Royalty</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+		  <operations>
+		    <li Class="PatchOperationAdd">
+                <xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[1]/guards</xpath>
+		        <order>Append</order>
+                <value>
+		        	<Mechanent_Guard>0.25</Mechanent_Guard>
+		        	<Mechanent_Spacer_Trooper>0.065</Mechanent_Spacer_Trooper>			
+		        	<Mechanent_Spacer_Marine>0.045</Mechanent_Spacer_Marine>	
+		        	<Persona_Spacer_Trooper>0.05</Persona_Spacer_Trooper>			
+		        	<Persona_Spacer_Marine>0.005</Persona_Spacer_Marine>						
+                </value>
+			</li>		  
+		    <li Class="PatchOperationAdd">
+		        <xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[2 or 3 or 4]/options</xpath>
+		        <order>Append</order>
+		        <value>
+		        	<Mechanent_Spacer_Trooper>0.055</Mechanent_Spacer_Trooper>			
+		        	<Mechanent_Spacer_Marine>0.045</Mechanent_Spacer_Marine>	
+		        	<Persona_Spacer_Trooper>0.025</Persona_Spacer_Trooper>			
+		        	<Persona_Spacer_Marine>0.015</Persona_Spacer_Marine>							
+		        </value>
+			</li>					
+          </operations>		  
+		</match>		
+    </Operation>
+ 
+</Patch>

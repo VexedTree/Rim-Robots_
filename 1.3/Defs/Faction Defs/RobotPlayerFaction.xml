@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+  <FactionDef ParentName="FactionBase">
+    <defName>PlayerColonySynth</defName>
+    <label>New Syndicate</label>
+    <description>A division of recently crashed synthetics.</description>
+    <pawnSingular>synthetic</pawnSingular>
+    <pawnsPlural>synthetics</pawnsPlural>	
+    <basicMemberKind>Mechanent_Villager</basicMemberKind>
+    <techLevel>Industrial</techLevel>
+	<isPlayer>true</isPlayer>
+	<colorSpectrum>
+		<li>(0, 0.737, 0.847)</li>
+		<li>(0, 0.625, 0.730)</li>
+	</colorSpectrum>	
+    <factionIconPath>WorldIcon/RobotsPlayer</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>	
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionSynthPlayer</factionNameMaker>
+    <settlementNameMaker>NamerSettlementSynthetic</settlementNameMaker>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+        <commonality>0.05</commonality>
+      </li>
+    </backstoryFilters>	
+	<allowedCultures>
+	    <li>Astropolitan</li>
+    </allowedCultures>
+    <geneticVariance>1</geneticVariance>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>ClassicStart</li>
+      <li>ClassicStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>	
+      </thingDefs>
+    </apparelStuffFilter>
+  </FactionDef>
+</Defs>

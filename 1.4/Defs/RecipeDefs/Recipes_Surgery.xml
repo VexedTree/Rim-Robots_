@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+  <!-- Universal -->
+
+  <RecipeDef ParentName="SurgeryMechanical">
+    <defName>RR_Decommission</defName>
+    <label>sever AI core consciousness</label>
+    <description>Decommission a synthetic via forcefully terminating the AI core.</description>
+    <workerClass>Recipe_ExecuteByCut</workerClass>
+    <jobString>Decommissioning a synthetic.</jobString>
+    <workAmount>500</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>true</isViolation>
+    <targetsBodyPart>false</targetsBodyPart>
+    <surgerySuccessChanceFactor>5</surgerySuccessChanceFactor>	
+    <recipeUsers>
+      <li>Mechanent</li>
+	  <li>Personae_</li>
+    </recipeUsers>		
+	<ingredients>
+	    <li>
+			<filter>
+				<thingDefs>
+					<li>ComponentIndustrial</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+    <fixedIngredientFilter>
+	    <thingDefs>
+            <li>ComponentIndustrial</li>
+		</thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryMechanical">
+    <defName>RR_Overclock</defName>
+    <label>overclock AI core</label>
+    <description>Overclock the AI core of a synthetic via increasing processor clock rates - increasing its reaction time, speed, and manipulation. This will vastly increase fuel consumption and the risk of internal damage.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Overclocking a synthetic.</jobString>
+    <workAmount>1400</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>true</isViolation>
+    <recipeUsers>
+      <li>Mechanent</li>
+	  <li>Personae_</li>
+    </recipeUsers>		
+	<ingredients>
+	    <li>
+			<filter>
+				<thingDefs>
+					<li>ComponentIndustrial</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+    <fixedIngredientFilter>
+	    <thingDefs>
+            <li>ComponentIndustrial</li>
+		</thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>MechanicalBrain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RR_OverclockedCore</addsHediff>	
+  </RecipeDef>  
+  
+  <RecipeDef ParentName="SurgeryMechanical">
+    <defName>RR_RestartAICore</defName>
+    <label>recalibrate AI core</label>
+    <description>A procedure done to reverse a 'overclocked core', while it is done rather quickly, the rebooting phase the synthetic must go through takes much longer, and will render them comatose until finished.</description>
+    <workerClass>Recipe_RemoveHediff</workerClass>
+    <jobString>Initiating system-restart.</jobString>
+    <workAmount>200</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>false</isViolation>
+    <targetsBodyPart>false</targetsBodyPart>
+    <removesHediff>RR_OverclockedCore</removesHediff>
+    <successfullyRemovedHediffMessage>{0} has successfully initiated {1}'s system-restart.</successfullyRemovedHediffMessage>
+    <recipeUsers>
+      <li>Mechanent</li>
+	  <li>Personae_</li>
+    </recipeUsers>	
+  </RecipeDef>   
+  
+  <RecipeDef ParentName="SurgeryMechanical">
+    <defName>RR_ReplaceComponent</defName>
+    <label>replace ruined component</label>
+    <description>This procedure will fix components that have broken down inside a synthetic.</description>
+    <workerClass>Recipe_RemoveHediff</workerClass>
+    <jobString>Replacing ruined component.</jobString>
+    <workAmount>800</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>false</isViolation>
+    <targetsBodyPart>false</targetsBodyPart>
+    <removesHediff>ComponentBreakdown_Hediff</removesHediff>
+    <successfullyRemovedHediffMessage>{0} has successfully replaced {1}'s broken component.</successfullyRemovedHediffMessage>
+    <skillRequirements>
+      <Crafting>5</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>Mechanent</li>
+	  <li>Personae_</li>
+    </recipeUsers>	
+	<ingredients>
+	    <li>
+			<filter>
+				<thingDefs>
+					<li>ComponentIndustrial</li>
+				</thingDefs>
+			</filter>
+			<count>3</count>
+		</li>
+	</ingredients>
+    <fixedIngredientFilter>
+	    <thingDefs>
+            <li>ComponentIndustrial</li>
+		</thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>  
+  
+ 
+
+ 
+  
+  <!-- Scythes -->
+ 
+  <RecipeDef ParentName="SurgeryInstallUpgradePartAddedBase">
+    <defName>RR_InstallPlasteelScythe</defName>
+    <label>install plasteel scythe</label>
+    <description>Install a plasteel scythe.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RR_AddedScythesItem</ThingDef>
+      <HediffDef>RR_AddedScythes</HediffDef>
+    </descriptionHyperlinks>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing plasteel scythe.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RR_AddedScythesItem</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RR_AddedScythesItem</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+		<li>MechShoulder</li>
+		<li>SyntheticShoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RR_AddedScythes</addsHediff>
+  </RecipeDef> 
+
+  <RecipeDef ParentName="SyntheticRemoveUpgradeBase">
+    <defName>RR_RemovePlasteelScythe</defName>
+    <label>remove a plasteel scythe</label>
+    <description>Remove plasteel scythe.</description>
+    <descriptionHyperlinks><ThingDef>RR_AddedScythesItem</ThingDef></descriptionHyperlinks>
+    <jobString>Removing plasteel scythe.</jobString>
+    <removesHediff>RR_AddedScythes</removesHediff>
+  </RecipeDef>  
+    
+ 
+ 
+ 
+   <!-- FissionReactor -->
+ 
+  <RecipeDef ParentName="SurgeryInstallUpgradePartAddedBase">
+    <defName>InstallFissionReactor</defName>
+    <label>install fission reactor</label>
+    <description>Install a fission reactor.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RR_FissionReactorItem</ThingDef>
+      <HediffDef>RR_FissionReactor</HediffDef>
+    </descriptionHyperlinks>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing fission reactor.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RR_FissionReactorItem</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RR_FissionReactorItem</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Reactor</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RR_FissionReactor</addsHediff>
+  </RecipeDef> 
+
+  <RecipeDef ParentName="SyntheticRemoveUpgradeBase">
+    <defName>RemoveFissionReactor</defName>
+    <label>remove a fission reactor</label>
+    <description>Remove fission reactor.</description>
+    <descriptionHyperlinks><ThingDef>RR_FissionReactorItem</ThingDef></descriptionHyperlinks>
+    <jobString>Removing fission reactor.</jobString>
+    <removesHediff>RR_FissionReactor</removesHediff>
+  </RecipeDef> 
+  
+  
+  
+   <!-- VanometricReactor -->
+ 
+  <RecipeDef ParentName="SyntheticInstallArchotechUpgradeBase">
+    <defName>InstallVanometricReactor</defName>
+    <label>install vanometric reactor</label>
+    <description>Install a vanometric reactor.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RR_VanometricReactorItem</ThingDef>
+      <HediffDef>RR_VanometricReactor</HediffDef>
+    </descriptionHyperlinks>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing vanometric reactor.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RR_VanometricReactorItem</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RR_VanometricReactorItem</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Reactor</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RR_VanometricReactor</addsHediff>
+  </RecipeDef> 
+
+  <RecipeDef ParentName="SyntheticRemoveUpgradeBase">
+    <defName>RemoveVanometricReactor</defName>
+    <label>remove a vanometric reactor</label>
+    <description>Remove vanometric reactor.</description>
+    <descriptionHyperlinks><ThingDef>RR_VanometricReactorItem</ThingDef></descriptionHyperlinks>
+    <jobString>Removing vanometric reactor.</jobString>
+    <removesHediff>RR_VanometricReactor</removesHediff>
+  </RecipeDef>  
+  
+   <!-- VanometricReactor -->
+ 
+  <RecipeDef ParentName="SyntheticInstallArchotechUpgradeBase">
+    <defName>InstallMechanoidVisualSensor</defName>
+    <label>install mechanoid visual sensor</label>
+    <description>Install a mechanoid visual sensor.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RR_MechanoidVisualSensorItem</ThingDef>
+      <HediffDef>RR_MechanoidVisualSensor</HediffDef>
+    </descriptionHyperlinks>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing mechanoid visual sensor.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RR_MechanoidVisualSensorItem</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RR_MechanoidVisualSensorItem</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+	  <li>MechEye</li>
+      <li>SyntheticEye</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RR_MechanoidVisualSensor</addsHediff>
+  </RecipeDef> 
+
+  <RecipeDef ParentName="SyntheticRemoveUpgradeBase">
+    <defName>RemoveMechanoidVisualSensor</defName>
+    <label>remove a mechanoid visual sensor</label>
+    <description>Remove a mechanoid visual sensor.</description>
+    <descriptionHyperlinks><ThingDef>RR_MechanoidVisualSensorItem</ThingDef></descriptionHyperlinks>
+    <jobString>Removing mechanoid visual sensor.</jobString>
+    <removesHediff>RR_MechanoidVisualSensor</removesHediff>
+  </RecipeDef>    
+  
+  
+  
+  
+  
+   <!-- ArchotechUplink -->
+ 
+  <RecipeDef ParentName="SyntheticInstallArchotechUpgradeBase">
+    <defName>InstallArchotechUplink</defName>
+    <label>install archotech uplink</label>
+    <description>Install a archotech uplink.</description>
+    <descriptionHyperlinks>
+      <ThingDef>RR_ArchotechUplinkItem</ThingDef>
+      <HediffDef>RR_ArchotechUplink</HediffDef>
+    </descriptionHyperlinks>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing archotech uplink.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RR_ArchotechUplinkItem</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RR_ArchotechUplinkItem</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>MechanicalBrain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RR_ArchotechUplink</addsHediff>
+  </RecipeDef> 
+
+  <RecipeDef ParentName="SyntheticRemoveUpgradeBase">
+    <defName>RemoveArchotechUplink</defName>
+    <label>remove a archotech uplink</label>
+    <description>Remove archotech uplink.</description>
+    <descriptionHyperlinks><ThingDef>RR_ArchotechUplinkItem</ThingDef></descriptionHyperlinks>
+    <jobString>Removing archotech uplink.</jobString>
+    <removesHediff>RR_ArchotechUplink</removesHediff>
+  </RecipeDef>   
+  
+  
+
+  <!-- Limbs T1 - Arm -->
+  
+   <RecipeDef ParentName="SyntheticHotswapUpgradeBase">
+    <defName>InstallMechArm</defName>
+    <label>install mechanical arm</label>
+    <description>Install mechanical arm.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Item_MechArmSynth</ThingDef>
+    </descriptionHyperlinks>
+	<workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing mechanical arm.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Item_MechArmSynth</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Item_MechArmSynth</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+	<appliedOnFixedBodyParts>
+		<li>MechArm</li>
+		<li>SyntheticArm</li>
+	</appliedOnFixedBodyParts>
+  </RecipeDef>  
+  
+  <!-- Limbs T1 - Leg -->
+  
+   <RecipeDef ParentName="SyntheticHotswapUpgradeBase">
+    <defName>InstallMechLeg</defName>
+    <label>install mechanical leg</label>
+    <description>Install mechanical leg.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Item_MechLegSynth</ThingDef>
+    </descriptionHyperlinks>
+	<workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing mechanical leg.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Item_MechLegSynth</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Item_MechLegSynth</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+	<appliedOnFixedBodyParts>
+		<li>MechLeg</li>
+		<li>SyntheticLeg</li>
+	</appliedOnFixedBodyParts>
+  </RecipeDef>    
+  
+  <!-- Limbs T1 - Eye -->
+  
+   <RecipeDef ParentName="SurgeryInstallUpgradePartNaturalBase">
+    <defName>InstallMechEye</defName>
+    <label>install mechanical eye</label>
+    <description>Install mechanical eye.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Item_MechEyeSynth</ThingDef>
+    </descriptionHyperlinks>
+	<workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing mechanical eye.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Item_MechEyeSynth</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Item_MechEyeSynth</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+	<appliedOnFixedBodyParts>
+		<li>MechEye</li>
+		<li>SyntheticEye</li>
+	</appliedOnFixedBodyParts>
+  </RecipeDef>      
+  
+  <!-- Limbs T1 - Jaw -->
+  
+   <RecipeDef ParentName="SurgeryInstallUpgradePartNaturalBase">
+    <defName>InstallMechJaw</defName>
+    <label>install mechanical jaw</label>
+    <description>Install mechanical jaw.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Item_MechJawSynth</ThingDef>
+    </descriptionHyperlinks>
+	<workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing mechanical jaw.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Item_MechJawSynth</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Item_MechJawSynth</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+	<appliedOnFixedBodyParts>
+		<li>MechanicalJaw</li>
+		<li>SyntheticJaw</li>
+	</appliedOnFixedBodyParts>
+  </RecipeDef>      
+  
+  
+  
+  <!-- Limbs T2 - Arm -->
+  
+   <RecipeDef ParentName="SurgeryInstallUpgradePartNaturalBase">
+    <defName>InstallSynthArm</defName>
+    <label>install synthetic arm</label>
+    <description>Install synthetic arm.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Item_SynthArmSynth</ThingDef>
+    </descriptionHyperlinks>
+	<workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing synthetic arm.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Item_SynthArmSynth</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Item_SynthArmSynth</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+	<appliedOnFixedBodyParts>
+		<li>SyntheticArm</li>
+	</appliedOnFixedBodyParts>
+  </RecipeDef>   
+  
+  <!-- Limbs T2 - Leg -->
+  
+   <RecipeDef ParentName="SurgeryInstallUpgradePartNaturalBase">
+    <defName>InstallSynthLeg</defName>
+    <label>install synthetic leg</label>
+    <description>Install synthetic leg.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Item_MechLegSynth</ThingDef>
+    </descriptionHyperlinks>
+	<workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing synthetic leg.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Item_MechLegSynth</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Item_MechLegSynth</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+	<appliedOnFixedBodyParts>
+		<li>SyntheticLeg</li>
+	</appliedOnFixedBodyParts>
+  </RecipeDef>    
+  
+  <!-- Limbs T2 - Eye -->
+  
+   <RecipeDef ParentName="SurgeryInstallUpgradePartNaturalBase">
+    <defName>InstallSynthEye</defName>
+    <label>install synthetic eye</label>
+    <description>Install synthetic eye.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Item_MechEyeSynth</ThingDef>
+    </descriptionHyperlinks>
+	<workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing synthetic eye.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Item_MechEyeSynth</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Item_MechEyeSynth</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+	<appliedOnFixedBodyParts>
+		<li>SyntheticEye</li>
+	</appliedOnFixedBodyParts>
+  </RecipeDef>      
+  
+  <!-- Limbs T2 - Jaw -->
+  
+   <RecipeDef ParentName="SurgeryInstallUpgradePartNaturalBase">
+    <defName>InstallSynthJaw</defName>
+    <label>install synthetic jaw</label>
+    <description>Install synthetic jaw.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Item_MechJawSynth</ThingDef>
+    </descriptionHyperlinks>
+	<workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing synthetic jaw.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Item_MechJawSynth</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Item_MechJawSynth</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+	<appliedOnFixedBodyParts>
+		<li>SyntheticJaw</li>
+	</appliedOnFixedBodyParts>
+  </RecipeDef>  
+</Defs>

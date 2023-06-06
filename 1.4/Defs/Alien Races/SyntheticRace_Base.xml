@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="BaseSyntheticPawn" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <containedPawnsSelectable>true</containedPawnsSelectable>
+    <containedItemsSelectable>true</containedItemsSelectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+    <statBases>
+      <Mass>60</Mass>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <inspectorTabs>
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Training</li>
+      <li>ITab_Pawn_Social</li>
+      <li>ITab_Pawn_Guest</li>
+      <li>ITab_Pawn_Prisoner</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">ITab_Pawn_Slave</li>
+      <li>ITab_Pawn_FormingCaravan</li>
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Log</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+  </ThingDef>
+  
+<AlienRace.ThingDef_AlienRace ParentName="BaseSyntheticPawn"  Name="BaseSyntheticRace" Abstract="True">
+    <statBases>
+	  <Fertility MayRequire="Ludeon.RimWorld.Biotech">0</Fertility>
+      <ToxicResistance>1</ToxicResistance>
+	  <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>  
+	  <MeatAmount>0</MeatAmount>	  
+      <LeatherAmount>0</LeatherAmount>	
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>	
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>	  
+    </tools>	
+    <comps/>	
+<alienRace>
+<generalSettings>
+	
+    <notXenophobistTowards>
+        <li>Mechanent</li>
+        <li MayRequire="VexedTrees980.RimSkeletons">Skeleton_</li>	
+		
+		<li MayRequire="ChJees.Androids">ChjAndroid</li>
+		<li MayRequire="ChJees.Androids">ChjDroid</li>
+		<li MayRequire="peptide.androidsexpanded">ChjSpacerDroid</li>
+		<li MayRequire="peptide.androidsexpanded">NChefDrone</li>
+		<li MayRequire="peptide.androidsexpanded">NEngiDrone</li>
+		<li MayRequire="peptide.androidsexpanded">NMedicDrone</li>		
+		
+		<li MayRequire="Atlas.AndroidTiers">Android1Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">Android2Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">Android3Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">Android4Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">Android5Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">M7Mech</li>
+		<li MayRequire="Atlas.AndroidTiers">M8Mech</li>			
+		
+		<li MayRequire="[O21] Mechadroids">O21_Alien_MechadroidAlpha</li>
+		<li MayRequire="[O21] Mechadroids">O21_Alien_MechadroidDelta</li>
+		<li MayRequire="[O21] Mechadroids">O21_Alien_MechadroidGamma</li>
+		<li MayRequire="[O21] Subpersona Shells">SubAI_SubpersonaShell</li>
+    </notXenophobistTowards>
+	
+ 	<disallowedTraits>
+		<li>
+			<defName>Gourmand</defName>
+		</li>	
+		<li>
+			<defName>Cannibal</defName>
+		</li>		
+		<li>
+			<defName>BodyPurist</defName>
+		</li>
+		<li>
+			<defName>Transhumanist</defName>
+		</li>		
+		<li>
+			<defName>Immunity</defName>
+		</li>
+		<li>
+		    <defName>DrugDesire</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_RefinedPalate</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_IronStomach</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Squeamish</defName>
+		</li>	
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Technophobe</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_DrunkenMaster</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Stoner</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Lush</defName>
+		</li>	
+ 	</disallowedTraits>	
+    
+	<minAgeForAdulthood>0</minAgeForAdulthood>		
+    <maxDamageForSocialfight>8</maxDamageForSocialfight>
+    <humanRecipeImport>false</humanRecipeImport>
+    <allowHumanBios>false</allowHumanBios>
+    <immuneToAge>false</immuneToAge>	
+
+	<chemicalSettings>
+		<li>
+			<chemical>Smokeleaf</chemical>
+			<ingestible>false</ingestible>
+		</li>
+		<li>
+			<chemical>Alcohol</chemical>
+			<ingestible>false</ingestible>
+		</li>
+		<li>
+			<chemical>Psychite</chemical>
+			<ingestible>false</ingestible>
+		</li>
+		<li>
+			<chemical>WakeUp</chemical>
+			<ingestible>false</ingestible>
+		</li>		
+		<li>
+			<chemical>Ambrosia</chemical>
+			<ingestible>false</ingestible>
+		</li>		
+		<li>
+			<chemical>GoJuice</chemical>
+			<ingestible>false</ingestible>
+		</li>
+		<li MayRequire="VanillaExpanded.VBrewE">
+			<chemical>VBE_Caffeine</chemical>
+			<ingestible>false</ingestible>
+		</li>				
+		<li MayRequire="OskarPotocki.VFE.Insectoid">
+			<chemical>VFEI_RoyalJellyChemical</chemical>
+			<ingestible>false</ingestible>
+		</li>	
+		<li MayRequire="HardTimes.drugmod">
+			<chemical>Shard</chemical>
+			<ingestible>false</ingestible>
+		</li>				
+		<li MayRequire="HardTimes.drugmod">
+			<chemical>Psychedelics</chemical>
+			<ingestible>false</ingestible>
+		</li>		
+	</chemicalSettings>
+	
+    <corpseCategory>CorpsesSyntheticlike</corpseCategory>		
+	
+</generalSettings>        
+
+ <thoughtSettings>
+	
+    <ateThoughtSpecific/> 
+	
+    <cannotReceiveThoughts>
+	      <li>NeedFood</li>
+		  <li>EnvironmentDark</li>
+		  <li>EnvironmentCold</li>
+		  <li>EnvironmentHot</li>		  
+		  
+		  <li MayRequire="Ludeon.RimWorld.Ideology">NoRecentHumanMeat_Preferred</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">NoRecentHumanMeat_RequiredStrong</li>		  
+		  <li MayRequire="Ludeon.RimWorld.Ideology">NoRecentHumanMeat_RequiredRavenous</li>	
+		  <li MayRequire="Ludeon.RimWorld.Ideology">HAR_NoRecentAlienMeat_Preferred</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">HAR_NoRecentAlienMeat_RequiredStrong</li>		  		  
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AteNonCannibalFood_Horrible</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AteNonCannibalFood_Know_Horrible</li>	
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AteNonCannibalFood_Abhorrent</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AteNonCannibalFood_Know_Abhorrent</li>		  
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AgeReversalReceived</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AgeReversalDemanded</li>	  
+    </cannotReceiveThoughts>	
+	
+    <restrictedThoughts>
+	   <li>SynthSick</li>
+	   <li>FullyCharged</li>
+       <li>ReactorNeedsSynthetic</li>
+       <li>EnvironmentColdSynthetic</li>
+       <li>EnvironmentHotSynthetic</li>	  
+	   <li>BrawlerUnhappyRobot</li>
+	   <li>RotStinkSynth</li>
+	   <li>RotStinkLingeringSynth</li>
+	   <li>MyPartsHarvestedRobot</li>	
+       <li>WasImprisonedRobot</li>	   
+	   <li>CatharsisRobot</li>
+	   <li>ColonyPrisonerEscapedRobot</li>
+	   <li>KilledHumanlikeBloodlustRobot</li>
+	   <li>WitnessedDeathBloodlustRobot</li>
+	   <li>ObservedLayingRottingCorpseRobot</li>	
+	   <li>RescuedMeByOfferingHelpRobot</li>
+       <li MayRequire="Ludeon.RimWorld.Royalty">MechClusterRobot</li>
+	   <li MayRequire="Ludeon.RimWorld.Royalty">AnimaScreamRobot</li>
+	   <li MayRequire="Ludeon.RimWorld.Royalty">JoyfuzzRobot</li>
+       <li MayRequire="Ludeon.RimWorld.Ideology">MedicalSpecialistRobot</li>
+       <li MayRequire="Ludeon.RimWorld.Ideology">StyleDesiredRobot</li>	  	  
+    </restrictedThoughts>		   	
+</thoughtSettings>
+
+<raceRestriction>	
+    <foodList>
+	   <li>Chemfuel</li>
+	   <li>Uranium</li>
+	   <li>FuelNode_SynthDiet</li>
+    </foodList>	
+
+    <traitList>
+        <li>Anthropophobia</li>
+    </traitList>
+    <blackTraitList>
+        <li>Automatonophobia</li>
+    </blackTraitList>	
+	
+    <onlyEatRaceRestrictedFood>true</onlyEatRaceRestrictedFood>		
+    <onlyUseRaceRestrictedXenotypes>true</onlyUseRaceRestrictedXenotypes>
+	<onlyHaveRaceRestrictedGenes>true</onlyHaveRaceRestrictedGenes>
+    <canReproduce>false</canReproduce>
+	
+    <whiteXenotypeList>
+	    <li>Baseliner</li>
+    </whiteXenotypeList>
+    <whiteGeneList>
+	    <li MayRequire="vanillaracesexpanded.android">VREA_SyntheticBody</li>
+    </whiteGeneList>	
+	
+    <blackEndoCategories MayRequire="Ludeon.RimWorld.Biotech">
+        <li>Melanin</li>
+        <li>HairColor</li>		
+        <li>Ears</li>
+        <li>Nose</li>		
+        <li>Jaw</li>
+        <li>Hands</li>
+        <li>Headbone</li>
+        <li>Head</li>		
+        <li>Voice</li>		
+    </blackEndoCategories>		
+</raceRestriction>
+
+<compatibility>
+	<isFlesh>false</isFlesh>
+	<isSentient>true</isSentient>
+	<hasBlood>false</hasBlood>
+</compatibility>
+
+</alienRace>   
+<race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>2500</lifeExpectancy>
+      <nameCategory>HumanStandard</nameCategory>	  
+	  <useMeatFrom>Human</useMeatFrom>	  
+	  <foodType>4</foodType>	  <!-- Note: The reason why we have just the number 4 here is because the bit-value 4 is a 'void' diet, meaning they eat nothing - however with Royalty enabled we HAVE to have a functioning diet as recreation & meditation needs are lumped into the diet value for some unknown reason so we cannot use the co"None" diet. -->
+	  <canBePredatorPrey>false</canBePredatorPrey>
+	  <maxMechEnergy>100</maxMechEnergy>
+      <baseBodySize>1.0</baseBodySize>	
+	  
+      <lifeStageAges>
+        <li>
+          <def>SyntheticFullyFormed</def>
+          <minAge>0</minAge>
+        </li>	
+      </lifeStageAges> 
+	  
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <specialShadowData>
+        <volume>(0.3, 0.8, 0.4)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </specialShadowData>	  
+</race>
+    <recipes>
+      <li>AdministerMechSerumHealer</li>	
+	  <li>RemoveBodyPart</li> 	  
+	  <li MayRequire="Killathon.AndroidTiersReforged">ATR_Install_SkyMindReceiver</li> 
+    </recipes>
+	<modExtensions>	
+	    <li Class="VexedThings.HumanlikeMechanoidsExtension">
+		    <canFallIll>false</canFallIll>
+			<incapableOfLove>false</incapableOfLove>
+			<canBeStunnedByEMP>true</canBeStunnedByEMP>
+			<willSpawnWithTraits>true</willSpawnWithTraits>
+			<corpseIsImperishable>true</corpseIsImperishable>
+			<corpseIsInedible>true</corpseIsInedible>
+			<corpseIsDisturbing>false</corpseIsDisturbing>
+			<disableBreathVapors>true</disableBreathVapors>			
+			<pawnCannotPerceiveBeauty>false</pawnCannotPerceiveBeauty>	
+			<disabledJobs>
+		        <li>Vomit</li>
+			</disabledJobs>	
+			<disabledHediffs>		
+			    <li>TraumaSavant</li>
+		        <li>FoodPoisoning</li>
+				<li>CryptosleepSickness</li>
+			</disabledHediffs>			
+		</li>	
+	</modExtensions>	
+    <butcherProducts>
+      <Steel>45</Steel>
+      <Plasteel>30</Plasteel>
+    </butcherProducts>			
+</AlienRace.ThingDef_AlienRace>
+</Defs>

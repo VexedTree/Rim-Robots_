@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BuildingBase">
+		<defName>MechCreationCasket</defName>
+		<label>mechanoid-casket</label>
+		<description>A mechanoid printer capable of assembling both mechanents and synthetics. If given the correct materials, and enough time, the mechanites within the casket will print a subpersona-mechanent. If a AI persona core is provided, it will print a strikingly human avatar for the persona.\n\nOn most worlds mechanoid-casket and mechanents are the pillar of human industry and ingenuity. On others they are outright banned.\n\nThe casket is hardcoded to never print combat class mechanoids.</description>
+		<thingClass>ItemProcessor.Building_ItemProcessor</thingClass>
+		<graphicData>
+			<texPath>Buildings/Synth_Casket</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3.5,4.5)</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<costList>
+			<Steel>350</Steel>
+			<Plasteel>130</Plasteel>
+			<ComponentIndustrial>8</ComponentIndustrial>			
+			<ComponentSpacer>2</ComponentSpacer>			
+		</costList>
+		<building>
+			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+		</building>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<rotatable>true</rotatable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<uiIconScale>0.8</uiIconScale>
+		<fillPercent>0.5</fillPercent>
+
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<Mass>100</Mass>
+			<WorkToBuild>15000</WorkToBuild>
+			<MaxHitPoints>380</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<size>(2,3)</size>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <designationCategory>Production</designationCategory>
+        <constructEffect>ConstructMetal</constructEffect>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,2)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>false</shortCircuitInRain>
+				<basePowerConsumption>750</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable" />
+			<li Class="ItemProcessor.CompProperties_ItemProcessor">
+				<buildingOnGraphic>Buildings/Synth_Casket</buildingOnGraphic>
+				<numberOfInputs>1</numberOfInputs>
+				<acceptsNoneAsInput>false</acceptsNoneAsInput>
+				<transfersIngredientLists>false</transfersIngredientLists>
+				<isAutoDropper>true</isAutoDropper>
+				<isMachinePausable>true</isMachinePausable>
+				<showProgressBar>true</showProgressBar>						
+				<destroyIngredientsAtStartOfProcess>true</destroyIngredientsAtStartOfProcess>
+				
+				<chooseIngredientsIcon>Gizmos/UI/ProductionCasket</chooseIngredientsIcon>
+				<InsertFirstItemDesc>IP_ChooseOutput</InsertFirstItemDesc>
+				
+				<bringIngredientsIcon>Gizmos/UI/BringToCasket</bringIngredientsIcon>
+				<bringIngredientsText>IP_BringIngredients</bringIngredientsText>
+				<bringIngredientsDesc>IP_BringIngredientsDesc</bringIngredientsDesc>
+
+				<cancelIngredientsIcon>Gizmos/UI/CancelBringingToCasket</cancelIngredientsIcon>					
+				<cancelIngredientsText>IP_CancelIngredients</cancelIngredientsText>
+				<cancelIngredientsDesc>IP_CancelIngredientsDesc</cancelIngredientsDesc>						
+				
+				<noPowerDestroysProgress>true</noPowerDestroysProgress>
+				<noPowerDestroysMessage>IP_NoPowerDestroysWarning</noPowerDestroysMessage>
+				<noPowerDestroysInitialWarning>IP_NoPowerDestroysInitialWarning</noPowerDestroysInitialWarning>
+				<rareTicksToDestroy>20</rareTicksToDestroy>														
+			</li>
+		</comps>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<researchPrerequisites Inherit='False'>
+			<li>PersonaCreation</li>
+		</researchPrerequisites>
+		<modExtensions>
+		</modExtensions>
+   		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+	</ThingDef>
+</Defs>

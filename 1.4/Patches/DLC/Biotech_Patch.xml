@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+    </mods>	
+	<match Class="PatchOperationSequence">
+      <operations>
+		<li Class="PatchOperationReplace">	
+         <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Mechanent"]/race/lifeStageAges</xpath>
+            <value>    
+              <lifeStageAges>
+                <li>
+                  <def>MechanoidFullyFormed</def>
+                  <minAge>0</minAge>
+                  <soundWounded>Pawn_Mech_Fabricor_Wounded</soundWounded>
+                  <soundDeath>Pawn_Mech_Fabricor_Death</soundDeath>
+				  <soundCall>Pawn_Mech_Fabricor_Call</soundCall>
+                </li>
+              </lifeStageAges> 	
+	        </value>
+		</li>  			  
+		<li Class="PatchOperationReplace">	
+         <xpath>/Defs/ThingDef[defName="ComponentMechanent"]/costList</xpath>
+            <value>    
+	          <costList>
+                <Steel>150</Steel>
+	            <Plasteel>70</Plasteel>
+                <ComponentIndustrial>10</ComponentIndustrial>
+	            <SubcoreHigh>1</SubcoreHigh>
+              </costList>	
+	        </value>
+		</li>  		
+	  </operations>
+    </match>		  
+  </Operation>
+</Patch>

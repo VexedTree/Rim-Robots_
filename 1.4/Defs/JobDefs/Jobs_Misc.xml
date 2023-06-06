@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <JobDef>
+        <defName>RR_RepairPersonae</defName>
+        <driverClass>VexedThings.JobGiver_RepairPersonae</driverClass>
+        <reportString>repairing TargetA.</reportString>
+        <casualInterruptible>false</casualInterruptible>
+    </JobDef>
+	
+</Defs>

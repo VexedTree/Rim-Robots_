@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Childhood.................................................................................-->
+
+<AlienRace.AlienBackstoryDef>
+    <defName>CattleForFuel</defName>
+    <title>fuel cattle</title>
+    <titleShort>cattle</titleShort>
+    <baseDesc>In a isolated tribe, [PAWN_nameDef] had a peaceful childhood - until a machine-legion descended upon the area from orbit. After the land was stripped for all its resources, the robots began to harvest the tribespeople to slowly liquidate their bodies into chemfuel. Until one day, they simply left.\n[PAWN_nameDef] still experiences night-terrors from seeing [PAWN_possessive] friends and family suspended in the vats.</baseDesc>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Tribal</li>
+    </spawnCategories>
+	<bodyTypeFemale>Thin</bodyTypeFemale>	
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<forcedTraitsChance>
+	    <li>
+			<defName>Automatonophobia</defName>
+			<degree>1</degree>
+			<chance>65</chance>
+		</li>	
+	    <li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Technophobe</defName>
+			<chance>25</chance>
+		</li>			
+	</forcedTraitsChance>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>FuelFetcher</defName>
+    <title>boomalope rancher</title>
+    <titleShort>fuel-fetcher</titleShort>
+    <baseDesc>The village elder of [PAWN_nameDef]s tribe was seen as a great blood machine, imprisoned in the form of a human, and cast down by the gods for going against their will. But it was really just a mechanent that found its way into the tribe generations prior. [PAWN_nameDef]s job was to occasionally milk the boomalope herd to gain "liquid fire" to feed [PAWN_possessive] elders reactor.</baseDesc>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Tribal</li>
+    </spawnCategories>
+	<bodyTypeFemale>Thin</bodyTypeFemale>	
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+</AlienRace.AlienBackstoryDef>
+
+
+<!--Adulthood.................................................................................-->
+
+<AlienRace.AlienBackstoryDef>
+    <defName>BloodMachineHunter</defName>
+    <title>blood machine hunter</title>
+    <titleShort>blood machine hunter</titleShort>
+    <baseDesc>[PAWN_nameDef] spent the majority of [PAWN_possessive] adulthood training to hunt and kill the "great blood machines" to protect [PAWN_possessive] tribe - [PAWN_pronoun] learned that arrows and daggers couldn't kill them; but a well laid ambush, and a lump of uranium slotted into a stone club definitely could.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+	  <li>Tribal</li>
+    </spawnCategories>
+	<linkedBackstory>CattleForFuel</linkedBackstory>	
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+    <bodyTypeGlobal>Hulk</bodyTypeGlobal>		
+	<skillGains>
+		<li>
+			<key>Shooting</key>
+			<value>2</value>
+		</li>	
+		<li>
+			<key>Melee</key>
+			<value>5</value>
+		</li>		
+	</skillGains>	
+	<forcedTraitsChance>
+	    <li>
+			<defName>Automatonophobia</defName>
+			<degree>1</degree>
+			<chance>10</chance>
+		</li>	
+	    <li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Technophobe</defName>
+			<chance>25</chance>
+		</li>			
+	</forcedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+</Defs>

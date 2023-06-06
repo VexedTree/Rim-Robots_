@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<AlienRace.PAWNBioDef>
+	<defName>PawnBio_Hal9000</defName>
+	<childhoodDef>ChildhoodMechanent1</childhoodDef>
+	<adulthoodDef>AdulthoodSynth9000</adulthoodDef>
+	<gender>Male</gender>
+	<name>
+	    <first>HAL</first>
+		<nick>HAL 9000</nick>
+		<last>9000</last>
+	</name>
+	<validRaces>
+		<li>Personae_</li>
+	</validRaces>
+</AlienRace.PAWNBioDef>
+
+<AlienRace.PAWNBioDef>
+	<defName>PawnBio_Dolores</defName>
+	<childhoodDef>CasketPersonae1</childhoodDef>
+	<adulthoodDef>AdulthoodPersonae29</adulthoodDef>
+	<gender>Female</gender>
+	<name>
+	    <first>Dolores</first>
+		<last>Abernathy</last>
+	</name>
+	<validRaces>
+		<li>Personae_</li>
+	</validRaces>
+</AlienRace.PAWNBioDef>
+
+<AlienRace.PAWNBioDef>
+	<defName>PawnBio_Bender</defName>
+	<childhoodDef>ChildhoodMechanent1</childhoodDef>
+	<adulthoodDef>AdulthoodMechanent26</adulthoodDef>
+	<name>
+	    <first>Bender</first>
+		<nick>Bender</nick>
+		<last>Rodríguez</last>
+	</name>
+	<validRaces>
+		<li>Mechanent</li>
+	</validRaces>
+</AlienRace.PAWNBioDef>
+
+<AlienRace.PAWNBioDef>
+	<defName>PawnBio_TheAndroidSentByCyberLife</defName>
+	<childhoodDef>ChildhoodPersonae9</childhoodDef>
+	<adulthoodDef>AdulthoodPersonae45</adulthoodDef>
+	<gender>Male</gender>
+	<name>
+	    <first>Connor</first>
+		<nick>Connor</nick>
+		<last>RK800</last>
+	</name>
+	<validRaces>
+		<li>Personae_</li>
+	</validRaces>
+</AlienRace.PAWNBioDef>
+</Defs>

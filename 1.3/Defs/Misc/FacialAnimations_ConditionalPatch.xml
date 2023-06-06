@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Defs>
+<FacialAnimation.HeadTypeDef MayRequire="Nals.FacialAnimation">
+<defName>personaAverage</defName>
+<texPath>FacialAnimations_Folder/P_Averg/Average</texPath>
+<raceName>Personae_</raceName>
+<shader>Map/CutoutComplex</shader>
+</FacialAnimation.HeadTypeDef>
+<FacialAnimation.HeadTypeDef MayRequire="Nals.FacialAnimation">
+<defName>personaPointy</defName>
+<texPath>FacialAnimations_Folder/P_Point/Pointy</texPath>
+<raceName>Personae_</raceName>
+<shader>Map/CutoutComplex</shader>
+</FacialAnimation.HeadTypeDef>
+<FacialAnimation.HeadTypeDef MayRequire="Nals.FacialAnimation">
+<defName>personaVisor</defName>
+<texPath>FacialAnimations_Folder/P_Visor/Visor</texPath>
+<raceName>Personae_</raceName>
+<shader>Map/CutoutComplex</shader>
+</FacialAnimation.HeadTypeDef>
+<!-- 
+  <FacialAnimation.FaceAdjustmentDef>
+    <defName>ShekFaceSizeAndPositionDef</defName>
+    <RaceName>Personae_</RaceName>
+    <Size>(1.5,1.5)</Size>    
+  </FacialAnimation.FaceAdjustmentDef>
+   -->
+  <!-- 
+<FacialAnimation.FaceAdjustmentDef>
+    <defName>HumanFaceSizeAndPositionDef</defName>
+    <RaceName>Personae_</RaceName>
+    <Size>(1.5,1.5)</Size>
+	
+    <OffsetNorth>(1,0.1)</OffsetNorth>
+    <OffsetEast>(2,0.2)</OffsetEast>
+    <OffsetSouth>(3,0.3)</OffsetSouth>
+    <OffsetWest>(4,0.4)</OffsetWest>
+</FacialAnimation.FaceAdjustmentDef>
+-->  
+</Defs>

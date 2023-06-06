@@ -1,0 +1,6 @@
+C:\Users\drwp0\Documents\My Games\RimWorld.v1.3.3287\RimWorld.v1.3.3287\RimWorld.v1.3.3287\Mods\Rim-Robots_\Assemblies\PawnsMechanical.dll
+C:\Users\drwp0\Documents\My Games\RimWorld.v1.3.3287\RimWorld.v1.3.3287\RimWorld.v1.3.3287\Mods\Rim-Robots_\Assemblies\PawnsMechanical.pdb
+C:\Users\drwp0\Documents\My Games\RimWorld.v1.3.3287\RimWorld.v1.3.3287\RimWorld.v1.3.3287\Mods\Rim-Robots_\1.3\Source\PawnsMechanical\obj\Debug\VexedThings.SyntheticPawns.csproj.CoreCompileInputs.cache
+C:\Users\drwp0\Documents\My Games\RimWorld.v1.3.3287\RimWorld.v1.3.3287\RimWorld.v1.3.3287\Mods\Rim-Robots_\1.3\Source\PawnsMechanical\obj\Debug\VexedThings.SyntheticPawns.csproj.CopyComplete
+C:\Users\drwp0\Documents\My Games\RimWorld.v1.3.3287\RimWorld.v1.3.3287\RimWorld.v1.3.3287\Mods\Rim-Robots_\1.3\Source\PawnsMechanical\obj\Debug\PawnsMechanical.dll
+C:\Users\drwp0\Documents\My Games\RimWorld.v1.3.3287\RimWorld.v1.3.3287\RimWorld.v1.3.3287\Mods\Rim-Robots_\1.3\Source\PawnsMechanical\obj\Debug\PawnsMechanical.pdb

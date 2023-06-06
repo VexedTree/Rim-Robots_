@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Ideology Expanded - Memes and Structures</li>
+	  <li>Vanilla Cooking Expanded</li>
+    </mods>
+    <success>Always</success>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/FactionDef[parentName="SynthFactionBase"]/disallowedMemes</xpath>
+      <value>
+        <li>VME_SweetTeeth</li>
+      </value>
+    </match>
+  </Operation>  
+</Patch>

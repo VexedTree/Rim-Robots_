@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- Credit to cubicPsycho, who made this wonderful patch. -->
+  <!-- Makes personae immune to the effects of hypoxia in space -->  
+
+  <Operation Class="PatchOperationFindMod">
+    <success>Always</success>
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="PersonaRace"]</xpath>
+      <value>
+        <tradeTags>
+          <li>AnimalInsectSpace</li>
+        </tradeTags>
+      </value>
+    </match>
+  </Operation>
+</Patch>

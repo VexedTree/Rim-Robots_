@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<AlienRace.ThingDef_AlienRace ParentName="BaseSyntheticRace">
+    <defName>Personae_</defName>
+    <label>persona</label>  
+    <description>The avatar of an AI persona core - a fusion of archotech and bleeding-edge technology, their vessels are analogous to a live human; and can even outperform in certain aspects.</description>   
+    <descriptionHyperlinks><ThingDef>AIPersonaCore</ThingDef></descriptionHyperlinks>
+    <statBases>
+	  <MechBandwidth MayRequire="Ludeon.RimWorld.Biotech">2</MechBandwidth>
+	  <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>	  
+      <ComfyTemperatureMin>-50</ComfyTemperatureMin>
+      <ComfyTemperatureMax>150</ComfyTemperatureMax>
+      <RoyalFavorValue>6</RoyalFavorValue>	  
+      <PawnBeauty>0.5</PawnBeauty>	  
+      <MeleeDodgeChance>1.2</MeleeDodgeChance>	  
+      <MarketValue>5500</MarketValue>
+      <MoveSpeed>5.0</MoveSpeed>
+      <Flammability>0.3</Flammability>
+      <MedicalSurgerySuccessChance>1.2</MedicalSurgerySuccessChance>	  
+      <ResearchSpeed>1.2</ResearchSpeed>
+	  <NegotiationAbility>1.2</NegotiationAbility>
+      <SocialImpact>1.2</SocialImpact>
+      <ArmorRating_Heat>1.80</ArmorRating_Heat>	  
+    </statBases>
+    <tools>
+      <li>
+        <label>teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>8.2</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.07</chanceFactor>
+        <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+        <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+      </li>
+    </tools>
+<alienRace>
+
+<generalSettings>
+    <alienPartGenerator>
+    <headBodyPartDef>SyntheticHead</headBodyPartDef>	
+    <bodyTypes>
+	  <li>Female</li>	
+      <li>Male</li>
+      <li>Thin</li>	  
+	  <li>Hulk</li>
+    </bodyTypes>
+    <headTypes>
+	  <li>Female_PersonaAverage</li>
+      <li>Female_PersonaAveragePointy</li>	 	
+	  <li>Female_PersonaNarrow</li>	 
+      <li>Female_Persona</li>	
+      <li>Male_PersonaAverage</li>	
+      <li>Male_PersonaAveragePointy</li>
+      <li>Male_PersonaNarrow</li>	  
+      <li>Male_Persona</li>	  	  
+    </headTypes>
+    <getsGreyAt>2500</getsGreyAt>	 
+    <colorChannels Inherit="False">
+      <li>
+        <name>skin</name>
+        <first Class="ColorGenerator_Options">
+            <options>
+                <!-- Synthetic Skin -->
+                <li>
+					<weight>10</weight>
+                    <only>RGBA(1.0,1.0,1.0,1)</only>
+				</li>
+                <li>
+					<weight>5.2</weight>
+                    <only>RGBA(242, 237, 224)</only>
+				</li>	
+                <li>
+					<weight>5.5</weight>
+                    <only>RGBA(255, 239, 189)</only>
+				</li>					
+                <li>
+					<weight>5.5</weight>
+                    <only>RGBA(249, 219, 165)</only>
+				</li>
+                <li>
+					<weight>5.58</weight>
+                    <only>RGBA(242, 199, 140)</only>
+				</li>
+                <li>
+					<weight>5.63</weight>
+                    <only>RGBA(228, 158, 90)</only>
+				</li>
+                <li>
+					<weight>5.75</weight>
+                    <only>RGBA(130, 91, 48)</only>
+				</li>	
+                <li>
+					<weight>5.5</weight>
+                    <only>RGBA(228, 158, 90)</only>
+				</li>
+                <li>
+					<weight>5.2</weight>
+                    <only>RGBA(99, 70, 36)</only>
+				</li>				
+				
+				<!-- Mechanoid -->
+                <li>
+                   <weight>6.4</weight>
+				   <only>RGBA(203,207,195)</only>
+                </li>				
+                <li>
+					<weight>6</weight>
+                    <only>RGBA(178,183,162))</only>
+				</li>								
+            </options>
+        </first>
+		<second Class="AlienRace.ColorGenerator_SkinColorMelanin">
+            <minMelanin>0</minMelanin>
+            <maxMelanin>1</maxMelanin>
+		</second>				
+      </li>
+      <li>
+        <name>hair</name>
+        <first Class="ColorGenerator_Options">
+            <options>		
+				<!-- Deep Blue -->
+                <li>
+                   <weight>5.0</weight>
+                   <min>RGBA(17,16,141)</min>
+				   <max>RGBA(36,81,146,255)</max>
+                </li>			
+				<!-- Off Cyan -->
+                <li>
+                   <weight>5.2</weight>
+                   <min>RGBA(45,111,117)</min>
+				   <max>RGBA(86,100,107)</max>
+                </li>
+				<!-- Neon Purple -->
+                <li>
+                   <weight>5.0</weight>
+                   <min>RGBA(90,0,163)</min>
+				   <max>RGBA(114,0,255)</max>
+                </li>	
+				<!-- Dark Purple -->
+                <li>
+                   <weight>5.2</weight>
+                   <min>RGBA(141,16,95,1.0)</min>
+				   <max>RGBA(203,10,45,1.0)</max>
+                </li>	
+				<!-- Washed-Out Purple -->
+                <li>
+                   <weight>5.4</weight>
+                   <min>RGBA(76,69,81,1.0)</min>
+				   <max>RGBA(141,16,95,1.0)</max>
+                </li>				
+				<!-- Red -->
+                <li>
+                   <weight>5.3</weight>
+                   <min>RGBA(17,16,141,1.0)</min>
+				   <max>RGBA(36,81,146,1.0)</max>
+                </li>	
+				<!-- Black -->
+                <li>
+                   <weight>5.3</weight>
+                   <min>RGBA(20,20,20)</min>
+				   <max>RGBA(50,50,50)</max>
+                </li>				
+			    <!-- Rainbow! :D -->
+                <li>
+                   <weight>20</weight>
+                   <min>RGBA(50,50,50)</min>
+				   <max>RGBA(200,200,200)</max>
+                </li>			
+            </options>
+        </first>		
+      </li>	  
+    </colorChannels>
+    </alienPartGenerator>
+	
+    <forcedRaceTraitEntries>	
+	    <li>
+			<defName>Asexual</defName>
+			<chance>5</chance>
+		</li>	
+    </forcedRaceTraitEntries>	
+
+    <maleGenderProbability>0.5</maleGenderProbability>
+	
+</generalSettings>    
+
+
+<graphicPaths>
+	    <body>RobotRace/Body_Persona/</body>
+        <head>RobotRace/Head_Persona/</head>
+        <skinShader>Cutout</skinShader>
+</graphicPaths>
+
+    <styleSettings>
+        <li>
+            <key>HairDef</key>
+            <value>
+                <hasStyle>true</hasStyle>
+            </value>
+        </li>
+        <li>
+            <key>BeardDef</key>
+            <value>
+                <hasStyle>true</hasStyle>
+            </value>
+        </li>
+        <li>
+            <key>TattooDef</key>
+            <value>
+                <hasStyle>true</hasStyle>
+            </value>
+        </li>
+    </styleSettings>
+
+<relationSettings>
+    <relationChanceModifierChild>0</relationChanceModifierChild>
+    <relationChanceModifierParent>0</relationChanceModifierParent>
+    <relationChanceModifierSibling>0</relationChanceModifierSibling>
+</relationSettings>
+       
+
+ <thoughtSettings>
+ 
+    <butcherThoughtGeneral>
+	    <thought>ButcheredSyntheticCorpse</thought> <!-- Whoever dismantles the persona is unsettled. -->
+		<knowThought>SyntheticButcher</knowThought>  <!-- The colony at large doesn't give a shit. -->
+	</butcherThoughtGeneral>
+	
+    <ateThoughtSpecific/>
+
+    <replacerList>
+        <li>
+		    <original>NeedFood</original>
+			<replacer>ReactorNeedsSynthetic</replacer>
+	    </li>	
+        <li>
+		    <original>EnvironmentCold</original>
+			<replacer>EnvironmentColdSynthetic</replacer>
+	    </li>			
+        <li>
+		    <original>EnvironmentHot</original>
+			<replacer>EnvironmentHotSynthetic</replacer>
+	    </li>
+        <li>
+		    <original>Sick</original>
+			<replacer>SynthSick</replacer>
+	    </li>
+        <li>
+		    <original>ProsthophileNoProsthetic</original>
+			<replacer>ProsthophileNoProstheticRobot</replacer>
+	    </li>	
+        <li>
+		    <original>RotStink</original>
+			<replacer>RotStinkSynth</replacer>
+	    </li>
+        <li>
+		    <original>RotStinkLingering</original>
+			<replacer>RotStinkLingeringSynth</replacer>
+	    </li>		
+        <li>
+		    <original MayRequire="Ludeon.RimWorld.Royalty">DefeatedMechCluster</original>
+			<replacer MayRequire="Ludeon.RimWorld.Royalty">MechClusterRobot</replacer>
+	    </li>
+        <li>		
+			<original MayRequire="Ludeon.RimWorld.Ideology">TendedByMedicalSpecialist</original>
+			<replacer MayRequire="Ludeon.RimWorld.Ideology">MedicalSpecialistRobot</replacer>
+	    </li>			
+    </replacerList>  
+</thoughtSettings>
+
+<raceRestriction>		
+	<blackApparelList>
+	    <li MayRequire="OskarPotocki.VFE.Pirates">
+			<defName>VFEP_Apparel_Rumsuit</defName>
+	    </li>	
+	</blackApparelList>
+</raceRestriction>
+</alienRace>  
+<race>
+      <nameCategory>HumanStandard</nameCategory>
+      <nameGenerator>NamerPersonSynthMale</nameGenerator>
+      <nameGeneratorFemale>NamerPersonSynthFemale</nameGeneratorFemale>		  	  
+      <body>PersonaeBody</body>
+      <fleshType>VexedSynthetic</fleshType>	  
+      <bloodDef>Filth_SynthBlood</bloodDef>
+      <baseHealthScale>0.9</baseHealthScale>  	    
+      <baseHungerRate>0.0001</baseHungerRate>	  
+      <needsRest>true</needsRest>	  
+	  <hasGenders>true</hasGenders>	  	  
+      <ageGenerationCurve>
+        <points>
+		    <li>(0,0)</li>
+            <li>(14,0)</li>
+            <li>(16,100)</li>
+            <li>(50,200)</li>
+            <li>(60,30)</li>
+            <li>(70,18)</li>
+            <li>(80,10)</li>
+            <li>(90,3)</li>
+            <li>(150,0)</li>
+		    <li>(1,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>PersonaStandard</li>
+		<li MayRequire="Killathon.AndroidTiersReforged">ATR_MechanicalStandard</li>
+      </hediffGiverSets>  	  
+</race>	
+</AlienRace.ThingDef_AlienRace>
+</Defs>

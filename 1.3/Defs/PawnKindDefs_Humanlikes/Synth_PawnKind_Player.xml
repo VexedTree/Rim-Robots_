@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+  
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>Mechanent_Colonist</defName>
+    <label>mechanent</label>
+	<labelPlural>mechanents</labelPlural>
+	<race>Mechanent</race>
+    <defaultFactionType>PlayerColonySynth</defaultFactionType>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>	
+            <li>BackstoriesMechanent</li>
+        </categories>
+      </li>			
+    </backstoryFiltersOverride>		
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelMoney>0~150</apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsChance>0.03</techHediffsChance>
+    <techHediffsMoney>50~800</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialResistanceRange>13~21</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>Persona_Colonist</defName>
+    <label>persona</label>
+	<labelPlural>personae</labelPlural>
+	<race>Personae_</race>
+    <defaultFactionType>PlayerColonySynth</defaultFactionType>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>	
+            <li>BackstoriesPersona</li>
+        </categories>
+      </li>			
+    </backstoryFiltersOverride>		
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelMoney>350~600</apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsChance>0.03</techHediffsChance>
+    <techHediffsMoney>50~800</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialResistanceRange>13~21</initialResistanceRange>
+  </PawnKindDef>  
+  
+</Defs>

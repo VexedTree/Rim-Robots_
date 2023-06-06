@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingCategoryDef>
+        <defName>BodyPartsSynthetic</defName>
+        <label>synthetic body parts</label>
+        <parent>BodyParts</parent>
+    </ThingCategoryDef>	
+	
+    <ThingCategoryDef>
+        <defName>CorpsesSyntheticlike</defName>
+        <label>synthetic corpses</label>
+        <parent>alienCorpseCategory</parent>
+    </ThingCategoryDef>	
+</Defs>

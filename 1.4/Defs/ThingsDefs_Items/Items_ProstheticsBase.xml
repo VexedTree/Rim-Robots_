@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Bases. -->
+  
+  <ThingDef ParentName="BodyPartBase" Name="SyntheticPartBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <drawerType>MapMeshOnly</drawerType>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+    <alwaysHaulable>true</alwaysHaulable>
+    <isTechHediff>true</isTechHediff>
+    <pathCost>14</pathCost>
+    <allowedArchonexusCount>1</allowedArchonexusCount>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <Beauty>-4</Beauty>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Mass>1</Mass>
+    </statBases>
+    <tradeTags>
+      <li>TechHediff</li>
+    </tradeTags>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+  </ThingDef>  
+  
+  <ThingDef Name="SynthPartUpgradeBase" ParentName="SyntheticPartBase" Abstract="True">
+    <techLevel>Spacer</techLevel>
+    <thingCategories>
+      <li>BodyPartsSynthetic</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Items/Prosthetics/CreatedSynth</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(189,169,118)</color>
+    </graphicData>
+    <tradeTags>
+      <li>SynthUpgrade</li>
+    </tradeTags>
+    <statBases>
+      <WorkToMake>26000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>MechanentCreation</researchPrerequisite>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef Name="PersonaPartUpgradeBase" ParentName="SyntheticPartBase" Abstract="True">
+    <techLevel>Ultra</techLevel>
+    <thingCategories>
+      <li>BodyPartsSynthetic</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Items/Prosthetics/CreatedSynth</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(255,255,255)</color>
+    </graphicData>
+    <tradeTags>
+      <li>SynthUpgrade</li>
+    </tradeTags>
+    <statBases>
+      <WorkToMake>36000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>PersonaCreation</researchPrerequisite>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef Name="ArchotechPartUpgradeBase" ParentName="SyntheticPartBase" Abstract="True">
+    <techLevel>Archotech</techLevel>
+    <thingCategories>
+      <li>BodyPartsSynthetic</li>
+    </thingCategories>
+	<tickerType>Rare</tickerType>
+    <graphicData>
+      <texPath>Items/Prosthetics/CreatedArcho</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(255,255,255)</color>
+    </graphicData>	
+    <tradeTags>
+      <li>SynthUpgradeArchotech</li>
+    </tradeTags>
+    <techHediffsTags>
+      <li>ArchotechUpgrade</li>
+    </techHediffsTags>
+    <statBases>
+      <WorkToMake>58000</WorkToMake>	
+      <MarketValue>4600</MarketValue>	
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0</Flammability>	   
+    </statBases>	
+  </ThingDef>  
+  
+  
+   <!-- Upgrades - T1 -->
+  
+  <ThingDef ParentName="SynthPartUpgradeBase">
+    <defName>RR_AddedScythesItem</defName>
+    <label>plasteel scythe</label>
+    <description>A large, formidable scythe that can only be installed on 'synthetics'. Quite simply, this is very similar to the cutting appendages used by the dreaded scyther', with the exception of a small prosthetic grasper on the hilt of the scythe - to better suit everyday life. It allows for a mechanent to cut down opponents with frightening efficiency while in close combat.</description>
+    <descriptionHyperlinks><RecipeDef>RR_InstallPlasteelScythe</RecipeDef></descriptionHyperlinks>
+    <techHediffsTags Inherit="False">
+      <li>CombatUpgrade</li>
+    </techHediffsTags>	
+    <costList>
+      <Plasteel>36</Plasteel>
+	  <Steel>20</Steel>
+    </costList>
+    <recipeMaker>
+        <researchPrerequisite>MechanentCreation</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>    
+  
+
+  
+   <!-- Limbs - T1 -->  
+
+  <ThingDef ParentName="SynthPartUpgradeBase">
+    <defName>Item_MechArmSynth</defName>
+    <label>mechanical arm</label>
+    <description>A detached mechanical arm - it lacks any biological interfaces, meaning it can only be installed on 'synthetics'. Its complex arrangement of internal joints and servos allows it to perform any action a regular human arm can.</description>
+    <descriptionHyperlinks><RecipeDef>InstallMechArm</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>40</Steel>
+	  <Plasteel>15</Plasteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+  </ThingDef>   
+  
+  <ThingDef ParentName="SynthPartUpgradeBase">
+    <defName>Item_MechLegSynth</defName>
+    <label>mechanical leg</label>
+    <description>A detached mechanical leg - it lacks any biological interfaces, meaning it can only be installed on 'synthetics'. Its complex arrangement of internal joints and servos allows it to perform on par with a human leg.</description>
+    <descriptionHyperlinks><RecipeDef>InstallMechLeg</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>40</Steel>
+	  <Plasteel>15</Plasteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+  </ThingDef>   
+
+  <ThingDef ParentName="SynthPartUpgradeBase">
+    <defName>Item_MechEyeSynth</defName>
+    <label>visual sensor</label>
+    <description>A detached visual sensor - it lacks any biological interfaces, meaning it can only be installed on 'synthetics'. It allows a synthetic to detect and decipher changes in light, similarly to cameras. It is on par with a human eye.</description>
+    <descriptionHyperlinks><RecipeDef>InstallMechEye</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>20</Steel>
+	  <Plasteel>15</Plasteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+  </ThingDef>   
+  
+  <ThingDef ParentName="SynthPartUpgradeBase">
+    <defName>Item_MechJawSynth</defName>
+    <label>mechanical jaw</label>
+    <description>A detached linguistics operator - it lacks any biological interfaces, meaning it can only be installed on 'synthetics'. It contains a micro-mesh speaker capable of transmitting the sounds desired by the user.</description>
+    <descriptionHyperlinks><RecipeDef>InstallMechJaw</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>20</Steel>
+	  <Plasteel>15</Plasteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+  </ThingDef>     
+  
+  
+   <!-- Limbs - T2 -->  
+
+  <ThingDef ParentName="PersonaPartUpgradeBase">
+    <defName>Item_SynthArmSynth</defName>
+    <label>synthetic arm</label>
+    <description>A detached synthetic arm - it lacks any biological interfaces, meaning it can only be installed on 'synthetics'. Its exquisitely complex internal workings allows it to perform any action a regular human arm can. A lattice-dust healing system allows it to recover from damage - it is capable of outperforming a human arm.</description>
+    <descriptionHyperlinks><RecipeDef>InstallSynthArm</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>10</Steel>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+  </ThingDef>   
+  
+  <ThingDef ParentName="PersonaPartUpgradeBase">
+    <defName>Item_SynthLegSynth</defName>
+    <label>synthetic leg</label>
+    <description>A detached synthetic leg - it lacks any biological interfaces, meaning it can only be installed on 'synthetics'. Its exquisitely complex internal workings allows it to perform just like a human leg. A lattice-dust healing system allows it to recover from damage - it is capable of outperforming a human arm.</description>
+    <descriptionHyperlinks><RecipeDef>InstallSynthLeg</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>10</Steel>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+  </ThingDef>     
+  
+  <ThingDef ParentName="PersonaPartUpgradeBase">
+    <defName>Item_SynthEyeSynth</defName>
+    <label>synthetic eye</label>
+    <description>A detached synthetic eye - it lacks any biological interfaces, meaning it can only be installed on 'synthetics'. It allows a synthetic to detect and decipher changes in light, with internal signal pre-processor, and wide-spectrum sensors. It is as good as a human eye.</description>
+    <descriptionHyperlinks><RecipeDef>InstallSynthEye</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>20</Steel>
+	  <Plasteel>15</Plasteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+  </ThingDef>   
+  
+  <ThingDef ParentName="PersonaPartUpgradeBase">
+    <defName>Item_SynthJawSynth</defName>
+    <label>synthetic jaw</label>
+    <description>A detached synthetic jaw - it lacks any biological interfaces, meaning it can only be installed on 'synthetics'. Its complex internal workings allows for uncompromised speak and eloquence, as a added bonus it is very beautiful.</description>
+    <descriptionHyperlinks><RecipeDef>InstallSynthJaw</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>20</Steel>
+	  <Plasteel>15</Plasteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+  </ThingDef>   
+  
+</Defs>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Inject "butcher" jobs. -->
+    <Operation Class="PatchOperationAdd">
+	    <xpath>/Defs/ThingDef[defName="TableMachining"]/recipes</xpath>
+	    <value>
+    	    <li>ShredCorpseSynthetic</li>
+	    </value>
+    </Operation>
+  
+    <Operation Class="PatchOperationAdd">
+	    <xpath>/Defs/ThingDef[defName="CraftingSpot"]/recipes</xpath>
+	    <value>
+	    	<li>SmashCorpseSynthetic</li>
+	    </value>
+    </Operation>
+
+  
+    <!-- Inject corpse exceptions. -->
+    <Operation Class="PatchOperationAdd">
+	    <xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/fixedIngredientFilter/disallowedCategories</xpath>
+	    <value>
+	    	<li>CorpsesSyntheticlike</li>
+	    </value>
+    </Operation> 
+  
+    <Operation Class="PatchOperationAdd">
+	    <xpath>/Defs/RecipeDef[defName="CremateCorpse"]/fixedIngredientFilter/disallowedCategories</xpath>
+	    <value>
+		    <li>CorpsesSyntheticlike</li>
+	    </value>
+    </Operation>  
+	
+</Patch>
