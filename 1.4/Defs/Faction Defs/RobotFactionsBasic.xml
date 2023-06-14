@@ -251,7 +251,7 @@
   <FactionDef ParentName="SynthFactionBase">
     <defName>SynthEvil</defName>
     <label>hostile mech reign</label>
-    <description>These synthetic-sentients have been occupying this planet for a few decades. They are technologically more advanced than regular outlanders, but choose not to leave the planet. They work with advanced machinery and massive factories, and utilize both charge weaponry and advanced pyrotechnics.\n\nAfter either hundreds of years of oppression or a hatred for the biological, they've become completely and utterly hostile.\n\nThis particular group is hostile to all forms of biological life, and those who associate with it.</description>
+    <description>These mechanical beings have been occupying this planet for a few decades. They are technologically more advanced than regular outlanders, but choose not to leave. They work with advanced machinery and massive factories, utilizing charge weaponry and advanced pyrotechnics for their regular assaults.\n\nAfter either hundreds of years of oppression or a coded hatred for the biological, they've become completely and utterly hostile.\n\nThis particular group is hostile to all forms of biological life, and those who associate with it.</description>
     <colorSpectrum>
       <li>(74,75,71)</li>
       <li>(41,40,41)</li>
@@ -293,6 +293,11 @@
           <Personae_Nexus>1</Personae_Nexus>
 		  <Mechanent_Spacer_Trooper>0.5</Mechanent_Spacer_Trooper>
 		  <Mechanent_Spacer_Marine>0.2</Mechanent_Spacer_Marine> 
+		  <Mech_Scyther>2</Mech_Scyther>
+		  <Mech_Lancer>0.5</Mech_Lancer>
+		  <Mech_Pikeman>0.1</Mech_Pikeman>
+		  <Mech_Militor MayRequire="Ludeon.RimWorld.Biotech">8</Mech_Militor>
+          <Mech_Legionary MayRequire="Ludeon.RimWorld.Biotech">0.02</Mech_Legionary>
         </options>
       </li>  
       <li>
@@ -306,21 +311,26 @@
           <Mechanent_Heavy>3</Mechanent_Heavy>
           <Mechanent_Elite>2</Mechanent_Elite>
           <Mechanent_Spacer_Trooper>0.4</Mechanent_Spacer_Trooper>
+		  <Mech_Lancer>0.5</Mech_Lancer>
+		  <Mech_Pikeman>0.1</Mech_Pikeman>
+		  <Mech_Tesseron MayRequire="Ludeon.RimWorld.Biotech">0.01</Mech_Tesseron>
         </options>
       </li> 
       <li>
-        <!-- Elite extermination squad. -->
+        <!-- Bio-extermination squad. -->
         <kindDef>Combat</kindDef>
         <commonality>6</commonality>
         <options>
-          <Mechanent_Charger>5</Mechanent_Charger>
 		  <Mechanent_Elite>8</Mechanent_Elite>
 		  <Mechanent_Sniper>2</Mechanent_Sniper>
           <Mechanent_Heavy>1</Mechanent_Heavy>
 		  <Mechanent_Spacer_Trooper>6</Mechanent_Spacer_Trooper>
 		  <Mechanent_Spacer_Marine>4</Mechanent_Spacer_Marine> 
 		  <Persona_Spacer_Trooper>0.3</Persona_Spacer_Trooper>
-		  <Persona_Spacer_Marine>0.2</Persona_Spacer_Marine> 		  
+		  <Persona_Spacer_Marine>0.2</Persona_Spacer_Marine> 	
+          <Mech_CentipedeGunner>0.01</Mech_CentipedeGunner>
+		  <Mech_Tesseron MayRequire="Ludeon.RimWorld.Biotech">0.8</Mech_Tesseron>
+          <Mech_Legionary MayRequire="Ludeon.RimWorld.Biotech">0.08</Mech_Legionary>		  
         </options>
       </li> 	  
       <li>
@@ -333,6 +343,8 @@
         </disallowedStrategies>		
         <options>
           <Mechanent_Charger>10</Mechanent_Charger>
+		  <Mech_Scyther>5</Mech_Scyther>
+		  <Mech_Tunneler MayRequire="Ludeon.RimWorld.Biotech">0.01</Mech_Tunneler>
         </options>
       </li>	
 	  
@@ -351,7 +363,12 @@
 		  <Mechanent_Spacer_Trooper>2</Mechanent_Spacer_Trooper>
 		  <Mechanent_Spacer_Marine>1.5</Mechanent_Spacer_Marine>
 		  <Persona_Spacer_Trooper>1</Persona_Spacer_Trooper>
-		  <Persona_Spacer_Marine>0.5</Persona_Spacer_Marine> 			  
+		  <Persona_Spacer_Marine>0.5</Persona_Spacer_Marine> 	
+		  <Mech_Scyther>0.8</Mech_Scyther>
+		  <Mech_Lancer>2</Mech_Lancer>
+		  <Mech_Pikeman>0.2</Mech_Pikeman>
+		  <Mech_Militor MayRequire="Ludeon.RimWorld.Biotech">5</Mech_Militor>
+          <Mech_Legionary MayRequire="Ludeon.RimWorld.Biotech">0.4</Mech_Legionary>
         </options>
       </li>	
       <li MayRequire="Ludeon.RimWorld.Ideology">
@@ -360,6 +377,7 @@
         <options>
           <Mechanent_Miner>1</Mechanent_Miner>
 		  <Mechanent_Guard>0.4</Mechanent_Guard>
+		  <Mech_Tunneler MayRequire="Ludeon.RimWorld.Biotech">2</Mech_Tunneler>
         </options>
       </li>
       <li MayRequire="Ludeon.RimWorld.Ideology">
@@ -368,6 +386,7 @@
         <options>
           <Mechanent_Logger>1</Mechanent_Logger>
 		  <Mechanent_Guard>0.8</Mechanent_Guard>
+		  <Mech_Militor MayRequire="Ludeon.RimWorld.Biotech">5</Mech_Militor>
         </options>
       </li>  
     </pawnGroupMakers>	

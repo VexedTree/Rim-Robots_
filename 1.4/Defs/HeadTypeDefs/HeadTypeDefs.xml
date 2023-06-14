@@ -97,6 +97,12 @@
   </HeadTypeDef>
 
   <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>None_Logic</defName>
+    <graphicPath>RobotRace/Head_Mechanent/Logic</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>  
+  
+  <HeadTypeDef ParentName="AverageBaseSynth">
     <defName>None_Medic</defName>
     <graphicPath>RobotRace/Head_Mechanent/Medic</graphicPath>
     <gender>None</gender>
@@ -142,12 +148,14 @@
     <defName>None_Scyther</defName>
     <graphicPath>RobotRace/Head_Mechanent/Scyther</graphicPath>
     <gender>None</gender>
+	<narrow>true</narrow>
   </HeadTypeDef>  
 
   <HeadTypeDef ParentName="AverageBaseSynth">
     <defName>None_Drifter</defName>
     <graphicPath>RobotRace/Head_Mechanent/Drifter</graphicPath>
     <gender>None</gender>
+	<narrow>true</narrow>
   </HeadTypeDef>
 
   <HeadTypeDef ParentName="AverageBaseSynth">

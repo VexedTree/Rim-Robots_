@@ -8,12 +8,16 @@
 			<Cleanliness>-10</Cleanliness>
 		</statBases>
 		<graphicData>
-			<texPath>Filth</texPath>
+			<texPath>Things/Filth/Spatter</texPath>
+			<color>(55, 121, 170)</color>
 		</graphicData>
 		<filth>
+			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+			<disappearsInDays>35~40</disappearsInDays>
 			<rainWashes>true</rainWashes>
 			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
 			<canFilthAttach>true</canFilthAttach>
+			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
 		</filth>
 	</ThingDef>
 </Defs>

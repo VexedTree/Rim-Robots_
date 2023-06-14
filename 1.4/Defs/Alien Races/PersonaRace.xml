@@ -248,10 +248,6 @@
 			<replacer>SynthSick</replacer>
 	    </li>
         <li>
-		    <original>ProsthophileNoProsthetic</original>
-			<replacer>ProsthophileNoProstheticRobot</replacer>
-	    </li>	
-        <li>
 		    <original>RotStink</original>
 			<replacer>RotStinkSynth</replacer>
 	    </li>
