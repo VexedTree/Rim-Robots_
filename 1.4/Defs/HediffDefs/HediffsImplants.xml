@@ -3,17 +3,13 @@
 
   <!-- Basic -->
 
-  <HediffDef ParentName="ImplantHediffBase">
+  <HediffDef>
     <defName>RR_OverclockedCore</defName>
     <label>overclocked core</label>
-	<description>This synthetic pawn is utilizing an overclocked AI core, increasing its reaction time, speed, and manipulation - which vastly increases fuel consumption and the risk of internal damage.</description>
-	<hediffClass>HediffWithComps</hediffClass>
+	<description>This machine persona is utilizing an overclocked AI core, increasing its reaction time, speed, and manipulation - which vastly increases fuel consumption and the risk of internal damage.</description>
+    <hediffClass>Hediff_Implant</hediffClass>
 	<isBad>false</isBad>
-    <tendable>false</tendable>		
-	<everCurableByItem>false</everCurableByItem>		
-	<scenarioCanAdd>false</scenarioCanAdd>
 	<initialSeverity>1</initialSeverity>
-	<maxSeverity>1.0</maxSeverity>
 	<defaultLabelColor>(0.6, 0.6, 0.70)</defaultLabelColor>	
     <hediffGivers>
       <li Class="HediffGiver_Random">

@@ -3,25 +3,27 @@
 
   <!-- Wooden peg leg. -->
 
-  <HediffDef ParentName="AddedBodyPartBase">
-    <defName>SynthPegLeg</defName>
-    <label>peg leg</label>
-    <labelNoun>a peg leg</labelNoun>
-    <description>An installed peg leg.</description>
-    <priceImpact>false</priceImpact>
-    <addedPartProps>
-      <solid>true</solid>
-      <partEfficiency>0.60</partEfficiency>
-    </addedPartProps>
-    <spawnThingOnRemoved>WoodLog</spawnThingOnRemoved>
-  </HediffDef>
-
   <RecipeDef ParentName="SyntheticHotswapUpgradeBase">
     <defName>InstallPegLegSynth</defName>
     <label>install peg leg</label>
     <description>Install a peg leg.</description>
     <descriptionHyperlinks><ThingDef>WoodLog</ThingDef></descriptionHyperlinks>
     <jobString>Installing peg leg.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>	
 	<appliedOnFixedBodyParts>
 		<li>MechLeg</li>
 		<li>SyntheticLeg</li>
@@ -32,25 +34,27 @@
 
   <!-- Wooden hand. -->
 
-  <HediffDef ParentName="AddedBodyPartBase">
-    <defName>SynthWoodenHand</defName>
-    <label>wooden hand</label>
-    <labelNoun>a wooden hand</labelNoun>
-    <description>An installed wooden hand.</description>
-    <priceImpact>false</priceImpact>
-    <addedPartProps>
-      <solid>true</solid>
-      <partEfficiency>0.60</partEfficiency>
-    </addedPartProps>
-    <spawnThingOnRemoved>WoodLog</spawnThingOnRemoved>
-  </HediffDef>
-
   <RecipeDef ParentName="SyntheticHotswapUpgradeBase">
     <defName>InstallWoodenHandSynth</defName>
     <label>install wooden hand</label>
     <description>Install a wooden hand.</description>
     <descriptionHyperlinks><ThingDef>WoodLog</ThingDef></descriptionHyperlinks>
     <jobString>Installing wooden hand.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>	
 	<appliedOnFixedBodyParts>
 		<li>MechanicalHand</li>
 		<li>SyntheticHand</li>
@@ -61,25 +65,27 @@
   
   <!-- Wooden foot. -->
 
-  <HediffDef ParentName="AddedBodyPartBase">
-    <defName>SynthWoodenFoot</defName>
-    <label>wooden foot</label>
-    <labelNoun>a wooden foot</labelNoun>
-    <description>An installed wooden foot.</description>
-    <priceImpact>false</priceImpact>
-    <addedPartProps>
-      <solid>true</solid>
-      <partEfficiency>0.80</partEfficiency>
-    </addedPartProps>
-    <spawnThingOnRemoved>WoodLog</spawnThingOnRemoved>
-  </HediffDef>
-
   <RecipeDef ParentName="SyntheticHotswapUpgradeBase">
     <defName>InstallWoodenFootSynth</defName>
     <label>install wooden foot</label>
     <description>Install a wooden foot.</description>
     <descriptionHyperlinks><ThingDef>WoodLog</ThingDef></descriptionHyperlinks>
     <jobString>Installing wooden foot.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>	
     <workAmount>1000</workAmount>
 	<appliedOnFixedBodyParts>
 		<li>MechanicalFoot</li>

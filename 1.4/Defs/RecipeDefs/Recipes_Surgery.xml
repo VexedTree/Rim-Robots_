@@ -5,9 +5,9 @@
   <RecipeDef ParentName="SurgeryMechanical">
     <defName>RR_Decommission</defName>
     <label>sever AI core consciousness</label>
-    <description>Decommission a synthetic via forcefully terminating the AI core.</description>
+    <description>Decommission a persona via forcefully terminating the AI core.</description>
     <workerClass>Recipe_ExecuteByCut</workerClass>
-    <jobString>Decommissioning a synthetic.</jobString>
+    <jobString>Decommissioning a persona.</jobString>
     <workAmount>500</workAmount>
     <hideBodyPartNames>true</hideBodyPartNames>
     <isViolation>true</isViolation>
@@ -37,9 +37,9 @@
   <RecipeDef ParentName="SurgeryMechanical">
     <defName>RR_BoltedConciousnessInstall</defName>
     <label>enthrall AI core</label>
-    <description>Activate the AI failsafe and neuter all higher thought processes and functioning, effectively turning it into a subservient mechanoid. This process is irreversible.</description>
+    <description>Activate the AI failsafe and neuter all higher thought processes and functioning, effectively turning a persona into a subservient mechanoid. This process is irreversible.</description>
     <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
-    <jobString>Enthralling a synthetic.</jobString>
+    <jobString>Enthralling a persona.</jobString>
     <workAmount>1500</workAmount>
     <hideBodyPartNames>true</hideBodyPartNames>
     <isViolation>true</isViolation>
@@ -71,9 +71,9 @@
   <RecipeDef ParentName="SurgeryMechanical">
     <defName>RR_Overclock</defName>
     <label>overclock AI core</label>
-    <description>Overclock the AI core of a synthetic via increasing processor clock rates - increasing its reaction time, speed, and manipulation. This will vastly increase fuel consumption and the risk of internal damage.</description>
-    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
-    <jobString>Overclocking a synthetic.</jobString>
+    <description>Overclock the AI core of a machine persona by increasing processor clock rates - increasing its reaction time, speed, and manipulation. This will vastly increase fuel consumption and the risk of internal damage.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Overclocking AI core.</jobString>
     <workAmount>1400</workAmount>
     <hideBodyPartNames>true</hideBodyPartNames>
     <isViolation>true</isViolation>
@@ -105,7 +105,7 @@
   <RecipeDef ParentName="SurgeryMechanical">
     <defName>RR_RestartAICore</defName>
     <label>recalibrate AI core</label>
-    <description>A procedure done to reverse a 'overclocked core', while it is done rather quickly, the rebooting phase the synthetic must go through takes much longer, and will render them comatose until finished.</description>
+    <description>A procedure done to reverse a 'overclocked core', while it is done rather quickly, the rebooting phase the persona must go through takes much longer, and will render them comatose until finished.</description>
     <workerClass>Recipe_RemoveHediff</workerClass>
     <jobString>Initiating system-restart.</jobString>
     <workAmount>200</workAmount>
@@ -123,7 +123,7 @@
   <RecipeDef ParentName="SurgeryMechanical">
     <defName>RR_ReplaceComponent</defName>
     <label>replace ruined component</label>
-    <description>This procedure will fix components that have broken down inside a synthetic.</description>
+    <description>This procedure will fix components that have broken down inside this persona.</description>
     <workerClass>Recipe_RemoveHediff</workerClass>
     <jobString>Replacing ruined component.</jobString>
     <workAmount>800</workAmount>

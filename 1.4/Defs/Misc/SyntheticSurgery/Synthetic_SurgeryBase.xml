@@ -102,34 +102,6 @@
 	<recipeUsers>
       <li>Mechanent</li>
     </recipeUsers>	
-  </RecipeDef> 
- 
-  <!-- Wooden workerClass. --> 
-  <RecipeDef Name="SyntheticInstallWoodenPartBase" ParentName="SurgeryInstallUpgradePartAddedBase" Abstract="True">
-    <workerClass>Recipe_InstallImplant</workerClass>
-    <workAmount>1500</workAmount>
-    <skillRequirements>
-      <Crafting>3</Crafting>
-    </skillRequirements>
-    <recipeUsers>
-      <li>Mechanent</li>
-	  <li>Personae_</li>
-    </recipeUsers>	
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>WoodLog</li>
-          </thingDefs>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>WoodLog</li>
-      </thingDefs>
-    </fixedIngredientFilter>
   </RecipeDef>  
 
   <!-- Remove workerClass. -->  
@@ -161,6 +133,36 @@
             <li>ComponentIndustrial</li>
 		</thingDefs>
     </fixedIngredientFilter>	
+  </RecipeDef> 
+
+  <RecipeDef ParentName="SurgeryMechanical">
+    <defName>RemoveBodyPartSynthetic</defName>
+    <label>remove part</label>
+    <description>Remove mechanical part.</description>
+    <workerClass>Recipe_RemoveBodyPart</workerClass>
+    <jobString>Removing part.</jobString>
+    <workAmount>2000</workAmount>
+    <surgerySuccessChanceFactor>1.2</surgerySuccessChanceFactor>
+    <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    <recipeUsers>
+      <li>Mechanent</li>
+	  <li>Personae_</li>
+    </recipeUsers>	
+	<ingredients>
+	    <li>
+			<filter>
+				<thingDefs>
+					<li>ComponentIndustrial</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+    <fixedIngredientFilter>
+	    <thingDefs>
+            <li>ComponentIndustrial</li>
+		</thingDefs>
+    </fixedIngredientFilter>
   </RecipeDef>  
 
 </Defs>

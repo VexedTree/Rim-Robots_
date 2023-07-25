@@ -15,7 +15,7 @@
       <CarryingCapacity>85</CarryingCapacity>
       <MentalBreakThreshold>0.2</MentalBreakThreshold>
       <PainShockThreshold>0.9</PainShockThreshold>	  
-	  <InjuryHealingFactor>0</InjuryHealingFactor>
+	  <InjuryHealingFactor>0.5</InjuryHealingFactor>
       <ResearchSpeed>0.8</ResearchSpeed>
       <SocialImpact>0.5</SocialImpact>
       <PlantHarvestYield>0.8</PlantHarvestYield>
@@ -373,13 +373,7 @@
       <baseHungerRate>0.5</baseHungerRate>	  
       <needsRest>false</needsRest>	  
 	  <hasGenders>false</hasGenders>		
-      <lifeStageAges Inherit="False">
-        <li MayRequire="Ludeon.RimWorld.Biotech">
-          <def>MechanoidFullyFormed</def>
-          <minAge>100</minAge>
-          <soundWounded>BulletImpact_Metal</soundWounded>
-          <soundDeath>BulletImpact_Metal</soundDeath>
-        </li>	  
+      <lifeStageAges Inherit="False">	  
         <li>
           <def>MechanoidFullyFormed</def>
           <minAge>0</minAge>

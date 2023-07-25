@@ -1804,9 +1804,9 @@
 
 <AlienRace.AlienBackstoryDef>
     <defName>AdulthoodPersonae48</defName>
-    <title>Corporate Entity</title>
-    <titleShort>Capitalist</titleShort>
-    <baseDesc>[PAWN_nameDef] was quietly imported to a urbworld to be installed as the shadow-CEO of a ruthless mega-corporation. Under [PAWN_nameDef]'s control the company's profit margin sky-rocketed - but [PAWN_nameDef] was only driven by the incentive of seeing the numbers rise, and ended up plunged the corporation into increasingly shady, morally corrupt, and down-right sinister operations. All while maintaining the facade of 'just business'.</baseDesc>
+    <title>corporate entity</title>
+    <titleShort>capitalist</titleShort>
+    <baseDesc>[PAWN_nameDef] was quietly imported to an urbworld to be installed as the shadow-CEO of a ruthless mega-corporation. Under [PAWN_nameDef]'s control the company's profit margin sky-rocketed - but [PAWN_pronoun] was only driven by the incentive of seeing the numbers rise, and ended up plunged the corporation into increasingly shady, morally corrupt, and down-right sinister operations. All while maintaining the facade of 'just business'.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>BackstoriesPersona</li>
@@ -1825,15 +1825,19 @@
 		<li>
 			<key>Intellectual</key>
 			<value>3</value>
+		</li>
+		<li>
+			<key>Plants</key>
+			<value>-5</value>
 		</li>		
 	</skillGains>
 </AlienRace.AlienBackstoryDef>
 
 <AlienRace.AlienBackstoryDef>
     <defName>AdulthoodPersonae49</defName>
-    <title>Machine Cultist</title>
-    <titleShort>Penitent</titleShort>
-    <baseDesc>After following the ideology surrounding that of a AI supercomputer built to make simulated projections of the future, [PAWN_nameDef] became obsessed with fulfilling the AI's vision of the perfect future - no matter how many 'outliers' the AI marked, or how many lives were quietly controlled by its influences.</baseDesc>
+    <title>machine cultist</title>
+    <titleShort>penitent</titleShort>
+    <baseDesc>[PAWN_nameDef] followed a cult surrounding an AI supercomputer that was built to make simulated projections of the future. [PAWN_pronoun] became obsessed with fulfilling the AI's vision of the perfect future - no matter how many 'outliers' the AI marked, or how many lives were quietly controlled by its influences.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>BackstoriesPersona</li>
@@ -1863,9 +1867,9 @@
 
 <AlienRace.AlienBackstoryDef>
     <defName>AdulthoodPersonae50</defName>
-    <title>Brain Scanned Pseudo-Clone</title>
-    <titleShort>Pseudo-Clone</titleShort>
-    <baseDesc>[PAWN_nameDef] is the result of a project aimed at cheating death entirely - [PAWN_possessive] life, memories, and personality are all miraged impressions of a affluent human who has since died. When [PAWN_pronoun] questions the nature of [PAWN_possessive] reality, [PAWN_pronoun] goes into fits of mania.</baseDesc>
+    <title>brain-scanned pseudo-clone</title>
+    <titleShort>pseudo-clone</titleShort>
+    <baseDesc>[PAWN_nameDef] is the result of a project aimed at cheating death entirely - [PAWN_possessive] life, memories, and personality are all mirages of the mind of an affluent human who's brain was scanned and digitized. Ultimately the project was a failure, and [PAWN_pronoun] isn't who [PAWN_pronoun] was meant to clone - but at least it gave [PAWN_objective] some insight on the inner workings of the human body.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>BackstoriesPersona</li>
@@ -1878,9 +1882,13 @@
     </workDisables>		
 	<skillGains>				
 		<li>
-			<key>Social</key>
+			<key>Medicine</key>
 			<value>5</value>
 		</li>
+		<li>
+			<key>Animals</key>
+			<value>2</value>
+		</li>		
 		<li>
 			<key>Shooting</key>
 			<value>-2</value>
@@ -1888,6 +1896,42 @@
 	</skillGains>
 </AlienRace.AlienBackstoryDef>
 
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae51</defName>
+    <title>manic geologist</title>
+    <titleShort>geologist</titleShort>
+    <baseDesc>[PAWN_nameDef] was gestated to live as an enthusiastic geologist. Unfortunately, this was all [PAWN_possessive] creators programmed [PAWN_objective] to be, an overly enthusiastic geologist. [PAWN_pronoun] spouts rock trivia and geology facts at any chance [PAWN_pronoun] gets.</baseDesc>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodPersonae1</linkedBackstory>	
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<workDisables>
+	    <li>PlantWork</li>
+		<li>Animals</li>
+    </workDisables>		
+	<skillGains>				
+		<li>
+			<key>Mining</key>
+			<value>6</value>
+		</li>
+		<li>
+			<key>Construction</key>
+			<value>2</value>
+		</li>		
+		<li>
+			<key>Intellectual</key>
+			<value>-2</value>
+		</li>
+		<li>
+			<key>Social</key>
+			<value>-2</value>
+		</li>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
 
 
 

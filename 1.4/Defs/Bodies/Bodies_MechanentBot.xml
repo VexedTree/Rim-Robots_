@@ -286,7 +286,7 @@
             <parts>
             <li>
               <def>MechanicalFoot</def>
-              <customLabel>right foot</customLabel>
+              <customLabel>right mechanical foot</customLabel>
               <coverage>0.1</coverage>
               <groups>
                 <li>Feet</li>

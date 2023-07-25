@@ -17,7 +17,7 @@
       <MoveSpeed>5.0</MoveSpeed>
       <Flammability>0.3</Flammability>
       <MedicalSurgerySuccessChance>1.2</MedicalSurgerySuccessChance>
-      <InjuryHealingFactor>0.5</InjuryHealingFactor>	  
+      <InjuryHealingFactor>0.8</InjuryHealingFactor>	  
       <ResearchSpeed>1.2</ResearchSpeed>
 	  <NegotiationAbility>1.2</NegotiationAbility>
       <SocialImpact>1.2</SocialImpact>

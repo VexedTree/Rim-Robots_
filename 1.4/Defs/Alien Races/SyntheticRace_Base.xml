@@ -330,11 +330,7 @@
 	  <maxMechEnergy>100</maxMechEnergy>
       <baseBodySize>1.0</baseBodySize>	
 	  
-      <lifeStageAges>
-        <li MayRequire="Ludeon.RimWorld.Biotech">
-          <def>MechanoidFullyFormed</def>
-          <minAge>100</minAge>
-        </li>	  
+      <lifeStageAges> 
         <li>
           <def>MechanoidFullyFormed</def>
           <minAge>0</minAge>
@@ -351,8 +347,7 @@
       </specialShadowData>	  
 </race>
     <recipes>
-      <li>AdministerMechSerumHealer</li>	
-	  <li>RemoveBodyPart</li> 	  
+      <li>AdministerMechSerumHealer</li>	  
     </recipes>
 	<modExtensions>	
 	    <li Class="VexedThings.HumanlikeMechanoidsExtension">

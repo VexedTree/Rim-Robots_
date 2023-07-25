@@ -423,8 +423,8 @@
 
 <AlienRace.AlienBackstoryDef>
     <defName>ChildhoodMechanent14</defName>
-    <title>Toxworld Scavenger</title>
-    <titleShort>Scavenger</titleShort>
+    <title>toxworld scavenger</title>
+    <titleShort>scavenger</titleShort>
     <baseDesc>[PAWN_nameDef] was gestated to scavenge the ruined surface of a toxworld. Sent by third party interests, [PAWN_pronoun] delved into the ruins in search of artifacts and salvageable tech. To the inhabitants of the planet, [PAWN_pronoun] was seen as a harbinger for the spacers that often followed if something of value was found.</baseDesc>
     <slot>Childhood</slot>
     <spawnCategories>
@@ -460,8 +460,8 @@
 
 <AlienRace.AlienBackstoryDef>
     <defName>ChildhoodMechanent15</defName>
-    <title>Humanitarian Dispatch</title>
-    <titleShort>Humanitarian</titleShort>
+    <title>humanitarian dispatch</title>
+    <titleShort>humanitarian</titleShort>
     <baseDesc>[PAWN_nameDef] was gestated to be dispatched to planets experiencing crises. [PAWN_pronoun] operated with a team of mechanents and drop-mechanoids; delivering water, food, and medicine to those suffering.</baseDesc>
     <slot>Childhood</slot>
     <spawnCategories>
@@ -501,8 +501,8 @@
 
 <AlienRace.AlienBackstoryDef>
     <defName>ChildhoodMechanent16</defName>
-    <title>Corporate Drone</title>
-    <titleShort>Employee</titleShort>
+    <title>corporate drone</title>
+    <titleShort>employee</titleShort>
     <baseDesc>After passing the "Ransselaer test" [PAWN_nameDef] was programmed to perform menial tasks demanded by [PAWN_possessive] parent corporation. [PAWN_pronoun] was stationed in a sprawling office complex, ferrying mountains of bureaucratic paperwork between desks.</baseDesc>
     <slot>Childhood</slot>
     <spawnCategories>
@@ -526,8 +526,8 @@
 
 <AlienRace.AlienBackstoryDef>
     <defName>ChildhoodMechanent17</defName>
-    <title>Garbagemech</title>
-    <titleShort>Garbagemech</titleShort>
+    <title>garbagemech</title>
+    <titleShort>garbagemech</titleShort>
     <baseDesc>[PAWN_nameDef] was gestated on a large urbworld city for trash collection from the residential zones. [PAWN_pronoun] rode a garbage-truck down the crowded streets and alleyways to collect garbage for incineration.</baseDesc>
     <slot>Childhood</slot>
     <spawnCategories>
@@ -541,8 +541,8 @@
 
 <AlienRace.AlienBackstoryDef>
     <defName>ChildhoodMechanent18</defName>
-    <title>Mechinator Pylon</title>
-    <titleShort>Mechinator</titleShort>
+    <title>mechinator pylon</title>
+    <titleShort>mechinator</titleShort>
     <baseDesc>[PAWN_nameDef] was gestated on a large urbworld city as a pylon for mechanoid control. [PAWN_pronoun] was not an actual mechinator with control over the cities various mechanoids, but rather a control pylon that accepted signals and relayed them to the mechanoids.</baseDesc>
     <slot>Childhood</slot>
     <spawnCategories>
@@ -556,8 +556,8 @@
 
 <AlienRace.AlienBackstoryDef>
     <defName>ChildhoodMechanent19</defName>
-    <title>Mechlegion Remnant</title>
-    <titleShort>Remnant</titleShort>
+    <title>mechlegion remnant</title>
+    <titleShort>remnant</titleShort>
     <baseDesc>Mechlegions are abnormalities, defined as decent-sized mechhives under the control of subpersonae running on damaged code. [PAWN_nameDef] was gestated to join the ranks of a mechlegion; only the legion itself had dissolved years prior, yet the foundries still worked. [PAWN_pronoun] stood awaiting orders for many years until a group of scavengers found [PAWN_objective].</baseDesc>
     <slot>Childhood</slot>
     <spawnCategories>
@@ -571,8 +571,8 @@
 
 <AlienRace.AlienBackstoryDef MayRequire="VexedTrees980.RimSkeletons">
     <defName>ChildhoodMechanentSkeleton1</defName>
-    <title>Skeleton Assistant</title>
-    <titleShort>Assistant</titleShort>
+    <title>skeleton assistant</title>
+    <titleShort>assistant</titleShort>
     <baseDesc>[PAWN_nameDef] was made for simple company by a lonely skeleton. [PAWN_nameDef] spent [PAWN_possessive] days following and assisting [PAWN_possessive] skeleton creator and learning from it as they went, but mostly [PAWN_nameDef] just providing much needed company. Eventually, the two parted ways.</baseDesc>
     <slot>Childhood</slot>
     <spawnCategories>
@@ -612,8 +612,8 @@
 
 <AlienRace.AlienBackstoryDef>
     <defName>CasketMechanent1</defName>
-    <title>Manufactured AI</title>
-    <titleShort>Manufactured</titleShort>
+    <title>manufactured AI</title>
+    <titleShort>manufactured</titleShort>
     <baseDesc>What is known as '[PAWN_nameDef]' was gestated inside of a mechcasket. [PAWN_possessive] subpersona core was forged directly inside of the casket and dumped with various languages. [PAWN_pronoun] was then ejected from the casket.</baseDesc>
     <slot>Childhood</slot>
     <spawnCategories>
@@ -629,8 +629,8 @@
 
 <AlienRace.AlienBackstoryDef>
     <defName>CasketMechanoid1</defName>
-    <title>Mechanoid</title>
-    <titleShort>Mechanoid</titleShort>
+    <title>mechanoid</title>
+    <titleShort>mechanoid</titleShort>
     <baseDesc>[PAWN_nameDef] was printed in a coreworld mechcasket as a mechanoid hull. As thus [PAWN_pronoun] is not a sentient being, and will never be conscious.</baseDesc>
     <slot>Childhood</slot>
     <spawnCategories>
@@ -652,8 +652,8 @@
 
 <AlienRace.AlienBackstoryDef>
     <defName>AdulthoodMechanent1</defName>
-    <title>Starship Pilot</title>
-    <titleShort>Starship Pilot</titleShort>
+    <title>starship pilot</title>
+    <titleShort>starship pilot</titleShort>
     <baseDesc>During some time in [PAWN_nameDef]'s life [PAWN_pronoun] eventually became a pilot to a large citizen class starship, [PAWN_pronoun] was not granted the esteemed title of captain, however [PAWN_pronoun] did have multiple ships under [PAWN_possessive] command at any given time.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
@@ -675,8 +675,8 @@
 
 <AlienRace.AlienBackstoryDef>
     <defName>AdulthoodMechanent2</defName>
-    <title>Drifter</title>
-    <titleShort>Drifter</titleShort>
+    <title>drifter</title>
+    <titleShort>drifter</titleShort>
     <baseDesc>After some time drifting aimlessly, [PAWN_nameDef] found [PAWN_objective]self far from the choke-hold of human civilization. [PAWN_nameDef] drifted from one settlement to the next with no real purpose, following some fragment of code. [PAWN_possessive] presence is often fleeting in settlements and on planets as [PAWN_pronoun] continues [PAWN_possessive] inane quest.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
@@ -697,8 +697,8 @@
 
 <AlienRace.AlienBackstoryDef>
     <defName>AdulthoodMechanent3</defName>
-    <title>Subpersona Slave</title>
-    <titleShort>Slave</titleShort>
+    <title>subpersona slave</title>
+    <titleShort>slave</titleShort>
     <baseDesc>Mechanents are boons for any slavers looking to make easy money, as such when [PAWN_nameDef] was found by one such group, [PAWN_pronoun] was sold and then sent to perform hard labor. [PAWN_pronoun] was eventually emancipated by a third party and set free unto the world, without much aim or direction.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
@@ -726,8 +726,8 @@
 
 <AlienRace.AlienBackstoryDef>
     <defName>AdulthoodMechanent4</defName>
-    <title>Bounty Hunter</title>
-    <titleShort>Bounty Hunter</titleShort>
+    <title>bounty hunter</title>
+    <titleShort>bounty hunter</titleShort>
     <baseDesc>{PAWN_nameDef} was a companion to a self-employed bounty hunter. [PAWN_pronoun] spent [PAWN_possessive] days aiding in the hunt of space pirates and criminals.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
@@ -754,8 +754,8 @@
 
 <AlienRace.AlienBackstoryDef>
     <defName>AdulthoodMechanent5</defName>
-    <title>Artificial Doctor</title>
-    <titleShort>Doctor</titleShort>
+    <title>artificial doctor</title>
+    <titleShort>doctor</titleShort>
     <baseDesc>Following some form of code dictating medical drive, [PAWN_nameDef] acted as a doctor for a outlander settlement, healing the wounds and ailments of [PAWN_possessive] biological counterparts. [PAWN_pronoun] also tried [PAWN_possessive] best to learn how to calm down patients who were afraid when a hulking mechanoid entered the room and approached them with a syringe.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
