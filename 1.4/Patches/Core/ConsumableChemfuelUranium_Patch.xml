@@ -30,10 +30,14 @@
 		                <foodType>Fluid</foodType>
 		                <maxNumToIngestAtOnce>10</maxNumToIngestAtOnce>
 		                <preferability>MealLavish</preferability>
-	                 	<ingestSound>Recipe_Cremate</ingestSound>
+	                 	<ingestSound>ReactorCharge_Sustained</ingestSound>
+						<ingestEffect>SyntheticElectricalArcs</ingestEffect>
                         <ingestCommandString>Fuel reactor with {0}</ingestCommandString>
                         <ingestReportString>Fueling reactor with {0}.</ingestReportString>		
 	                 	<optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
+						<ingestHoldUsesTable>false</ingestHoldUsesTable>
+						<useEatingSpeedStat>false</useEatingSpeedStat>
+		                <chairSearchRadius>0</chairSearchRadius>
                     </ingestible>
                 </value>
             </li>
@@ -60,10 +64,14 @@
 		                <foodType>Fluid</foodType>
 		                <maxNumToIngestAtOnce>5</maxNumToIngestAtOnce>
 		                <preferability>MealLavish</preferability>
-	                 	<ingestSound>Recipe_Cremate</ingestSound>
+	                 	<ingestSound>ReactorCharge_Sustained</ingestSound>
+						<ingestEffect>SyntheticElectricalArcs</ingestEffect>
                         <ingestCommandString>Fuel reactor with {0}</ingestCommandString>
                         <ingestReportString>Fueling reactor with {0}.</ingestReportString>		
 	                 	<optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
+						<ingestHoldUsesTable>false</ingestHoldUsesTable>
+						<useEatingSpeedStat>false</useEatingSpeedStat>
+		                <chairSearchRadius>0</chairSearchRadius>
                     </ingestible>
                 </value>
             </li>			

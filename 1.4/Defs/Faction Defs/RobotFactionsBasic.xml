@@ -235,6 +235,7 @@
         <options>
           <Mechanent_Miner>1</Mechanent_Miner>
 		  <Mechanent_Guard>0.4</Mechanent_Guard>
+		  <Mech_Tunneler MayRequire="Ludeon.RimWorld.Biotech">2</Mech_Tunneler>
         </options>
       </li>
       <li MayRequire="Ludeon.RimWorld.Ideology">
@@ -243,15 +244,16 @@
         <options>
           <Mechanent_Logger>1</Mechanent_Logger>
 		  <Mechanent_Guard>0.8</Mechanent_Guard>
-        </options>
-      </li>  
+		  <Mech_Agrihand MayRequire="Ludeon.RimWorld.Biotech">0.5</Mech_Agrihand>	
+        </options> 
+	  </li>
     </pawnGroupMakers>	
   </FactionDef>
 
   <FactionDef ParentName="SynthFactionBase">
     <defName>SynthEvil</defName>
-    <label>hostile mech reign</label>
-    <description>These mechanical beings have been occupying this planet for a few decades. They are technologically more advanced than regular outlanders, but choose not to leave. They work with advanced machinery and massive factories, utilizing charge weaponry and advanced pyrotechnics for their regular assaults.\n\nAfter either hundreds of years of oppression or a coded hatred for the biological, they've become completely and utterly hostile.\n\nThis particular group is hostile to all forms of biological life, and those who associate with it.</description>
+    <label>hostile mechlegion</label>
+    <description>This mechlegion has been occupying this planet for a few decades. They are technologically more advanced than regular outlanders but choose not to leave. They work with advanced machinery and massive factories, utilizing charge weaponry and whatever armaments they can get to fuel their frequent assaults.\n\nMechlegions can be caused by self-replicating subpersonae with damaged code or personae heralding a mechhive. These legions are always hostile to anything around them.\n\nThis particular one is hostile to all forms of biological life and those associated with it, going so far as to mass-produce mechanoids to burn it out where it might hide.</description>
     <colorSpectrum>
       <li>(74,75,71)</li>
       <li>(41,40,41)</li>
@@ -313,6 +315,7 @@
           <Mechanent_Spacer_Trooper>0.4</Mechanent_Spacer_Trooper>
 		  <Mech_Lancer>0.5</Mech_Lancer>
 		  <Mech_Pikeman>0.1</Mech_Pikeman>
+          <Mech_Scorcher MayRequire="Ludeon.RimWorld.Biotech">0.2</Mech_Scorcher>			  
 		  <Mech_Tesseron MayRequire="Ludeon.RimWorld.Biotech">0.01</Mech_Tesseron>
         </options>
       </li> 
@@ -328,9 +331,9 @@
 		  <Mechanent_Spacer_Marine>4</Mechanent_Spacer_Marine> 
 		  <Persona_Spacer_Trooper>0.3</Persona_Spacer_Trooper>
 		  <Persona_Spacer_Marine>0.2</Persona_Spacer_Marine> 	
-          <Mech_CentipedeGunner>0.01</Mech_CentipedeGunner>
-		  <Mech_Tesseron MayRequire="Ludeon.RimWorld.Biotech">0.8</Mech_Tesseron>
-          <Mech_Legionary MayRequire="Ludeon.RimWorld.Biotech">0.08</Mech_Legionary>		  
+          <Mech_CentipedeBurner>0.01</Mech_CentipedeBurner>
+          <Mech_Scorcher MayRequire="Ludeon.RimWorld.Biotech">2</Mech_Scorcher>			  
+		  <Mech_Tesseron MayRequire="Ludeon.RimWorld.Biotech">0.8</Mech_Tesseron>	  
         </options>
       </li> 	  
       <li>
@@ -344,7 +347,7 @@
         <options>
           <Mechanent_Charger>10</Mechanent_Charger>
 		  <Mech_Scyther>5</Mech_Scyther>
-		  <Mech_Tunneler MayRequire="Ludeon.RimWorld.Biotech">0.01</Mech_Tunneler>
+		  <Mech_Tunneler MayRequire="Ludeon.RimWorld.Biotech">0.08</Mech_Tunneler>
         </options>
       </li>	
 	  
@@ -367,6 +370,7 @@
 		  <Mech_Scyther>0.8</Mech_Scyther>
 		  <Mech_Lancer>2</Mech_Lancer>
 		  <Mech_Pikeman>0.2</Mech_Pikeman>
+		  <Mech_CentipedeGunner>0.01</Mech_CentipedeGunner>
 		  <Mech_Militor MayRequire="Ludeon.RimWorld.Biotech">5</Mech_Militor>
           <Mech_Legionary MayRequire="Ludeon.RimWorld.Biotech">0.4</Mech_Legionary>
         </options>
@@ -386,6 +390,7 @@
         <options>
           <Mechanent_Logger>1</Mechanent_Logger>
 		  <Mechanent_Guard>0.8</Mechanent_Guard>
+		  <Mech_Agrihand MayRequire="Ludeon.RimWorld.Biotech">0.6</Mech_Agrihand>	
 		  <Mech_Militor MayRequire="Ludeon.RimWorld.Biotech">5</Mech_Militor>
         </options>
       </li>  
@@ -404,6 +409,7 @@
             <li>ComponentIndustrial</li>
             <li>Chemfuel</li>
             <li>Neutroamine</li>
+            <li>FuelNode_SynthDiet</li>			
           </thingDefs>
         </filter>
       </fixedParams>

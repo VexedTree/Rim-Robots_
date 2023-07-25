@@ -10,7 +10,7 @@
       <li>
         <label>fully charged</label>
         <description>Energy is coursing through me.</description>
-        <baseMoodEffect>3</baseMoodEffect>
+        <baseMoodEffect>6</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>

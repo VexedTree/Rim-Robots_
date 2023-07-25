@@ -25,7 +25,7 @@
 		<amount>
 			<li>1</li>
 		</amount>
-		<result>Printed_Persona_Spawner</result>	
+		<result>Printed_Persona_Spawner</result>
 		<yield>1</yield>
 		<useQualityIncreasing>false</useQualityIncreasing>
 		<singleTimeIfNotQualityIncreasing>0.1</singleTimeIfNotQualityIncreasing>

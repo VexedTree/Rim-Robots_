@@ -1,72 +1,56 @@
-﻿using RimWorld;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using HarmonyLib;
+using RimWorld;
 using Verse;
 
 namespace VexedThings
 {
+	internal class CompProps_SynthMaker : CompProperties
+	{
+		public CompProps_SynthMaker()
+		{
+			compClass = typeof(Comp_SynthMaker);
+		}
 
-    public class CompProps_SynthMaker : CompProperties
-    {
-        public CompProps_SynthMaker()
-        {
-            this.compClass = typeof(Comp_SynthMaker);
-        }
-        public PawnKindDef pawnKind;
-    }
+		public List<PawnKindDef> pawnKinds;
+	}
 
-    public class Comp_SynthMaker : ThingComp
-    {
-        public CompProps_SynthMaker Spawnprops
-        {
-            get
-            {
-                return this.props as CompProps_SynthMaker;
-            }
-        }
-        public override void PostSpawnSetup(bool respawningAfterLoad)
-        {
-            this.SpawnPawn();
-            this.parent.Destroy(DestroyMode.Vanish);
-        }
-        public void SpawnPawn()
-        {
-            PawnKindDef pawnKind = this.Spawnprops.pawnKind;
-            Faction ofPlayer = Faction.OfPlayer;
-            PawnGenerationContext context = PawnGenerationContext.NonPlayer;
-            int tile = -1;
-            bool forceGenerateNewPawn = true;
-            bool allowDead = false;
-            bool allowDowned = false;
-            bool canGeneratePawnRelations = false;
-            bool mustBeCapableOfViolence = false;
-            float colonistRelationChanceFactor = 1f;
-            bool forceAddFreeWarmLayerIfNeeded = false;
-            bool allowGay = true;
-            bool allowPregnant = false;
-            bool allowFood = false;
-            bool allowAddictions = false;
-            bool inhabitant = false;
-            bool certainlyBeenInCryptosleep = false;
-            bool forceRedressWorldPawnIfFormerColonist = false;
-            bool worldPawnFactionDoesntMatter = false;
-            float biocodeWeaponChance = 0f;
-            float biocodeApparelChance = 0f;
-            Pawn extraPawnForExtraRelationChance = null;
-            float relationWithExtraPawnChanceFactor = 1f;
-            Predicate<Pawn> validatorPreGear = null;
-            Predicate<Pawn> validatorPostGear = null;
-            IEnumerable<TraitDef> forcedTraits = null;
-            IEnumerable<TraitDef> prohibitedTraits = null;
-            float? num = new float?(0f);
-            float? num2 = new float?(0f);
-            Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(pawnKind, ofPlayer, context, tile, forceGenerateNewPawn, allowDead, allowDowned, canGeneratePawnRelations, mustBeCapableOfViolence, colonistRelationChanceFactor, forceAddFreeWarmLayerIfNeeded, allowGay, allowPregnant, allowFood, allowAddictions, inhabitant, certainlyBeenInCryptosleep, forceRedressWorldPawnIfFormerColonist, worldPawnFactionDoesntMatter, biocodeWeaponChance, biocodeApparelChance, extraPawnForExtraRelationChance, relationWithExtraPawnChanceFactor, validatorPreGear, validatorPostGear, forcedTraits, prohibitedTraits, null, num, num2, null, null, null, null, null, true, false, false, false, null, null, null, null, null, 1f, DevelopmentalStage.Adult, null, null, null, false));
-            Pawn_ApparelTracker apparel = pawn.apparel;
-            if (apparel != null)
-            {
-                apparel.DestroyAll(DestroyMode.Vanish);
-            }
-            GenSpawn.Spawn(pawn, this.parent.Position, this.parent.Map, WipeMode.Vanish);
-        }
-    }
+	internal class Comp_SynthMaker : ThingComp
+	{
+		private CompProps_SynthMaker Props
+		{
+			get
+			{
+				return (CompProps_SynthMaker)props;
+			}
+		}
+		public override void Initialize(CompProperties props)
+		{
+			base.Initialize(props);
+			if (pawnKind == null)
+			{
+				pawnKind = Props.pawnKinds.RandomElement();
+			}
+		}
+		public override void CompTick()
+		{
+			{
+				Spawn();
+			}
+		}
+		public void Spawn()
+		{
+			Faction faction = FactionUtility.DefaultFactionFrom(pawnKind.defaultFactionType);
+			Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(pawnKind, faction, PawnGenerationContext.NonPlayer, -1, false, false, false, true, false, 1f, false, true, false, true, true, false, false, false, false, 0f, 0f, null, 1f, null, null, null, null, null, null, null, null, null, null, null, null, false, false, false, false, null, null, null, null, null, 0f, DevelopmentalStage.Adult, null, null, null, false));
+			Pawn_ApparelTracker apparel = pawn.apparel;
+			if (apparel != null)
+			{
+				apparel.DestroyAll(DestroyMode.Vanish);
+			}
+			GenSpawn.Spawn(pawn, parent.Position, parent.Map, WipeMode.Vanish);
+			parent.Destroy(DestroyMode.Vanish);
+		}
+		private PawnKindDef pawnKind;
+	}
 }

@@ -40,7 +40,9 @@
     <statBases>
 	  <Fertility MayRequire="Ludeon.RimWorld.Biotech">0</Fertility>
       <ToxicResistance>1</ToxicResistance>
-	  <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>  
+	  <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance> 
+	  <PersonaEnergyLossPerHP>0.02</PersonaEnergyLossPerHP>
+	  <TendSpeed_Synth>1</TendSpeed_Synth>
 	  <MeatAmount>0</MeatAmount>	  
       <LeatherAmount>0</LeatherAmount>	
     </statBases>
@@ -283,7 +285,7 @@
     <canReproduce>false</canReproduce>
 	
     <whiteXenotypeList>
-	    <li>Baseliner</li>
+	    <li MayRequire="Ludeon.RimWorld.Biotech">Baseliner</li>
     </whiteXenotypeList>
     <whiteGeneList>
 	    <li MayRequire="vanillaracesexpanded.android">VREA_SyntheticBody</li>
@@ -299,7 +301,13 @@
         <li>Headbone</li>
         <li>Head</li>		
         <li>Voice</li>		
-    </blackEndoCategories>		
+    </blackEndoCategories>	
+
+    <conceptList>
+        <li>Personae_Lowdown</li>
+        <li>Personae_Diet</li>
+    </conceptList>
+	
 </raceRestriction>
 
 <compatibility>
@@ -323,10 +331,14 @@
       <baseBodySize>1.0</baseBodySize>	
 	  
       <lifeStageAges>
+        <li MayRequire="Ludeon.RimWorld.Biotech">
+          <def>MechanoidFullyFormed</def>
+          <minAge>100</minAge>
+        </li>	  
         <li>
-          <def>SyntheticFullyFormed</def>
+          <def>MechanoidFullyFormed</def>
           <minAge>0</minAge>
-        </li>	
+        </li>
       </lifeStageAges> 
 	  
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -341,7 +353,6 @@
     <recipes>
       <li>AdministerMechSerumHealer</li>	
 	  <li>RemoveBodyPart</li> 	  
-	  <li MayRequire="Killathon.AndroidTiersReforged">ATR_Install_SkyMindReceiver</li> 
     </recipes>
 	<modExtensions>	
 	    <li Class="VexedThings.HumanlikeMechanoidsExtension">
@@ -351,18 +362,26 @@
 			<willSpawnWithTraits>true</willSpawnWithTraits>
 			<corpseIsImperishable>true</corpseIsImperishable>
 			<corpseIsInedible>true</corpseIsInedible>
-			<corpseIsDisturbing>false</corpseIsDisturbing>
+			<corpseIsNotDisturbing>false</corpseIsNotDisturbing>
 			<disableBreathVapors>true</disableBreathVapors>			
 			<pawnCannotPerceiveBeauty>false</pawnCannotPerceiveBeauty>	
-			<disabledJobs>
+			<blackListedJobs>
 		        <li>Vomit</li>
-			</disabledJobs>	
-			<disabledHediffs>		
+			</blackListedJobs>	
+			<blackListedHediffs>		
 			    <li>TraumaSavant</li>
 		        <li>FoodPoisoning</li>
 				<li>CryptosleepSickness</li>
-			</disabledHediffs>			
+			    <li MayRequire="sindre0830.universum">Universum_Decompression_Hediff</li>
+		        <li MayRequire="sindre0830.universum">Universum_Suffocation_Hediff</li>			
+			</blackListedHediffs>		
+			<whiteListedDrugs>
+		        <li>Luciferium</li>
+			</whiteListedDrugs>				
 		</li>	
+	    <li Class="ATReforged.ATR_MechTweaker" MayRequire="Killathon.AndroidTiersReforged">
+		    <canInherentlyUseSkyMind>true</canInherentlyUseSkyMind>		
+		</li>			
 	</modExtensions>	
     <butcherProducts>
       <Steel>45</Steel>

@@ -41,7 +41,7 @@
   <HediffDef>
     <defName>RR_BoltedConciousness</defName>
     <label>function inhibitor</label>
-	<description>This synthetic pawn is installed with a function inhibitor. It neuters all higher thought processes and functioning.</description>
+	<description>This synthetic pawn's AI failsafe was activated, irreversibly neutering all higher thought processes and functioning.</description>
 	<hediffClass>HediffWithComps</hediffClass>
 	<isBad>false</isBad>
     <tendable>false</tendable>		

@@ -6,7 +6,7 @@ namespace VexedThings
 {
     public class HumanlikeMechanoidsExtension : DefModExtension
     {
-        public bool corpseIsDisturbing = false;
+        public bool corpseIsNotDisturbing = true;
         public bool corpseIsImperishable = true;
         public bool corpseIsInedible = true;
         public bool canBeStunnedByEMP = true;
@@ -16,9 +16,18 @@ namespace VexedThings
         public bool willSpawnWithTraits = true;
         public bool pawnRequiresRepairs = true;
         public bool pawnCannotPerceiveBeauty  = true;
+
+        public bool areSyntheticPawnsVictims;
+        public bool onlyPersonaeCanIngest;
+
+        public List<HediffDef> blackListedHediffs = new List<HediffDef>();
+        public List<JobDef> blackListedJobs = new List<JobDef>();
         public List<ThingDef> whiteListedDrugs = new List<ThingDef>();
-        public List<HediffDef> disabledHediffs = new List<HediffDef>();
-        public List<JobDef> disabledJobs = new List<JobDef>();
+    }
+
+    internal class PersonaCapacityLabel : DefModExtension
+    {
+        public string personaCapLabel = string.Empty;
     }
 
     [DefOf]
@@ -38,12 +47,13 @@ namespace VexedThings
 
         public static JobDef RR_RepairPersonae;
 
-        public static StatDef TendQuality_Synth;
         public static StatDef TendSpeed_Synth;
+        public static StatDef PersonaEnergyLossPerHP;
 
         public static FleckDef RepairingCog;
-    }
 
+        public static EffecterDef RepairingSynthetic;
+    }
     public static class SyntheticPawnsExtensions
     {
         public static HumanlikeMechanoidsExtension FetchExtension(this Pawn pawn)

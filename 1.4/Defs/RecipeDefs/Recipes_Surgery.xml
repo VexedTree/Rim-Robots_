@@ -35,6 +35,40 @@
   </RecipeDef>
   
   <RecipeDef ParentName="SurgeryMechanical">
+    <defName>RR_BoltedConciousnessInstall</defName>
+    <label>enthrall AI core</label>
+    <description>Activate the AI failsafe and neuter all higher thought processes and functioning, effectively turning it into a subservient mechanoid. This process is irreversible.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Enthralling a synthetic.</jobString>
+    <workAmount>1500</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>true</isViolation>
+    <recipeUsers>
+      <li>Mechanent</li>
+	  <li>Personae_</li>
+    </recipeUsers>		
+	<ingredients>
+	    <li>
+			<filter>
+				<thingDefs>
+					<li>ComponentIndustrial</li>
+				</thingDefs>
+			</filter>
+			<count>4</count>
+		</li>
+	</ingredients>
+    <fixedIngredientFilter>
+	    <thingDefs>
+            <li>ComponentIndustrial</li>
+		</thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>MechanicalBrain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>RR_BoltedConciousness</addsHediff>		
+  </RecipeDef>  
+  
+  <RecipeDef ParentName="SurgeryMechanical">
     <defName>RR_Overclock</defName>
     <label>overclock AI core</label>
     <description>Overclock the AI core of a synthetic via increasing processor clock rates - increasing its reaction time, speed, and manipulation. This will vastly increase fuel consumption and the risk of internal damage.</description>

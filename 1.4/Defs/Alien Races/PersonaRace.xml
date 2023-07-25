@@ -3,7 +3,7 @@
 <AlienRace.ThingDef_AlienRace ParentName="BaseSyntheticRace">
     <defName>Personae_</defName>
     <label>persona</label>  
-    <description>The avatar of an AI persona core - a fusion of archotech and bleeding-edge technology, their vessels are analogous to a live human; and can even outperform in certain aspects.</description>   
+    <description>The avatar of an AI persona core - a fusion of archotech and bleeding-edge technology, their vessels are often analogous and strikingly identical to a live human. They're both reviled and revered by human cultures.</description>   
     <descriptionHyperlinks><ThingDef>AIPersonaCore</ThingDef></descriptionHyperlinks>
     <statBases>
 	  <MechBandwidth MayRequire="Ludeon.RimWorld.Biotech">2</MechBandwidth>
@@ -16,7 +16,8 @@
       <MarketValue>5500</MarketValue>
       <MoveSpeed>5.0</MoveSpeed>
       <Flammability>0.3</Flammability>
-      <MedicalSurgerySuccessChance>1.2</MedicalSurgerySuccessChance>	  
+      <MedicalSurgerySuccessChance>1.2</MedicalSurgerySuccessChance>
+      <InjuryHealingFactor>0.5</InjuryHealingFactor>	  
       <ResearchSpeed>1.2</ResearchSpeed>
 	  <NegotiationAbility>1.2</NegotiationAbility>
       <SocialImpact>1.2</SocialImpact>
@@ -40,24 +41,31 @@
 
 <generalSettings>
     <alienPartGenerator>
-    <headBodyPartDef>SyntheticHead</headBodyPartDef>	
+    <headBodyPartDef>SyntheticHead</headBodyPartDef>
+    <oldHairAgeRange>9000~9999</oldHairAgeRange>	
     <bodyTypes>
 	  <li>Female</li>	
       <li>Male</li>
+	  <li>Fat</li>
       <li>Thin</li>	  
 	  <li>Hulk</li>
     </bodyTypes>
     <headTypes>
 	  <li>Female_PersonaAverage</li>
+	  <li>Female_PersonaAverageWide</li>	
       <li>Female_PersonaAveragePointy</li>	 	
-	  <li>Female_PersonaNarrow</li>	 
+	  <li>Female_PersonaNarrow</li>
+	  <li>Female_PersonaNarrowWide</li>	
+      <li>Female_PersonaNarrowPointy</li>	  
       <li>Female_Persona</li>	
-      <li>Male_PersonaAverage</li>	
-      <li>Male_PersonaAveragePointy</li>
-      <li>Male_PersonaNarrow</li>	  
+	  <li>Male_PersonaAverage</li>
+	  <li>Male_PersonaAverageWide</li>	
+      <li>Male_PersonaAveragePointy</li>	 	
+	  <li>Male_PersonaNarrow</li>
+	  <li>Male_PersonaNarrowWide</li>	
+      <li>Male_PersonaNarrowPointy</li>
       <li>Male_Persona</li>	  	  
-    </headTypes>
-    <getsGreyAt>2500</getsGreyAt>	 
+    </headTypes>	 
     <colorChannels Inherit="False">
       <li>
         <name>skin</name>
@@ -65,8 +73,8 @@
             <options>
                 <!-- Synthetic Skin -->
                 <li>
-					<weight>10</weight>
-                    <only>RGBA(1.0,1.0,1.0,1)</only>
+					<weight>12</weight>
+                    <only>RGBA(255,255,255)</only>
 				</li>
                 <li>
 					<weight>5.2</weight>
@@ -101,76 +109,191 @@
                     <only>RGBA(99, 70, 36)</only>
 				</li>				
 				
-				<!-- Mechanoid -->
+				<!-- Blue -->
                 <li>
-                   <weight>6.4</weight>
-				   <only>RGBA(203,207,195)</only>
+                   <weight>0.05</weight>
+				   <only>RGBA(100, 165, 193)</only>
+                </li>			
+				<!-- Purple -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(97, 87, 195)</only>
+                </li>
+				<!-- Light Red -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(222, 106, 106)</only>
+                </li>					
+				<!-- Red -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(150, 62, 62)</only>
+                </li>	
+				<!-- Light Yellow -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(193, 165, 99)</only>
+                </li>	
+				<!-- Yellow -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(204, 199, 65)</only>
                 </li>				
+				<!-- Orange -->
                 <li>
-					<weight>6</weight>
-                    <only>RGBA(178,183,162))</only>
-				</li>								
+                   <weight>0.05</weight>
+				   <only>RGBA(210, 114, 63)</only>
+                </li>	
+				<!-- Green -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(169,182,108)</only>
+                </li>							
             </options>
         </first>
-		<second Class="AlienRace.ColorGenerator_SkinColorMelanin">
-            <minMelanin>0</minMelanin>
-            <maxMelanin>1</maxMelanin>
-		</second>				
-      </li>
+        <second Class="ColorGenerator_Options">
+            <options>		
+				<!-- Neon Blue -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(57, 57, 255)</only>
+                </li>			
+				<!-- Neon Purple -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(199,16,197)</only>
+                </li>
+				<!-- Neon Teal -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(12, 221, 182)</only>
+                </li>					
+				<!-- Neon Green -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(68,214,44)</only>
+                </li>	
+				<!-- Neon Yellow -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(224,231,34)</only>
+                </li>				
+				<!-- Neon Orange -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(255,173,0)</only>
+                </li>	
+				<!-- Neon Pink -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(219,62,177)</only>
+                </li>				
+				<!-- Neon Red -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(210,39,48)</only>
+                </li>
+				<!-- Neon White -->
+                <li>
+                   <weight>0.15</weight>
+				   <only>RGBA(255, 255, 255)</only>
+                </li>
+            </options>
+        </second>		
+      </li>	    
       <li>
         <name>hair</name>
         <first Class="ColorGenerator_Options">
             <options>		
-				<!-- Deep Blue -->
+				<!-- Light Blue -->
                 <li>
-                   <weight>5.0</weight>
-                   <min>RGBA(17,16,141)</min>
-				   <max>RGBA(36,81,146,255)</max>
+                   <weight>0.8</weight>
+				   <only>RGBA(34, 63, 227)</only>
                 </li>			
-				<!-- Off Cyan -->
+				<!-- Light Purple -->
                 <li>
-                   <weight>5.2</weight>
-                   <min>RGBA(45,111,117)</min>
-				   <max>RGBA(86,100,107)</max>
+                   <weight>0.8</weight>
+				   <only>RGBA(227, 115, 255)</only>
                 </li>
-				<!-- Neon Purple -->
+				<!-- Light Teal -->
                 <li>
-                   <weight>5.0</weight>
-                   <min>RGBA(90,0,163)</min>
-				   <max>RGBA(114,0,255)</max>
+                   <weight>0.8</weight>
+				   <only>RGBA(52, 191, 182)</only>
+                </li>					
+				<!-- Light Green -->
+                <li>
+                   <weight>0.8</weight>
+				   <only>RGBA(72, 201, 40)</only>
                 </li>	
-				<!-- Dark Purple -->
+				<!-- Orange -->
                 <li>
-                   <weight>5.2</weight>
-                   <min>RGBA(141,16,95,1.0)</min>
-				   <max>RGBA(203,10,45,1.0)</max>
+                   <weight>0.8</weight>
+				   <only>RGBA(189, 133, 49)</only>
                 </li>	
-				<!-- Washed-Out Purple -->
+				<!-- Pink -->
                 <li>
-                   <weight>5.4</weight>
-                   <min>RGBA(76,69,81,1.0)</min>
-				   <max>RGBA(141,16,95,1.0)</max>
+                   <weight>0.8</weight>
+				   <only>RGBA(191, 86, 149)</only>
                 </li>				
 				<!-- Red -->
                 <li>
-                   <weight>5.3</weight>
-                   <min>RGBA(17,16,141,1.0)</min>
-				   <max>RGBA(36,81,146,1.0)</max>
-                </li>	
-				<!-- Black -->
+                   <weight>0.8</weight>
+				   <only>RGBA(191, 86, 86)</only>
+                </li>
+
+				
+				<!-- Blonde -->
                 <li>
-                   <weight>5.3</weight>
-                   <min>RGBA(20,20,20)</min>
-				   <max>RGBA(50,50,50)</max>
+                   <weight>2</weight>
+				   <only>RGBA(237, 202, 156)</only>
                 </li>				
-			    <!-- Rainbow! :D -->
+				<!-- Sandy Blonde -->
                 <li>
-                   <weight>20</weight>
-                   <min>RGBA(50,50,50)</min>
-				   <max>RGBA(200,200,200)</max>
-                </li>			
+                   <weight>2</weight>
+				   <only>RGBA(193, 146, 85)</only>
+                </li>	
+				
+				<!-- Reddish Brown -->
+                <li>
+                   <weight>2</weight>
+				   <only>RGBA(132, 83, 47)</only>
+                </li>									
+				<!-- Dark Brown -->
+                <li>
+                   <weight>2</weight>
+				   <only>RGBA(90, 58, 32)</only>
+                </li>				
+				<!-- Dark Saturated Reddish -->
+                <li>
+                   <weight>1.5</weight>
+				   <only>RGBA(56, 36, 18)</only>
+                </li>				
+				<!-- Dark Reddish -->
+                <li>
+                   <weight>1.5</weight>
+				   <only>RGBA(0.25, 0.2, 0.15)</only>
+                </li>					
+
+				<!-- Mid Black -->
+                <li>
+                   <weight>1.5</weight>
+				   <only>RGBA(0.31, 0.28, 0.26)</only>
+                </li>				
+				<!-- Dark Black -->
+                <li>
+                   <weight>1.5</weight>
+				   <only>RGBA(0.2, 0.2, 0.2)</only>
+                </li>				
+				<!-- Ink Black -->
+                <li>
+                   <weight>0.5</weight>
+				   <only>RGBA(25, 25, 25)</only>
+                </li>		
             </options>
-        </first>		
+        </first>
+        <second Class="ColorGenerator_Single">
+            <color>RGBA(255, 255, 255)</color>
+        </second>		
       </li>	  
     </colorChannels>
     </alienPartGenerator>
@@ -190,7 +313,6 @@
 <graphicPaths>
 	    <body>RobotRace/Body_Persona/</body>
         <head>RobotRace/Head_Persona/</head>
-        <skinShader>Cutout</skinShader>
 </graphicPaths>
 
     <styleSettings>

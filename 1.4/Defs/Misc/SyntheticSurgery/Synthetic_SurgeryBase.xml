@@ -8,32 +8,6 @@
     <workSkillLearnFactor>16</workSkillLearnFactor>
 	<anesthetize>false</anesthetize>
   </RecipeDef>
- 
-  <!-- Covers bionics, and other foreign implants. --> 
-  <RecipeDef Name="SurgeryInstallUpgradePartAddedBase" ParentName="SyntheticInstallUpgradeBase" Abstract="True">
-    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
-	<recipeUsers>
-      <li>Mechanent</li>
-	  <li>Personae_</li>
-    </recipeUsers>	
-  </RecipeDef>
-
-  <!-- Covers natural body parts. --> 
-  <RecipeDef Name="SurgeryInstallUpgradePartNaturalBase" ParentName="SyntheticInstallUpgradeBase" Abstract="True">
-    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
-	<recipeUsers>
-      <li>Mechanent</li>
-	  <li>Personae_</li>
-    </recipeUsers>	
-  </RecipeDef>
-  
-  <!-- Covers implants used exclusively by mechanents. --> 
-  <RecipeDef Name="SurgeryInstallMechanoidPartAddedBase" ParentName="SyntheticInstallUpgradeBase" Abstract="True">
-    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
-	<recipeUsers>
-      <li>Mechanent</li>
-    </recipeUsers>	
-  </RecipeDef>
   
   <!-- Base workerClass. -->   
   <RecipeDef Name="SyntheticInstallUpgradeBase" ParentName="SurgeryMechanical" Abstract="True">
@@ -102,7 +76,33 @@
             <li>ComponentSpacer</li>
 		</thingDefs>
     </fixedIngredientFilter>	
-  </RecipeDef>  
+  </RecipeDef>   
+  
+  <!-- Covers bionics, and other foreign implants. --> 
+  <RecipeDef Name="SurgeryInstallUpgradePartAddedBase" ParentName="SyntheticInstallUpgradeBase" Abstract="True">
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+	<recipeUsers>
+      <li>Mechanent</li>
+	  <li>Personae_</li>
+    </recipeUsers>	
+  </RecipeDef>    
+  
+  <!-- Covers natural body parts. --> 
+  <RecipeDef Name="SurgeryInstallUpgradePartNaturalBase" ParentName="SyntheticInstallUpgradeBase" Abstract="True">
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+	<recipeUsers>
+      <li>Mechanent</li>
+	  <li>Personae_</li>
+    </recipeUsers>	
+  </RecipeDef>
+  
+  <!-- Covers implants used exclusively by mechanents. --> 
+  <RecipeDef Name="SurgeryInstallMechanoidPartAddedBase" ParentName="SyntheticInstallUpgradeBase" Abstract="True">
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+	<recipeUsers>
+      <li>Mechanent</li>
+    </recipeUsers>	
+  </RecipeDef> 
  
   <!-- Wooden workerClass. --> 
   <RecipeDef Name="SyntheticInstallWoodenPartBase" ParentName="SurgeryInstallUpgradePartAddedBase" Abstract="True">

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_SyntheticElectricalArcs</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <drawOffscreen>true</drawOffscreen>
+    <mote>
+      <fadeInTime>0.05</fadeInTime>
+      <fadeOutTime>0.1</fadeOutTime>
+      <solidTime>1</solidTime>
+    </mote>
+    <graphicData>
+      <texPath>Motes/ElectricalArcs</texPath>
+      <graphicClass>GraphicMote_RandomWithAgeSecs</graphicClass>
+      <shaderType>GlowAnimated</shaderType>
+      <shaderParameters>
+        <_NumFrames>7</_NumFrames>
+        <_FramesPerSec>6</_FramesPerSec>
+      </shaderParameters>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_GreenFlash</defName>
+    <thingClass>MoteAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.03</fadeInTime>
+      <fadeOutTime>0.06</fadeOutTime>
+      <solidTime>0</solidTime>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/BrightFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <color>(0.2, 1, 0.34, 0.35)</color>
+    </graphicData>
+  </ThingDef>  
+</Defs>

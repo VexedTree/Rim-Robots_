@@ -14,7 +14,7 @@
         </categories>
       </li>
     </backstoryFiltersOverride>
-    <chronologicalAgeRange>0~0</chronologicalAgeRange>	
+    <chronologicalAgeRange>0~0.001</chronologicalAgeRange>	
     <defaultFactionType>PlayerColony</defaultFactionType>
     <chemicalAddictionChance>0</chemicalAddictionChance>
     <gearHealthRange>0</gearHealthRange>
@@ -39,7 +39,7 @@
         </categories>
       </li>
     </backstoryFiltersOverride>
-	<chronologicalAgeRange>0~0</chronologicalAgeRange>
+	<chronologicalAgeRange>0~0.001</chronologicalAgeRange>
     <defaultFactionType>PlayerColony</defaultFactionType>
     <chemicalAddictionChance>0</chemicalAddictionChance>
     <gearHealthRange>0</gearHealthRange>

@@ -13,27 +13,7 @@
 						<li>Mechanent</li>
 						<li>Personae_</li>
 					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/HediffDef[defName='MechanentNature_Hediff']/comps</xpath>
-					<order>Append</order>
-					<value>
-                        <li Class="ATReforged.HediffCompProperties_SkyMindEffecter">
-                            <allowsConnection>true</allowsConnection>
-                            <isTransceiver>true</isTransceiver>
-                        </li>
-					</value>
-				</li>	
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/HediffDef[defName='SyntheticNature_Hediff']/comps</xpath>
-					<order>Append</order>
-					<value>
-                        <li Class="ATReforged.HediffCompProperties_SkyMindEffecter">
-                            <allowsConnection>true</allowsConnection>
-                            <isTransceiver>true</isTransceiver>
-                        </li>
-					</value>
-				</li>					
+				</li>				
 			    <li Class="PatchOperationRemove">
 				    <xpath>/Defs/RecipeDef[defName='RR_Decommission']</xpath>
 			    </li>

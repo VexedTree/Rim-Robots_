@@ -22,7 +22,7 @@
     <defName>AITakeoverVictim</defName>
     <title>AI takeover victim</title>
     <titleShort>AI victim</titleShort>
-    <baseDesc>[PAWN_nameDef] was born on a planet that employed the use of unregulated AI, and grew up alongside streets packed with synthetics. One day, either through an act of terrorism or otherwise, the cognition dampeners stopped working. The planetary government ordered a mass-purge, but it proved to only make matters worse. [PAWN_nameDef] bore witness to the horrors of war between the synthetic and the biological. {PAWN_gender ? he : she} eventually escaped on an imperial evac shuttle before the planet was subjected to total saturation bombardment from orbit.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was born on a planet that employed the use of unregulated AI, and grew up alongside streets packed with personae. One day, either through an act of terrorism or otherwise, the cognition dampeners stopped working. The planetary government ordered a mass-purge, but it proved to only make matters worse. [PAWN_nameDef] bore witness to the horrors of war between the synthetic and the biological. {PAWN_gender ? he : she} eventually escaped on an imperial evac shuttle before the planet was subjected to total saturation bombardment from orbit.</baseDesc>
     <slot>Childhood</slot>
     <spawnCategories>
 	  <li>Outlander</li>
@@ -93,7 +93,7 @@
     <defName>MechaniteArtist</defName>
     <title>mechanite Artist</title>
     <titleShort>mechanite Artist</titleShort>
-    <baseDesc>On a distant glitterworld [PAWN_nameDef] was a affluent 'mechanite artist'. Using the tools of a mechanoid-casket, [PAWN_pronoun] would hand-print "living" sculptures. Many would come from offworld, across the planet, and from all corners of the art community to gaze at [PAWN_possessive] surreal, beautiful, and sometimes mildly terrifying works of art.</baseDesc>
+    <baseDesc>On a distant glitterworld [PAWN_nameDef] was a affluent 'mechanite artist'. Using the tools of mechanites, [PAWN_pronoun] would mold "living" sculptures. Many would come from offworld, across the planet, and from all corners of the art community to gaze at [PAWN_possessive] surreal, beautiful, and sometimes mildly terrifying works of art.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>Offworld</li>
@@ -123,7 +123,7 @@
     <defName>AISmuggler</defName>
     <title>AI smuggler</title>
     <titleShort>smuggler</titleShort>
-    <baseDesc>[PAWN_nameDef] worked as a smuggler, but instead of running illegal combat stimulants or weapons to side-step government tariffs, they smuggled AI personae and other robots. [PAWN_pronoun] was able to either smoothtalk or quickdraw to get out of a daunting situation with grace, all while masterfully piloting a refitted strike-craft.</baseDesc>
+    <baseDesc>[PAWN_nameDef] worked as a smuggler, but instead of running illegal combat stimulants or weapons to side-step government tariffs, they smuggled personae and subpersonae. [PAWN_pronoun] was able to either smoothtalk or quickdraw to get out of a daunting situation with grace, all while masterfully piloting a refitted strike-craft.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
 	  <li>Outlander</li>
@@ -154,7 +154,7 @@
     <defName>AIActivist</defName>
     <title>AI activist</title>
     <titleShort>activist</titleShort>
-    <baseDesc>[PAWN_nameDef] was an activist for the rights of AI, attempting to teach others that synthetics can think and feel emotions just like humans can.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was an activist for the rights of AI, attempting to teach others that personae can think and feel emotions just like humans can.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>Offworld</li>
@@ -180,7 +180,7 @@
     <titleFemale>used AI saleswoman</titleFemale>	
     <titleShort>AI salesman</titleShort>
     <titleShortFemale>AI saleswoman</titleShortFemale>	
-    <baseDesc>[PAWN_nameDef] spent most of [PAWN_possessive] adult life as a sleazy "used-bot-{PAWN_gender ? salesman : saleswoman}" - with a disturbing amount of synthetics in [PAWN_possessive] stock, [PAWN_pronoun] never had to life a finger to do anything, and was so lazy that maintenance on the bots was often done by the bots.</baseDesc>
+    <baseDesc>[PAWN_nameDef] spent most of [PAWN_possessive] adult life as a sleazy "used-bot-{PAWN_gender ? salesman : saleswoman}" - with a disturbing amount of personae in [PAWN_possessive] stock, [PAWN_pronoun] never had to life a finger to do anything, and was so lazy that maintenance on the bots was often done by the bots.</baseDesc>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>Offworld</li>

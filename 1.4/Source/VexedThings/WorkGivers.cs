@@ -5,81 +5,93 @@ using RimWorld;
 
 namespace VexedThings
 {
-		public class WorkGiver_Repair : WorkGiver_Tend
+	public class WorkGiver_RepairPersona : WorkGiver_Scanner
+	{
+		public override PathEndMode PathEndMode
 		{
-			public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
+			get
 			{
-                return t is Pawn pawn2 && pawn.def.HasModExtension<HumanlikeMechanoidsExtension>() && pawn.def.GetModExtension<HumanlikeMechanoidsExtension>().pawnRequiresRepairs && (!this.def.tendToHumanlikesOnly || pawn2.RaceProps.Humanlike) && (!this.def.tendToAnimalsOnly || pawn2.RaceProps.Animal) && WorkGiver_Tend.GoodLayingStatusForTend(pawn2, pawn) && HealthAIUtility.ShouldBeTendedNowByPlayer(pawn2) && pawn.CanReserve(pawn2, 1, -1, null, forced) && (!pawn2.InAggroMentalState || pawn2.health.hediffSet.HasHediff(HediffDefOf.Scaria, false));
-            }
-
-			public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
-			{
-				Pawn pawn2 = t as Pawn;
-				Thing thing = HealthAIUtility.FindBestMedicine(pawn, pawn2, false);
-				if (thing != null)
-				{
-					return JobMaker.MakeJob(RR_DefOf.RR_RepairPersonae, pawn2, thing);
-				}
-				return JobMaker.MakeJob(RR_DefOf.RR_RepairPersonae, pawn2);
+				return PathEndMode.InteractionCell;
 			}
 		}
 
-		public class WorkGiver_RepairOther : WorkGiver_Repair
+		public override Danger MaxPathDanger(Pawn pawn)
 		{
-			public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
+			return Danger.Deadly;
+		}
+
+		public override ThingRequest PotentialWorkThingRequest
+		{
+			get
 			{
-				return base.HasJobOnThing(pawn, t, forced) && pawn != t;
+				return ThingRequest.ForGroup(ThingRequestGroup.Pawn);
 			}
 		}
 
-		public class WorkGiver_RepairOtherUrgent : WorkGiver_Tend
+		public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
 		{
-			public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
-			{
-				return base.HasJobOnThing(pawn, t, forced) && HealthAIUtility.ShouldBeTendedNowByPlayerUrgent((Pawn)t);
-			}
+			return pawn.Map.mapPawns.SpawnedPawnsInFaction(pawn.Faction);
 		}
 
-		public class WorkGiver_RepairSelf : WorkGiver_Repair
+		public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
 		{
-			public override ThingRequest PotentialWorkThingRequest
-			{
-				get
-				{
-					return ThingRequest.ForGroup(ThingRequestGroup.Undefined);
-				}
-			}
-			public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
-			{
-				yield return pawn;
-				yield break;
-			}
-			public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
-			{
-				bool flag = pawn == t && pawn.playerSettings != null && base.HasJobOnThing(pawn, t, forced);
-				if (flag && !pawn.playerSettings.selfTend)
-				{
-					JobFailReason.Is("RR.SelfRepairDisabled".Translate(), null);
-				}
-				return flag && pawn.playerSettings.selfTend;
-			}
+			return WorkGiver_RepairPersona.HasJobOn(pawn, t, forced);
 		}
 
-		public class WorkGiver_RepairSelfEmergency : WorkGiver_RepairOther
+		public static bool HasJobOn(Pawn pawn, Thing t, bool forced)
 		{
-			public override Job NonScanJob(Pawn pawn)
+			Pawn pawn2 = (Pawn)t;
+			if (pawn2 == null || !pawn2.IsHumanlikeMechanoid())
 			{
-				if (!this.HasJobOnThing(pawn, pawn, false) || !HealthAIUtility.ShouldBeTendedNowByPlayerUrgent(pawn))
-				{
-					return null;
-				}
-				ThinkResult thinkResult = jobpack.TryIssueJobPackage(pawn, default);
-				if (thinkResult.IsValid)
-				{
-					return thinkResult.Job;
-				}
-				return null;
+				return false;
 			}
-			private static readonly JobGiver_RepairSelf jobpack = new JobGiver_RepairSelf();
+			if (pawn.WorkTypeIsDisabled(WorkTypeDefOf.Crafting))
+			{
+				return false;
+			}
+			if (!WorkGiver_RepairPersona.GoodLayingStatusForTend(pawn2, pawn, forced))
+			{
+				return false;
+			}
+			if (pawn != pawn2)
+			{
+				if (pawn2.CurJobDef == RR_DefOf.RR_RepairPersonae)
+				{
+					return false;
+				}
+				if (pawn2.HostileTo(pawn))
+				{
+					return false;
+				}
+				if (t.IsForbidden(pawn))
+				{
+					return false;
+				}
+				if (!pawn.CanReserveAndReach(t, PathEndMode.InteractionCell, Danger.Deadly, 1, -1, null, false))
+				{
+					return false;
+				}
+			}
+			return JobDriver_RepairPersonae.CanRepairNow(pawn2);
+		}
+
+
+		public static bool GoodLayingStatusForTend(Pawn patient, Pawn doctor, bool forced)
+		{
+			if (patient == doctor)
+			{
+				return true;
+			}
+			if (patient.RaceProps.Humanlike)
+			{
+				return patient.InBed();
+			}
+			return patient.GetPosture() > PawnPosture.Standing;
+		}
+
+		public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
+		{
+			return JobMaker.MakeJob(RR_DefOf.RR_RepairPersonae, t);
 		}
 	}
+}

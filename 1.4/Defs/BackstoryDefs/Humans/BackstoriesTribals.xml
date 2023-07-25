@@ -7,7 +7,7 @@
     <defName>CattleForFuel</defName>
     <title>fuel cattle</title>
     <titleShort>cattle</titleShort>
-    <baseDesc>In a isolated tribe, [PAWN_nameDef] had a peaceful childhood - until a machine-legion descended upon the area from orbit. After the land was stripped for all its resources, the robots began to harvest the tribespeople to slowly liquidate their bodies into chemfuel. Until one day, they simply left.\n[PAWN_nameDef] still experiences night-terrors from seeing [PAWN_possessive] friends and family suspended in the vats.</baseDesc>
+    <baseDesc>In an isolated tribe, [PAWN_nameDef] had a peaceful childhood - until a mechlegion descended upon the area from orbit. After the land was stripped of all its resources, the robots began to harvest the tribespeople to slowly liquidate their bodies into chemfuel. Until one day, they left. Leaving the scarred survivors behind.\n[PAWN_nameDef] still experiences night terrors from seeing [PAWN_possessive] friends and family suspended in the vats.</baseDesc>
     <slot>Childhood</slot>
     <spawnCategories>
       <li>Tribal</li>
@@ -32,7 +32,7 @@
     <defName>FuelFetcher</defName>
     <title>boomalope rancher</title>
     <titleShort>fuel-fetcher</titleShort>
-    <baseDesc>The village elder of [PAWN_nameDef]s tribe was seen as a great blood machine, imprisoned in the form of a human, and cast down by the gods for going against their will. But it was really just a mechanent that found its way into the tribe generations prior. [PAWN_nameDef]s job was to occasionally milk the boomalope herd to gain "liquid fire" to feed [PAWN_possessive] elders reactor.</baseDesc>
+    <baseDesc>The village elder of [PAWN_nameDef]s tribe was seen as a great blood machine, imprisoned in the form of a human, and cast down by the Gods for going against their will. But it was really just a mechanent that found its way into the tribe generations prior. [PAWN_nameDef]s job was to occasionally milk the boomalope herd to gain "liquid fire" to fuel [PAWN_possessive] elders reactor.</baseDesc>
     <slot>Childhood</slot>
     <spawnCategories>
       <li>Tribal</li>

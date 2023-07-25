@@ -57,7 +57,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JobGivers.cs" />
+    <Compile Include="JobDrivers.cs" />
     <Compile Include="WorkGivers.cs" />
     <Compile Include="ThoughtWorkers.cs" />
     <Compile Include="Comps.cs" />

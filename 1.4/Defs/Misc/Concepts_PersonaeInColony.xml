@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ConceptDef ParentName="NotedOpportunisticBase">
+    <defName>Personae_Lowdown</defName>
+    <label>Persona pawn information</label>
+    <helpText>Persona pawns work differently from human pawns in a variety of ways, most prominently in how their "medical" needs are handled. Instead of being tended they must be repaired, and to install prosthesis you need components. Both of these actions require a pawn capable of smithing. Repairing a persona will drain its energy need, which acts akin to the food need on biological pawns. While persona pawns are immune to illness, extreme temperatures, and toxicity - they are vulnerable to being stunned by emp attacks, and are weak to blunt damage inflicted by explosives or club weaponry.\n\nFundamentally persona and subpersona pawns are very different from humans and even to each other. They interact with the world in different ways, so to find all the small little interactions you need to experiment and explore their mechanics.</helpText>    
+  </ConceptDef>
+
+  <ConceptDef ParentName="NotedOpportunisticBase">
+    <defName>Personae_Diet</defName>
+    <label>Persona refueling</label>
+    <helpText>Personae cannot run their reactors on food, instead they need fuel such as chemfuel, uranium, or charge cells. If you do not have access to biofuel refining it's easiest to import chemfuel through trade, or ranch a herd of boomalopes.</helpText>
+  </ConceptDef>
+
+</Defs>

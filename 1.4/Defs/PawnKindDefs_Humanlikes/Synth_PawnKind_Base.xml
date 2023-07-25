@@ -20,6 +20,7 @@
 		<commonality>0.03</commonality>
       </li>	  
     </backstoryFiltersOverride>	
+	<minGenerationAge MayRequire="Ludeon.Rimworld.Biotech">200</minGenerationAge>
 	<useFactionXenotypes>false</useFactionXenotypes>
     <chemicalAddictionChance>0</chemicalAddictionChance>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>

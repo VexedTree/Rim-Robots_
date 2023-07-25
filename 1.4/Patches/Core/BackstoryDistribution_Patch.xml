@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="UrbworldEntrepreneur14"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>	
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="MafiaBoss17"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesMechanent</li>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="Taxonomist0"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="SpaceTactician28"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>		
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="Policeman45"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesMechanent</li>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="Inventor6"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>	
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="Bartender62"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesMechanent</li>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="ConceptualArtist39"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>		
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="EscapedConvict90"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesMechanent</li>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="Bodyguard58"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesMechanent</li>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>	
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="Mathematician6"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>		
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="Gardener99"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesMechanent</li>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="Model99"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>	
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="Actor72"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>		
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="Drifter67"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="MachineCollector55"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>		
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="ConArtist80"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>		
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="Logger95"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesMechanent</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="Ranger96"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesMechanent</li>
+                </value>
+            </li>	
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="Forester96"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesMechanent</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="Hunter89"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesMechanent</li>
+                </value>
+            </li>	
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="CorporateManager76"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>	
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/BackstoryDef[defName="Assassin20"]/spawnCategories</xpath>
+                <value>
+					<li>BackstoriesPersona</li>
+                </value>
+            </li>			
+        </operations>
+    </Operation> 
+
+</Patch>

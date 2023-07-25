@@ -32,9 +32,15 @@
 
   <HeadTypeDef ParentName="AverageBaseSynth">
     <defName>Male_PersonaAverage</defName>
-    <graphicPath>RobotRace/Head_Persona/Male_Average</graphicPath>
+    <graphicPath>RobotRace/Head_Persona/Male_Average_Normal</graphicPath>
     <gender>Male</gender>
   </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>Male_PersonaAverageWide</defName>
+    <graphicPath>RobotRace/Head_Persona/Male_Average_Wide</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef> 
 
   <HeadTypeDef ParentName="AverageBaseSynth">
     <defName>Male_PersonaAveragePointy</defName>
@@ -44,13 +50,25 @@
 
   <HeadTypeDef ParentName="NarrowBaseSynth">
     <defName>Male_PersonaNarrow</defName>
-    <graphicPath>RobotRace/Head_Persona/Male_Thin</graphicPath>
+    <graphicPath>RobotRace/Head_Persona/Male_Narrow_Normal</graphicPath>
     <gender>Male</gender>
   </HeadTypeDef>
   
+  <HeadTypeDef ParentName="NarrowBaseSynth">
+    <defName>Male_PersonaNarrowWide</defName>
+    <graphicPath>RobotRace/Head_Persona/Male_Narrow_Wide</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>  
+  
+  <HeadTypeDef ParentName="NarrowBaseSynth">
+    <defName>Male_PersonaNarrowPointy</defName>
+    <graphicPath>RobotRace/Head_Persona/Male_Narrow_Pointy</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>    
+  
   <HeadTypeDef ParentName="AverageBaseSynth">
     <defName>Male_Persona</defName>
-    <graphicPath>RobotRace/Head_Persona/Male_Average</graphicPath>
+    <graphicPath>RobotRace/Head_Persona/Male_Persona</graphicPath>
     <gender>Male</gender>
   </HeadTypeDef>  
 
@@ -59,10 +77,16 @@
 
   <HeadTypeDef ParentName="AverageBaseSynth">
     <defName>Female_PersonaAverage</defName>
-    <graphicPath>RobotRace/Head_Persona/Female_Average</graphicPath>
+    <graphicPath>RobotRace/Head_Persona/Female_Average_Normal</graphicPath>
     <gender>Female</gender>
   </HeadTypeDef>
-
+  
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>Female_PersonaAverageWide</defName>
+    <graphicPath>RobotRace/Head_Persona/Female_Average_Wide</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>  
+  
   <HeadTypeDef ParentName="AverageBaseSynth">
     <defName>Female_PersonaAveragePointy</defName>
     <graphicPath>RobotRace/Head_Persona/Female_Average_Pointy</graphicPath>
@@ -71,13 +95,25 @@
 
   <HeadTypeDef ParentName="NarrowBaseSynth">
     <defName>Female_PersonaNarrow</defName>
-    <graphicPath>RobotRace/Head_Persona/Female_Thin</graphicPath>
+    <graphicPath>RobotRace/Head_Persona/Female_Narrow_Normal</graphicPath>
     <gender>Female</gender>
   </HeadTypeDef>
   
   <HeadTypeDef ParentName="NarrowBaseSynth">
+    <defName>Female_PersonaNarrowWide</defName>
+    <graphicPath>RobotRace/Head_Persona/Female_Narrow_Wide</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>  
+  
+  <HeadTypeDef ParentName="NarrowBaseSynth">
+    <defName>Female_PersonaNarrowPointy</defName>
+    <graphicPath>RobotRace/Head_Persona/Female_Narrow_Pointy</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>  
+  
+  <HeadTypeDef ParentName="NarrowBaseSynth">
     <defName>Female_Persona</defName>
-    <graphicPath>RobotRace/Head_Persona/Female_Average</graphicPath>
+    <graphicPath>RobotRace/Head_Persona/Female_Persona</graphicPath>
     <gender>Female</gender>
   </HeadTypeDef> 
 

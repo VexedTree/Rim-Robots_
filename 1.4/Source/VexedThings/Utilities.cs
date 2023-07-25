@@ -1,6 +1,7 @@
-﻿using AlienRace;
+﻿using RimWorld;
+using AlienRace;
 using Verse;
-
+using System.Linq;
 
 namespace VexedThings
 {
@@ -43,6 +44,27 @@ namespace VexedThings
                 return false;
             }
             return pawn.def.HasModExtension<HumanlikeMechanoidsExtension>();
+        }
+
+        public static bool PersonaCanIngest(Pawn ingester, out Thing ingestible)
+        {
+            if (!ingester.IsHumanlikeMechanoid())
+            {
+                ingestible = null;
+                return false;
+            }
+            ingestible = null;
+            return false;
+        }
+
+        public static bool HediffControlTag(HediffDef hediffDef)
+        {
+            HumanlikeMechanoidsExtension modExtension = hediffDef.GetModExtension<HumanlikeMechanoidsExtension>();
+            if (modExtension != null)
+            {
+                return modExtension.areSyntheticPawnsVictims;
+            }
+            return (hediffDef.tags == null || hediffDef.CompProps<HediffCompProperties_Immunizable>() == null && !hediffDef.makesSickThought && !hediffDef.chronic && !typeof(Hediff_Addiction).IsAssignableFrom(hediffDef.hediffClass) && !DefDatabase<ChemicalDef>.AllDefs.Any((ChemicalDef x) => x.toleranceHediff == hediffDef) && !typeof(Hediff_High).IsAssignableFrom(hediffDef.hediffClass) && !typeof(Hediff_Hangover).IsAssignableFrom(hediffDef.hediffClass));
         }
     }
 }

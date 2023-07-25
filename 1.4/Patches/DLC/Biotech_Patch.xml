@@ -30,13 +30,7 @@
 	            <SubcoreHigh>1</SubcoreHigh>
               </costList>	
 	        </value>
-		</li>  		
-		<li Class="PatchOperationReplace">	
-         <xpath>/Defs/FactionDef[defName="SynthEvil"]/description</xpath>
-            <value>    
-	          <description>These mechanical beings have been occupying this planet for a few decades. They are technologically more advanced than regular outlanders, but choose not to leave. They work with advanced machinery and massive factories, utilizing charge weaponry and advanced pyrotechnics for their regular assaults.\n\nAfter either hundreds of years of oppression or a coded hatred for the biological, they've become completely and utterly hostile.\n\nThis particular group is hostile to all forms of biological life, and those who associate with it. They even mass produce their own mechanoids to burn out life where it hides.</description>	
-	        </value>
-		</li>		
+		</li>	
 	  </operations>
     </match>		  
   </Operation>

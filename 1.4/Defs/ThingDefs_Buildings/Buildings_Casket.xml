@@ -3,12 +3,12 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>MechCreationCasket</defName>
 		<label>mechanoid-casket</label>
-		<description>A mechanoid printer capable of assembling both mechanents and synthetics. If given the correct materials, and enough time, the mechanites within the casket will print a subpersona-mechanent. If a AI persona core is provided, it will print a strikingly human avatar for the persona.\n\nOn most worlds mechanoid-casket and mechanents are the pillar of human industry and ingenuity. On others they are outright banned.\n\nThe casket is hardcoded to never print combat class mechanoids.</description>
+		<description>An ultratech gestation chamber capable of printing both mechanents and synthetics. If given the correct materials, and enough time, the mechanites within the casket will print a subpersona-mechanent. If a AI persona core is provided, it will print a strikingly human avatar for the persona.\n\nOn most worlds mechanoid-casket and mechanents are the pillar of human industry and ingenuity. On others they are outright banned.\n\nThe casket is hardcoded to never print combat class mechanoids.</description>
 		<thingClass>ItemProcessor.Building_ItemProcessor</thingClass>
 		<graphicData>
 			<texPath>Buildings/Synth_Casket</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(3.5,4.5)</drawSize>
+			<drawSize>(3.2,4.3)</drawSize>
 			<shaderType>CutoutComplex</shaderType>
 			<damageData>
 				<cornerTL>Damage/Corner</cornerTL>
@@ -72,6 +72,8 @@
 				<isMachinePausable>true</isMachinePausable>
 				<showProgressBar>true</showProgressBar>						
 				<destroyIngredientsAtStartOfProcess>true</destroyIngredientsAtStartOfProcess>
+				<mustLoadFromInteractionSpot>true</mustLoadFromInteractionSpot>
+				<mustUnloadFromInteractionSpot>true</mustUnloadFromInteractionSpot>	
 				
 				<chooseIngredientsIcon>Gizmos/UI/ProductionCasket</chooseIngredientsIcon>
 				<InsertFirstItemDesc>IP_ChooseOutput</InsertFirstItemDesc>

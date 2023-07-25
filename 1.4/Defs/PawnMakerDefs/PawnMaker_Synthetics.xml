@@ -1,82 +1,49 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <ThingDef Name="RRSpawnerBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>ThingWithComps</thingClass>
+    <passability>Standable</passability>
+    <selectable>false</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+	<tickerType>Normal</tickerType>
+  </ThingDef>
+
     <!-- Mechanents -->
-    <ThingDef>
+    <ThingDef ParentName="RRSpawnerBase">
         <defName>Printed_Mechanent_Spawner</defName>
-        <label>mechanent</label>
-        <description>Assembles a new mechanent.</description>
+		<label>mechanent</label>
         <thingClass>Building</thingClass>
-        <statBases>
-            <WorkToMake>550</WorkToMake>
-            <MaxHitPoints>150</MaxHitPoints>
-            <Flammability>0.1</Flammability>
-        </statBases>
         <graphicData>
             <texPath>Buildings/Blank/Null</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
         </graphicData>		
-        <size>(1,1)</size>
-        <category>Building</category>
-        <pathCost>200</pathCost>
-        <passability>Standable</passability>
-        <filthLeaving>Filth_RubbleRock</filthLeaving>
-        <hasInteractionCell>false</hasInteractionCell>
-        <drawerType>MapMeshAndRealTime</drawerType>
-        <altitudeLayer>Building</altitudeLayer>
-        <repairEffect>Repair</repairEffect>
-        <useHitPoints>True</useHitPoints>
-        <selectable>true</selectable>
-        <surfaceType>Item</surfaceType>
-        <tickerType>Normal</tickerType>
-        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>		
+        <size>(1,1)</size>	
         <comps>
             <li Class="VexedThings.CompProps_SynthMaker">
-                <pawnKind>
+                <pawnKinds>
 				    <li>Printed_Mechanent</li>
-				</pawnKind>
+				</pawnKinds>
             </li>
         </comps>		
     </ThingDef>	
 
     <!-- Personae -->		
-    <ThingDef>
+    <ThingDef ParentName="RRSpawnerBase">
         <defName>Printed_Persona_Spawner</defName>
-        <label>persona</label>
-        <description>Prints a new persona vessel.</description>
+		<label>persona</label>
         <thingClass>Building</thingClass>
-        <statBases>
-            <WorkToMake>550</WorkToMake>
-            <MaxHitPoints>150</MaxHitPoints>
-            <Flammability>0.1</Flammability>
-        </statBases>
         <graphicData>
             <texPath>Buildings/Blank/Null</texPath>
             <graphicClass>Graphic_Multi</graphicClass>		
         </graphicData>		
         <size>(1,1)</size>
-        <category>Building</category>
-        <pathCost>200</pathCost>
-        <passability>Standable</passability>
-        <filthLeaving>Filth_RubbleRock</filthLeaving>
-        <hasInteractionCell>false</hasInteractionCell>
-        <drawerType>MapMeshAndRealTime</drawerType>
-        <altitudeLayer>Building</altitudeLayer>
-        <repairEffect>Repair</repairEffect>
-        <useHitPoints>True</useHitPoints>
-        <selectable>true</selectable>
-        <surfaceType>Item</surfaceType>
-        <tickerType>Normal</tickerType>
-        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>		
         <comps>
             <li Class="VexedThings.CompProps_SynthMaker">
-                <pawnKind>
+                <pawnKinds>
 				    <li>Printed_Persona</li>
-				</pawnKind>
+				</pawnKinds>
             </li>
         </comps>
     </ThingDef>	

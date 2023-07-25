@@ -76,3 +76,4 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\1.4\Sour
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\1.4\Source\VexedThings\obj\Debug\PawnsMechanical.csproj.CopyComplete
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\1.4\Source\VexedThings\obj\Debug\PawnsMechanical.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\1.4\Source\VexedThings\obj\Debug\PawnsMechanical.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\1.4\Source\VexedThings\obj\Debug\PawnsMechanical.csproj.AssemblyReference.cache

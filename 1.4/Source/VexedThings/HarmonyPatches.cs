@@ -11,6 +11,8 @@ namespace VexedThings.HarmonyPatches
 {
     // MISC / PATCHES
 
+    // Toggles if a ThingDef with the "personaeCanIngest" extension will be inedible to pawns that are not "IsHumanlikeMechanoid".
+
     // Toggles if pawns with the "canBeStunnedByEMP" extension can be stunned by EMP attacks.
     [HarmonyPatch(typeof(StunHandler), "get_AffectedByEMP")]
     public class AffectedByEMP_HarmonyPatch
@@ -116,39 +118,6 @@ namespace VexedThings.HarmonyPatches
                 }
             }
         }
-
-        [HarmonyPatch(typeof(Need), "get_LabelCap")]
-        public class LabelCapSleep_HarmonyPatch
-        {
-            [HarmonyPostfix]
-            public static void Listener(ref string __result, Pawn ___pawn, Need __instance)
-            {
-                if (__instance.def.defName == "Rest" && Methods.IsHumanlikeMechanoid(___pawn))
-                {
-                    __result = "RR.MemoryNeed".Translate();
-                }
-            }
-        }
-        [HarmonyPatch(typeof(Need_Food), "GetTipString")]
-        public class GetTipStringSleep_HarmonyPatch
-        {
-            [HarmonyPostfix]
-            public static void Listener(ref string __result, Pawn ___pawn, Need __instance)
-            {
-                if (__instance.def.defName == "Rest" && Methods.IsHumanlikeMechanoid(___pawn))
-                {
-                    __result = string.Format("{0}: {1} ({2:0.##}/{3:0.##})\n{4}", new object[]
-                    {
-                        "RR.MemoryNeed".Translate(),
-                        __instance.CurLevelPercentage.ToStringPercent(),
-                        __instance.CurLevel,
-                        __instance.MaxLevel,
-                        "RR.MemoryNeedDescription".Translate()
-                    });
-                    return;
-                }
-            }
-        }
     }
 
     internal class Corpse_Patches
@@ -175,17 +144,31 @@ namespace VexedThings.HarmonyPatches
                 return true;
             }
         }
+        [HarmonyPatch(typeof(CompRottable), "Active", MethodType.Getter)]
+        public static class RottableActive_HarmonyPatch
+        {
+            [HarmonyPrefix]
+            public static bool Prefix(CompRottable __instance, ref bool __result)
+            {
+                if (__instance.parent is Corpse corpse && corpse.InnerPawn.def.HasModExtension<HumanlikeMechanoidsExtension>() && corpse.InnerPawn.def.GetModExtension<HumanlikeMechanoidsExtension>().corpseIsImperishable)
+                {
+                    __result = false;
+                    return false;
+                }
+                return true;
+            }
+        }
 
         // Toggles if corpses of pawns with the "corpseIsEdible" extension will be edible.
-        [HarmonyPatch(typeof(RaceProperties), "CanEverEat", new Type[]
+        [HarmonyPatch(typeof(Corpse), "get_IngestibleNow")]
+        public class IngestibleNow_HarmonyPatch
         {
-        typeof(Thing)
-        })]
-        public static class CanEverEat_HarmonyPatch
-        {
-            public static void Postfix(ref bool __result, Thing t)
+            [HarmonyPostfix]
+            public static void Listener(Corpse __instance, ref bool __result)
             {
-                if (t is Corpse corpse && corpse.InnerPawn.def.HasModExtension<HumanlikeMechanoidsExtension>() && corpse.InnerPawn.def.GetModExtension<HumanlikeMechanoidsExtension>().corpseIsInedible)
+                if (!__result)
+                    return;
+                if (__instance is Corpse corpse && corpse.InnerPawn.def.HasModExtension<HumanlikeMechanoidsExtension>() && corpse.InnerPawn.def.GetModExtension<HumanlikeMechanoidsExtension>().corpseIsInedible)
                 {
                     __result = false;
                 }
@@ -211,12 +194,12 @@ namespace VexedThings.HarmonyPatches
 
         // Toggles if corpses of pawns with the "corpseIsDisturbing" extension will disturb pawns.
         [HarmonyPatch(typeof(Corpse), "GiveObservedThought")]
-        public class GiveObservedThought_HarmonyPatch
+        public class GiveObservedThought_Patch
         {
             [HarmonyPostfix]
             public static void Listener(Corpse __instance, ref Thought_Memory __result)
             {
-                if (__instance is Corpse corpse && corpse.InnerPawn.def.HasModExtension<HumanlikeMechanoidsExtension>() && corpse.InnerPawn.def.GetModExtension<HumanlikeMechanoidsExtension>().corpseIsDisturbing)
+                if (__instance.InnerPawn.def.HasModExtension<HumanlikeMechanoidsExtension>() && __instance.InnerPawn.def.GetModExtension<HumanlikeMechanoidsExtension>().corpseIsNotDisturbing)
                 {
                     __result = null;
                 }
@@ -228,7 +211,7 @@ namespace VexedThings.HarmonyPatches
             [HarmonyPostfix]
             public static void Listener(Corpse __instance, Pawn observer, ref HistoryEventDef __result)
             {
-                if (__instance is Corpse corpse && corpse.InnerPawn.def.HasModExtension<HumanlikeMechanoidsExtension>() && corpse.InnerPawn.def.GetModExtension<HumanlikeMechanoidsExtension>().corpseIsDisturbing)
+                if (__instance is Corpse corpse && corpse.InnerPawn.def.HasModExtension<HumanlikeMechanoidsExtension>() && corpse.InnerPawn.def.GetModExtension<HumanlikeMechanoidsExtension>().corpseIsNotDisturbing)
                 {
                     __result = null;
                 }
@@ -314,6 +297,32 @@ namespace VexedThings.HarmonyPatches
                 }
             }
         }
+        [HarmonyPatch]
+        public static class ITab_PrisonerHemogenFarm_HarmonyPatch
+        {
+            public static MethodBase TargetMethod()
+            {
+                Type[] nestedTypes = typeof(ITab_Pawn_Visitor).GetNestedTypes(AccessTools.all);
+                for (int i = 0; i < nestedTypes.Length; i++)
+                {
+                    foreach (MethodInfo methodInfo in nestedTypes[i].GetMethods(AccessTools.all))
+                    {
+                        if (methodInfo.Name.Contains("CanUsePrisonerInteractionMode"))
+                        {
+                            return methodInfo;
+                        }
+                    }
+                }
+                return null;
+            }
+            public static void Postfix(Pawn pawn, PrisonerInteractionModeDef mode, ref bool __result)
+            {
+                if (mode == PrisonerInteractionModeDefOf.HemogenFarm && pawn.IsHumanlikeMechanoid())
+                {
+                    __result = false;
+                }
+            }
+        }
 
         // Controls if pawns with the "IsHumanlikeMechanoid" tag can be implanted with xenogerms.
         [HarmonyPatch]
@@ -340,6 +349,26 @@ namespace VexedThings.HarmonyPatches
                     }
                 }
             }
+        }
+    }
+
+    // Controls if pawns with the "IsHumanlikeMechanoid" will use "isFlesh" health capacity labels.
+    [HarmonyPatch(new Type[] { typeof(Pawn) })]
+    [HarmonyPatch(typeof(PawnCapacityDef))]
+    [HarmonyPatch("GetLabelFor")]
+    internal static class GetLabelForAndroidCapacity
+    {
+        public static bool Prefix(ref string __result, PawnCapacityDef __instance, Pawn pawn)
+        {
+            if (pawn != null && pawn.IsHumanlikeMechanoid())
+            {
+                if (__instance.GetModExtension<HumanlikeMechanoidsExtension>() != null)
+                {
+                    __result = __instance.GetModExtension<PersonaCapacityLabel>().personaCapLabel;
+                    return false;
+                }
+            }
+            return true;
         }
     }
 
@@ -411,9 +440,38 @@ namespace VexedThings.HarmonyPatches
         }
     }
 
-    // Controls if pawns with the "IsHumanlikeMechanoid" tag will demand age reversal.
+    internal class MiscTend_Patch
+    {
+        [HarmonyPatch(typeof(WorkGiver_Tend), "HasJobOnThing")]
+        public class HasJobOnThing_HarmonyPatch
+        {
+            [HarmonyPrefix]
+            public static bool Listener(Pawn pawn, Thing t, bool forced)
+            {
+                if (pawn.IsHumanlikeMechanoid())
+                {
+                    return false;
+                }
+                return true;
+            }
+        }
+        [HarmonyPatch(typeof(HealthAIUtility), "ShouldBeTendedNowByPlayer")]
+        public static class ShouldBeTendedNowByPlayer_HarmonyPatch
+        {
+            [HarmonyPostfix]
+            public static void Postfix(Pawn pawn, ref bool __result)
+            {
+                if (pawn.IsHumanlikeMechanoid())
+                {
+                    __result = false;
+                }
+            }
+        }
+    }
+
+    // Controls if pawns with the "IsHumanlikeMechanoid" tag will recieve "demand" thoughts.
     [HarmonyPatch(typeof(ThoughtWorker_AgeReversalDemanded), "ShouldHaveThought")]
-    public class ShouldHaveThought_HarmonyPatch
+    public class AgeReversalShouldHaveThought_HarmonyPatch
     {
         [HarmonyPostfix]
         public static void Listener(Pawn p, ref ThoughtState __result)
@@ -426,6 +484,20 @@ namespace VexedThings.HarmonyPatches
             {
                 __result = ThoughtState.Inactive;
             }
+        }
+    }
+    [HarmonyPatch(typeof(ThoughtWorker_NeedNeuralSupercharge), "ShouldHaveThought")]
+    public static class NeuralSuperchargeShouldHaveThought_HarmonyPatch
+    {
+        [HarmonyPrefix]
+        public static bool Prefix(Pawn p, ref ThoughtState __result)
+        {
+            if (p.IsHumanlikeMechanoid())
+            {
+                __result = ThoughtState.Inactive;
+                return false;
+            }
+            return true;
         }
     }
 
@@ -478,6 +550,64 @@ namespace VexedThings.HarmonyPatches
             }
         }
     }
+    [HarmonyPatch(typeof(CompBiosculpterPod), "AddCarryToPodJobs")]
+    public static class BiosculpterPod_AddCarryToPodJobs_HarmonyPatch
+    {
+        [HarmonyPrefix]
+        public static bool Prefix(Pawn traveller)
+        {
+            return !traveller.IsHumanlikeMechanoid();
+        }
+    }
+    [HarmonyPatch(typeof(CompNeuralSupercharger), "CanAutoUse")]
+    public static class CanAutoUse_HarmonyPatch
+    {
+        [HarmonyPostfix]
+        public static void Postfix(Pawn pawn, ref bool __result)
+        {
+            if (__result && pawn.IsHumanlikeMechanoid())
+            {
+                __result = false;
+            }
+        }
+    }
+
+    // Disables the casual/forced ingestion of drugs, excluding those listed by "whitelistedDrugs".
+    [HarmonyPatch(typeof(Pawn_DrugPolicyTracker), "ShouldTryToTakeScheduledNow")]
+    public static class ShouldTryToTakeScheduledNow_HarmonyPatch
+    {
+        [HarmonyPrefix]
+        public static bool Prefix(Pawn_DrugPolicyTracker __instance)
+        {
+            {
+                return !__instance.pawn.IsHumanlikeMechanoid();
+            }
+        }
+    }
+
+    // VFE Ancients patch, credit to the VFE team for this one.
+    [HarmonyPatch]
+    public static class VFEAncients_Pawn_PowerTracker_CanGetPowers_Patch
+    {
+        public static bool Prepare()
+        {
+            VFEAncients_Pawn_PowerTracker_CanGetPowers_Patch.targetMethod = AccessTools.Method("VFEAncients.Pawn_PowerTracker:CanGetPowers", null, null);
+            return VFEAncients_Pawn_PowerTracker_CanGetPowers_Patch.targetMethod != null;
+        }
+        public static MethodBase TargetMethod()
+        {
+            return VFEAncients_Pawn_PowerTracker_CanGetPowers_Patch.targetMethod;
+        }
+        [HarmonyPostfix]
+        public static void Postfix(Pawn pawn, ref bool __result)
+        {
+            if (pawn.IsHumanlikeMechanoid())
+            {
+                __result = false;
+            }
+        }
+        public static MethodInfo targetMethod;
+    }
 
     // LISTERS / PATCHERS
 
@@ -497,7 +627,7 @@ namespace VexedThings.HarmonyPatches
             else
             {
                 HumanlikeMechanoidsExtension patch = pawn;
-                list = (patch?.disabledJobs);
+                list = (patch?.blackListedJobs);
             }
             List<JobDef> list2 = list;
             return list2 == null || !list2.Contains(newJob.def);
@@ -530,7 +660,7 @@ namespace VexedThings.HarmonyPatches
             else
             {
                 HumanlikeMechanoidsExtension patch = pawn;
-                list = (patch?.disabledHediffs);
+                list = (patch?.blackListedHediffs);
             }
             List<HediffDef> list2 = list;
             return list2 == null || !list2.Contains(hediff.def);

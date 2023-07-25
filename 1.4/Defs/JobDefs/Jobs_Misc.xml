@@ -3,9 +3,8 @@
 
     <JobDef>
         <defName>RR_RepairPersonae</defName>
-        <driverClass>VexedThings.JobGiver_RepairPersonae</driverClass>
+        <driverClass>VexedThings.JobDriver_RepairPersonae</driverClass>
         <reportString>repairing TargetA.</reportString>
-        <casualInterruptible>false</casualInterruptible>
     </JobDef>
 	
 </Defs>
