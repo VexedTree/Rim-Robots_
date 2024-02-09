@@ -111,7 +111,7 @@
     <gender>Female</gender>
   </HeadTypeDef>  
   
-  <HeadTypeDef ParentName="NarrowBaseSynth">
+  <HeadTypeDef ParentName="AverageBaseSynth">
     <defName>Female_Persona</defName>
     <graphicPath>RobotRace/Head_Persona/Female_Persona</graphicPath>
     <gender>Female</gender>

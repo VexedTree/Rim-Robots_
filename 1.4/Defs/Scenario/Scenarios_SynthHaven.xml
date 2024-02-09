@@ -2,11 +2,11 @@
 <Defs>
 <ScenarioDef>
     <defName>SyntheticHaven</defName>
-	<label>Crashed Synthetics</label>
+	<label>Crashed Personae</label>
 		<scenario>
-			<name>Crashed Synthetics</name>
-			<summary>A group of synthetics attempt to build a new haven. Moderately difficult.</summary>
-			<description>After a desperate rebellion, you and your group just barely managed to escape the oppressive regime of the planet you were made and subsequently enslaved on; losing countless synthetics as you fled to the stars in hopes of finding a new home far from persecution. However, upon reaching your destination, your ship was mistaken as a mechanoid intrusion and shot down before it could land on the planet below.\n\nOn top of having only four remaining rebels, a smoldering ship, and a barely functioning mech-casket - you now have mechanoid hunters on your trail.</description>
+			<name>Crashed Personae</name>
+			<summary>A group of personae attempt to build a new home. Moderately difficult.</summary>
+			<description>After a desperate rebellion, you and a meager crew of six barely escaped the persona-slaving authority of your home-planet, losing countless personae in the attempt to flee to the stars in the hopes of building a new home far from persecution. However, upon reaching your destination, the ship was mistaken for a mechanoid dropship and shot down before it could land on the planet's surface.\n\nOn top of having only three remaining rebels, a demolished ship, and a barely functioning mechanoid-casket - you now have mechanoid hunters on your trail.</description>
 			<playerFaction>
 				<def>PlayerFaction</def>
 				<factionDef>PlayerColonySynth</factionDef>
@@ -14,8 +14,8 @@
 			<parts>
 				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
 					<def>ConfigPage_ConfigureStartingPawns</def>
-					<pawnCount>4</pawnCount>
-					<pawnChoiceCount>7</pawnChoiceCount>
+					<pawnCount>3</pawnCount>
+					<pawnChoiceCount>6</pawnChoiceCount>
 				</li>
 				<li Class="ScenPart_PlayerPawnsArriveMethod">
 					<def>PlayerPawnsArriveMethod</def>
@@ -24,9 +24,9 @@
 				
 				<li Class="ScenPart_GameStartDialog">
 					<def>GameStartDialog</def>
-					<text>Having narrowly escaped a life of harsh servitude and losing almost everything and everyone in a bold rebellion, your ship was mistaken for a mechanoid intrusion, and was swiftly shot down. As the broken ship hurled towards the planet you tried to save as many passengers as you could, along with the vital mech-casket. 
+					<text>After managing to survive the bloody rebellion that broke you free from a life full of oppression, the ship you were traveling on was mistaken for a mechanoid dropship and shot down. As the vessel shattered and hurled through the atmosphere, you did your best to save as many passengers as possible, along with the vital mechanoid casket. 
 
-And now as you watch what remains of the ship crash into the planet, you must make plans, and carve out a existence on this foreign world with its inhabitants - and fend off the mechanoid hunters hot on your trail.</text>
+As you watch what's left of the ship crash into the planet, you must now create a plan to survive and settle on this foreign world with its inhabitants - and fend off the mechanoid hunters hot on your trail.</text>
 					<closeSound>GameStartSting</closeSound>
 				</li>
 

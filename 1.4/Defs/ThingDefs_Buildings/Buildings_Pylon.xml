@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>IndustrialChargePylon</defName>
+    <label>charge pylon</label>
+    <description>A massive piece of industrial equipment used to charge an array of batteries. Charge cells are inserted into the pylons ports and rapidly filled with electrical charge.\n\nUsed for industrial scale recharging and dispensing of charge cells for use by humanlike mechanoids.</description>
+    <descriptionHyperlinks><ThingDef>FuelNode_SynthDiet</ThingDef></descriptionHyperlinks>
+    <thingClass>ItemProcessor.Building_ItemProcessor</thingClass>
+    <graphicData>
+      <texPath>Buildings/ChargePylon/Charge_Pylon</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(5.2,5.2)</drawSize>
+	  <drawOffset>(0,0,0.3)</drawOffset>
+    </graphicData>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <researchPrerequisites>
+        <li>MechanentCreation</li>
+    </researchPrerequisites>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <uiIconScale>0.85</uiIconScale>
+    <tickerType>Normal</tickerType>	
+	<rotatable>true</rotatable>
+	<canOverlapZones>false</canOverlapZones>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Production</designationCategory>
+    <constructEffect>ConstructMetal</constructEffect>
+    <statBases>
+        <MaxHitPoints>200</MaxHitPoints>
+        <WorkToBuild>7500</WorkToBuild>
+        <Mass>120</Mass>
+        <Flammability>0.8</Flammability>
+    </statBases>
+    <size>(3,3)</size>
+    <costList>
+        <Steel>250</Steel>
+	    <Plasteel>30</Plasteel>
+        <ComponentIndustrial>12</ComponentIndustrial>
+    </costList>
+	<building>
+	    <isMealSource>true</isMealSource>
+		<ai_chillDestination>false</ai_chillDestination>
+        <soundDispense>ElectricCharge_Shock</soundDispense>
+		<soundAmbient>ChemfuelFiredGenerator_Ambience</soundAmbient>
+		<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		<buildingTags>
+			<li>Production</li>
+		</buildingTags>
+	</building>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <interactionCellOffset>(0,0,2)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>	
+    <comps>
+        <li Class="CompProperties_Flickable" />   
+        <li Class="CompProperties_Power">
+    		<compClass>CompPowerTrader</compClass>
+    		<shortCircuitInRain>true</shortCircuitInRain>
+    		<basePowerConsumption>3200</basePowerConsumption>
+	    </li>
+      <li Class="CompProperties_Toxifier" MayRequire="Ludeon.RimWorld.Biotech">
+        <radius>26.9</radius>
+        <cellsToPollute>6</cellsToPollute>
+        <pollutionIntervalTicks>180000</pollutionIntervalTicks><!-- 3 days -->
+      </li>		
+        <li Class="CompProperties_Glower">
+            <glowRadius>6</glowRadius>
+            <glowColor>(255, 170, 170,0)</glowColor>
+        </li>  
+		<li Class="ItemProcessor.CompProperties_ItemProcessor">
+			<numberOfInputs>1</numberOfInputs>
+			<acceptsNoneAsInput>false</acceptsNoneAsInput>
+			<transfersIngredientLists>false</transfersIngredientLists>
+			<isAutoDropper>false</isAutoDropper>
+			<isSemiAutomaticMachine>true</isSemiAutomaticMachine>
+			<isMachinePausable>true</isMachinePausable>
+			<showProgressBar>true</showProgressBar>						
+			<destroyIngredientsAtStartOfProcess>true</destroyIngredientsAtStartOfProcess>
+			<mustLoadFromInteractionSpot>true</mustLoadFromInteractionSpot>
+			<mustUnloadFromInteractionSpot>true</mustUnloadFromInteractionSpot>	
+				
+			<chooseIngredientsIcon>Gizmos/UI/BringToPylon</chooseIngredientsIcon>
+			<InsertFirstItemDesc>IP_ChooseOutput</InsertFirstItemDesc>
+
+			<cancelIngredientsIcon>Gizmos/UI/CancelBringingToPylon</cancelIngredientsIcon>					
+			<cancelIngredientsText>IP_CancelIngredients</cancelIngredientsText>
+			<cancelIngredientsDesc>IP_CancelIngredientsDesc</cancelIngredientsDesc>	
+				
+			<resetSemiautomaticIcon>Gizmos/UI/ResetPylon</resetSemiautomaticIcon>
+				
+			<noPowerDestroysProgress>true</noPowerDestroysProgress>
+			<noPowerDestroysMessage>IP_NoPowerDestroysWarning</noPowerDestroysMessage>
+			<noPowerDestroysInitialWarning>IP_NoPowerDestroysInitialWarning</noPowerDestroysInitialWarning>
+			<rareTicksToDestroy>20</rareTicksToDestroy>														
+		</li>		
+    </comps>
+	<placeWorkers MayRequire="Ludeon.RimWorld.Biotech">
+        <li>PlaceWorker_ToxifierGenerator</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected MayRequire="Ludeon.RimWorld.Biotech">true</drawPlaceWorkersWhileSelected>
+  </ThingDef>
+</Defs>

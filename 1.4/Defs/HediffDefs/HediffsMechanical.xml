@@ -15,31 +15,11 @@
 		<disablesNeeds>
 		    <li>Comfort</li>
 			<li>Beauty</li>
-			<li>DrugDesire</li>
 		</disablesNeeds>	
 		<stages>
 		    <li>		
 			    <painFactor>0.0</painFactor>			
 		        <becomeVisible>false</becomeVisible>
-			    <makeImmuneTo>
-	                <li>FoodPoisoning</li>
-	                <li>DrugOverdose</li>
-	                <li>HeartAttack</li>
-	                <li>Carcinoma</li>
-	                <li>GutWorms</li>
-	                <li>MuscleParasites</li>
-	                <li>WoundInfection</li>
-	                <li>Flu</li>	   
-	                <li>Plague</li>
-	                <li>Malaria</li>
-	                <li>SleepingSickness</li>
-	                <li>ChemicalBurn</li>
-	                <li>Frostbite</li>
-	                <li>ChemicalDamageModerate</li>
-	                <li>ChemicalDamageSevere</li>
-	                <li>Cirrhosis</li>
-	                <li>Scaria</li>				
-	    		</makeImmuneTo>
 		    </li>
             <li MayRequire="Dylan.CSL">
                 <capMods>
@@ -74,27 +54,10 @@
 		<initialSeverity>1</initialSeverity>
 		<maxSeverity>1.0</maxSeverity>
 		<defaultLabelColor>(0.6, 0.6, 0.70)</defaultLabelColor>	
-		<disablesNeeds>
-			<li>DrugDesire</li>
-		</disablesNeeds>
+		<disablesNeeds/>
 		<stages>
 		    <li>
 		        <becomeVisible>false</becomeVisible>
-			    <makeImmuneTo>
-	                <li>FoodPoisoning</li>
-	                <li>DrugOverdose</li>
-	                <li>HeartAttack</li>
-	                <li>Carcinoma</li>
-	                <li>GutWorms</li>
-	                <li>MuscleParasites</li>
-	                <li>WoundInfection</li>
-	                <li>Flu</li>	   
-	                <li>Plague</li>
-	                <li>Malaria</li>
-	                <li>SleepingSickness</li>
-	                <li>Cirrhosis</li>
-	                <li>Scaria</li>					
-	    		</makeImmuneTo>
 		    </li>
             <li MayRequire="Dylan.CSL">
                 <capMods>
@@ -368,5 +331,14 @@
       </li>
     </stages>
   </HediffDef>  
+	
+  <HediffDef>
+    <defName>RR_HumanlikeMechanoidHibernation</defName>
+    <label>dormancy</label>
+    <description>This persona doesn't have enough energy to remain active, thus it has been forced into dormancy. Unlike simpler mechanoids, dormancy does not have the capability to recharge the persona while it hibernates - meaning it must be brought to a charger, or reactivated with fuel.</description>
+    <isBad>false</isBad>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+  </HediffDef>	
 	
 </Defs>

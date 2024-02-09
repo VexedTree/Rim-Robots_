@@ -11,6 +11,7 @@ Ash
 Chirp
 Tali
 Siri
+Jinx
 Wquec
 Elizabeth
 Veronipoint

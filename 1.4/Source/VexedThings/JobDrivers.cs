@@ -3,16 +3,17 @@ using Verse;
 using Verse.AI;
 using RimWorld;
 using UnityEngine;
+using System;
 
 namespace VexedThings
 {
-	public class JobDriver_RepairPersonae : JobDriver
+	public class JobDriver_RepairHumanlikeMechanoid : JobDriver
 	{
 		protected Pawn Persona
 		{
 			get
 			{
-				return (Pawn)this.job.GetTarget(TargetIndex.A).Thing;
+				return (Pawn)job.GetTarget(TargetIndex.A).Thing;
 			}
 		}
 
@@ -20,25 +21,25 @@ namespace VexedThings
 		{
 			get
 			{
-				return Mathf.RoundToInt(1f / this.pawn.GetStatValue(RR_DefOf.TendSpeed_Synth, true, -1) * 120f);
+				return Mathf.RoundToInt(1f / pawn.GetStatValue(RR_DefOf.TendSpeed_Synth, true, -1) * 120f);
 			}
 		}
 
 		public override bool TryMakePreToilReservations(bool errorOnFailed)
 		{
-			return this.pawn.Reserve(this.Persona, this.job, 1, -1, null, errorOnFailed);
+			return pawn.Reserve(Persona, job, 1, -1, null, errorOnFailed);
 		}
 
 		protected override IEnumerable<Toil> MakeNewToils()
 		{
 			this.FailOnDestroyedOrNull(TargetIndex.A);
 			this.FailOnForbidden(TargetIndex.A);
-			this.FailOn(() => this.Persona.IsAttacking());
+			this.FailOn(() => Persona.IsAttacking());
 			Toil gotoToil = Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
-			int ticks = (int)(1f / this.pawn.GetStatValue(RR_DefOf.TendSpeed_Synth, true, -1) * 600f);
+			int ticks = (int)(1f / pawn.GetStatValue(RR_DefOf.TendSpeed_Synth, true, -1) * 600f);
 			Toil tendToil = Toils_General.Wait(ticks, TargetIndex.None);
 			tendToil.WithProgressBarToilDelay(TargetIndex.A, false, -0.5f).PlaySustainerOrSound(SoundDefOf.RepairMech_Touch, 1f);
-			if (this.pawn != this.Persona)
+			if (pawn != Persona)
 			{
 				tendToil.FailOnCannotTouch(TargetIndex.A, PathEndMode.InteractionCell);
 			}
@@ -48,9 +49,9 @@ namespace VexedThings
 			tendToil.PlaySustainerOrSound(SoundDefOf.RepairMech_Touch, 1f);
 			tendToil.tickAction = delegate ()
 			{
-				if (this.pawn != this.Persona)
+				if (pawn != Persona)
 				{
-					this.pawn.rotationTracker.FaceTarget(this.Persona);
+					pawn.rotationTracker.FaceTarget(Persona);
 				}
 			};
 			Toil repairToil = Toils_General.Wait(int.MaxValue, TargetIndex.None);
@@ -58,51 +59,51 @@ namespace VexedThings
 			repairToil.PlaySustainerOrSound(SoundDefOf.RepairMech_Touch, 1f);
 			repairToil.AddPreInitAction(delegate
 			{
-				this.ticksToNextRepair = this.TicksPerHeal;
+				ticksToNextRepair = TicksPerHeal;
 			});
 			repairToil.handlingFacing = true;
 			repairToil.tickAction = delegate ()
 			{
-				this.ticksToNextRepair--;
-				if (this.ticksToNextRepair <= 0)
+				ticksToNextRepair--;
+				if (ticksToNextRepair <= 0)
 				{
-					this.Persona.needs.food.CurLevel -= this.Persona.GetStatValue(RR_DefOf.PersonaEnergyLossPerHP, true, -1);
-					JobDriver_RepairPersonae.RepairingCurrent(this.Persona);
-					this.ticksToNextRepair = this.TicksPerHeal;
+					Persona.needs.food.CurLevel -= Persona.GetStatValue(RR_DefOf.PersonaEnergyLossPerHP, true, -1);
+					JobDriver_RepairPersonae.RepairingCurrent(Persona);
+					ticksToNextRepair = TicksPerHeal;
 				}
-				this.pawn.rotationTracker.FaceTarget(this.Persona);
-				if (this.pawn.skills != null)
+				pawn.rotationTracker.FaceTarget(Persona);
+				if (pawn.skills != null)
 				{
-					this.pawn.skills.Learn(SkillDefOf.Crafting, 0.05f, false);
+					pawn.skills.Learn(SkillDefOf.Crafting, 0.05f, false);
 				}
 			};
-			if (this.pawn != this.Persona)
+			if (pawn != Persona)
 			{
 				repairToil.FailOnCannotTouch(TargetIndex.A, PathEndMode.InteractionCell);
 			}
 			repairToil.AddEndCondition(delegate
 			{
-				if (!JobDriver_RepairPersonae.CanRepairNow(this.Persona))
+				if (!JobDriver_RepairPersonae.CanRepairNow(Persona))
 				{
 					return JobCondition.Succeeded;
 				}
 				return JobCondition.Ongoing;
 			});
 			repairToil.activeSkill = (() => SkillDefOf.Crafting);
-			if (this.pawn != this.Persona)
+			if (pawn != Persona)
 			{
 				yield return gotoToil;
 			}
-			yield return Toils_Jump.JumpIf(repairToil, () => !this.Persona.health.HasHediffsNeedingTend(false));
+			yield return Toils_Jump.JumpIf(repairToil, () => !Persona.health.HasHediffsNeedingTend(false));
 			yield return tendToil;
-			yield return JobDriver_RepairPersonae.FinalizeRepair(this.Persona);
+			yield return JobDriver_RepairPersonae.FinalizeRepair(Persona);
 			yield return Toils_Jump.Jump(gotoToil);
 			yield return repairToil;
-			base.AddFinishAction(delegate
+			AddFinishAction(delegate
 			{
-				if (this.Persona != null && this.Persona != this.pawn && this.Persona.CurJob != null && (this.Persona.CurJob.def == JobDefOf.Wait || this.Persona.CurJob.def == JobDefOf.Wait_MaintainPosture))
+				if (Persona != null && Persona != pawn && Persona.CurJob != null && (Persona.CurJob.def == JobDefOf.Wait || Persona.CurJob.def == JobDefOf.Wait_MaintainPosture))
 				{
-					this.Persona.jobs.EndCurrentJob(JobCondition.InterruptForced, true, true);
+					Persona.jobs.EndCurrentJob(JobCondition.InterruptForced, true, true);
 				}
 			});
 			yield break;
@@ -164,16 +165,16 @@ namespace VexedThings
 		public override void Notify_DamageTaken(DamageInfo dinfo)
 		{
 			base.Notify_DamageTaken(dinfo);
-			if (dinfo.Def.ExternalViolenceFor(this.pawn) && this.pawn.Faction != Faction.OfPlayer && this.pawn == this.Persona)
+			if (dinfo.Def.ExternalViolenceFor(pawn) && pawn.Faction != Faction.OfPlayer && pawn == Persona)
 			{
-				this.pawn.jobs.CheckForJobOverride();
+				pawn.jobs.CheckForJobOverride();
 			}
 		}
 
 		public override void ExposeData()
 		{
 			base.ExposeData();
-			Scribe_Values.Look<int>(ref this.ticksToNextRepair, "ticksToNextRepair", 0, false);
+			Scribe_Values.Look(ref ticksToNextRepair, "ticksToNextRepair", 0, false);
 		}
 		protected int ticksToNextRepair;
 	}

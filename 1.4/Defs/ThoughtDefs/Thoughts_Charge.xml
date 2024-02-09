@@ -5,12 +5,12 @@
     <defName>FullyCharged</defName>
     <showBubble>true</showBubble>
     <icon>Gizmos/OpinionOfSynth</icon>
-    <durationDays>1</durationDays>
+    <durationDays>1.6</durationDays>
     <stages>
       <li>
-        <label>fully charged</label>
-        <description>Energy is coursing through me.</description>
-        <baseMoodEffect>6</baseMoodEffect>
+        <label>optimally charged</label>
+        <description>I was optimally charged. Everything is running right.</description>
+        <baseMoodEffect>7</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>

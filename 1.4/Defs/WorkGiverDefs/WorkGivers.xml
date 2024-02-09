@@ -2,9 +2,9 @@
 <Defs>
 
   <WorkGiverDef>
-    <defName>RR_WorkRepairPersonae</defName>
-    <label>repair personae</label>
-    <giverClass>VexedThings.WorkGiver_RepairPersona</giverClass>
+    <defName>RR_WorkRepairPersonaeUrgent</defName>
+    <label>repair personae with urgent needs</label>
+    <giverClass>VexedThings.WorkGiver_RepairPersonaOtherUrgent</giverClass>
     <workType>Smithing</workType>
     <emergency>true</emergency>
     <verb>repair</verb>
@@ -12,9 +12,43 @@
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
+    <priorityInType>110</priorityInType>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef> 
+  
+  <WorkGiverDef>
+    <defName>RR_WorkRepairPersonae</defName>
+    <label>repair personae</label>
+    <giverClass>VexedThings.WorkGiver_RepairPersonaOther</giverClass>
+    <workType>Smithing</workType>
+    <verb>repair</verb>
+    <gerund>repairing</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
     <priorityInType>100</priorityInType>
     <prioritizeSustains>true</prioritizeSustains>
-	<canBeDoneByMechs>true</canBeDoneByMechs>
+  </WorkGiverDef>
+  
+  <WorkGiverDef Name="RR_PersonaRepairSelf">
+    <defName>RR_WorkSelfRepairPersonae</defName>
+    <label>repair self</label>
+    <giverClass>VexedThings.WorkGiver_RepairPersonaSelf</giverClass>
+    <workType>Smithing</workType>
+    <verb>repair</verb>
+    <gerund>repairing</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <priorityInType>90</priorityInType>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>  
+
+  <WorkGiverDef ParentName="RR_PersonaRepairSelf">
+    <defName>RR_WorkSelfRepairPersonaeEmergency</defName>
+    <giverClass>VexedThings.WorkGiver_RepairPersonaSelfEmergency</giverClass>
+    <emergency>True</emergency>
+    <priorityInType>95</priorityInType>
   </WorkGiverDef>  
 
 </Defs>

@@ -22,7 +22,15 @@ namespace VexedThings
 
         public List<HediffDef> blackListedHediffs = new List<HediffDef>();
         public List<JobDef> blackListedJobs = new List<JobDef>();
-        public List<ThingDef> whiteListedDrugs = new List<ThingDef>();
+    }
+
+    public class VexedThingsItemExtension : DefModExtension
+    {
+        public bool isIngestibleByPersonaeOnly = true;
+    }
+    public class VexedThingsHediffExtension : DefModExtension
+    {
+        public bool affectsPersonae = true;
     }
 
     internal class PersonaCapacityLabel : DefModExtension
@@ -42,18 +50,33 @@ namespace VexedThings
         public static TraitDef Anthropophobia;
         public static ThoughtDef AnthropophobiaVsHuman;
 
-        public static FleshTypeDef VexedMechanical;
-        public static FleshTypeDef VexedSynthetic;
-
         public static JobDef RR_RepairPersonae;
+
+        public static HediffDef RR_HumanlikeMechanoidHibernation;
 
         public static StatDef TendSpeed_Synth;
         public static StatDef PersonaEnergyLossPerHP;
 
-        public static FleckDef RepairingCog;
-
         public static EffecterDef RepairingSynthetic;
+
+        public static ThingDef FuelNode_SynthDiet;
+        public static FleckDef RR_PersonaFleckCharging;
+        public static FleckDef RR_PersonaFleckRepair;
+
+        public static SoundDef ReactorCharge_Sustained;
     }
+
+    public class Need_RemoveFoodNeed : Need_Food
+    {
+        public Need_RemoveFoodNeed(Pawn pawn) : base(pawn)
+        {
+        }
+        public override void NeedInterval()
+        {
+            CurLevel = 1f;
+        }
+    }
+
     public static class SyntheticPawnsExtensions
     {
         public static HumanlikeMechanoidsExtension FetchExtension(this Pawn pawn)

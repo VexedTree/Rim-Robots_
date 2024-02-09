@@ -16,7 +16,12 @@
     <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>	
     <factionNameMaker>NamerFactionSynth</factionNameMaker>
     <settlementNameMaker>NamerSettlementSynthetic</settlementNameMaker>
-    <allowedCultures><li>Astropolitan</li></allowedCultures>	
+    <allowedCultures><li>Astropolitan</li></allowedCultures>
+    <dialogFactionGreetingHostile>SynthFactionGreetingHostile</dialogFactionGreetingHostile>
+    <dialogFactionGreetingHostileAppreciative>SynthFactionGreetingHostileAppreciative</dialogFactionGreetingHostileAppreciative>
+    <dialogFactionGreetingWary>SynthFactionGreetingWary</dialogFactionGreetingWary>
+    <dialogFactionGreetingWarm>SynthFactionGreetingWarm</dialogFactionGreetingWarm>	
+	<dialogMilitaryAidSent>SynthMilitaryAidSent</dialogMilitaryAidSent>
     <disallowedMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">AnimalPersonhood</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">TreeConnection</li>		
@@ -183,12 +188,9 @@
         <carriers>
           <Horse>7</Horse>		
           <Muffalo>6</Muffalo>
-          <Donkey>5.5</Donkey>
-          <Yak>5</Yak>		  
-          <Dromedary>4</Dromedary>		  
-          <Alpaca>2.5</Alpaca>
-          <Bison>2</Bison>		  
-          <Elephant>1</Elephant>
+          <Donkey>4.5</Donkey>
+          <Yak>3</Yak>		  
+          <Dromedary>2</Dromedary>
         </carriers>
         <guards>
           <Town_Guard>0.07</Town_Guard>

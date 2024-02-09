@@ -70,7 +70,7 @@ namespace VexedThings
     {
         public override float OpinionOffset()
         {
-            if (this.pawn.story.traits.DegreeOfTrait(RR_DefOf.Anthropophobia) != 1)
+            if (pawn.story.traits.DegreeOfTrait(RR_DefOf.Anthropophobia) != 1)
             {
                 return -15f;
             }

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============================== Big threats ==============================-->
+  
+  <IncidentDef>
+    <defName>RR_MechanoidHunters</defName>
+    <label>mechanoid hunters</label>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_RaidEnemy</workerClass>
+    <baseChance>0</baseChance>
+    <letterLabel>Mechanoid Hunters</letterLabel>
+    <letterText>Mechanoid hunters have arrived!\n\nThey will take no chances of your colony developing into something more sinister, and will attempt to wipe you out.</letterText>
+    <letterDef>ThreatBig</letterDef>	
+    <category>ThreatBig</category>
+    <pointsScaleable>true</pointsScaleable>
+	<pawnKind>RR_MechanoidHunter</pawnKind>
+    <tale>Raid</tale>
+  </IncidentDef>
+
+</Defs>

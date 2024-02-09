@@ -50,6 +50,7 @@
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>1.0</maxSeverity>
 	<defaultLabelColor>(0.6, 0.6, 0.70)</defaultLabelColor>	
+	<blocksSocialInteraction>true</blocksSocialInteraction>
 	<disablesNeeds>
 	    <li>Mood</li>
 		<li>Joy</li>

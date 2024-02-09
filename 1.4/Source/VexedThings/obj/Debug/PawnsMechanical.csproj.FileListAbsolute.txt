@@ -70,10 +70,16 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Skeletons!\1.4\S
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Skeletons!\1.4\Source\PawnsMechanical\obj\Debug\PawnsMechanical.csproj.CopyComplete
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Skeletons!\1.4\Source\PawnsMechanical\obj\Debug\VexedThings.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Skeletons!\1.4\Source\PawnsMechanical\obj\Debug\VexedThings.pdb
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\Assemblies\PawnsMechanical.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\Assemblies\PawnsMechanical.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\1.4\Source\VexedThings\obj\Debug\PawnsMechanical.csproj.AssemblyReference.cache
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\1.4\Source\VexedThings\obj\Debug\PawnsMechanical.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\1.4\Source\VexedThings\obj\Debug\PawnsMechanical.csproj.CopyComplete
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\1.4\Source\VexedThings\obj\Debug\PawnsMechanical.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\1.4\Source\VexedThings\obj\Debug\PawnsMechanical.pdb
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\1.4\Source\VexedThings\obj\Debug\PawnsMechanical.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\Assemblies\PawnsMechanical.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\Assemblies\PawnsMechanical.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_ - Copy\Assemblies\PawnsMechanical.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_ - Copy\Assemblies\PawnsMechanical.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_ - Copy\1.4\Source\VexedThings\obj\Debug\PawnsMechanical.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_ - Copy\1.4\Source\VexedThings\obj\Debug\PawnsMechanical.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_ - Copy\1.4\Source\VexedThings\obj\Debug\PawnsMechanical.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_ - Copy\1.4\Source\VexedThings\obj\Debug\PawnsMechanical.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_ - Copy\1.4\Source\VexedThings\obj\Debug\PawnsMechanical.csproj.CopyComplete

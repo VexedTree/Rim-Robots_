@@ -30,7 +30,13 @@
 	            <SubcoreHigh>1</SubcoreHigh>
               </costList>	
 	        </value>
-		</li>	
+		</li>
+		<li Class="PatchOperationReplace">	
+            <xpath>/Defs/ThingDef[defName="IndustrialChargePylon"]/description</xpath>
+            <value>
+               <description>A massive piece of industrial equipment used to charge an array of batteries. Charge cells are inserted into the pylons ports and rapidly filled with electrical charge.\n\nUsed for industrial scale recharging and dispensing of charge cells for use by humanlike-mechanoids.\n\nWhile the pylon is active, it will slowly pollute the terrain within a respectable radius. If all terrain in the radius is polluted, the pylon will shut down.</description>
+		    </value>
+		</li>  
 	  </operations>
     </match>		  
   </Operation>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod"> <!-- Full credit to ГМ for the provided patches for CE! -->
+		<mods>
+			<li>Combat Extended</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			  <!-- ============================== Implants  ====================== -->
+			  <!-- Self-Alloyed Plating -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/HediffDef[defName="RR_SelfAlloyingPlating"]/stages/li/statOffsets/ArmorRating_Sharp</xpath>
+					<value>
+						<ArmorRating_Sharp>2</ArmorRating_Sharp>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/HediffDef[defName="RR_SelfAlloyingPlating"]/stages/li/statOffsets/ArmorRating_Blunt</xpath>
+					<value>
+						<ArmorRating_Blunt>3</ArmorRating_Blunt>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/HediffDef[defName="RR_SelfAlloyingPlating"]/stages/li/statOffsets</xpath>
+					<value>
+						<MoveSpeed>-0.25</MoveSpeed>
+						<MeleeDodgeChance>-0.07</MeleeDodgeChance>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/HediffDef[defName="RR_SelfAlloyingPlating"]/stages/li/capMods</xpath>
+				</li>
+				
+			<!-- Added Scythes -->
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/HediffDef[defName="RR_AddedScythes"]/comps/tools</xpath>
+                <value>
+                  <tools>
+                    <li Class="CombatExtended.ToolCE">
+                        <label>left blade</label>
+                        <capacities>
+                            <li>Cut</li>
+                        </capacities>
+                        <power>43</power>
+                        <cooldownTime>2.07</cooldownTime>
+                        <linkedBodyPartsGroup>LeftBlade</linkedBodyPartsGroup>
+                        <armorPenetrationSharp>2.16</armorPenetrationSharp>
+                        <armorPenetrationBlunt>5.4</armorPenetrationBlunt>
+                        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                 		<soundMeleeHit>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHit>
+                        <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+                    </li>
+                    <li Class="CombatExtended.ToolCE">
+                        <label>left blade</label>
+                        <capacities>
+                            <li>Stab</li>
+                        </capacities>
+                        <power>24</power>
+                        <cooldownTime>1.33</cooldownTime>
+                        <linkedBodyPartsGroup>LeftBlade</linkedBodyPartsGroup>
+                        <armorPenetrationSharp>40</armorPenetrationSharp>
+                        <armorPenetrationBlunt>20</armorPenetrationBlunt>
+                        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		                <soundMeleeHit>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHit>
+                        <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+                    </li>
+                    <li Class="CombatExtended.ToolCE">
+                        <label>right blade</label>
+                        <capacities>
+                            <li>Cut</li>
+                        </capacities>
+                        <power>43</power>
+                        <cooldownTime>2.07</cooldownTime>
+                        <linkedBodyPartsGroup>RightBlade</linkedBodyPartsGroup>
+                        <armorPenetrationSharp>2.16</armorPenetrationSharp>
+                        <armorPenetrationBlunt>5.4</armorPenetrationBlunt>
+                        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		                <soundMeleeHit>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHit>
+                        <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+                    </li>
+                    <li Class="CombatExtended.ToolCE">
+                        <label>right blade</label>
+                        <capacities>
+                            <li>Stab</li>
+                        </capacities>
+                        <power>24</power>
+                        <cooldownTime>1.33</cooldownTime>
+                        <linkedBodyPartsGroup>RightBlade</linkedBodyPartsGroup>
+                        <armorPenetrationSharp>40</armorPenetrationSharp>
+                        <armorPenetrationBlunt>20</armorPenetrationBlunt>
+                        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		                <soundMeleeHit>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHit>
+                        <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+                    </li>
+                </tools>
+            </value>
+        </li>		
+		</operations>
+		</match>
+	</Operation>
+</Patch>

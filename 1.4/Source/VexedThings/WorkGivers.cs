@@ -35,7 +35,7 @@ namespace VexedThings
 
 		public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
 		{
-			return WorkGiver_RepairPersona.HasJobOn(pawn, t, forced);
+			return HasJobOn(pawn, t, forced);
 		}
 
 		public static bool HasJobOn(Pawn pawn, Thing t, bool forced)
@@ -49,13 +49,13 @@ namespace VexedThings
 			{
 				return false;
 			}
-			if (!WorkGiver_RepairPersona.GoodLayingStatusForTend(pawn2, pawn, forced))
-			{
-				return false;
-			}
 			if (pawn != pawn2)
 			{
 				if (pawn2.CurJobDef == RR_DefOf.RR_RepairPersonae)
+				{
+					return false;
+				}
+				if (pawn2.needs.food == null)
 				{
 					return false;
 				}
@@ -72,11 +72,10 @@ namespace VexedThings
 					return false;
 				}
 			}
-			return JobDriver_RepairPersonae.CanRepairNow(pawn2);
+			return JobDriver_RepairHumanlikeMechanoid.CanRepair(pawn2);
 		}
 
-
-		public static bool GoodLayingStatusForTend(Pawn patient, Pawn doctor, bool forced)
+		public static bool GoodLayingStatusForTend(Pawn patient, Pawn doctor)
 		{
 			if (patient == doctor)
 			{
@@ -91,7 +90,69 @@ namespace VexedThings
 
 		public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
 		{
-			return JobMaker.MakeJob(RR_DefOf.RR_RepairPersonae, t);
+			Pawn pawn2 = t as Pawn;
+			return JobMaker.MakeJob(RR_DefOf.RR_RepairPersonae, pawn2);
 		}
+	}
+
+	public class WorkGiver_RepairPersonaOther : WorkGiver_RepairPersona
+	{
+		public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
+		{
+			return base.HasJobOnThing(pawn, t, forced) && pawn != t;
+		}
+	}
+
+	public class WorkGiver_RepairPersonaOtherUrgent : WorkGiver_RepairPersonaOther
+	{
+		public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
+		{
+			return base.HasJobOnThing(pawn, t, forced) && HealthAIUtility.ShouldBeTendedNowByPlayerUrgent((Pawn)t);
+		}
+	}
+
+	public class WorkGiver_RepairPersonaSelf : WorkGiver_RepairPersona
+	{
+		public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
+		{
+			yield return pawn;
+			yield break;
+		}
+
+		public override ThingRequest PotentialWorkThingRequest
+		{
+			get
+			{
+				return ThingRequest.ForGroup(ThingRequestGroup.Undefined);
+			}
+		}
+
+		public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
+		{
+			bool flag = pawn == t && pawn.playerSettings != null && base.HasJobOnThing(pawn, t, forced);
+			if (flag && !pawn.playerSettings.selfTend)
+			{
+				JobFailReason.Is("SelfTendDisabled".Translate(), null);
+			}
+			return flag && pawn.playerSettings.selfTend;
+		}
+	}
+	public class WorkGiver_RepairPersonaSelfEmergency : WorkGiver_RepairPersonaSelf
+	{
+		public override Job NonScanJob(Pawn pawn)
+		{
+			if (!HasJobOnThing(pawn, pawn, false) || !HealthAIUtility.ShouldBeTendedNowByPlayerUrgent(pawn))
+			{
+				return null;
+			}
+			ThinkResult thinkResult = jgp.TryIssueJobPackage(pawn, default);
+			if (thinkResult.IsValid)
+			{
+				return thinkResult.Job;
+			}
+			return null;
+		}
+
+		private static JobGiver_RepairHumanlikeMechanoid jgp = new JobGiver_RepairHumanlikeMechanoid();
 	}
 }

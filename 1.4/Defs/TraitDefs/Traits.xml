@@ -5,7 +5,7 @@
         <commonality>0.4</commonality>
         <degreeDatas>
             <li>
-                <label>automatonophobe</label>
+                <label>automaphobe</label>
                 <description>[PAWN_nameDef] despises artificial humanoids. {PAWN_pronoun} sees them as the potential downfall of all biological sentience.</description>
                 <degree>1</degree>
             </li>
@@ -20,13 +20,13 @@
         <commonality>0.8</commonality>
         <degreeDatas>
             <li>
-                <label>anthropophobe</label>
+                <label>anthrophobe</label>
                 <description>[PAWN_nameDef] despises biological humanoids. {PAWN_pronoun} sees them as a disease that must be snuffed out.</description>
                 <degree>1</degree>
                 <commonality>0.6</commonality>
             </li>
             <li>
-                <label>anthropophile</label>
+                <label>anthrophile</label>
                 <description>[PAWN_nameDef] exists to serve humanity. {PAWN_pronoun} has an unshakable yet endearing infatuation with biological sentience.</description>
                 <degree>-1</degree>
                 <commonality>0.4</commonality>

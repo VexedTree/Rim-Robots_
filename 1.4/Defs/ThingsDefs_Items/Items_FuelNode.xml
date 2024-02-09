@@ -17,23 +17,26 @@
     </statBases>
     <altitudeLayer>Item</altitudeLayer>
     <stackLimit>10</stackLimit>
+	<techLevel>Industrial</techLevel>
     <tickerType>Rare</tickerType>
     <socialPropernessMatters>true</socialPropernessMatters>
     <thingCategories>
-      <li>FoodMeals</li>
+      <li>Manufactured</li>
     </thingCategories>
+	<tradeTags>
+      <li>SynthFuel</li>
+    </tradeTags>
     <alwaysHaulable>true</alwaysHaulable>
     <comps>
       <li Class="CompProperties_Forbiddable" />
-      <li Class="CompProperties_FoodPoisonable" />
     </comps>
     <pathCost>14</pathCost>
-    <allowedArchonexusCount>40</allowedArchonexusCount>
+    <allowedArchonexusCount>20</allowedArchonexusCount>
     <resourceReadoutPriority>Last</resourceReadoutPriority>
     <drawGUIOverlay>true</drawGUIOverlay>
     <uiIconForStackCount>1</uiIconForStackCount>
     <ingestible>
-      <foodType>Meal</foodType>
+      <foodType>Fluid</foodType>
       <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
       <optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
     </ingestible>
@@ -42,7 +45,8 @@
   <ThingDef ParentName="PersonaFuelBase">
     <defName>FuelNode_SynthDiet</defName>
     <label>charge cell</label>
-    <description>A small battery capacitor which holds a large amount of electrical current. Used to charge the internal reactors of persona-avatars, mechanoids, and small star ships.</description>
+    <description>A small battery capacitor which holds a large amount of electrical current. Used to charge the internal reactors of persona-avatars, mechanoids, and small star ships.\n\nWhile charge cells can be made at a machining table, it's much more efficient and less costly to simply build a charge pylon to produce industrial amounts of batteries.</description>
+    <descriptionHyperlinks><ThingDef>IndustrialChargePylon</ThingDef></descriptionHyperlinks> 
     <graphicData>
       <texPath>Items/Nodes</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -50,13 +54,12 @@
     </graphicData>
 	<statBases>
 	    <Nutrition>1.4</Nutrition>
-		<FoodPoisonChanceFixedHuman>0</FoodPoisonChanceFixedHuman>
 		<Mass>0.45</Mass>
 		<MaxHitPoints>20</MaxHitPoints>
 		<DeteriorationRate>1</DeteriorationRate>
 		<Flammability>5.0</Flammability>
 		<MarketValue>36</MarketValue>
-		<WorkToMake>3000</WorkToMake>
+		<WorkToMake>860</WorkToMake>
 	</statBases>	
     <socialPropernessMatters>true</socialPropernessMatters>
     <ingestible>
@@ -72,17 +75,19 @@
 		<ingestHoldUsesTable>false</ingestHoldUsesTable>
 		<useEatingSpeedStat>false</useEatingSpeedStat>
 		<chairSearchRadius>0</chairSearchRadius>
-    </ingestible>	
-    <tickerType>Normal</tickerType>	
-    <stackLimit>5</stackLimit>		
-    <techLevel>Industrial</techLevel>
-    <thingCategories>
-      <li>Manufactured</li>
-    </thingCategories>
-    <tradeTags>
-      <li>SynthFuel</li>
-    </tradeTags>	
-    <allowedArchonexusCount>20</allowedArchonexusCount>	
+    </ingestible>					
+    <recipeMaker>
+      <effectWorking>SyntheticElectricalArcs</effectWorking>
+	  <soundWorking>ElectricCharge_Shock</soundWorking>
+      <researchPrerequisite>MechanentCreation</researchPrerequisite>
+      <bulkRecipeCount>4</bulkRecipeCount>	  
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Steel>35</Steel>
+    </costList>
   </ThingDef>
 
 </Defs>

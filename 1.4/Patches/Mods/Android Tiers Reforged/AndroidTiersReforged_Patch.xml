@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Android Tiers Reforged</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name='ATR_surgeryMechanical']/recipeUsers</xpath>
+					<order>Append</order>
+					<value>
+						<li>Mechanent</li>
+						<li>Personae_</li>
+					</value>
+				</li>				
+			    <li Class="PatchOperationRemove">
+				    <xpath>/Defs/RecipeDef[defName='RR_Decommission']</xpath>
+			    </li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

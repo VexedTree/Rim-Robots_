@@ -93,12 +93,11 @@
     </colorChannels>
     </alienPartGenerator>
 	
-    <forcedRaceTraitEntries>	
-	    <li>
-			<defName>Asexual</defName>
-			<chance>50</chance>
-		</li>	
-    </forcedRaceTraitEntries>	
+    <forcedRaceTraitEntries/>	
+	
+    <notXenophobistTowards>
+        <li>Personae_</li>
+    </notXenophobistTowards>	
     
  	<disallowedTraits>
 		<li>
@@ -109,15 +108,21 @@
 		</li>	
 		<li>
 			<defName>Wimp</defName>
-		</li>			
+		</li>
+		<li>
+			<defName>Greedy</defName>
+		</li>		
 		<li>
 			<defName>CreepyBreathing</defName>
 		</li>		
 		<li>
 		    <defName>Gay</defName>
-		</li>
+		</li>		
 		<li>
 			<defName>Bisexual</defName>
+		</li>	
+		<li>
+		    <defName>Asexual</defName>
 		</li>		
 		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
 			<defName>VTE_ThinSkinned</defName>
@@ -137,6 +142,24 @@
 		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
 			<defName>VTE_Prude</defName>
 		</li>
+		<li MayRequire="divineDerivative.Romance">
+			<defName>Faithful</defName>
+		</li>
+		<li MayRequire="divineDerivative.Romance">
+			<defName>Philanderer</defName>
+		</li>	
+		<li MayRequire="divineDerivative.Romance">
+			<defName>BiAce</defName>
+		</li>
+		<li MayRequire="divineDerivative.Romance">
+			<defName>HomoAce</defName>
+		</li>
+		<li MayRequire="divineDerivative.Romance">
+			<defName>HeteroAce</defName>
+		</li>
+		<li MayRequire="divineDerivative.Romance">
+			<defName>Straight</defName>
+		</li>		
  	</disallowedTraits>
 	
 </generalSettings>    
@@ -188,6 +211,7 @@
 		  <li>InsultedMood</li>
 		  <li>KindWordsMood</li>		  
 		  <li>AteWithoutTable</li>
+		  <li>EnvironmentDark</li>
 		  <li>DeadMansApparel</li>
 		  <li>HumanLeatherApparelSad</li>
 		  <li>NeedOutdoors</li>
@@ -223,6 +247,7 @@
 		  <li>FailedToRescueRelative</li>
 		  
 		  <li MayRequire="Ludeon.RimWorld.Royalty">AteFoodInappropriateForTitle</li>
+		  <li MayRequire="Ludeon.RimWorld.Royalty">DefeatedMechCluster</li>
 		  	  
 		  <li MayRequire="Ludeon.RimWorld.Ideology">NeedNeuralSupercharge</li>
 		  <li MayRequire="Ludeon.RimWorld.Ideology">BioSculpterDespised</li>
@@ -239,12 +264,12 @@
 		  <li MayRequire="Ludeon.RimWorld.Biotech">NoxiousHaze</li>	 
 		  
 		  <li MayRequire="ReGrowth.BOTR.Core">RG_Wet</li>		  
-          <li MayRequire="ReGrowth.BOTR.Core">RG_ExtremelyWet</li>	
+          <li MayRequire="ReGrowth.BOTR.Core">RG_ExtremelyWet</li>  
 		  <li MayRequire="ReGrowth.BOTR.Core">RG_HotSpringWet</li>
-    </cannotReceiveThoughts>
+    </cannotReceiveThoughts>	
 
     <butcherThoughtGeneral>
-	    <thought>SyntheticButcher</thought>          <!-- The colony at large doesn't give a shit if a bot is dismantled. -->
+	    <thought>SyntheticButcher</thought>          <!-- The colony at large doesn't care if this pawn is dismantled, unless Ideology is running. -->
 		<knowThought>SyntheticButcher</knowThought>
 	</butcherThoughtGeneral>    
 	
@@ -282,11 +307,7 @@
         <li>
 		    <original>KilledHumanlikeBloodlust</original>
 			<replacer>KilledHumanlikeBloodlustRobot</replacer>
-	    </li>
-        <li>
-		    <original>BrawlerUnhappy</original>
-			<replacer>BrawlerUnhappyRobot</replacer>
-	    </li>		
+	    </li>	
         <li>
 		    <original>ColonyPrisonerEscaped</original>
 			<replacer>ColonyPrisonerEscapedRobot</replacer>
@@ -298,10 +319,10 @@
         <li>
 		    <original>RescuedMeByOfferingHelp</original>
 			<replacer>RescuedMeByOfferingHelpRobot</replacer>
-	    </li>		
+	    </li>	
         <li>
-		    <original MayRequire="Ludeon.RimWorld.Royalty">DefeatedMechCluster</original>
-			<replacer MayRequire="Ludeon.RimWorld.Royalty">MechClusterRobot</replacer>
+		    <original>DefeatedInsectHive</original>
+			<replacer>DefeatedInsectHiveRobot</replacer>
 	    </li>
         <li>
 		    <original MayRequire="Ludeon.RimWorld.Royalty">AnimaScream</original>
@@ -330,7 +351,11 @@
         <li>		
 			<original MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienRaces_Abhorrent_Social</original>
 			<replacer MayRequire="Ludeon.RimWorld.Ideology">AlienFleshlings_Abhorrent_Social</replacer>			
-	    </li>				
+	    </li>		
+        <li>
+		    <original MayRequire="ReGrowth.BOTR.Core">RG_Sandy</original>
+			<replacer MayRequire="ReGrowth.BOTR.Core">RG_Sandy_Synth</replacer>
+	    </li>		
     </replacerList>  	
 </thoughtSettings>
 
@@ -389,17 +414,17 @@
 		<li MayRequire="Killathon.AndroidTiersReforged">ATR_MechanicalStandard</li>
       </hediffGiverSets>  	  
 </race>
-	<modExtensions Inherit="False">	
-	    <li Class="VexedThings.HumanlikeMechanoidsExtension">	
+	<modExtensions>	
+	    <li Class="VexedThings.HumanlikeMechanoidsExtension" Inherit="False">	
 		    <canFallIll>false</canFallIll>
-			<incapableOfLove>true</incapableOfLove>
+			<incapableOfLove>true</incapableOfLove>   <!-- Disables everything regarding romance attempts, even psycast love-manipulation. -->
 			<canBeStunnedByEMP>true</canBeStunnedByEMP>
 			<willSpawnWithTraits>true</willSpawnWithTraits>
 			<corpseIsImperishable>true</corpseIsImperishable>
 			<corpseIsInedible>true</corpseIsInedible>
 			<corpseIsNotDisturbing>true</corpseIsNotDisturbing>
 			<disableBreathVapors>true</disableBreathVapors>			
-			<pawnCannotPerceiveBeauty>true</pawnCannotPerceiveBeauty>			
+			<pawnCannotPerceiveBeauty>true</pawnCannotPerceiveBeauty>	<!-- Does not disable 'beauty' need, this simply means this pawn will never have a social opinion on another pawn's beauty. -->		
 			<blackListedJobs>
 		        <li>Vomit</li>
 			</blackListedJobs>	
@@ -409,10 +434,7 @@
 				<li>CryptosleepSickness</li>
 				<li MayRequire="Ludeon.RimWorld.Royalty">PsychicVertigo</li>
 				<li MayRequire="Ludeon.RimWorld.Ideology">TortureCrown</li>				
-			</blackListedHediffs>
-			<whiteListedDrugs>
-		        <li>Luciferium</li>
-			</whiteListedDrugs>				
+			</blackListedHediffs>				
 		</li>	
 	</modExtensions>
 </AlienRace.ThingDef_AlienRace>

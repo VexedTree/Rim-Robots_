@@ -298,6 +298,10 @@
     </colorChannels>
     </alienPartGenerator>
 	
+    <notXenophobistTowards>
+        <li>Mechanent</li>
+    </notXenophobistTowards>	
+	
     <forcedRaceTraitEntries>	
 	    <li>
 			<defName>Asexual</defName>

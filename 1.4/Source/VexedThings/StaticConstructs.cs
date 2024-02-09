@@ -1,8 +1,8 @@
 ﻿using RimWorld;
 using System.Linq;
 using Verse;
-using System;
-using System.Collections.Generic;
+using System.Text;
+using Verse.Sound;
 
 namespace VexedThings
 {

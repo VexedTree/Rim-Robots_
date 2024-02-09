@@ -98,7 +98,6 @@
 <generalSettings>
 	
     <notXenophobistTowards>
-        <li>Mechanent</li>
         <li MayRequire="VexedTrees980.RimSkeletons">Skeleton_</li>	
 		
 		<li MayRequire="ChJees.Androids">ChjAndroid</li>
@@ -161,58 +160,17 @@
 		</li>
 		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
 			<defName>VTE_Lush</defName>
-		</li>	
+		</li>
+		<li MayRequire="VexedTrees980.RimElvesBiotech">
+			<defName>RE_SuperiorityComplex</defName>
+		</li>		
  	</disallowedTraits>	
     
 	<minAgeForAdulthood>0</minAgeForAdulthood>		
     <maxDamageForSocialfight>8</maxDamageForSocialfight>
     <humanRecipeImport>false</humanRecipeImport>
     <allowHumanBios>false</allowHumanBios>
-    <immuneToAge>false</immuneToAge>	
-
-	<chemicalSettings>
-		<li>
-			<chemical>Smokeleaf</chemical>
-			<ingestible>false</ingestible>
-		</li>
-		<li>
-			<chemical>Alcohol</chemical>
-			<ingestible>false</ingestible>
-		</li>
-		<li>
-			<chemical>Psychite</chemical>
-			<ingestible>false</ingestible>
-		</li>
-		<li>
-			<chemical>WakeUp</chemical>
-			<ingestible>false</ingestible>
-		</li>		
-		<li>
-			<chemical>Ambrosia</chemical>
-			<ingestible>false</ingestible>
-		</li>		
-		<li>
-			<chemical>GoJuice</chemical>
-			<ingestible>false</ingestible>
-		</li>
-		<li MayRequire="VanillaExpanded.VBrewE">
-			<chemical>VBE_Caffeine</chemical>
-			<ingestible>false</ingestible>
-		</li>				
-		<li MayRequire="OskarPotocki.VFE.Insectoid">
-			<chemical>VFEI_RoyalJellyChemical</chemical>
-			<ingestible>false</ingestible>
-		</li>	
-		<li MayRequire="HardTimes.drugmod">
-			<chemical>Shard</chemical>
-			<ingestible>false</ingestible>
-		</li>				
-		<li MayRequire="HardTimes.drugmod">
-			<chemical>Psychedelics</chemical>
-			<ingestible>false</ingestible>
-		</li>		
-	</chemicalSettings>
-	
+    <immuneToAge>false</immuneToAge>		
     <corpseCategory>CorpsesSyntheticlike</corpseCategory>		
 	
 </generalSettings>        
@@ -257,11 +215,13 @@
 	   <li>WitnessedDeathBloodlustRobot</li>
 	   <li>ObservedLayingRottingCorpseRobot</li>	
 	   <li>RescuedMeByOfferingHelpRobot</li>
+	   <li>DefeatedInsectHiveRobot</li>
        <li MayRequire="Ludeon.RimWorld.Royalty">MechClusterRobot</li>
 	   <li MayRequire="Ludeon.RimWorld.Royalty">AnimaScreamRobot</li>
 	   <li MayRequire="Ludeon.RimWorld.Royalty">JoyfuzzRobot</li>
        <li MayRequire="Ludeon.RimWorld.Ideology">MedicalSpecialistRobot</li>
-       <li MayRequire="Ludeon.RimWorld.Ideology">StyleDesiredRobot</li>	  	  
+       <li MayRequire="Ludeon.RimWorld.Ideology">StyleDesiredRobot</li>	 
+       <li MayRequire="ReGrowth.BOTR.Core">RG_Sandy_Synth</li>		   
     </restrictedThoughts>		   	
 </thoughtSettings>
 
@@ -369,10 +329,7 @@
 				<li>CryptosleepSickness</li>
 			    <li MayRequire="sindre0830.universum">Universum_Decompression_Hediff</li>
 		        <li MayRequire="sindre0830.universum">Universum_Suffocation_Hediff</li>			
-			</blackListedHediffs>		
-			<whiteListedDrugs>
-		        <li>Luciferium</li>
-			</whiteListedDrugs>				
+			</blackListedHediffs>			
 		</li>	
 	    <li Class="ATReforged.ATR_MechTweaker" MayRequire="Killathon.AndroidTiersReforged">
 		    <canInherentlyUseSkyMind>true</canInherentlyUseSkyMind>		

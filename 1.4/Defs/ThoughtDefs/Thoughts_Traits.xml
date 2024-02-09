@@ -10,8 +10,8 @@
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
-        <label>automatonophobe hates synth'</label>
-        <description>automatonophobe hates synth'</description>
+        <label>automatonophobe hates personae</label>
+        <description>automatonophobe hates personae</description>
         <baseOpinionOffset>-25</baseOpinionOffset>
         <baseMoodEffect>-4</baseMoodEffect>
       </li>
@@ -25,7 +25,7 @@
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
-        <label>synth hated by automatonophobe</label>
+        <label>persona hated by automatonophobe</label>
         <baseOpinionOffset>-25</baseOpinionOffset>
       </li>
     </stages>
@@ -41,8 +41,8 @@
     </requiredTraits>
     <stages>
       <li>
-        <label>transhumanist admires synth'</label>
-        <description>transhumanist admires synth'</description>
+        <label>transhumanist admires personae</label>
+        <description>transhumanist admires personae</description>
         <baseOpinionOffset>20</baseOpinionOffset>
         <baseMoodEffect>4</baseMoodEffect>
       </li>
@@ -56,7 +56,7 @@
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
-        <label>synth admired by transhumanist</label>
+        <label>persona admired by transhumanist</label>
         <baseOpinionOffset>15</baseOpinionOffset>
       </li>
     </stages>
@@ -88,14 +88,14 @@
     </requiredTraits>
     <stages>
       <li>
-        <label>anthropophile loves humans</label>
-        <description>anthropophile loves humans</description>
+        <label>anthropophile loves humanoids</label>
+        <description>anthropophile loves humanoids</description>
         <baseOpinionOffset>25</baseOpinionOffset>
         <baseMoodEffect>4</baseMoodEffect>
       </li>
       <li>
-        <label>anthropophobe hates humans</label>
-        <description>anthropophobe hates humans</description>
+        <label>anthropophobe hates humanoids</label>
+        <description>anthropophobe hates humanoids</description>
         <baseOpinionOffset>-25</baseOpinionOffset>
         <baseMoodEffect>-4</baseMoodEffect>
       </li>
@@ -109,11 +109,11 @@
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
-        <label>human loved by anthropophile</label>
+        <label>humanoid loved by anthropophile</label>
         <baseOpinionOffset>15</baseOpinionOffset>
       </li>
       <li>
-        <label>human hated by anthropophobe</label>
+        <label>humanoid hated by anthropophobe</label>
         <baseOpinionOffset>-25</baseOpinionOffset>
       </li>
     </stages>

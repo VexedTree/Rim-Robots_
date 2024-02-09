@@ -14,7 +14,7 @@ namespace VexedThings.HarmonyPatches
     // Toggles if a ThingDef with the "personaeCanIngest" extension will be inedible to pawns that are not "IsHumanlikeMechanoid".
 
     // Toggles if pawns with the "canBeStunnedByEMP" extension can be stunned by EMP attacks.
-    [HarmonyPatch(typeof(StunHandler), "get_AffectedByEMP")]
+    [HarmonyPatch(typeof(StunHandler), "AffectedByEMP", MethodType.Getter)]
     public class AffectedByEMP_HarmonyPatch
     {
         [HarmonyPostfix]
@@ -45,6 +45,18 @@ namespace VexedThings.HarmonyPatches
     }
     [HarmonyPatch(typeof(ThoughtWorker_Disfigured), "CurrentSocialStateInternal")]
     public class ThoughtWorker_Disfigured_HarmonyPatch
+    {
+        [HarmonyPostfix]
+        public static void Postfix(Pawn pawn, ref ThoughtState __result)
+        {
+            if (pawn != null && pawn.def.HasModExtension<HumanlikeMechanoidsExtension>() && pawn.def.GetModExtension<HumanlikeMechanoidsExtension>().pawnCannotPerceiveBeauty)
+            {
+                __result = false;
+            }
+        }
+    }
+    [HarmonyPatch(typeof(ThoughtWorker_Pretty), "CurrentSocialStateInternal")]
+    public class ThoughtWorker_Pretty_HarmonyPatch
     {
         [HarmonyPostfix]
         public static void Postfix(Pawn pawn, ref ThoughtState __result)
@@ -86,7 +98,7 @@ namespace VexedThings.HarmonyPatches
     // Translates the given need bars on pawns tagged as "IsHumanlikeMechanoid" with the given custom keys.
     internal class Need_Patchs
     {
-        [HarmonyPatch(typeof(Need), "get_LabelCap")]
+        [HarmonyPatch(typeof(Need), "LabelCap", MethodType.Getter)]
         public class LabelCapFood_HarmonyPatch
         {
             [HarmonyPostfix]
@@ -160,7 +172,7 @@ namespace VexedThings.HarmonyPatches
         }
 
         // Toggles if corpses of pawns with the "corpseIsEdible" extension will be edible.
-        [HarmonyPatch(typeof(Corpse), "get_IngestibleNow")]
+        [HarmonyPatch(typeof(Corpse), "IngestibleNow", MethodType.Getter)]
         public class IngestibleNow_HarmonyPatch
         {
             [HarmonyPostfix]
@@ -440,20 +452,18 @@ namespace VexedThings.HarmonyPatches
         }
     }
 
+    // This stops pawns from attempting to tend IsHumanlikeMechanoid pawns.
     internal class MiscTend_Patch
     {
         [HarmonyPatch(typeof(WorkGiver_Tend), "HasJobOnThing")]
         public class HasJobOnThing_HarmonyPatch
         {
-            [HarmonyPrefix]
-            public static bool Listener(Pawn pawn, Thing t, bool forced)
-            {
-                if (pawn.IsHumanlikeMechanoid())
-                {
-                    return false;
-                }
-                return true;
-            }
+			[HarmonyPrefix]
+			public static bool Listener(Pawn pawn, Thing t, bool forced, ref bool __result)
+			{
+				__result = !Methods.IsMechanoidlikeThingdef(t.def);
+				return __result;
+			}
         }
         [HarmonyPatch(typeof(HealthAIUtility), "ShouldBeTendedNowByPlayer")]
         public static class ShouldBeTendedNowByPlayer_HarmonyPatch
@@ -572,19 +582,6 @@ namespace VexedThings.HarmonyPatches
         }
     }
 
-    // Disables the casual/forced ingestion of drugs, excluding those listed by "whitelistedDrugs".
-    [HarmonyPatch(typeof(Pawn_DrugPolicyTracker), "ShouldTryToTakeScheduledNow")]
-    public static class ShouldTryToTakeScheduledNow_HarmonyPatch
-    {
-        [HarmonyPrefix]
-        public static bool Prefix(Pawn_DrugPolicyTracker __instance)
-        {
-            {
-                return !__instance.pawn.IsHumanlikeMechanoid();
-            }
-        }
-    }
-
     // VFE Ancients patch, credit to the VFE team for this one.
     [HarmonyPatch]
     public static class VFEAncients_Pawn_PowerTracker_CanGetPowers_Patch
@@ -664,6 +661,39 @@ namespace VexedThings.HarmonyPatches
             }
             List<HediffDef> list2 = list;
             return list2 == null || !list2.Contains(hediff.def);
+        }
+    }
+
+
+    // Blacklists the consumption of drugs depending on "isIngestibleByPersonaeOnly" and "IsHumanlikeMechanoid" - vice versa for humans and personae.
+    [HarmonyPatch(typeof(PawnUtility), "CanTakeDrug")]
+    public class CanTakeDrug_HarmonyPatch
+    {
+        [HarmonyPostfix]
+        public static void Postfix(ThingDef drug, Pawn pawn, ref bool __result)
+        {
+            if (pawn != null && !pawn.IsHumanlikeMechanoid() && drug.HasModExtension<VexedThingsItemExtension>() && drug.GetModExtension<VexedThingsItemExtension>().isIngestibleByPersonaeOnly)
+            {
+                __result = false;
+            }
+            if (pawn != null && pawn.IsHumanlikeMechanoid() && !drug.HasModExtension<VexedThingsItemExtension>() && !drug.GetModExtension<VexedThingsItemExtension>().isIngestibleByPersonaeOnly)
+            {
+                __result = false;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Recipe_AdministerIngestible), "ApplyOnPawn")]
+    public class AdministerApplyOnPawn_HarmonyPatch
+    {
+        [HarmonyPrefix]
+        public static bool Listener(Bill __instance, Pawn pawn, List<Thing> ingredients)
+        {
+            if (pawn.IsHumanlikeMechanoid() && !ingredients[0].def.HasModExtension<VexedThingsItemExtension>() && !ingredients[0].def.GetModExtension<VexedThingsItemExtension>().isIngestibleByPersonaeOnly)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- This patch tests and injects the necessary mod extensions onto the drug base and addiction hediff base. -->
+    <!-- This is used to ensure humans don't get high off of USB sticks, and vice versa for robots on cocaine. -->
+	
+    <Operation Class="PatchOperationSequence">			
+        <operations>			
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[@Name = "DrugBase"]/modExtensions</xpath>
+                <success>Invert</success>
+            </li>			
+			<li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[@Name = "DrugBase"]</xpath>
+                <value>
+                    <modExtensions>
+	                    <li Class="VexedThings.VexedThingsItemExtension">	
+			                <isIngestibleByPersonaeOnly>false</isIngestibleByPersonaeOnly>				
+		                </li>
+                    </modExtensions>
+                </value>
+            </li>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/HediffDef[@Name = "AddictionBase"]/modExtensions</xpath>
+                <success>Invert</success>
+            </li>			
+			<li Class="PatchOperationAdd">
+                <xpath>/Defs/HediffDef[@Name = "AddictionBase"]</xpath>
+                <value>
+                    <modExtensions>
+	                    <li Class="VexedThings.VexedThingsHediffExtension">	
+			                <affectsPersonae>false</affectsPersonae>				
+		                </li>
+                    </modExtensions>
+                </value>
+            </li>			
+        </operations>
+    </Operation>	
+</Patch>

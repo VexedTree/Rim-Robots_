@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <ThingCategoryDef>
+        <defName>RR_Mechware</defName>
+        <label>inserts</label>
+        <parent>Drugs</parent>
+    </ThingCategoryDef>	
+	
+    <ThingCategoryDef>
         <defName>BodyPartsSynthetic</defName>
         <label>synthetic body parts</label>
         <parent>BodyParts</parent>
-    </ThingCategoryDef>	
+    </ThingCategoryDef>		
 	
     <ThingCategoryDef>
         <defName>CorpsesSyntheticlike</defName>

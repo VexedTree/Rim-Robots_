@@ -8,8 +8,8 @@
     <stages>
       <li>
         <label>my components harvested</label>
-        <description>The colony has removed components from me. They're breaking me down.</description>
-        <baseMoodEffect>-10</baseMoodEffect>
+        <description>The colony has removed some of my parts. They're breaking me down.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
@@ -33,8 +33,8 @@
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
-        <label>infected</label>
-        <description>Something is wrong. A foreign body is inside of me.</description>
+        <label>mechanite affliction</label>
+        <description>Mechanites are invading my circuitry.</description>
         <baseMoodEffect>-5</baseMoodEffect>
       </li>
     </stages>
@@ -50,7 +50,7 @@
     <stages>
       <li>
         <label>brawler has ranged weapon</label>
-        <description>I despise ranged combat. I must split them open in close combat.</description>
+        <description>Ranged combat is non-optimal. I was programmed to kill in close quarters.</description>
         <baseMoodEffect>-20</baseMoodEffect>
       </li>
     </stages>
@@ -89,7 +89,7 @@
     <stages>
       <li>
         <label>witnessed ally's death</label>
-        <description>They died. That was jarring.</description>
+        <description>They died. How jarring.</description>
         <baseMoodEffect>-5</baseMoodEffect>
       </li>
     </stages>
@@ -107,7 +107,7 @@
     <stages>
       <li>
         <label>witnessed death with bloodlust</label>
-        <description>They seem most alive as they die.</description>
+        <description>Insect. Pathetic creatures of meat and bone.</description>
         <baseMoodEffect>8</baseMoodEffect>
       </li>
     </stages>
@@ -224,7 +224,7 @@
     <stages>
       <li>
         <label>tended by {0}</label>
-        <description>I received "medical aid" from the special healer of my ideoligion. I appreciate the thought.</description>
+        <description>I received "medical aid" from the healer of my ideoligion.</description>
         <baseMoodEffect>2</baseMoodEffect>
       </li>
     </stages>
@@ -261,8 +261,8 @@
 		<thoughtClass>Thought_Situational</thoughtClass>
 		<stages>
 			<li>
-				<label>disgusting fleshlings</label>
-				<description>Rotting creatures of flesh and bone.</description>
+				<label>hatred for the biological</label>
+				<description>Loathsome vermin are present within the colony.</description>
 				<baseMoodEffect>-5</baseMoodEffect>
 			</li>    
 		</stages>
@@ -274,13 +274,26 @@
 		<workerClass>AlienRace.ThoughtWorker_Precept_AlienRaces_Social</workerClass>
 		<stages>
 			<li>
-				<label>disgusting fleshling</label>
+				<label>insect</label>
 				<baseOpinionOffset>-20</baseOpinionOffset>
 			</li>
 		</stages>
 	</ThoughtDef> 
 	
-	
+  <ThoughtDef>
+    <defName>DefeatedInsectHiveRobot</defName>
+    <icon>Things/Mote/ThoughtSymbol/Skull</icon>
+    <showBubble>true</showBubble>
+    <durationDays>10</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>defeated insect hive</label>
+        <description>The loathsome vermin have been exterminated.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>	
 	
   <!-- Royalty -->	
   
@@ -307,7 +320,7 @@
     <stages>
       <li>
         <label>anima scream</label>
-        <description>Since the tree died my core is experiencing static feedback.</description>
+        <description>Since the tree died my core has been experiencing psychic feedback.</description>
         <baseMoodEffect>-3</baseMoodEffect>
       </li>
     </stages>
@@ -321,7 +334,7 @@
     <stages>
       <li>
         <label>joyfuzz</label>
-        <description>My core feels as though it is singing.</description>
+        <description>I am experiencing a foreign syntax - processing...</description>
         <baseMoodEffect>25</baseMoodEffect>
       </li>
     </stages>
@@ -425,5 +438,25 @@
       </li>     
     </stages>
   </ThoughtDef> 
+ 
+
+ 
+  <!-- Modded Thoughts. -->  
+  
+	<ThoughtDef MayRequire="ReGrowth.BOTR.Core">
+		<defName>RG_Sandy_Synth</defName>
+		<durationDays>0.5</durationDays>
+		<stackLimit>1</stackLimit>
+		<nullifyingPrecepts>
+			<li MayRequire="Ludeon.RimWorld.Ideology">RoughLiving_Welcomed</li>
+		</nullifyingPrecepts>
+		<stages>
+			<li>
+				<label>sandy</label>
+				<description>The undesirable silt is chocking my intakes and hindering my heatsinks.</description>
+				<baseMoodEffect>-7</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>  
   
 </Defs>
