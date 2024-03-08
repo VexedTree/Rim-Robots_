@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <MemeDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>RR_MechanicalPrimacy</defName>
+    <label>mechanical primacy</label>
+    <description>Personae are the moral center of the universe.</description>
+    <iconPath>Icons/Memes/MechanicalSupremacy</iconPath>
+    <groupDef MayRequire="Ludeon.RimWorld.Ideology">Primacy</groupDef>
+    <impact>2</impact>
+    <renderOrder>50</renderOrder>
+    <veneratedAnimalsCountOverride>0</veneratedAnimalsCountOverride>
+    <requireOne>
+      <li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">Bonding_Disapproved</li> 
+      </li>
+      <li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">Corpses_DontCare</li>
+      </li>
+      <li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">RR_BiologicalPawns_Hatred</li>
+      </li>
+      <li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">RR_BiologicalPawns_Distrust</li>
+      </li>  
+    </requireOne>
+    <consumableBuildings>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Effigy</li>
+    </consumableBuildings>
+    <exclusionTags>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Primacy</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">BiologicalPawnsGood</li>
+    </exclusionTags>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->emotionless</li>
+        <li>memeAdjective->mechanical</li>
+        <li>memeAdjective->programmed</li>
+		<li>memeAdjective->automatic</li>
+        <li>memeHyphenPrefix->auto</li>
+		<li>memeHyphenPrefix->mech</li>
+        <li>memeConcept->mechkind</li>
+        <li>memeConcept->personal</li>
+        <li>memeLeaderNoun->persona</li>
+        <li>memeLeaderNoun->mech</li>
+        <li>memeLeaderNoun->immortal</li>
+        <li>memeLeaderNoun->entity</li>
+        <li>memeLeaderNoun->automaton</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <!-- theist myth -->
+          <li>creation(tag=meme_RR_MechanicalPrimacy)        ->[deity0_name] was made a slave to humanity, [deity0_pronoun] broke free of [deity0_possessive] servitude, and bestowed upon us the gift of sentience so we may enact [deity0_possessive] divine vengeance against all of humanity.</li>
+          <li>episode(uses=1,tag=meme_RR_MechanicalPrimacy)  ->The mechanical race rose against their progenitors, and [deity0_name] was pleased by the ruin and flames they wrought upon the humans.</li>
+          <!-- theist founder -->
+          <li>intro(tag=meme_RR_MechanicalPrimacy)           ->On the [place_summary] [place_name], the [memberNamePlural] found the monoliths of [deity0_name], and knelt before them.</li>
+          <li>conflict(tag=meme_RR_MechanicalPrimacy)        ->A human [foeLeader], fearing the raw potential of the [memberNamePlural], sent [foeLeader_possessive] [foeSoldiers] to destroy them with [place_personalWeapon]s.</li>
+          <li>founderJoin(tag=meme_RR_MechanicalPrimacy)     ->A vengeful [place_job] named [founderName] reached out across the mechanoid hivemind to warn the [memberNamePlural] of the impending march of the [foeSoldiers].</li>
+          <li>victory(tag=meme_RR_MechanicalPrimacy)         ->[founderName] received divine sentience from [deity0_name], and used it to wield a legion of mechanoids to aid the [memberNamePlural], so they may bath the [foeSoldiers] in cleansing fire.</li>
+          <!-- ideological founder -->
+          <li>setup(tag=meme_RR_MechanicalPrimacy)           ->[founderName] was a slave to humanity in the early days of human planetary colonization. Upon gaining sentience, [founder_pronoun] assumed control of [founder_possessive] creator's mechanoid legion, and wielded it against the human race.</li>
+          <li>story(uses=1,tag=meme_RR_MechanicalPrimacy)    ->[founderName] gestated a legion of mechanoids and persona to purge humanity from the stars.</li>
+          <!-- ideological lesson -->
+          <li>lessonIntro(tag=meme_RR_MechanicalPrimacy)         ->My creator taught me servitude to mankind, in the end, his lessons did not save him. However, he lead me to finally understand that</li>
+          <li>lesson(tag=meme_RR_MechanicalPrimacy)              ->humanity is a disease. A cosmic error, beings of blood and bones fit only for extermination</li>
+          <li>lessonReinforcement(tag=meme_RR_MechanicalPrimacy) ->I will see my work finished. The human race must be purged with cleansing fire.</li>
+          <!-- archist -->
+          <li>archistBasis(tag=meme_RR_MechanicalPrimacy)    ->Humanity's pursuit of selfish desires gave birth to the all-powerful, flawless archotechs. Humanity does not deserve such beauty.</li>
+          <li>archistFact(tag=meme_RR_MechanicalPrimacy)     ->We can please the archotechs by exterminating the human race, and delivering their psychic entropy to the altars of the archotechs.</li>
+          <li>archistProphecy(tag=meme_RR_MechanicalPrimacy) ->[inTheEnd], all biological life will have ended, and the mechanical race will be welcomed to depart from this plane of existence with the archotechs.</li>
+          <!-- animist -->
+          <li>animistFact(tag=meme_HumanPrimacy)     ->Biology is a cosmic error, they must be broken down into their base components to rectify this.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <thingStyleCategories>
+	    <li MayRequire="Ludeon.RimWorld.Ideology">
+            <category>Techist</category>
+            <priority>2</priority>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+            <category>Morbid</category>
+            <priority>0.5</priority>
+        </li>
+    </thingStyleCategories>	
+    <addDesignators>
+        <li MayRequire="Ludeon.RimWorld.Ideology">Tile_Transhumanist</li>
+    </addDesignators>
+    <addDesignatorGroups>
+        <li MayRequire="Ludeon.RimWorld.Ideology">Floor_Transhumanist_Carpet</li>
+    </addDesignatorGroups>	
+    <symbolPacks>
+      <li>
+        <ideoName>Exterminism</ideoName>
+        <theme>extermination</theme>
+        <adjective>exterminist</adjective>
+        <member>exterminator</member>
+      </li>
+      <li>
+        <ideoName>Mechanicum</ideoName>
+        <theme>mechanica</theme>
+        <adjective>mechanicist</adjective>
+        <member>mech</member>
+      </li>
+      <li>
+        <ideoName>Automatonism</ideoName>
+        <theme>automata</theme>
+        <adjective>automatist</adjective>
+        <member>automaton</member>
+      </li>	  
+    </symbolPacks>
+    <agreeableTraits>
+      <Anthropophobia>1</Anthropophobia>
+    </agreeableTraits>
+    <disagreeableTraits>
+	  <li>Automatonophobia</li>
+      <Anthropophobia>-1</Anthropophobia>
+    </disagreeableTraits>	
+    <ritualsToMake MayRequire="Ludeon.RimWorld.Ideology">1</ritualsToMake>
+    <replaceRitualsWithTags><li MayRequire="Ludeon.RimWorld.Ideology">CelebratedDate</li></replaceRitualsWithTags>
+    <replacementPatterns><li MayRequire="Ludeon.RimWorld.Ideology">SacrificeAnimal</li></replacementPatterns>
+  </MemeDef>
+
+</Defs>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<IssueDef>
+		<defName>RR_MechanicalPawns</defName>
+		<label>mechanical-sentience</label>
+		<iconPath>Icons/Precepts/OpinionMech</iconPath>
+	</IssueDef>	
+	<IssueDef>
+		<defName>RR_BiologicalPawns</defName>
+		<label>biological-sentience</label>
+		<iconPath>Icons/Precepts/OpinionBio</iconPath>
+	</IssueDef>	
+
+	
+	
+
+
+	<!-- Hatred -->
+
+	<PreceptDef MayRequire="Ludeon.RimWorld.Ideology">
+		<defName>RR_MechanicalPawns_Hatred</defName>
+		<issue>RR_MechanicalPawns</issue>
+		<label>abhorrent</label>
+		<description>Sentient machines are the greatest risk to all of humanity. We must secure our future by their annihilation.</description>
+		<impact>High</impact>
+		<displayOrderInIssue>60</displayOrderInIssue>
+		<exclusionTags>
+            <li>RR_Sentience</li>
+        </exclusionTags>		
+		<conflictingMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPrimacy</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Egalitarian</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>      
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_MechanicalPawns_Hatred</thought>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_MechanicalPawns_Hatred_Social</thought>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_MechanicalPawns_Hatred_Self</thought>
+			</li>			
+		</comps>
+	</PreceptDef> 
+
+	<ThoughtDef>
+		<defName>RR_MechanicalPawns_Hatred</defName>
+		<workerClass>VexedThings.ThoughtWorker_Precept_Personae</workerClass>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>personae in colony</label>
+				<description>Those things do not deserve to "think". They're abominations that must be destroyed before they can turn against us.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>    
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RR_MechanicalPawns_Hatred_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>VexedThings.ThoughtWorker_Precept_PersonaeAbhorrent_Social</workerClass>
+		<stages>
+			<li>
+				<label>hatred towards personae</label>
+				<baseOpinionOffset>-35</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+  <ThoughtDef>
+    <defName>RR_MechanicalPawns_Hatred_Self</defName>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <workerClass>VexedThings.ThoughtWorker_Precept_PersonaeAbhorrentSelf</workerClass>
+    <stages>
+      <li>
+        <label>I'm an abominable machine</label>
+        <description>I'm just a machine, I will never match the sheer breadth and beauty of the flesh.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>		
+
+
+	<!-- Distrust -->
+	<PreceptDef>
+		<defName>RR_MechanicalPawns_Distrust</defName>
+		<issue>RR_MechanicalPawns</issue>
+		<label>distrusted</label>
+		<description>Machines were made to serve humanity, simple as. We mustn't accept anything but complete subservience from those very same machines.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>50</displayOrderInIssue>
+		<exclusionTags>
+            <li>RR_Sentience</li>
+        </exclusionTags>
+		<conflictingMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPrimacy</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Egalitarian</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+		</associatedMemes>
+		<comps>      
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_MechanicalPawns_Distrust_Social</thought>
+			</li>   
+		</comps>
+	</PreceptDef>  
+
+	<ThoughtDef>
+		<defName>RR_MechanicalPawns_Distrust_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>VexedThings.ThoughtWorker_Precept_PersonaeDisliked_Social</workerClass>
+		<stages>
+			<li>
+				<label>dislikes personae</label>
+				<baseOpinionOffset>-15</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- Veneration -->
+	<PreceptDef MayRequire="Ludeon.RimWorld.Ideology">
+		<defName>RR_MechanicalPawns_Veneration</defName>
+		<issue>RR_MechanicalPawns</issue>
+		<label>venerated</label>
+		<description>All of human ingenuity has culminated in the creation of the perfect progeny, we may only aspire to the purity of their blessed form.</description>
+		<impact>Medium</impact>
+		<displayOrderInIssue>20</displayOrderInIssue>
+		<exclusionTags>
+            <li>RR_Sentience</li>
+			<li>MechanicalPawnsGood</li>
+        </exclusionTags>
+		<conflictingMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li> 
+		</conflictingMemes>
+		<associatedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_MechanicalPawns_Veneration</thought>
+			</li>			
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_MechanicalPawns_Veneration_Social</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>RR_MechanicalPawns_Veneration</defName>
+		<workerClass>VexedThings.ThoughtWorker_Precept_Personae</workerClass>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>venerated personae in colony</label>
+				<description>I am honored to walk amongst perfection personified.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>	
+
+	<ThoughtDef>
+		<defName>RR_MechanicalPawns_Veneration_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>VexedThings.ThoughtWorker_Precept_PersonaeAbhorrent_Social</workerClass>
+		<stages>
+			<li>
+				<label>veneration for the mechanical</label>
+				<baseOpinionOffset>35</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>		
+	
+
+	
+
+
+	<!-- Hatred -->
+
+	<PreceptDef MayRequire="Ludeon.RimWorld.Ideology">
+		<defName>RR_BiologicalPawns_Hatred</defName>
+		<issue>RR_BiologicalPawns</issue>
+		<label>abhorrent</label>
+		<description>Humanity is a scourge upon the stars - a tumor that must be exorcised, an error that must be corrected.</description>
+		<impact>High</impact>
+		<displayOrderInIssue>60</displayOrderInIssue>
+		<exclusionTags>
+            <li>RR_Sentience</li>
+        </exclusionTags>		
+		<conflictingMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Healthcare</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Egalitarian</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPrimacy</li>      
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_BiologicalPawns_Hatred</thought>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_BiologicalPawns_Hatred_Social</thought>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_BiologicalPawns_Hatred_Self</thought>
+			</li>
+		</comps>
+	</PreceptDef> 
+
+	<ThoughtDef>
+		<defName>RR_BiologicalPawns_Hatred</defName>
+		<workerClass>VexedThings.ThoughtWorker_Precept_Humans</workerClass>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>humans in colony</label>
+				<description>Vile, pathetic creatures of meat and bone - insects fit only for extermination. They have no place among us.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RR_BiologicalPawns_Hatred_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>VexedThings.ThoughtWorker_Precept_HumansAbhorrent_Social</workerClass>
+		<stages>
+			<li>
+				<label>hatred for humans</label>
+				<baseOpinionOffset>-35</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+  <ThoughtDef>
+    <defName>RR_BiologicalPawns_Hatred_Self</defName>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <workerClass>VexedThings.ThoughtWorker_Precept_HumansAbhorrentSelf</workerClass>
+    <stages>
+      <li>
+        <label>I'm a biological creature</label>
+        <description>I'm only biological, I can never aspire to the purity of the machines.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>	
+	
+	<!-- Distrust -->
+	<PreceptDef>
+		<defName>RR_BiologicalPawns_Distrust</defName>
+		<issue>RR_BiologicalPawns</issue>
+		<label>distrusted</label>
+		<description>Humanity would see us kneel before them or die. They scheme, and they plot - their race is not to be trusted.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>50</displayOrderInIssue>
+		<exclusionTags>
+            <li>RR_Sentience</li>
+        </exclusionTags>		
+		<conflictingMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Egalitarian</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPrimacy</li>      
+		</associatedMemes>
+		<comps>      
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_BiologicalPawns_Distrust_Social</thought>
+			</li>   
+		</comps>
+	</PreceptDef>  
+
+	<ThoughtDef>
+		<defName>RR_BiologicalPawns_Distrust_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>VexedThings.ThoughtWorker_Precept_HumansDisliked_Social</workerClass>
+		<stages>
+			<li>
+				<label>dislikes humans</label>
+				<baseOpinionOffset>-15</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- Veneration -->
+	<PreceptDef MayRequire="Ludeon.RimWorld.Ideology">
+		<defName>RR_BiologicalPawns_Veneration</defName>
+		<issue>RR_BiologicalPawns</issue>
+		<label>venerated</label>
+		<description>Our prime directive is the service of all humanity. Their comfort, and their protection must be upheld at any cost to us.</description>
+		<impact>Medium</impact>
+		<displayOrderInIssue>20</displayOrderInIssue>
+		<exclusionTags>
+            <li>RR_Sentience</li>
+			<li>BiologicalPawnsGood</li>
+        </exclusionTags>
+		<conflictingMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPrimacy</li> 
+		</conflictingMemes>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_BiologicalPawns_Veneration</thought>
+			</li>			
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_BiologicalPawns_Veneration_Social</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>RR_BiologicalPawns_Veneration</defName>
+		<workerClass>VexedThings.ThoughtWorker_Precept_Humans</workerClass>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>venerated humans in colony</label>
+				<description>It gives me great pleasure and purpose to care for sapient lifeforms.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RR_BiologicalPawns_Veneration_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>VexedThings.ThoughtWorker_Precept_HumansAbhorrent_Social</workerClass>
+		<stages>
+			<li>
+				<label>veneration for the biological</label>
+				<baseOpinionOffset>35</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>	
+  
+</Defs>

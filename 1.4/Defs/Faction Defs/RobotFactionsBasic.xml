@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <FactionDef ParentName="FactionBase" Name="SynthFactionBase" Abstract="True">
-    <pawnSingular>synthetic</pawnSingular>
-    <pawnsPlural>synthetics</pawnsPlural>
+  <FactionDef Name="SynthFactionBase" Abstract="True">
+    <pawnSingular>persona</pawnSingular>
+    <pawnsPlural>personae</pawnsPlural>
     <categoryTag>Outlander</categoryTag>
     <listOrderPriority>35</listOrderPriority>
     <settlementGenerationWeight>1</settlementGenerationWeight>
@@ -34,12 +34,14 @@
     <disallowedPrecepts>
       <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_CoveringAnythingButGroinDisapproved</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPawns_Hatred</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPawns_Distrust</li>  
     </disallowedPrecepts>	
     <structureMemeWeights>
-      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">0</Structure_TheistEmbodied>
-      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">0</Structure_TheistAbstract>
-      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
-      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">2</Structure_Archist>
+      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">0.5</Structure_TheistEmbodied>
+      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistAbstract>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">4</Structure_Ideological>
+      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">6</Structure_Archist>
       <Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginChristian>
       <Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginIslamic>
       <Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginHindu>
@@ -83,6 +85,15 @@
         <li>(100000, 10000)</li>
       </points>
     </maxPawnCostPerTotalPointsCurve>
+    <raidLootValueFromPointsCurve>
+      <points>
+        <li>(35,     15)</li>
+        <li>(100,   120)</li>
+        <li>(1000,  500)</li>
+        <li>(2000,  800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>	
   </FactionDef>
  
   <FactionDef ParentName="SynthFactionBase">
@@ -96,6 +107,9 @@
     <requiredMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>	  
     </requiredMemes>	
+    <disallowedPrecepts>
+      <li MayRequire="Ludeon.RimWorld.Ideology">RR_BiologicalPawns_Hatred</li>
+    </disallowedPrecepts>		
     <xenotypeSet>
       <xenotypeChances>
 	    <Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.98</Baseliner>
@@ -261,7 +275,7 @@
       <li>(41,40,41)</li>
     </colorSpectrum>	
     <requiredMemes>
-	  <li MayRequire="Ludeon.RimWorld.Ideology">HAR_Xenophobia</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPrimacy</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>	  
     </requiredMemes>		
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>

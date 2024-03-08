@@ -13,7 +13,6 @@
     <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
     <statBases>
       <Mass>60</Mass>
-      <Flammability>0.7</Flammability>
     </statBases>
     <inspectorTabs>
       <li>ITab_Pawn_Health</li>
@@ -230,6 +229,7 @@
 	   <li>Chemfuel</li>
 	   <li>Uranium</li>
 	   <li>FuelNode_SynthDiet</li>
+	   <li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_Coal</li>
     </foodList>	
 
     <traitList>

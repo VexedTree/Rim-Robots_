@@ -4,32 +4,51 @@
     <defName>NamerPersonSynthNonGendered</defName>
     <rulePack>
       <rulesStrings>
-        <li>name(p=3)->[NameSynth] [NameSynth]</li>
-        <li>name(p=6)->[SylStart][SylEnd] [NameSynth]</li>		
-        <li>name(p=2)->[NameSynth] [Color]</li>		
-		<li>name(p=2)->[NameSynth] [Animal]</li>		
-        <li>name(p=2)->[NameSynth] [Place]</li>		
-        <li>name(p=2)->[NameSynth] the [Adjectives]</li>	
-        <li>name(p=2)->[NameSynth] [Adjectives]</li>	
-		<li>name(p=4)->[Objects][VerbSynth] [NameSynth]</li>	
-		<li>name->[Color] [NameSynth]</li>	
-		<li>name->[Color] [Place]</li>
-		<li>name->[Color] [Adjectives]</li>							
-        <li>name(p=2)->[Adjectives] [NameSynth]</li>
-		<li>name(p=2)->[Adjectives] [Color]</li>
-		<li>name(p=2)->[Adjectives] [Animal]</li>
-		<li>name(p=2)->[Adjectives] [Place]</li>		
-        <li>name->[Letter][Number] [Letter][Letter]</li>
-		<li>name->[Letter][Number][Number] [Letter][Letter]</li>
-		<li>name->[Letter][Number][Number][Number] [Letter][Letter]</li>
-		<li>name->[Letter][Letter][Number] [Letter][Letter]</li>
-		<li>name->[Letter][Letter][Number][Number] [Letter][Letter]</li>
-		<li>name->[Letter][Letter][Number][Number][Number] [Letter][Letter]</li>
+		<li>name(p=6)->[SylStart][SylEnd] [LastnameMechanent]</li>	  
+		<li>name(p=6)->[Objects][VerbSynth] [NameSynth]</li>
+        <li>name(p=5)->[NameSynth] [LastnameMechanent]</li>	  	
+		<li>name(p=4)->[NameSynth] [Num]</li>		
+        <li>name(p=3)->[NameSynth] the [Adjectives]</li>	
+        <li>name(p=2)->[NameSynth] [SylStart][SylEnd]</li>							
+        <li>name->[NameSynth] [Adjectives]</li>
+		<li>name->[NicknameMechanent] [Adjectives]</li>
+		
+		<li>name(p=5)->[Model] '[Objects][VerbSynth]' [Num]</li>
+		<li>name(p=4)->[Model] '[SylStart][SylEnd]' [Num]</li>
+		<li>name(p=3)->[SylStart][SylEnd] '[NicknameMechanent]' [LastnameMechanent]</li>
+		<li>name(p=2)->[Objects][VerbSynth] '[NicknameMechanent]' [NameSynth]</li>
+        <li>name(p=2)->[Model] '[NicknameMechanent]' [Num]</li>	
+		<li>name(p=2)->[Model] '[NameSynth]' [Num]</li>	
+
+        <li>NicknameMechanent(p=6)->[NicknameSynth]</li>
+        <li>NicknameMechanent(p=4)->[Objects][VerbSynth]</li>
+        <li>NicknameMechanent->[Animal]</li>
+        <li>NicknameMechanent->[Place]</li>	
+        <li>NicknameMechanent->[Color]</li>		
+		
+		<li>LastnameMechanent(p=3)->[Model][Num]</li>
+		<li>LastnameMechanent->[Model][Letter][Num]</li>
+
+        <li>Num->[Number]</li>
+        <li>Num->[Number][Number]</li>
+        <li>Num->[Number][Number][Number]</li>
+        <li>Num->[Number][Number][Number][Number]</li>
+		
+        <li>Model->model</li>
+        <li>Model->mark</li>
+        <li>Model->unit</li>
+        <li>Model->type</li>
+        <li>Model->version</li>		
+		
       </rulesStrings>
       <rulesRaw>
         <li Class="Rule_File">
           <keyword>NameSynth</keyword>
           <path>Synth_Names/Names/NameRobotic</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>NicknameSynth</keyword>
+          <path>Synth_Names/Names/NicknameRobotic</path>
         </li>
         <li Class="Rule_File">
             <keyword>Adjectives</keyword>

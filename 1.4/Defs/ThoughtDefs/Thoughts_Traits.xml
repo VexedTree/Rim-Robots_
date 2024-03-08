@@ -41,8 +41,8 @@
     </requiredTraits>
     <stages>
       <li>
-        <label>transhumanist admires personae</label>
-        <description>transhumanist admires personae</description>
+        <label>transhumanist admires persona</label>
+        <description>transhumanist admires persona</description>
         <baseOpinionOffset>20</baseOpinionOffset>
         <baseMoodEffect>4</baseMoodEffect>
       </li>

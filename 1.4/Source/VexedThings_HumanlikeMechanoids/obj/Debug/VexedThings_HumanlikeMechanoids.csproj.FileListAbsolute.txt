@@ -1,0 +1,12 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_ - Copy\1.4\Source\VexedThings_HumanlikeMechanoids\obj\Debug\VexedThings_HumanlikeMechanoids.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_ - Copy\1.4\Source\VexedThings_HumanlikeMechanoids\obj\Debug\VexedThings_HumanlikeMechanoids.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_ - Copy\Assemblies\VexedThings_HumanlikeMechanoids.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_ - Copy\Assemblies\VexedThings_HumanlikeMechanoids.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_ - Copy\1.4\Source\VexedThings_HumanlikeMechanoids\obj\Debug\VexedThings_HumanlikeMechanoids.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_ - Copy\1.4\Source\VexedThings_HumanlikeMechanoids\obj\Debug\VexedThings_HumanlikeMechanoids.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\Assemblies\VexedThings_HumanlikeMechanoids.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\Assemblies\VexedThings_HumanlikeMechanoids.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\1.4\Source\VexedThings_HumanlikeMechanoids\obj\Debug\VexedThings_HumanlikeMechanoids.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\1.4\Source\VexedThings_HumanlikeMechanoids\obj\Debug\VexedThings_HumanlikeMechanoids.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\1.4\Source\VexedThings_HumanlikeMechanoids\obj\Debug\VexedThings_HumanlikeMechanoids.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rim-Robots_\1.4\Source\VexedThings_HumanlikeMechanoids\obj\Debug\VexedThings_HumanlikeMechanoids.pdb
