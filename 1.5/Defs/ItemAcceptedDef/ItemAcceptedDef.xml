@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ItemProcessor.ItemAcceptedDef>
+		<defName>ItemDefCasketComponentMechanent</defName>
+		<building>MechCreationCasket</building>
+		<slot>1</slot>
+		<items>			
+		    <li>ComponentMechanent</li>					
+		</items>							
+	</ItemProcessor.ItemAcceptedDef>
+	
+	<ItemProcessor.ItemAcceptedDef>
+		<defName>ItemDefCasketComponentPersona</defName>
+		<building>MechCreationCasket</building>
+		<slot>1</slot>
+		<items>			
+	        <li>ComponentPersona</li>					
+		</items>							
+	</ItemProcessor.ItemAcceptedDef>
+
+	<ItemProcessor.ItemAcceptedDef>
+		<defName>ItemDefChargePylonCell</defName>
+		<building>IndustrialChargePylon</building>
+		<slot>1</slot>
+		<items>			
+	        <li>Steel</li>					
+		</items>							
+	</ItemProcessor.ItemAcceptedDef>	
+</Defs>

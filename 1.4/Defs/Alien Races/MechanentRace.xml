@@ -3,11 +3,11 @@
 <AlienRace.ThingDef_AlienRace ParentName="BaseSyntheticRace">
     <defName>Mechanent</defName>
     <label>mechanent</label>  
-    <description>A humanlike-mechanoid that utilizes a highly sophisticated subpersona core to approach a live human in its thought complexity; however, their "minds" are of a very different nature. And are incapable of emulating complex emotions.\n\nWhile they possess a degree of individuality, mechanents are not fully sentient - relying on mimicry of human behavior to appear less mechanical.</description>   	
+    <description>A humanlike-mechanoid that utilizes a highly sophisticated subpersona core to approach a live human in its thought complexity; however, their "minds" are of a very different nature, and are incapable of emulating complex emotions.\n\nWhile they possess a degree of individuality, mechanents are not fully sentient - relying on mimicry of human behavior to appear less mechanical.</description>   	
     <statBases>
 	  <MechBandwidth MayRequire="Ludeon.RimWorld.Biotech">1</MechBandwidth>
       <PsychicSensitivity>0.5</PsychicSensitivity>
-      <MoveSpeed>4.15</MoveSpeed>
+      <MoveSpeed>4.5</MoveSpeed>
       <Flammability>0</Flammability>
       <ComfyTemperatureMin>-100</ComfyTemperatureMin>
       <ComfyTemperatureMax>250</ComfyTemperatureMax>  
@@ -51,8 +51,9 @@
 	  <li>None_Drifter</li>
 	  <li>None_Nuclear</li>
 	  <li>None_Slasher</li>
-	  <li>None_Penitent</li>	 	  
-      <li>None_Wayfinder</li>		  
+	  <li>None_Penitent</li>
+	  <li>None_Socialist</li>
+      <li>None_Wayfinder</li>	  
     </headTypes>
     <colorChannels Inherit="False">
       <li>
@@ -159,7 +160,49 @@
 		</li>
 		<li MayRequire="divineDerivative.Romance">
 			<defName>Straight</defName>
+		</li>
+		<li>
+			<defName>Gourmand</defName>
+		</li>	
+		<li>
+			<defName>Cannibal</defName>
 		</li>		
+		<li>
+			<defName>BodyPurist</defName>
+		</li>
+		<li>
+			<defName>Transhumanist</defName>
+		</li>		
+		<li>
+			<defName>Immunity</defName>
+		</li>
+		<li>
+		    <defName>DrugDesire</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_RefinedPalate</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_IronStomach</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Squeamish</defName>
+		</li>	
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Technophobe</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_DrunkenMaster</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Stoner</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Lush</defName>
+		</li>
+		<li MayRequire="VexedTrees980.RimElvesBiotech">
+			<defName>RE_SuperiorityComplex</defName>
+		</li>			
  	</disallowedTraits>
 	
 </generalSettings>    
@@ -211,7 +254,6 @@
 		  <li>InsultedMood</li>
 		  <li>KindWordsMood</li>		  
 		  <li>AteWithoutTable</li>
-		  <li>EnvironmentDark</li>
 		  <li>DeadMansApparel</li>
 		  <li>HumanLeatherApparelSad</li>
 		  <li>NeedOutdoors</li>
@@ -394,7 +436,7 @@
       <body>CasteBody</body>
       <fleshType>VexedMechanical</fleshType>	  
       <bloodDef>Filth_MachineBits</bloodDef>		  
-      <baseHealthScale>1.08</baseHealthScale>  
+      <baseHealthScale>1.1</baseHealthScale>  
       <baseHungerRate>0.5</baseHungerRate>	  
       <needsRest>false</needsRest>	  
 	  <hasGenders>false</hasGenders>		
@@ -415,25 +457,35 @@
       </hediffGiverSets>  	  
 </race>
 	<modExtensions>	
-	    <li Class="VexedThings.HumanlikeMechanoidsExtension" Inherit="False">	
-		    <canFallIll>false</canFallIll>
-			<incapableOfLove>true</incapableOfLove>   <!-- Disables everything regarding romance attempts, even psycast love-manipulation. -->
+	    <li Class="VexedThings.HumanlikeMechanoidsExtension">	
+		    <canFallIll>true</canFallIll>
+			<canRunWild>false</canRunWild>
+			<canFeelPain>false</canFeelPain>
+			<seeInDarkness>true</seeInDarkness>
+			<incapableOfLove>true</incapableOfLove>
+			<isResurrectedNormally>false</isResurrectedNormally>
+			<isResurrectedWithRecipe>true</isResurrectedWithRecipe>
 			<canBeStunnedByEMP>true</canBeStunnedByEMP>
-			<willSpawnWithTraits>true</willSpawnWithTraits>
 			<corpseIsImperishable>true</corpseIsImperishable>
 			<corpseIsInedible>true</corpseIsInedible>
 			<corpseIsNotDisturbing>true</corpseIsNotDisturbing>
 			<disableBreathVapors>true</disableBreathVapors>			
-			<pawnCannotPerceiveBeauty>true</pawnCannotPerceiveBeauty>	<!-- Does not disable 'beauty' need, this simply means this pawn will never have a social opinion on another pawn's beauty. -->		
+			<disregardsPawnBeauty>true</disregardsPawnBeauty>
 			<blackListedJobs>
 		        <li>Vomit</li>
-			</blackListedJobs>	
-			<blackListedHediffs>		
+			</blackListedJobs>
+			<blackListedNeeds>
+		        <li>Comfort</li>
+		        <li>Beauty</li>
+			</blackListedNeeds>				
+			<blackListedHediffs>
 			    <li>TraumaSavant</li>
 		        <li>FoodPoisoning</li>
 				<li>CryptosleepSickness</li>
 				<li MayRequire="Ludeon.RimWorld.Royalty">PsychicVertigo</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">TortureCrown</li>				
+				<li MayRequire="Ludeon.RimWorld.Ideology">TortureCrown</li>
+			    <li MayRequire="sindre0830.universum">Universum_Decompression_Hediff</li>
+		        <li MayRequire="sindre0830.universum">Universum_Suffocation_Hediff</li>						
 			</blackListedHediffs>				
 		</li>	
 	</modExtensions>

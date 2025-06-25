@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Agreement - same -->
+
+  <GoodwillSituationDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>MechanicalPrimacy_MechanicalPrimacy</defName>
+    <label>mechanical primacy agreement</label>
+    <workerClass>GoodwillSituationWorker_MemeCompatibility</workerClass>
+    <meme>RR_MechanicalPrimacy</meme>
+    <otherMeme>RR_MechanicalPrimacy</otherMeme>
+    <naturalGoodwillOffset>10</naturalGoodwillOffset>
+  </GoodwillSituationDef>
+
+  <!-- Agreement - different -->
+
+  <GoodwillSituationDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>MechanicalPrimacy_Transhumanist</defName>
+    <label>mechanical primacy vs transhumanist</label>
+    <workerClass>GoodwillSituationWorker_MemeCompatibility</workerClass>
+    <meme>RR_MechanicalPrimacy</meme>
+    <otherMeme>Transhumanist</otherMeme>
+    <naturalGoodwillOffset>10</naturalGoodwillOffset>
+  </GoodwillSituationDef>
+
+  <!-- Disagreement -->
+  
+  <GoodwillSituationDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>MechanicalPrimacy_HumanPrimacy</defName>
+    <label>mechanical primacy vs human primacy</label>
+    <workerClass>GoodwillSituationWorker_MemeCompatibility</workerClass>
+    <meme>RR_MechanicalPrimacy</meme>
+    <otherMeme>HumanPrimacy</otherMeme>
+    <naturalGoodwillOffset>-25</naturalGoodwillOffset>
+  </GoodwillSituationDef> 
+
+  <GoodwillSituationDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>NaturePrimacy_NaturePrimacy</defName>
+    <label>mechanical primacy vs nature primacy</label>
+    <workerClass>GoodwillSituationWorker_MemeCompatibility</workerClass>
+    <meme>RR_MechanicalPrimacy</meme>
+    <otherMeme>NaturePrimacy</otherMeme>
+    <naturalGoodwillOffset>-20</naturalGoodwillOffset>
+  </GoodwillSituationDef>
+
+  <GoodwillSituationDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>MechanicalPrimacy_FleshPurity</defName>
+    <label>mechanical primacy vs flesh purity</label>
+    <workerClass>GoodwillSituationWorker_MemeCompatibility</workerClass>
+    <meme>RR_MechanicalPrimacy</meme>
+    <otherMeme>FleshPurity</otherMeme>
+    <naturalGoodwillOffset>-20</naturalGoodwillOffset>
+  </GoodwillSituationDef>
+
+  <GoodwillSituationDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>MechanicalPrimacy_AnimalPersonhood</defName>
+    <label>mechanical primacy vs animal personhood</label>
+    <workerClass>GoodwillSituationWorker_MemeCompatibility</workerClass>
+    <meme>RR_MechanicalPrimacy</meme>
+    <otherMeme>AnimalPersonhood</otherMeme>
+    <naturalGoodwillOffset>-10</naturalGoodwillOffset>
+  </GoodwillSituationDef>
+
+</Defs>

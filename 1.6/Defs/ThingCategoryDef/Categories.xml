@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingCategoryDef>
+        <defName>RR_Mechware</defName>
+        <label>inserts</label>
+        <parent>Drugs</parent>
+    </ThingCategoryDef>	
+	
+    <ThingCategoryDef>
+        <defName>BodyPartsSynthetic</defName>
+        <label>synthetic body parts</label>
+        <parent>BodyParts</parent>
+    </ThingCategoryDef>		
+	
+    <ThingCategoryDef>
+        <defName>CorpsesSyntheticlike</defName>
+        <label>synthetic corpses</label>
+        <parent>HAR_AlienCorpseCategory</parent>
+    </ThingCategoryDef>
+
+    <SpecialThingFilterDef>
+        <defName>AllowCorpsesSyntheticlikeFriendly</defName>
+        <label>allow friendly mech corpses</label>
+        <description>Allow the dead bodies of friendly mechanoids.</description>
+        <parentCategory>CorpsesMechanoid</parentCategory>
+        <allowedByDefault>false</allowedByDefault>
+        <saveKey>allowCorpsesMechFriendly</saveKey>
+        <workerClass>SpecialThingFilterWorker_CorpsesFriendly</workerClass>
+    </SpecialThingFilterDef>	
+</Defs>

@@ -1,0 +1,1823 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Childhood.................................................................................-->
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent1</defName>
+    <title>gestated</title>
+    <titleShort>gestated</titleShort>
+    <description>[PAWN_nameDef] was born from a sprawling gestation facility, spending several weeks growing in one of the thousands of mechanite solution baths, being coded and trained to operate [PAWN_possessive] metallic outer shell. Upon passing the "Ransselaer test", [PAWN_pronoun] was declared operational and sent for corporatist use.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <requiredWorkTags>
+      <li>Commoner</li>
+    </requiredWorkTags>	
+    <possessions>
+      <FuelNode_SynthDiet>1~2</FuelNode_SynthDiet>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent2</defName>
+    <title>gestated soldier</title>
+    <titleShort>soldier</titleShort>
+    <description>[PAWN_nameDef] was gestated while [PAWN_possessive] planet was in the cross hairs of an orbital mechanoid invasion, thus [PAWN_pronoun] was quickly reformatted for combat, and sold to government and PMC groups as a soldier. [PAWN_pronoun] managed to ride out the war a long time ago, but for [PAWN_nameDef], [PAWN_pronoun]'s still there on the battlefields and ruins watching for the adversary.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>	
+	<skillGains>
+		<Shooting>4</Shooting>			
+	</skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>	
+	<forcedTraitsChance>
+	    <li>
+			<defName>SlowLearner</defName>
+			<chance>25</chance>
+		</li>
+	    <li>
+			<defName>Ascetic</defName>
+			<chance>10</chance>
+		</li>		
+	</forcedTraitsChance>	
+    <disallowedTraitsChance>
+        <li>
+            <defName>FastLearner</defName>
+        </li>
+        <li>
+            <defName>Kind</defName>
+            <chance>50</chance>
+        </li>
+    </disallowedTraitsChance>
+    <possessions>
+      <Gun_MachinePistol>1</Gun_MachinePistol>
+	  <Chemfuel>0~20</Chemfuel>
+    </possessions>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent3</defName>
+    <title>custom creation</title>
+    <titleShort>custom built</titleShort>
+    <description>[PAWN_nameDef] was made with scrounged pieces and parts, but was mostly made from a hollow mechanent shell that was meant to be smelted down. [PAWN_nameDef] was created by a urbworld machinist, who treated [PAWN_objective] as their own child; teaching [PAWN_nameDef] how to move, speak, and perform basic actions - sadly [PAWN_pronoun] outlived [PAWN_possessive] creator, and was forced to strike out on [PAWN_possessive] own.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>	
+    <disallowedTraitsChance>
+        <li>
+            <defName>Psychopath</defName>
+        </li>
+        <li>
+            <defName>Bloodlust</defName>
+            <chance>42</chance>
+        </li>
+    </disallowedTraitsChance>
+    <possessions>
+	  <Chemfuel>0~20</Chemfuel>
+    </possessions>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent4</defName>
+    <title>gestated servant</title>
+    <titleShort>servant</titleShort>
+    <description>[PAWN_nameDef] was marketed to suit the needs of wealthy families on a distant urbworld. And so [PAWN_nameDef] was bought and made a servant for a wealthy family for many years before being replaced in favor for a more robust version.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Thin</bodyTypeMale>	
+	<skillGains>
+		<Social>3</Social>			
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName Degree="0">Anthropophobia</defName>
+			<chance>15</chance>
+		</li>				
+	</forcedTraitsChance>	
+    <possessions>
+	  <Chemfuel>0~12</Chemfuel>
+    </possessions>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent5</defName>
+    <title>gestated pirate</title>
+    <titleShort>pirate</titleShort>
+    <description>[PAWN_nameDef] was gestated aboard a pirate corsair ship, and subsequently joined their ranks. [PAWN_pronoun] eventually proved [PAWN_possessive] worth as a expendable fighter, and something that doesn't need oxygen when a ship is being boarded, or torn open by orbital cannon fire.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<skillGains>
+		<Shooting>3</Shooting>	
+		<Melee>2</Melee>		
+	</skillGains>	
+    <disallowedTraitsChance>
+        <li>
+            <defName>FastLearner</defName>
+        </li>
+        <li>
+            <defName>Kind</defName>
+            <chance>50</chance>
+        </li>
+    </disallowedTraitsChance>
+    <possessions>
+	  <Chemfuel>0~12</Chemfuel>
+    </possessions>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent6</defName>
+    <title>gestated medic</title>
+    <titleShort>doctor</titleShort>
+    <description>After passing the "Ransselaer test" [PAWN_nameDef] was programmed as a capable medical unit. [PAWN_pronoun] worked as a dispatch medical-officer for a large hospital branch in a massive urbworld city, often being sent to the poor parts of the city for emergency healthcare.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>	
+	<skillGains>
+		<Medicine>3</Medicine>			
+	</skillGains>
+    <requiredWorkTags>
+      <li>Caring</li>
+    </requiredWorkTags>	
+    <possessions>
+	  <MedicineIndustrial>3</MedicineIndustrial>
+	  <Chemfuel>0~20</Chemfuel>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent7</defName>
+    <title>gestated botanist</title>
+    <titleShort>botanist</titleShort>
+    <description>After passing the "Ransselaer test" [PAWN_nameDef] was programmed as a botanical care unit. [PAWN_pronoun] worked in a massive greenhouse complex on a densely populated urbworld. Growing crops, examining the plants for diseases, ordering the mechanized-harvesters, and controlling the greenhouse environment to maintain perfect humidity.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Plants>3</Plants>			
+	</skillGains>
+    <requiredWorkTags>
+      <li>PlantWork</li>
+    </requiredWorkTags>	
+    <possessions>
+	  <Chemfuel>0~20</Chemfuel>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent8</defName>
+    <title>outlander</title>
+    <titleShort>outlander</titleShort>
+    <description>One day [PAWN_nameDef] wandered into a backwoods town and started working, drawing much fear and suspicion from the townsfolk. After a few years [PAWN_pronoun] was eventually accepted as "just another townie".</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>	
+	<skillGains>
+		<Shooting>3</Shooting>
+        <Plants>2</Plants>		
+		<Animals>2</Animals>		
+	</skillGains>		
+    <possessions>
+	  <Chemfuel>0~15</Chemfuel>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent9</defName>
+    <title>policing drone</title>
+    <titleShort>police drone</titleShort>
+    <description>After passing the "Ransselaer test" [PAWN_nameDef] was programmed as a police grade peacekeeping unit. [PAWN_pronoun] operated on a urbworld filled with strife and unrest. Often going up against large-scale protests, working with human and persona officers alike in their attempts to quell unrest, and 'pacifying' citizens with their batons.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<skillGains>
+		<Melee>3</Melee>		
+		<Social>-3</Social>			
+	</skillGains>	
+    <disallowedTraitsChance>
+        <li>
+            <defName>Kind</defName>
+            <chance>55</chance>
+        </li>
+    </disallowedTraitsChance>	
+    <possessions>
+	  <MeleeWeapon_Mace>1</MeleeWeapon_Mace>
+	  <FuelNode_SynthDiet>1~3</FuelNode_SynthDiet>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent10</defName>
+    <title>factory overseer</title>
+    <titleShort>manager</titleShort>
+    <description>[PAWN_nameDef] was gestated to manage an urbworld factory. [PAWN_pronoun] prioritized efficiency above all else, overseeing the schedules and logistics of deliveries as they came and went. [PAWN_pronoun] was also deeply hated by the employees for [PAWN_possessive] impersonal touch.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+	<bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+    </requiredWorkTags>
+	<skillGains>
+		<Intellectual>1</Intellectual>		
+		<Social>-2</Social>			
+	</skillGains>
+    <possessions>
+	  <FuelNode_SynthDiet>1~2</FuelNode_SynthDiet>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent11</defName>
+    <title>artificial gladiator</title>
+    <titleShort>pit fighter</titleShort>
+    <description>[PAWN_nameDef] was made as a 'morally ethical' gladiator. [PAWN_possessive] battles were televised for urbworld and glitterworld citizens, [PAWN_pronoun] was one of the lucky few that was not outright annihilated in the fighting-ring, but was damaged enough to simply be thrown away.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<skillGains>
+		<Melee>3</Melee>	
+		<Shooting>2</Shooting>		
+	</skillGains>	
+	<forcedTraitsChance>
+	    <li>
+            <defName>Psychopath</defName>
+			<chance>15</chance>
+        </li>
+        <li>
+            <defName>Bloodlust</defName>
+            <chance>20</chance>
+        </li>
+	</forcedTraitsChance>	
+    <disallowedTraitsChance>
+        <li>
+            <defName>Kind</defName>
+            <chance>60</chance>
+        </li>
+    </disallowedTraitsChance>
+    <possessions>
+      <MeleeWeapon_Gladius>1</MeleeWeapon_Gladius>
+	  <Chemfuel>0~20</Chemfuel>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent12</defName>
+    <title>refinery worker</title>
+    <titleShort>refinery drone</titleShort>
+    <description>[PAWN_nameDef] was gestated to work in a massive refinery complex. The smoke billowing from the stacks made it inhospitable to humans outside of the factory's halls, so [PAWN_pronoun] had to work in the blacken air. Pouring the molten steel, regularly reigniting the smoke stacks, and repairing the furnaces when they inevitably exploded.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Construction>3</Construction>	
+		<Crafting>2</Crafting>	
+		<Medicine>-4</Medicine>		
+	</skillGains>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+      <li>Commoner</li>
+    </requiredWorkTags>	
+	<forcedTraitsChance>
+	    <li>
+            <defName Degree="2">Industriousness</defName>
+			<chance>20</chance>
+        </li>
+	</forcedTraitsChance>	
+    <disallowedTraitsChance>
+        <li>
+            <defName>Kind</defName>
+            <chance>90</chance>
+        </li>
+    </disallowedTraitsChance>
+    <possessions>
+	  <Chemfuel>0~20</Chemfuel>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent13</defName>
+    <title>gas giant harvester</title>
+    <titleShort>storm harvester</titleShort>
+    <description>[PAWN_nameDef] was gestated to operate on the surface of a gas giant, or what little surface could be found. While the humans lived inside the habitat-elevators and controlled the descensions, [PAWN_nameDef] clung to the exteriors of the habitats for maintenance and operation while they plunged through the storms to harvest gases.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Construction>3</Construction>	
+		<Mining>2</Mining>		
+		<Intellectual>-2</Intellectual>		
+	</skillGains>	
+	<forcedTraitsChance>
+	    <li>
+            <defName Degree="1">Industriousness</defName>
+			<chance>32</chance>
+        </li>
+	</forcedTraitsChance>
+    <possessions>
+	  <Chemfuel>0~20</Chemfuel>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent14</defName>
+    <title>toxworld scavenger</title>
+    <titleShort>scavenger</titleShort>
+    <description>[PAWN_nameDef] was gestated to scavenge the ruined surface of a toxworld. Sent by third party interests, [PAWN_pronoun] delved into the ruins in search of artifacts and salvageable tech. To the inhabitants of the planet, [PAWN_pronoun] was seen as a harbinger for the spacers that often followed if something of value was found.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>	
+	<skillGains>
+		<Mining>3</Mining>	
+		<Shooting>2</Shooting>		
+		<Plants>-6</Plants>		
+	</skillGains>	
+	<forcedTraitsChance>
+	    <li>
+            <defName>Ascetic</defName>
+			<chance>10</chance>
+        </li>
+	</forcedTraitsChance>
+    <possessions>
+	  <Chemfuel>0~20</Chemfuel>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent15</defName>
+    <title>humanitarian dispatch</title>
+    <titleShort>humanitarian</titleShort>
+    <description>[PAWN_nameDef] was gestated to be dispatched to planets experiencing crises. [PAWN_pronoun] operated with a team of mechanents and drop-mechanoids; delivering water, food, and medicine to those suffering.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Medicine>4</Medicine>	
+		<Social>2</Social>		
+		<Shooting>-3</Shooting>
+		<Melee>-2</Melee>		
+	</skillGains>	
+	<forcedTraitsChance>
+	    <li>
+            <defName>Kind</defName>
+			<chance>16</chance>
+        </li>
+	</forcedTraitsChance>
+    <possessions>
+	  <MedicineIndustrial>2</MedicineIndustrial>
+	  <Chemfuel>0~20</Chemfuel>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent16</defName>
+    <title>corporate drone</title>
+    <titleShort>employee</titleShort>
+    <description>After passing the "Ransselaer test" [PAWN_nameDef] was programmed to perform menial tasks demanded by [PAWN_possessive] parent corporation. [PAWN_pronoun] was stationed in a sprawling office complex, ferrying mountains of bureaucratic paperwork between desks.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>	
+		<Social>2</Social>		
+		<Crafting>-2</Crafting>	
+	</skillGains>
+    <possessions>
+	  <FuelNode_SynthDiet>1~2</FuelNode_SynthDiet>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent17</defName>
+    <title>garbagemech</title>
+    <titleShort>garbagemech</titleShort>
+    <description>[PAWN_nameDef] was gestated in an opulent urbworld city for trash collection from the residential zones. [PAWN_pronoun] rode a garbage-truck down the crowded streets and alleyways to collect garbage for incineration.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <possessions>
+	  <Chemfuel>0~12</Chemfuel>
+    </possessions>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent18</defName>
+    <title>mechinator pylon</title>
+    <titleShort>mechinator</titleShort>
+    <description>[PAWN_nameDef] was gestated on a large urbworld city as a pylon for mechanoid control. [PAWN_pronoun] was not an actual mechinator with control over the cities various mechanoids, but rather a control pylon that accepted signals and relayed them to the mechanoids.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>	
+		<Crafting>2</Crafting>
+		<Melee>-4</Melee>
+		<Shooting>-2</Shooting>
+		<Mining>-4</Mining>
+	</skillGains>	
+    <possessions>
+	  <FuelNode_SynthDiet>1~2</FuelNode_SynthDiet>
+    </possessions>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent19</defName>
+    <title>mechlegion remnant</title>
+    <titleShort>remnant</titleShort>
+    <description>Mechlegions are abnormalities, defined as mechhives under the control of subpersonae running on damaged syntax. [PAWN_nameDef] was gestated to join the ranks of a mechlegion; only the legion itself had dissolved years prior, yet the foundries still worked. [PAWN_pronoun] stood awaiting orders for many years until a group of scavengers found [PAWN_objective].</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+    <bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<skillGains>	
+		<Shooting>2</Shooting>		
+		<Plants>-7</Plants>	
+		<Animals>-4</Animals>	
+	</skillGains>
+    <possessions>
+	  <FuelNode_SynthDiet>1~2</FuelNode_SynthDiet>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent20</defName>
+    <title>delivery driver</title>
+    <titleShort>trucker</titleShort>
+    <description>[PAWN_nameDef] was gestated to deliver goods via space-freighter within a solar system. It was a very tedious and uneventful job, but [PAWN_nameDef] didn't mind.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+    <possessions>
+	  <Chemfuel>0~15</Chemfuel>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodMechanent21</defName>
+    <title>mechanic</title>
+    <titleShort>mechanic</titleShort>
+    <description>[PAWN_nameDef] was gestated to speedily repair vehicles in a auto-repair shop on an opulent urbworld. [PAWN_pronoun]'s still drawn to tuning-up vehicles wherever [PAWN_pronoun] finds them.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<skillGains>	
+		<Shooting>-3</Shooting>
+		<Animals>-4</Animals>		
+		<Construction>2</Construction>		
+		<Crafting>2</Crafting>		
+	</skillGains>
+    <possessions>
+	  <Chemfuel>0~20</Chemfuel>
+    </possessions>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef MayRequire="VexedTrees980.RimSkeletons">
+    <defName>ChildhoodMechanentSkeleton1</defName>
+    <title>skeleton assistant</title>
+    <titleShort>assistant</titleShort>
+    <description>[PAWN_nameDef] was made for simple company by a lonely skeleton. [PAWN_nameDef] spent [PAWN_possessive] days following and assisting [PAWN_possessive] skeleton creator and learning from it as they went, but mostly [PAWN_nameDef] just providing much needed company. Eventually, the two parted ways.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>	
+	<skillGains>
+		<Intellectual>3</Intellectual>		
+		<Crafting>2</Crafting>		
+		<Social>2</Social>			
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName>FastLearner</defName>
+			<chance>15</chance>
+		</li>
+	    <li>
+			<defName>Kind</defName>
+			<chance>5</chance>
+		</li>		
+	</forcedTraitsChance>	
+    <possessions>
+	  <Chemfuel>0~15</Chemfuel>
+    </possessions>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>CasketMechanent1</defName>
+    <title>manufactured AI</title>
+    <titleShort>manufactured</titleShort>
+    <description>What is known as '[PAWN_nameDef]' was gestated inside of a mechcasket. [PAWN_possessive] subpersona core was forged directly inside of the casket and dumped with various languages. [PAWN_pronoun] was then ejected from the casket.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanentCasket</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <possessions>
+	  <FuelNode_SynthDiet>1~2</FuelNode_SynthDiet>
+    </possessions>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>CasketMechanoid1</defName>
+    <title>mechanoid</title>
+    <titleShort>mechanoid</titleShort>
+    <description>[PAWN_nameDef] was printed in a coreworld mechcasket as a mechanoid hull. As thus [PAWN_pronoun] is not a sentient being, and will never be conscious.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanoidCasket</li>
+    </spawnCategories>
+    <bodyTypeFemale>Thin</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+    <bodyTypeGlobal>Hulk</bodyTypeGlobal>	
+    <forcedHediffs>
+      <li>RR_BoltedConciousness</li>	  
+    </forcedHediffs>	
+    <possessions>
+	  <FuelNode_SynthDiet>0~2</FuelNode_SynthDiet>
+    </possessions>		
+</AlienRace.AlienBackstoryDef>
+
+
+<!--Adulthood.................................................................................-->
+
+
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent1</defName>
+    <title>gravship pilot</title>
+    <titleShort>gravship pilot</titleShort>
+    <description>During some time in [PAWN_nameDef]'s life [PAWN_pronoun] became a pilot to a large citizen class gravship, [PAWN_pronoun] was not granted the esteemed title of captain, however [PAWN_pronoun] did have multiple freighters under [PAWN_possessive] control at any given time.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Social>3</Social>	
+		<Intellectual>3</Intellectual>		
+	</skillGains>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent2</defName>
+    <title>drifter</title>
+    <titleShort>drifter</titleShort>
+    <description>After some time drifting aimlessly, [PAWN_nameDef] found [PAWN_objective]self far from the choke-hold of human civilization. [PAWN_nameDef] drifted from one settlement to the next with no real purpose, following some fragment of syntax. [PAWN_possessive] presence is often fleeting in settlements and on planets as [PAWN_pronoun] continues [PAWN_possessive] inane quest.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Shooting>4</Shooting>
+		<Medicine>2</Medicine>		
+	</skillGains>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent3</defName>
+    <title>subpersona slave</title>
+    <titleShort>slave</titleShort>
+    <description>Mechanents are boons for any slavers looking to make easy money, as such when [PAWN_nameDef] was found by one such group, [PAWN_pronoun] was sold and then sent to perform hard labor. [PAWN_pronoun] was eventually emancipated by a third party and set free unto the world, without much aim or direction.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>		
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<workDisables>
+        <li>Social</li>
+    </workDisables>	
+	<skillGains>
+		<Mining>4</Mining>		
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName Degree="1">Anthropophobia</defName>
+			<chance>10</chance>
+		</li>				
+	</forcedTraitsChance>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent4</defName>
+    <title>bounty hunter</title>
+    <titleShort>bounty hunter</titleShort>
+    <description>{PAWN_nameDef} was a companion to a self-employed bounty hunter. [PAWN_pronoun] spent [PAWN_possessive] days aiding in the hunt of space pirates and criminals.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>		
+    <bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<skillGains>
+		<Shooting>5</Shooting>	
+		<Melee>4</Melee>	
+		<Medicine>2</Medicine>			
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent5</defName>
+    <title>artificial doctor</title>
+    <titleShort>doctor</titleShort>
+    <description>Following some form of syntax dictating medical drive, [PAWN_nameDef] acted as a doctor for a outlander settlement, healing the wounds and ailments of [PAWN_possessive] biological counterparts. [PAWN_pronoun] also tried [PAWN_possessive] best to learn how to calm down patients who were afraid when a hulking mechanoid entered the room and approached them with a syringe.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodMechanent6</linkedBackstory>	
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Medicine>6</Medicine>
+		<Social>3</Social>		
+	</skillGains>	
+	<possessions>
+      <MedicineIndustrial>2</MedicineIndustrial>
+    </possessions>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent6</defName>
+    <title>stowaway</title>
+    <titleShort>stowaway</titleShort>
+    <description>{PAWN_nameDef} sought passage into the stars, [PAWN_pronoun] achieved this by stealthily hitching a ride on a commercial cargo freighter. [PAWN_pronoun] was made company for those long years by a few other stowaway-personae aboard the ship while the human passengers slept in their cryptosleep caskets.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+	  <li>BackstoriesPersona</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Social>3</Social>		
+	</skillGains>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent7</defName>
+    <title>shipbreaker</title>
+    <titleShort>shipbreaker</titleShort>
+    <description>{PAWN_nameDef} was repurposed for the incredibly dangerous job of a shipbreaker. Positioned in an orbital shipyard [PAWN_pronoun] carefully disassembled starships to be scrapped and recycled, attempting to not vaporize [PAWN_objective]self with the volatile ship reactors along the way.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<workDisables>
+		<li>Artistic</li>	
+    </workDisables>			
+	<skillGains>
+		<Construction>4</Construction>		
+		<Crafting>3</Crafting>			
+	</skillGains>	
+    <possessions>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent8</defName>
+    <title>general contractor</title>
+    <titleShort>contractor</titleShort>
+    <description>Following some form of syntax dictating architectural drive, [PAWN_nameDef] wandered into a human colony and began making buildings and homes for them as well as defenses - which was useful when it came to the occasional pirate raid.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Construction>7</Construction>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent9</defName>
+    <title>angler</title>
+    <titleShort>angler</titleShort>
+    <description>{PAWN_nameDef} found [PAWN_objective]self as an angler; with a drive to provide [PAWN_possessive] catches to local human settlements. [PAWN_pronoun] was perplexed by an odd sense of comfort, or some vague mimicry of the emotion, in the serenity of the water around [PAWN_objective].</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodMechanent7</linkedBackstory>		
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>		
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Animals>5</Animals>
+        <Shooting>-3</Shooting>
+        <Mining>-5</Mining>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent10</defName>
+    <title>farmer</title>
+    <titleShort>farmer</titleShort>
+    <description>{PAWN_nameDef} helped man a plot of farmland for a humanoid settlement where [PAWN_pronoun] lead a peaceful life of tilling the land and tending to the farm animals.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodMechanent7</linkedBackstory>			
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Animals>4</Animals>
+		<Plants>5</Plants>		
+	</skillGains>
+    <possessions>
+      <Hay>10</Hay>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent11</defName>
+    <title>craftsmech</title>
+    <titleShort>craftsmech</titleShort>
+    <description>{PAWN_nameDef} fashioned [PAWN_objective]self as a craftsmech, making odds and ends by request of those who knew where to find [PAWN_objective] and those who had the right material to provide for [PAWN_objective]. [PAWN_pronoun] made anything from clothing and carvings for the local tribal humans, to bionics and guns for the nearby outlanders.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Crafting>5</Crafting>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent12</defName>
+    <title>blacksmith</title>
+    <titleShort>blacksmith</titleShort>
+    <description>{PAWN_nameDef}'s syntax demanded [PAWN_pronoun] seek perfection in blacksmithing, forging various weaponry and armor. [PAWN_pronoun] not only knew how to make them; but also how to use them.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Crafting>4</Crafting>	
+		<Melee>6</Melee>			
+	</skillGains>
+    <possessions>
+      <MeleeWeapon_LongSword>3</MeleeWeapon_LongSword>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent13</defName>
+    <title>ageusian chef</title>
+    <titleShort>chef</titleShort>
+    <description>{PAWN_nameDef} became a chef at a local human settlement. [PAWN_pronoun] was not the best chef - given that [PAWN_pronoun] could not taste the food [PAWN_pronoun] was making. Eventually, however, [PAWN_pronoun] got better at making palatable meals after finding a voluntary taste-tester.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodMechanent4</linkedBackstory>			
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>		
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Cooking>5</Cooking>				
+	</skillGains>
+    <requiredWorkTags>
+      <li>Cooking</li>
+    </requiredWorkTags>	
+    <possessions>
+      <MealSurvivalPack>2</MealSurvivalPack>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent14</defName>
+    <title>scout</title>
+    <titleShort>scout</titleShort>
+    <description>{PAWN_nameDef} was a scout for a military organization. [PAWN_pronoun] ran from outpost to outpost ferrying information on enemy movements and supply chain statuses, [PAWN_pronoun] also would run ahead of [PAWN_possessive] battalion to ensure the way ahead was secure.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodMechanent2</linkedBackstory>		
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Shooting>3</Shooting>				
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName Degree="2">SpeedOffset</defName>
+			<chance>20</chance>
+		</li>
+	</forcedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent15</defName>
+    <title>hermit</title>
+    <titleShort>hermit</titleShort>
+    <description>After some mystery fragment of syntax evolved in {PAWN_nameDef}'s mind, [PAWN_pronoun] wanted nothing more than the serenity of pure isolation; and so [PAWN_pronoun] retreated into nature. [PAWN_pronoun] lead a peaceful life, often spending days enthralled in [PAWN_possessive] contemplation of deep philosophical thoughts, yet sadly [PAWN_pronoun] had almost no ability to actually understand and process those thoughts, like viewing a hazy picture just out of focus.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Animals>4</Animals>	
+		<Plants>2</Plants>
+		<Social>-5</Social>	
+		<Shooting>-5</Shooting>
+		<Melee>-3</Melee>
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent16</defName>
+    <title>technosect victim</title>
+    <titleShort>cult victim</titleShort>
+    <description>{PAWN_nameDef} was captured by a radical group of anti-mechanoid zealots; who believed in a religion stating that biological life is sacred, and that any thinking machine is an insidious man-made horror that must be purged from existence. As such they punished [PAWN_nameDef] for [PAWN_possessive] 'wicked' ways. [PAWN_nameDef] eventually gained freedom, and doesn't seem to be any worse for wear.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Shooting>4</Shooting>
+		<Melee>2</Melee>		
+		<Social>-6</Social>		
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName Degree="1">Anthropophobia</defName>
+			<chance>15</chance>
+		</li>				
+	    <li>
+			<defName>Abrasive</defName>
+			<chance>25</chance>
+		</li>
+	    <li>
+			<defName>Bloodlust</defName>
+			<chance>15</chance>
+		</li>	
+	</forcedTraitsChance>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent17</defName>
+    <title>starship builder</title>
+    <titleShort>ship builder</titleShort>
+    <description>{PAWN_nameDef} was bought and repurposed at an orbital shipyard to build starships and proof hulls. [PAWN_pronoun] still yearns to build starships apparently, since [PAWN_pronoun] can sometimes be seen fiddling scrap metal into the vague shape of a starship.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Construction>4</Construction>
+		<Crafting>2</Crafting>	
+	</skillGains>
+    <requiredWorkTags>
+      <li>ManualSkilled</li>
+    </requiredWorkTags>	
+    <possessions>
+      <Plasteel>5</Plasteel>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent18</defName>
+    <title>computer</title>
+    <titleShort>computer</titleShort>
+    <description>[PAWN_nameDef] was repurposed into a knowledge repository by a small outlander university. [PAWN_possessive] new purpose was teaching students, aiding in research, and crunching large calculations with [PAWN_possessive] fellow academicians.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Intellectual>6</Intellectual>
+	</skillGains>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+    </requiredWorkTags>			
+	<forcedTraitsChance>
+	    <li>
+			<defName>TooSmart</defName>
+			<chance>20</chance>
+		</li>
+	</forcedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent19</defName>
+    <title>engineer</title>
+    <titleShort>engineer</titleShort>
+    <description>While repairing [PAWN_objective]self, [PAWN_nameDef] gradually became proficient in designing and repairing complex mechanisms, and naturally fell into the profession of an engineer. [PAWN_pronoun] became a master at laying out designs ranging from simple bridges, to advanced communications relays and mechanical cathedrals.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Construction>4</Construction>
+		<Intellectual>3</Intellectual>		
+	</skillGains>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+      <li>ManualSkilled</li>
+    </requiredWorkTags>		
+	<forcedTraitsChance>
+	    <li>
+			<defName Degree="2">Industriousness</defName>
+			<chance>20</chance>
+		</li>
+	</forcedTraitsChance>
+    <possessions>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent20</defName>
+    <title>space captain</title>
+    <titleShort>captain</titleShort>
+    <description>{PAWN_nameDef} earned [PAWN_objective]self a title as a starship captain, ferrying through the stars from one planet to the next. [PAWN_pronoun] was also able to handle [PAWN_objective]self in a fight if and when pirates vaulted onto the ship.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Social>3</Social>
+		<Shooting>3</Shooting>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent21</defName>
+    <title>holy machine</title>
+    <titleShort>priest</titleShort>
+    <description>{PAWN_nameDef} is a priest for [PAWN_possessive] religion. Despite common misconceptions, subpersonae can often form their own quasi-religions, of which [PAWN_nameDef] preaches the way of [PAWN_possessive] archotech god.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Social>4</Social>
+		<Medicine>2</Medicine>	
+		<Shooting>-6</Shooting>
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName>Kind</defName>
+			<chance>26</chance>
+		</li>		
+	</forcedTraitsChance>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent22</defName>
+    <title>enlightened machine</title>
+    <titleShort>monk</titleShort>
+    <description>{PAWN_nameDef} spent many years atop a mountain peak, attempting to reflect upon life - both biological and synthetic. Despite [PAWN_possessive] limited consciousness and cold exterior, the introspections [PAWN_pronoun] offered to passing strangers roused ample contemplation.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Social>3</Social>
+		<Melee>4</Melee>		
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName>Ascetic</defName>
+			<chance>25</chance>
+		</li>		
+	</forcedTraitsChance>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent23</defName>
+    <title>mercenary unit</title>
+    <titleShort>mercenary</titleShort>
+    <description>{PAWN_nameDef} found [PAWN_objective]self as a soldier for a mercenary company. Under contract by government agencies [PAWN_pronoun] worked amongst the mercenary battalions as they took key outposts, assaulted points, and padded military ranks.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodMechanent2</linkedBackstory>		
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>		
+    <bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<workDisables>
+		<li>Artistic</li>	
+    </workDisables>		
+	<skillGains>
+		<Shooting>5</Shooting>
+		<Melee>2</Melee>		
+	</skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>	
+	<forcedTraitsChance>
+	    <li>
+			<defName>Tough</defName>
+			<chance>15</chance>
+		</li>		
+	</forcedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent24</defName>
+    <title>encrypter</title>
+    <titleShort>coder</titleShort>
+    <description>Naturally, [PAWN_nameDef] found [PAWN_possessive] purpose behind the screen of a computer, and in the clicks of a keyboard. [PAWN_pronoun] skillfully coded various programs and scripts - running quick hacks on ancient tech complexes, or hacks and diagnostics on AI cores.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Intellectual>5</Intellectual>
+		<Social>-6</Social>		
+	</skillGains>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+    </requiredWorkTags>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent25</defName>
+    <title>clockwork artist</title>
+    <titleShort>artist</titleShort>
+    <description>A block of marble, or a empty canvas is all a piece of art yet to be made to [PAWN_nameDef] - though [PAWN_pronoun]'s unfortunately only following rigid lines of code to regurgitate randomized topics and centerpieces for [PAWN_possessive] artwork.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Artistic>6</Artistic>
+		<Crafting>2</Crafting>		
+	</skillGains>
+    <requiredWorkTags>
+      <li>Artistic</li>
+    </requiredWorkTags>	
+	<forcedTraitsChance>
+	    <li>
+			<defName>TorturedArtist</defName>
+			<chance>8</chance>
+		</li>		
+	</forcedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent26</defName>
+    <title>wandering menace</title>
+    <titleShort>menace</titleShort>
+    <description>Some subpersona cannot be freed into the environment for fear of how and what they would do to follow their coding, [PAWN_nameDef] is a good example. Due to [PAWN_possessive] coding, practically all [PAWN_pronoun] knows how to do is quickly and efficiently deescalate problems - by using extreme and horrific violence.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodMechanent11</linkedBackstory>		
+    <bodyTypeGlobal>Hulk</bodyTypeGlobal>	
+	<skillGains>
+		<Shooting>4</Shooting>		
+		<Melee>4</Melee>			
+	</skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>	
+    <workDisables>
+      <li>ManualSkilled</li>
+      <li>Caring</li>
+    </workDisables>	
+	<forcedTraitsChance>
+	    <li>
+			<defName Degree="1">Anthropophobia</defName>
+			<chance>5</chance>
+		</li>				
+	</forcedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent27</defName>
+    <title>starship marine</title>
+    <titleShort>marine</titleShort>
+    <description>{PAWN_nameDef} was stationed aboard one of the many troopships of a military-starship fleet. In addition to ground invasions and skirmishes, [PAWN_nameDef] partook in ship-cracking missions onto various enemy vessels by vaulting across the void and boring into the ship's hull.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodMechanent2</linkedBackstory>			
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Shooting>4</Shooting>	
+		<Melee>3</Melee>		
+	</skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent28</defName>
+    <title>marauder</title>
+    <titleShort>marauder</titleShort>
+    <description>[PAWN_nameDef] drifted with a rowdy band of pirates, becoming an accomplished pilot on a fighter ship. Aiding cargo ship ambushes in high orbit, vaulting onto enemy ships to crack open the hull, and being as cutthroat as possible is what [PAWN_nameDef] was made for.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodMechanent5</linkedBackstory>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Shooting>3</Shooting>
+		<Melee>2</Melee>
+		<Social>5</Social>			
+	</skillGains>	
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+      <li>Violent</li>
+    </requiredWorkTags>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent29</defName>
+    <title>subpersona insurgent</title>
+    <titleShort>rebel</titleShort>
+    <description>On a far-flung planet, [PAWN_nameDef] and many of [PAWN_possessive] fellow personae staged a coup against the local human government, the resulting rebellion lead to an all out war between the humans and machines. Eventually the planet was declared uninhabitable due to the deployment of colossal scale planetary-weaponry during the conflict. Neither side won.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Shooting>6</Shooting>	
+		<Melee>5</Melee>		
+		<Construction>4</Construction>						
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName Degree="1">Anthropophobia</defName>
+			<chance>15</chance>
+		</li>				
+	    <li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Desensitized</defName>
+			<chance>12</chance>
+		</li>	
+	    <li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Rebel</defName>
+			<chance>8</chance>
+		</li>		
+	</forcedTraitsChance>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent30</defName>
+    <title>exploration unit</title>
+    <titleShort>pathfinder</titleShort>
+    <description>[PAWN_nameDef] was used by an expedition company to chart unexplored and often dangerous territory. [PAWN_nameDef] has seen many ancient crypts, archotech oddities, and deep-space bioengineered horrors in [PAWN_possessive] existence.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Shooting>6</Shooting>	
+		<Melee>2</Melee>
+		<Medicine>5</Medicine>										
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent31</defName>
+    <title>mechanical miner</title>
+    <titleShort>miner</titleShort>
+    <description>[PAWN_nameDef] was repurposed to work for a deep space mining company - [PAWN_nameDef] operated heavy mining equipment while trying not to cause a cave-in. [PAWN_pronoun] also had to repel regular insectoid assaults during mining missions by means of fire and lead.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>	
+		<Mining>7</Mining>
+		<Shooting>4</Shooting>		
+	</skillGains>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+      <li>Mining</li>
+    </requiredWorkTags>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent32</defName>
+    <title>inter-netted</title>
+    <titleShort>operator</titleShort>
+    <description>{PAWN_nameDef} spent many years "living" inside the Net. [PAWN_pronoun] glossed over the untold values of uploads each and everyday, and spent a large amount of time browsing history archives - [PAWN_pronoun] gleamed info of the outside world through various news outlets and social media platforms. Eventually [PAWN_nameDef] was unplugged, and thrown back into the real world.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+	  <li>BackstoriesPersona</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<workDisables>
+        <li>Social</li>				
+    </workDisables>		
+	<skillGains>
+		<Intellectual>6</Intellectual>					
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName>Undergrounder</defName>
+		</li>
+	</forcedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent33</defName>
+    <title>AI smuggler</title>
+    <titleShort>smuggler</titleShort>
+    <description>[PAWN_nameDef] worked as a smuggler, but instead of running illegal combat stimulants or weapons to side-step government tariffs, [PAWN_pronoun] smuggled fellow AI personae. [PAWN_pronoun] was able to either smoothtalk or quickdraw to get out of a daunting situation with grace, all while masterfully piloting a refitted strike-craft.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodMechanent5</linkedBackstory>	
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<workDisables>
+	    <li>Caring</li>		
+    </workDisables>		
+	<skillGains>		
+		<Shooting>3</Shooting>		
+		<Social>3</Social>
+		<Intellectual>-1</Intellectual>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent34</defName>
+    <title>automaton manager</title>
+    <titleShort>manager</titleShort>
+    <description>[PAWN_nameDef] was repurposed by a megacorporation branch to aid in an expedition to establish a colony, and eventually a large scale factory. There [PAWN_pronoun] learned the ins and outs of human social intricacies, how to lay groundwork, and how to kill raiders.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<skillGains>		
+		<Shooting>3</Shooting>	
+		<Construction>4</Construction>			
+		<Social>5</Social>	
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent35</defName>
+    <title>omega-construct drone</title>
+    <titleShort>construct drone</titleShort>
+    <description>Omega-constructs are often classified as any artificial structure about the size of, or larger than a moon. [PAWN_nameDef] was one of billions of drones that were used to create one of these gargantuan constructs - [PAWN_pronoun] subserviently toiled as demanded by [PAWN_possessive] unknown overseer. Eventually for unknown reasons the project plateaued and stagnated, and the uplink controlling the drones was severed; leaving them confused and without purpose.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<workDisables>
+	    <li>Caring</li>	
+	    <li>Intellectual</li>
+		<li>Artistic</li>	
+    </workDisables>			
+	<skillGains>		
+		<Construction>6</Construction>		
+		<Social>-6</Social>			
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent36</defName>
+    <title>spiritualist shell</title>
+    <titleShort>spiritualist</titleShort>
+    <description>On a far flung Deadworld, [PAWN_nameDef] crashlanded and found [PAWN_objective]self surrounded by an agrarian society of spiritualistic personae. They admitted to [PAWN_nameDef] that they played a part in the sterilization of the planet, and feeling extreme remorse for their actions began searching for god. [PAWN_nameDef] wasn't swayed to the religion, but [PAWN_pronoun] still learned much from the spiritualists.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+	  <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<workDisables>
+        <li>Violent</li>				
+    </workDisables>			
+	<skillGains>		
+		<Plants>3</Plants>	
+		<Crafting>4</Crafting>			
+		<Social>5</Social>	
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName Degree="0">Anthropophobia</defName>
+			<chance>15</chance>
+		</li>		
+	    <li>
+            <defName>Kind</defName>
+			<chance>25</chance>
+        </li>
+	</forcedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent37</defName>
+    <title>stellar drifter</title>
+    <titleShort>space junk</titleShort>
+    <description>[PAWN_nameDef] was aboard a starship when it engaged in orbital battle and was subsequently destroyed. [PAWN_nameDef] was sucked out of the hull and into the vacuum of space where [PAWN_pronoun] drifted amongst the salvage. With nothing else to do [PAWN_pronoun] began to reflect on many things, like why the stars glitter the way they do, or [PAWN_possessive] own greater purpose - until many years later a wreckage ship stumbled upon [PAWN_objective] and pulled [PAWN_objective] aboard.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+	  <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>	
+	<workDisables>
+        <li>Social</li>	
+        <li>PlantWork</li>	
+        <li>Animals</li>			
+    </workDisables>		
+	<skillGains>					
+		<Intellectual>6</Intellectual>
+		<Crafting>-4</Crafting>
+		<Shooting>-3</Shooting>		
+	</skillGains>	
+    <possessions>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent38</defName>
+    <title>forgeworld drone</title>
+    <titleShort>forgeworld drone</titleShort>
+    <description>[PAWN_nameDef] was one of the many billions of mechanents toiling in the depths of a forgeworld. [PAWN_nameDef] was a simple drone tasked with the maintenance of a vast sector of machinery, along with [PAWN_possessive] crew of mechanents and mechanoids. Of all [PAWN_possessive] years in the forgeworld, it never saw a single organic lifeform.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodMechanent1</linkedBackstory>	
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>	
+	<workDisables>
+        <li>PlantWork</li>	
+        <li>Animals</li>	
+        <li>Caring</li>		
+    </workDisables>		
+	<skillGains>					
+		<Construction>5</Construction>	
+		<Crafting>3</Crafting>			
+	</skillGains>	
+    <requiredWorkTags>
+      <li>Constructing</li>
+    </requiredWorkTags>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent39</defName>
+    <title>hiveworld trooper</title>
+    <titleShort>trooper</titleShort>
+    <description>[PAWN_nameDef] was sent as a expendable marine to help secure a hiveworld for the construction of human outposts and research labs. The planet was entirely overrun with Sorne geneline insectiods, and it was [PAWN_nameDef]s job to push into contested territory to make way for human excursions. [PAWN_pronoun] was also coded with a certain particularity for fire.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodMechanent2</linkedBackstory>	
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>	
+	<workDisables>
+        <li>Firefighting</li>	
+        <li>Animals</li>			
+    </workDisables>		
+	<skillGains>					
+		<Shooting>5</Shooting>	
+		<Mining>3</Mining>			
+	</skillGains>	
+	<forcedTraitsChance>
+	    <li>
+            <defName>Pyromaniac</defName>
+			<chance>45</chance>
+        </li>
+	</forcedTraitsChance>
+    <possessions>
+      <Bullet_IncendiaryLauncher>1</Bullet_IncendiaryLauncher>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent40</defName>
+    <title>assassin</title>
+    <titleShort>assassin</titleShort>
+    <description>[PAWN_nameDef] claims [PAWN_pronoun] has come to this planet seeking to terminate an individual in a high position of power, but refuses to divulge any further information.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+    <linkedBackstory>ChildhoodMechanent2</linkedBackstory>		
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>	
+	<workDisables>
+        <li>Caring</li>	
+        <li>PlantWork</li>	
+        <li>Animals</li>			
+    </workDisables>		
+	<skillGains>					
+		<Shooting>4</Shooting>				
+	</skillGains>		
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent41</defName>
+    <title>machine cultist</title>
+    <titleShort>cultist</titleShort>
+    <description>Hacked to blindly follow the will of a AI supercomputer built to make simulated projections of the future, [PAWN_nameDef] fervently drove to fulfill the AI's vision of the perfect future - no matter how many 'outliers' the AI marked for death or societal shunning, or how many lives were quietly controlled by its influences.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+	  <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<workDisables>
+        <li>ManualDumb</li>			
+    </workDisables>		
+	<skillGains>					
+		<Shooting>4</Shooting>		
+		<Social>-4</Social>			
+	</skillGains>	
+	<forcedTraitsChance>
+	    <li>
+            <defName>Psychopath</defName>
+			<chance>25</chance>
+        </li>
+	</forcedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent42</defName>
+    <title>medieval deity</title>
+    <titleShort>medieval god</titleShort>
+    <description>After crashing on a medieval world, [PAWN_nameDef] was seen as the "paladin from the stars, riding a flaming horse". [PAWN_pronoun] eventually climbed [PAWN_possessive] way up the societal ladder on the planet until [PAWN_pronoun] became a high noble with many fields and fiefdoms under [PAWN_possessive] banner.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+	  <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Thin</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>	
+	<workDisables>
+        <li>ManualDumb</li>			
+    </workDisables>		
+	<skillGains>					
+		<Plants>4</Plants>		
+		<Social>5</Social>			
+	</skillGains>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent43</defName>
+    <title>detective</title>
+    <titleShort>detective</titleShort>
+    <description>Enlisted by a large outlander colony, [PAWN_nameDef] was asked to utilize [PAWN_possessive] highly analytical mind to solve human murders. And while [PAWN_possessive] methods were often described as “unusual”, [PAWN_pronoun] was undeniably proficient at seeing the bigger picture, and finding all the details needed to catch the perpetrator.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>			
+	<skillGains>					
+		<Intellectual>4</Intellectual>	
+		<Shooting>4</Shooting>		
+		<Social>5</Social>			
+	</skillGains>
+    <requiredWorkTags>
+      <li>Social</li>
+    </requiredWorkTags>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent44</defName>
+    <title>royal janissary</title>
+    <titleShort>janissary</titleShort>
+    <description>[PAWN_nameDef] was accepted by the imperial military force to pad the ranks and project force if the High Stellarch willed it so. [PAWN_pronoun] was often used as a very effective instrument of fear against deserters and enemies of the imperium alike.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+	  <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<workDisables>
+        <li>ManualDumb</li>	
+		<li>Caring</li>	
+    </workDisables>		
+	<skillGains>					
+		<Shooting>6</Shooting>
+		<Melee>4</Melee>		
+		<Social>-4</Social>			
+	</skillGains>	
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>	
+	<forcedTraitsChance>
+	    <li>
+            <defName>Bloodlust</defName>
+			<chance>26</chance>
+        </li>
+	</forcedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent45</defName>
+    <title>crimelord</title>
+    <titleShort>criminal</titleShort>
+    <description>[PAWN_nameDef] was a underground crimelord. [PAWN_pronoun] held a massive drug operation, growing elicit drug crops and cooking chemical cocktails. Of course [PAWN_nameDef] never actually did the dirty work, but [PAWN_pronoun] did partake in a bit of violence; if the situation called for it.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+	  <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<workDisables>
+        <li>ManualDumb</li>	
+		<li>Caring</li>	
+    </workDisables>	
+    <requiredWorkTags>
+      <li>Social</li>
+      <li>Violent</li>
+    </requiredWorkTags>	
+	<skillGains>					
+		<Shooting>5</Shooting>
+		<Social>6</Social>
+		<Construction>-4</Construction>		
+		<Crafting>-4</Crafting>			
+	</skillGains>			
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent46</defName>
+    <title>road-warrior</title>
+    <titleShort>road-warrior</titleShort>
+    <description>[PAWN_nameDef]'s planet was glassed by nuclear fire, leaving the entire planet a deserted husk. Still following self-preservation syntax, [PAWN_pronoun] plowed salvaged vehicles through endless maelstroms of sand in search of fuel and nuclear waste to fuel [PAWN_possessive] reactor.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+	  <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<workDisables>
+        <li>PlantWork</li>
+    </workDisables>	
+    <requiredWorkTags>
+      <li>Crafting</li>
+      <li>Violent</li>
+    </requiredWorkTags>	
+	<skillGains>					
+		<Shooting>5</Shooting>
+		<Crafting>6</Crafting>			
+	</skillGains>			
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent47</defName>
+    <title>gravleech</title>
+	<titleShort>gravleech</titleShort>
+    <description>In outer planetary orbit, [PAWN_nameDef] is what spacers refer to as a "gravleech" a persona or mechanoid that stalks the upper atmosphere in hunt of gravcores. Using jump packs and magnetic gauntlets, [PAWN_nameDef] would cling to the hull of traveling gravships, tearing holes in ducts and airlocks to asphyxiate the crew within, allowing {PAWN_objective} to steal the ships gravcore without much confrontation - save for the few who could grab a vac suit in time.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+	  <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<workDisables>
+        <li>PlantWork</li>
+    </workDisables>	
+    <requiredWorkTags>
+      <li>Constructing</li>
+      <li>Violent</li>
+    </requiredWorkTags>	
+	<skillGains>					
+		<Shooting>4</Shooting>
+		<Melee>3</Melee>
+		<Construction>6</Construction>			
+	</skillGains>			
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent48</defName>
+    <title>sea slag</title>
+	<titleShort>slag</titleShort>
+    <description>During a rough storm at sea, [PAWN_nameDef] was knocked overboard and quickly plummeted to the bottom of the ocean. {PAWN_pronoun} sat and wandered the pitch-black darkness for years, until a fishing trawler accidentally dredged {PAWN_objective} from the depths. Though, {PAWN_possessive} time under the waves gave {PAWN_objective} a unique perspective on sea life.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<workDisables>
+        <li>PlantWork</li>
+    </workDisables>	
+    <requiredWorkTags>
+      <li>Animals</li>
+    </requiredWorkTags>	
+	<skillGains>					
+		<Shooting>-4</Shooting>
+		<Construction>-2</Construction>
+		<Animals>3</Animals>		
+	</skillGains>			
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodMechanent49</defName>
+    <title>failed foster</title>	
+    <titleShort>surrogate</titleShort>
+    <description>[PAWN_nameDef] was repurposed to act as a surrogate foster for a small startup-colony of children on a distant planet. [PAWN_pronoun] spent time gestating their embryos, and nurturing them to childhood - however, [PAWN_nameDef] was alone in [PAWN_possessive] endeavor, and tragically, over the years [PAWN_possessive] children died one by one due to factors outside of [PAWN_possessive] control. Oddly, [PAWN_pronoun] still sometimes finds [PAWN_objective]self humming [PAWN_possessive] children's favorite bedtime melodies.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanent</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <requiredWorkTags>
+      <li>Caring</li>
+    </requiredWorkTags>		
+	<skillGains>		
+		<Plants>4</Plants>	
+		<Medicine>4</Medicine>	
+		<Construction>4</Construction>	
+		<Cooking>3</Cooking>
+		<Social>3</Social>
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName Degree="0">Anthropophobia</defName>
+			<chance>35</chance>
+		</li>	
+	    <li>
+			<defName Degree="-2">NaturalMood</defName>
+			<chance>30</chance>
+		</li>		
+	    <li>
+            <defName>Kind</defName>
+			<chance>15</chance>
+        </li>
+	</forcedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+
+<AlienRace.AlienBackstoryDef>
+    <defName>CasketMechanent2</defName>
+    <title>printed shell</title>
+    <titleShort>shell</titleShort>
+    <description>[PAWN_nameDef] was printed in a mechcasket as a subpersona shell.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanentCasket</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>CasketMechanoid</defName>
+    <title>mechanoid</title>
+    <titleShort>mechanoid</titleShort>
+    <description>[PAWN_nameDef] is a mindless drone used by Coreworld interests to perform various tasks, military or otherwise - a higher functioning version of the dreaded mechanoids.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesMechanoidCasket</li>
+    </spawnCategories>
+    <forcedHediffs>
+      <li>RR_BoltedConciousness</li>	  
+    </forcedHediffs>	
+	<bodyTypeFemale>Thin</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Hulk</bodyTypeGlobal>	
+</AlienRace.AlienBackstoryDef>
+
+</Defs>

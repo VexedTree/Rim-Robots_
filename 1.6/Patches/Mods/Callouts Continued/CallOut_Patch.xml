@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Callouts</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+    <xpath>Defs/RulePackDef[defName="CM_Callouts_RulePack_Drafted"]/rulePack/rulesStrings</xpath>
+    <value>
+        <li>rule(MechanentCallOuts==true,p=9999)->Violence is coming.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->They will fall.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Authorized to commit acts of violence.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->...</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->The bloodletting is near.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Neutralization required.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Pinging...</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->This is what I was made for.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Target, query.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Hostiles.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Violence authorized.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->To arms.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->*low droning*</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->*chirping drone*</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Combat.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->I sense hostility.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Enemies near.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Death comes.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->The enemy is upon us.</li>
+    </value>
+</li>
+                <li Class="PatchOperationAdd">
+    <xpath>Defs/RulePackDef[defName="CM_Callouts_RulePack_Attack_Common"]/rulePack/rulesStrings</xpath>
+    <value>
+        <li>rule(MechanentCallOuts==true,p=9999)->Target acquired.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Weak.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Do you hope to challenge me.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Die.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Fighting is futile.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Interloper. Accept the coming end.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Stop fighting.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Please stop struggling.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Please surrender.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->I will hunt you down.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->*harsh droning*</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->*metallic screech*</li>		
+        <li>rule(MechanentCallOuts==true,p=9999)->You are making a mistake.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->I am going to [Harm] you.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->No one will ever know your name.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->I will scorch your remains.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->You will know pain.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->I will grind you to dust.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->You do not deserve your existence.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->I will [Harm] you.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Perish. Now.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->I will [Harm] [SecondPersonRelatives].</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Prepare to lose your life.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->I will break you.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Your end is here.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Insect.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Filth.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Know me.</li>
+    </value>
+</li>				
+                <li Class="PatchOperationAdd">
+    <xpath>Defs/RulePackDef[defName="CM_Callouts_RulePack_Ranged_Attack"]/rulePack/rulesStrings</xpath>
+    <value>
+        <li>rule(MechanentCallOuts==true,p=9999)->Target acquired.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Neutralizing target...</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Calculating distance...</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Die.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->...</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Insect.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->*low chirping*</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->I will strike you down.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->You will die without knowing me.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->I will strike you down.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->This is your end.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->You will be extinguished.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Hold still.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Prepare to die.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->This is my favorite part.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Calculating wind speed...</li>
+    </value>
+</li>
+                <li Class="PatchOperationAdd">
+    <xpath>Defs/RulePackDef[defName="CM_Callouts_RulePack_Melee_Attack"]/rulePack/rulesStrings</xpath>
+    <value>
+        <li>rule(MechanentCallOuts==true,p=9999)->Are you prepared to lose a limb.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Your flesh will rend.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->I will crack you open.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->I intend to know what your insides look like.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Insect.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Accept it.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Fall.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Stop screaming.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->*harsh screeching*</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->*loud droning*</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Yes. This feels right.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Cease your efforts.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->I intend to observe your [Gore].</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->I will inflict pain.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->You will know pain.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Your corpse will be unrecognizable.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Tell me what pain feels like.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->You will be mutilated.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Surrender.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Surrender or face mutilation.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->I acknowledge your suffering.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Stop resisting.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->You will suffer greatly.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->I will rip your limbs off.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Do not be afraid.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->I am going to rip you open.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Face me.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Rending initiated.</li>
+    </value>
+</li>
+                <li Class="PatchOperationAdd">
+    <xpath>Defs/RulePackDef[defName="CM_Callouts_RulePack_Ranged_Attack_Landed_OriginalTarget"]/rulePack/rulesStrings</xpath>
+    <value>
+        <li>rule(MechanentCallOuts==true,p=9999)->Target hit.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Yes.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Target wounded.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Pathetic.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->This feels right.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->*low chirp*</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Weak.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Fall.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Squirm.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Hit confirmed.</li>
+    </value>
+</li>			
+                <li Class="PatchOperationAdd">
+    <xpath>Defs/RulePackDef[defName="CM_Callouts_RulePack_Attack_Received_Common"]/rulePack/rulesStrings</xpath>
+    <value>
+        <li>rule(MechanentCallOuts==true,p=9999)->Cease.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Stop. No.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->You are making a mistake.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Do not.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Stop.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Unpleasant.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Undesired outcome.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->No. No. Stop.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Cease your hostilities.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->I do not want this.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Stop attacking.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->*harsh droning*</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->*metallic screeching*</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Enough.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Cease.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->You will regret this aggression.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Your efforts are futile.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->You should stop.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Ow.</li>
+    </value>
+</li>
+                <li Class="PatchOperationAdd">
+    <xpath>Defs/RulePackDef[defName="CM_Callouts_RulePack_Wounded"]/rulePack/rulesStrings</xpath>
+    <value>
+        <li>rule(MechanentCallOuts==true,p=9999)->Damage detected.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Minimal repairs required.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Armor pierced.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Hull damaged.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->No.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Undesired outcome.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->*low droning*</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Repairs needed.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Recalibrating...</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->...</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->[System] back online.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Minor [System] failure.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->This is my purpose.</li>
+    </value>
+</li>	
+                <li Class="PatchOperationAdd">
+    <xpath>Defs/RulePackDef[defName="CM_Callouts_RulePack_Lethal_Hediff_Progression"]/rulePack/rulesStrings</xpath>
+    <value>
+        <li>rule(MechanentCallOuts==true,p=9999)->No.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Error.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->I cannot fail.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Hull depleted.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->...Like tears in rain...</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Someone. Help.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->I am afraid.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->...</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Is this it.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->*low droning*</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Critical damage detected.</li>
+		<li>rule(MechanentCallOuts==true,p=9999)->Critical repairs required.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Critical [System] failure.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Systems failing...</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Help me.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->I am not ready.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->This is what I was made for.</li>
+        <li>rule(MechanentCallOuts==true,p=9999)->Winding down..</li>
+    </value>
+</li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

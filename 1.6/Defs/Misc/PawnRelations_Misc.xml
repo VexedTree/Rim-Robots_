@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRelationDef>
+    <defName>Creator</defName>
+    <label>creator</label>
+    <importance>100</importance>
+    <diedThought>MyCreatorDiedMale</diedThought>
+    <diedThoughtFemale>MyCreatorDiedFemale</diedThoughtFemale>
+    <killedThought>KilledMyCreator</killedThought>
+    <lostThought>MyCreatorLostMale</lostThought>
+    <lostThoughtFemale>MyCreatorLostFemale</lostThoughtFemale>
+    <soldThoughts>
+      <li>SoldMyCreator</li>
+    </soldThoughts>
+    <opinionOffset>20</opinionOffset>
+    <implied>false</implied>
+    <reflexive>true</reflexive>
+  </PawnRelationDef>
+  
+</Defs>

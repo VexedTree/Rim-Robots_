@@ -12,7 +12,7 @@
     <canStageAttacks>true</canStageAttacks>
 	<earliestRaidDays>50</earliestRaidDays>
     <leaderTitle>prime nexus</leaderTitle>
-    <factionIconPath>WorldIcon/RobotsNeutral</factionIconPath>
+    <factionIconPath>UI/WorldIcon/RobotsNeutral</factionIconPath>
     <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>	
     <factionNameMaker>NamerFactionSynth</factionNameMaker>
     <settlementNameMaker>NamerSettlementSynthetic</settlementNameMaker>
@@ -292,7 +292,7 @@
       <li>Caravan_Synthetic_Exotic</li>
 	  <li>Caravan_Synthetic_PirateMerchant</li>
     </caravanTraderKinds>
-    <factionIconPath>WorldIcon/RobotsHostile</factionIconPath>	
+    <factionIconPath>UI/WorldIcon/RobotsHostile</factionIconPath>	
     <factionNameMaker>NamerFactionSynthEvil</factionNameMaker>		
     <pawnGroupMakers>
       <li>

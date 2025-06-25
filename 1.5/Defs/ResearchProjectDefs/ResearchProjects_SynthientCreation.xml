@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>MechanentCreation</defName>
+    <label>subpersona tech</label>
+    <description>The advanced technology required to gestate humanoid subpersonae.\n\nRequires a mechanoid-casket for gestation.</description>
+    <baseCost>7500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+	    <li MayRequire="Ludeon.RimWorld.Biotech">UltraMechtech</li>
+        <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>	
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>2.80</researchViewY>
+	<tab>RimRobots</tab>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>PersonaCreation</defName>
+    <label>ultratech personae</label>
+    <description>The ultra-advanced technology required to gestate fully functional avatars for AI persona cores.\n\nRequires a mechanoid-casket for gestation.</description>
+    <baseCost>16500</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+        <li>MechanentCreation</li>
+		<li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>	
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>3.75</researchViewX>
+    <researchViewY>2.65</researchViewY>
+	<tab>RimRobots</tab>
+  </ResearchProjectDef>  
+
+</Defs>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<CM_Callouts.CalloutConstantByHediffDef MayRequire="Bratwurstinator.Callouts">
+    <defName>Mechanent_CallOuts</defName>
+    <hediffDefs>
+        <li>MechanentNature_Hediff</li>
+    </hediffDefs>
+    <name>MechanentCallOuts</name>
+    <value>true</value>
+</CM_Callouts.CalloutConstantByHediffDef>
+</Defs>

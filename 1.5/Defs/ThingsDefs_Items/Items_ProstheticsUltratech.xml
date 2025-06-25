@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <ThingDef ParentName="PersonaPartUpgradeBase">
+    <defName>RR_FissionReactorItem</defName>
+    <label>advanced fission reactor</label>
+    <description>A micro-fission reactor that can only be installed in personae. This particular reactor does not require any fuel as it is capable of self sustainment - however since it hasn't been made inside a mech-casket it lacks certain fail-safes, and can randomly overclock to maintain its stability, causing magnetic instability.</description>
+    <descriptionHyperlinks><RecipeDef>InstallFissionReactor</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <techHediffsTags>
+      <li>UltratechUpgrade</li>
+    </techHediffsTags>	
+    <costList>
+      <Plasteel>25</Plasteel>
+	  <Uranium>4</Uranium>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <statBases>
+      <Mass>3</Mass>
+    </statBases>
+  </ThingDef> 
+  
+  <ThingDef ParentName="PersonaPartUpgradeBase">
+    <defName>RR_MechanoidVisualSensorItem</defName>
+    <label>mechanoid visual sensor</label>
+    <description>A mechanoid grade wide-spectrum sensor that can only be installed in personae. These sensors have the appearance of a pitch black pearl, once installed they can detect movement at extreme distances; perceive light, infrared, and gamma rays. It is also capable of detecting heat signatures.</description>
+    <descriptionHyperlinks><RecipeDef>InstallMechanoidVisualSensor</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <techHediffsTags Inherit="False">
+      <li>CombatUpgrade</li>
+    </techHediffsTags>		
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <Mass>3</Mass>
+    </statBases>
+  </ThingDef>   
+  
+  <ThingDef ParentName="PersonaPartUpgradeBase">
+    <defName>RR_MechaniteRepairNexusItem</defName>
+    <label>advanced repair nexus</label>
+    <description>A small reactor dedicated to releasing bursts of energy to alleviate the energy strain of repairs - it can only be installed in personae.</description>
+    <descriptionHyperlinks><RecipeDef>InstallMechaniteRepairNexus</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <techHediffsTags>
+      <li>UltratechUpgrade</li>
+    </techHediffsTags>		
+    <costList>
+      <Plasteel>25</Plasteel>
+	  <Uranium>20</Uranium>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <Mass>3</Mass>
+    </statBases>
+  </ThingDef>    
+  
+</Defs>

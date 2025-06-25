@@ -13,7 +13,7 @@
 		<li>(0, 0.737, 0.847)</li>
 		<li>(0, 0.625, 0.730)</li>
 	</colorSpectrum>	
-    <factionIconPath>WorldIcon/RobotsPlayer</factionIconPath>
+    <factionIconPath>UI/WorldIcon/RobotsPlayer</factionIconPath>
     <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>	
     <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
     <factionNameMaker>NamerFactionSynthPlayer</factionNameMaker>

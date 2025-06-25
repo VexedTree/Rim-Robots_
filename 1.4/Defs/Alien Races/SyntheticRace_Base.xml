@@ -119,51 +119,6 @@
 		<li MayRequire="[O21] Mechadroids">O21_Alien_MechadroidGamma</li>
 		<li MayRequire="[O21] Subpersona Shells">SubAI_SubpersonaShell</li>
     </notXenophobistTowards>
-	
- 	<disallowedTraits>
-		<li>
-			<defName>Gourmand</defName>
-		</li>	
-		<li>
-			<defName>Cannibal</defName>
-		</li>		
-		<li>
-			<defName>BodyPurist</defName>
-		</li>
-		<li>
-			<defName>Transhumanist</defName>
-		</li>		
-		<li>
-			<defName>Immunity</defName>
-		</li>
-		<li>
-		    <defName>DrugDesire</defName>
-		</li>
-		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
-			<defName>VTE_RefinedPalate</defName>
-		</li>
-		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
-			<defName>VTE_IronStomach</defName>
-		</li>
-		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
-			<defName>VTE_Squeamish</defName>
-		</li>	
-		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
-			<defName>VTE_Technophobe</defName>
-		</li>
-		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
-			<defName>VTE_DrunkenMaster</defName>
-		</li>
-		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
-			<defName>VTE_Stoner</defName>
-		</li>
-		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
-			<defName>VTE_Lush</defName>
-		</li>
-		<li MayRequire="VexedTrees980.RimElvesBiotech">
-			<defName>RE_SuperiorityComplex</defName>
-		</li>		
- 	</disallowedTraits>	
     
 	<minAgeForAdulthood>0</minAgeForAdulthood>		
     <maxDamageForSocialfight>8</maxDamageForSocialfight>
@@ -308,33 +263,7 @@
 </race>
     <recipes>
       <li>AdministerMechSerumHealer</li>	  
-    </recipes>
-	<modExtensions>	
-	    <li Class="VexedThings.HumanlikeMechanoidsExtension">
-		    <canFallIll>false</canFallIll>
-			<incapableOfLove>false</incapableOfLove>
-			<canBeStunnedByEMP>true</canBeStunnedByEMP>
-			<willSpawnWithTraits>true</willSpawnWithTraits>
-			<corpseIsImperishable>true</corpseIsImperishable>
-			<corpseIsInedible>true</corpseIsInedible>
-			<corpseIsNotDisturbing>false</corpseIsNotDisturbing>
-			<disableBreathVapors>true</disableBreathVapors>			
-			<pawnCannotPerceiveBeauty>false</pawnCannotPerceiveBeauty>	
-			<blackListedJobs>
-		        <li>Vomit</li>
-			</blackListedJobs>	
-			<blackListedHediffs>		
-			    <li>TraumaSavant</li>
-		        <li>FoodPoisoning</li>
-				<li>CryptosleepSickness</li>
-			    <li MayRequire="sindre0830.universum">Universum_Decompression_Hediff</li>
-		        <li MayRequire="sindre0830.universum">Universum_Suffocation_Hediff</li>			
-			</blackListedHediffs>			
-		</li>	
-	    <li Class="ATReforged.ATR_MechTweaker" MayRequire="Killathon.AndroidTiersReforged">
-		    <canInherentlyUseSkyMind>true</canInherentlyUseSkyMind>		
-		</li>			
-	</modExtensions>	
+    </recipes>	
     <butcherProducts>
       <Steel>45</Steel>
       <Plasteel>30</Plasteel>

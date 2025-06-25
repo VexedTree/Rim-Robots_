@@ -17,4 +17,14 @@
         <label>synthetic corpses</label>
         <parent>alienCorpseCategory</parent>
     </ThingCategoryDef>	
+		
+    <SpecialThingFilterDef>
+        <defName>AllowCorpsesSyntheticlikeFriendly</defName>
+        <label>allow friendly persona corpses</label>
+        <description>Allow the dead bodies of friendly personae.</description>
+        <parentCategory>CorpsesSyntheticlike</parentCategory>
+        <allowedByDefault>false</allowedByDefault>
+        <saveKey>allowCorpsesSyntheticlikeFriendly</saveKey>
+        <workerClass>SpecialThingFilterWorker_CorpsesFriendly</workerClass>
+    </SpecialThingFilterDef>	
 </Defs>

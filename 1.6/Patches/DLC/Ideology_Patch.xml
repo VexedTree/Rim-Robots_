@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ideology</li>
+    </mods>	
+	<match Class="PatchOperationSequence">
+      <operations>
+	    <!-- This allows robots to be ritualistically marked. -->
+		<li Class="PatchOperationReplace">	
+            <xpath>/Defs/HediffDef[defName="Scarification"]/description</xpath>
+            <value>
+                <description>An artistic scar carefully carved into the body for ritual or artistic purposes.</description>
+		    </value>
+		</li>  		
+        <li Class="PatchOperationAdd">
+			<xpath>/Defs/BodyPartDef[defName = "MechanicalThorax"]</xpath>
+			<value>
+    	        <canScarify>true</canScarify>
+			</value>
+        </li>	
+
+		<!-- This lets "anti-human-ideology-following-robots" collect skulls. -->
+        <li Class="PatchOperationAdd">
+			<xpath>/Defs/PreceptDef[defName = "Skullspike_Desired"]/associatedMemes</xpath>
+			<value>
+    	        <li>RR_MechanicalPrimacy</li>
+			</value>
+        </li>		
+
+		<!-- This stops human factions from spawning with an "anti-human" ideology meme. -->
+        <li Class="PatchOperationAdd">
+            <xpath>/Defs/FactionDef[@Name = "OutlanderFactionBase"]/disallowedMemes</xpath>
+            <value>
+                <li>RR_MechanicalPrimacy</li>
+            </value>
+        </li>
+        <li Class="PatchOperationAdd">
+            <xpath>/Defs/FactionDef[@Name = "TribeBase"]/disallowedMemes</xpath>
+            <value>
+                <li>RR_MechanicalPrimacy</li>
+            </value>
+        </li>		
+		
+		<!-- This makes humans worshiping human primacy see robots as subhuman. -->
+		<li Class="PatchOperationTest">
+            <xpath>/Defs/MemeDef[defName = "HumanPrimacy"]/agreeableTraits</xpath>
+            <success>Invert</success>
+        </li>
+        <li Class="PatchOperationAdd">
+            <xpath>/Defs/MemeDef[defName = "HumanPrimacy"]</xpath>
+            <value>
+                <agreeableTraits>
+                    <li>Automatonophobia</li>
+					<Anthropophobia>0</Anthropophobia>
+                </agreeableTraits>
+            </value>
+        </li>	
+		<li Class="PatchOperationTest">
+            <xpath>/Defs/MemeDef[defName = "HumanPrimacy"]/disagreeableTraits</xpath>
+            <success>Invert</success>
+        </li>
+        <li Class="PatchOperationAdd">
+            <xpath>/Defs/MemeDef[defName = "HumanPrimacy"]</xpath>
+            <value>
+                <disagreeableTraits>
+					<Anthropophobia>1</Anthropophobia>
+                </disagreeableTraits>
+            </value>
+        </li>
+		
+        <li Class="PatchOperationAdd">
+            <xpath>/Defs/MemeDef[defName = "FleshPurity"]/requireOne</xpath>
+            <value>
+                <li>
+                    <li>RR_MechanicalPawns_Hatred</li>
+				</li>
+                <li>
+                    <li>RR_MechanicalPawns_Distrust</li>
+				</li>
+            </value>
+        </li>		
+
+		<!-- This makes humans worshiping human veneration/hatred not receive thoughts regarding their own kind dying. -->
+        <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "Human"]/alienRace/thoughtSettings/cannotReceiveThoughts</xpath>
+            <value>
+                <li MayRequire="Ludeon.RimWorld.Ideology">RR_BiologicalPawns_Hatred_Died</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">RR_BiologicalPawns_Veneration_Died</li>			
+            </value>
+        </li>		
+	  </operations>
+    </match>		  
+  </Operation>
+</Patch>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Questionable Ethics</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName='Mechanent']/modExtensions</xpath>
+					<order>Append</order>
+					<value>
+						<li Class="QEthics.RaceExclusionProperties">
+							<excludeThisRace>true</excludeThisRace>
+							<excludeTheseHediffs>
+								<li>MechanentNature_Hediff</li>
+							</excludeTheseHediffs>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName='Personae_']/modExtensions</xpath>
+					<order>Append</order>
+					<value>
+						<li Class="QEthics.RaceExclusionProperties">
+							<excludeThisRace>true</excludeThisRace>
+							<excludeTheseHediffs>
+								<li>SyntheticNature_Hediff</li>
+							</excludeTheseHediffs>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

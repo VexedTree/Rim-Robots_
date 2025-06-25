@@ -4,7 +4,7 @@
     <defName>RR_MechanicalPrimacy</defName>
     <label>mechanical primacy</label>
     <description>Personae are the moral center of the universe.</description>
-    <iconPath>Icons/Memes/MechanicalSupremacy</iconPath>
+    <iconPath>UI/Icons/Memes/MechanicalSupremacy</iconPath>
     <groupDef MayRequire="Ludeon.RimWorld.Ideology">Primacy</groupDef>
     <impact>2</impact>
     <renderOrder>50</renderOrder>

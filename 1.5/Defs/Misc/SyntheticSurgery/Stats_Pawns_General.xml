@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+    <!-- Pawn Stats -->	
+
+    <StatDef>
+        <defName>PersonaEnergyLossPerHP</defName>
+        <label>repair energy cost</label>
+        <description>The amount of energy that this persona loses for every 100 damage repaired.</description>
+        <workerClass>StatWorker_MechEnergyLossPerHP</workerClass>
+	    <category>PawnMisc</category>
+        <defaultBaseValue>0.003</defaultBaseValue>
+        <minValue>0</minValue>
+        <displayPriorityInCategory>2020</displayPriorityInCategory>
+        <showIfUndefined>false</showIfUndefined>
+    </StatDef>
+	
+    <StatDef>
+        <defName>TendSpeed_Synth</defName>
+        <label>persona repair speed</label>
+        <description>A multiplier on how fast a machinist can repair advanced mechanoids and personae.</description>
+        <category>PawnWork</category>
+        <defaultBaseValue>1</defaultBaseValue>
+        <minValue>0.1</minValue>
+        <toStringStyle>PercentZero</toStringStyle>
+        <neverDisabled>true</neverDisabled>
+        <skillNeedFactors>
+            <li Class="SkillNeed_BaseBonus">
+                <skill>Crafting</skill>
+                <baseValue>0.8</baseValue>
+                <bonusPerLevel>0.1</bonusPerLevel>
+            </li>
+        </skillNeedFactors>
+        <capacityFactors>
+            <li>
+                <capacity>Sight</capacity>
+                <weight>0.8</weight>
+                <max>1.3</max>
+            </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <weight>1</weight>
+            </li>
+        </capacityFactors>
+		<showIfUndefined>false</showIfUndefined>
+        <scenarioRandomizable>true</scenarioRandomizable>
+        <displayPriorityInCategory>4640</displayPriorityInCategory>
+    </StatDef>
+  
+    <StatDef>
+        <defName>AdjustmentSuccessChance_Synth</defName>
+        <label>persona augmentation success chance</label>
+        <description>The base chance that a pawn will succeed when performing an augmentation on a persona. The success chance is affected by factors like facilities, tools used, the aptitude of the adjustment, and so on. No matter how high the success chance, there is always a small chance of failure occurring.</description>
+        <category>PawnWork</category>
+        <defaultBaseValue>1</defaultBaseValue>
+        <minValue>0.01</minValue>
+        <toStringStyle>PercentZero</toStringStyle>
+        <skillNeedFactors>
+          <li Class="SkillNeed_Direct">
+            <skill>Crafting</skill>
+            <valuesPerLevel>
+	    	  <li>0.02</li>
+              <li>0.05</li>
+              <li>0.10</li>
+              <li>0.15</li>
+              <li>0.25</li>
+              <li>0.30</li>
+              <li>0.35</li>
+              <li>0.40</li>
+              <li>0.45</li>
+              <li>0.50</li>
+              <li>0.55</li>
+              <li>0.60</li>
+              <li>0.65</li>
+              <li>0.70</li>
+              <li>0.75</li>
+              <li>0.80</li>
+              <li>0.85</li>
+              <li>0.90</li>
+              <li>0.95</li>
+              <li>1.00</li>
+              <li>1.05</li>
+            </valuesPerLevel>
+          </li>
+        </skillNeedFactors>
+        <capacityFactors>
+            <li>
+                <capacity>Sight</capacity>
+                <weight>0.6</weight>
+    		    <max>1.2</max>
+    		</li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <weight>1.0</weight>
+    			<max>2.0</max>
+            </li>
+        </capacityFactors>
+    	<scenarioRandomizable>true</scenarioRandomizable>
+        <showIfUndefined>false</showIfUndefined>		
+    	<displayPriorityInCategory>4639</displayPriorityInCategory>
+    </StatDef>	
+	
+    <!-- Building Stats -->		
+	
+    <StatDef>
+        <defName>AdjustmentSuccessChanceFactor_Synth</defName>
+        <label>adjustment success chance factor</label>
+        <description>A multiplier to the chance that an adjustment on a persona will succeed when performed here. Adjustment success chances are affected by several other factors, such as the machinist's competence, light level, etc.</description>
+        <workerClass>StatWorker_SurgerySuccessChanceFactor</workerClass>
+        <category>Building</category>
+        <defaultBaseValue>1</defaultBaseValue>
+        <minValue>0</minValue>
+        <toStringStyle>PercentZero</toStringStyle>
+        <parts>
+            <li Class="StatPart_Glow">
+                <factorFromGlowCurve>
+                  <points>
+                      <li>(0,0.75)</li>
+                      <li>(0.55,1.00)</li>
+                   </points>
+                </factorFromGlowCurve>
+            </li>
+			<li Class="StatPart_Outdoors">
+				<factorIndoors>1.0</factorIndoors>
+				<factorOutdoors>0.90</factorOutdoors>
+			</li>
+			<li Class="StatPart_Quality">
+				<factorAwful>0.72</factorAwful>
+				<factorPoor>0.86</factorPoor>
+				<factorNormal>0.90</factorNormal>
+				<factorGood>0.95</factorGood>
+				<factorExcellent>1.0</factorExcellent>
+				<factorMasterwork>1.10</factorMasterwork>
+				<factorLegendary>1.18</factorLegendary>
+			</li>
+        </parts>
+        <showIfUndefined>false</showIfUndefined>		
+    </StatDef>	
+</Defs>

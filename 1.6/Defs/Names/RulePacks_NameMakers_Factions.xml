@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>NamerFactionSynth</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[SynthFACT] [SynthCITY]</li>
+        <li>r_name->[SynthCORP][Letter][Letter] [SynthCITY]</li>		
+        <li>r_name->[SynthFACT] [SynthCORP][Letter][Letter]</li>
+        <li>r_name->[SynthCORP][Letter][Letter] [SynthCITY]</li>
+        <li>r_name->[SynthAdjectives] [SynthCORP][Letter][Letter][Number]</li>	
+        <li>r_name->[SynthAdjectives] [SynthFACT]s</li>	
+	    <li>r_name->[SynthAdjectives] [SynthFACT] [SynthCITY]</li>	
+	    <li>r_name->[SynthAdjectives] [SynthCORP][Letter][Letter] [SynthCITY]</li>			
+	    <li>r_name->The [SynthFACT] [SynthCITY]</li>
+	    <li>r_name->The [SynthCORP][Letter][Letter] [SynthCITY]</li>	
+	    <li>r_name->The [SynthFACT] [SynthCORP][Letter][Letter]</li>
+	    <li>r_name->The [SynthCORP][Letter][Letter] [SynthCITY]</li>
+        <li>r_name->The [SynthAdjectives] [SynthCORP][Letter][Letter][Number]</li>	
+        <li>r_name->The [SynthAdjectives] [SynthFACT]s</li>			
+	    <li>r_name->The [SynthAdjectives] [SynthFACT]-[SynthCITY]</li>		
+		<li>r_name->The [SynthAdjectives] [SynthCORP][Letter][Letter]-[SynthCITY]</li>	
+      </rulesStrings> 
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>SynthFACT</keyword>
+					<path>Faction_Names/FactionNameSynthDesc</path>
+				</li>
+	            <li Class="Rule_File">
+                    <keyword>SynthCORP</keyword>
+                    <path>Faction_Names/FactionsNameSynthBrand</path>
+                </li>
+	            <li Class="Rule_File">
+                    <keyword>SynthCITY</keyword>
+                    <path>Faction_Names/SynthFactCivil/FactionsNameSynthCity</path>
+                </li>				
+	            <li Class="Rule_File">
+                    <keyword>SynthAdjectives</keyword>
+                    <path>Faction_Names/SynthFactCivil/FactionNameAdjectives</path>
+                </li>	
+                <li Class="Rule_File">
+                    <keyword>Letter</keyword>
+                    <path>Titles/Letters</path>
+                </li>
+                <li Class="Rule_File">
+                    <keyword>Number</keyword>
+                    <path>Titles/Numbers</path>
+                </li>				
+			</rulesRaw>	  
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>NamerFactionSynthEvil</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[SynthFACT] [SynthEvilCITY]</li>
+        <li>r_name->[SynthCORP][Letter][Letter] [SynthEvilCITY]</li>		
+        <li>r_name->[SynthFACT] [SynthCORP][Letter][Letter]</li>
+        <li>r_name->[SynthCORP][Letter][Letter] [SynthEvilCITY]</li>
+        <li>r_name->[SynthAdjectivesEvil] [SynthCORP][Letter][Letter][Number]</li>	
+        <li>r_name->[SynthAdjectivesEvil] [SynthFACT]s</li>	
+	    <li>r_name->[SynthAdjectivesEvil] [SynthFACT] [SynthEvilCITY]</li>	
+	    <li>r_name->[SynthAdjectivesEvil] [SynthCORP][Letter][Letter] [SynthEvilCITY]</li>			
+	    <li>r_name->The [SynthFACT] [SynthEvilCITY]</li>
+	    <li>r_name->The [SynthCORP][Letter][Letter] [SynthEvilCITY]</li>	
+	    <li>r_name->The [SynthFACT] [SynthCORP][Letter][Letter][Number]</li>
+	    <li>r_name->The [SynthCORP][Letter][Letter] [SynthEvilCITY]</li>
+        <li>r_name->The [SynthAdjectivesEvil] [SynthCORP][Letter][Letter][Number]</li>	
+        <li>r_name->The [SynthAdjectivesEvil] [SynthFACT]s</li>			
+	    <li>r_name->The [SynthAdjectivesEvil] [SynthFACT]-[SynthEvilCITY]</li>		
+		<li>r_name->The [SynthAdjectivesEvil] [SynthCORP][Letter][Letter]-[SynthEvilCITY]</li>	
+      </rulesStrings> 
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>SynthFACT</keyword>
+					<path>Faction_Names/FactionNameSynthDesc</path>
+				</li>
+	            <li Class="Rule_File">
+                    <keyword>SynthCORP</keyword>
+                    <path>Faction_Names/FactionsNameSynthBrand</path>
+                </li>			
+	            <li Class="Rule_File">
+                    <keyword>SynthEvilCITY</keyword>
+                    <path>Faction_Names/SynthFactEvil/FactionsNameSynthCityEvil</path>
+                </li>	
+	            <li Class="Rule_File">
+                    <keyword>SynthAdjectivesEvil</keyword>
+                    <path>Faction_Names/SynthFactEvil/FactionNameAdjectivesEvil</path>
+                </li>
+                <li Class="Rule_File">
+                    <keyword>Letter</keyword>
+                    <path>Titles/Letters</path>
+                </li>
+                <li Class="Rule_File">
+                    <keyword>Number</keyword>
+                    <path>Titles/Numbers</path>
+                </li>				
+			</rulesRaw>	  
+    </rulePack>
+  </RulePackDef>  
+  
+  <RulePackDef>
+    <defName>NamerFactionSynthPlayer</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[SynthFACT] [SynthCITY]</li>
+        <li>r_name->[SynthCORP][Letter][Letter] [SynthCITY]</li>		
+        <li>r_name->[SynthFACT] [SynthCORP][Letter][Letter]</li>
+        <li>r_name->[SynthCORP][Letter][Letter] [SynthCITY]</li>
+        <li>r_name->[SynthAdjectivesPlayer] [SynthCORP][Letter][Letter]</li>	
+        <li>r_name->[SynthAdjectivesPlayer] [SynthFACT]s</li>	
+	    <li>r_name->[SynthAdjectivesPlayer] [SynthFACT] [SynthCITY]</li>	
+	    <li>r_name->[SynthAdjectivesPlayer] [SynthCORP][Letter][Letter] [SynthCITY]</li>			
+	    <li>r_name->The [SynthFACT] [SynthCITY]</li>
+	    <li>r_name->The [SynthCORP][Letter][Letter] [SynthCITY]</li>	
+	    <li>r_name->The [SynthFACT] [SynthCORP][Letter][Letter]</li>
+	    <li>r_name->The [SynthCORP][Letter][Letter] [SynthCITY]</li>
+        <li>r_name->The [SynthAdjectivesPlayer] [SynthCORP][Letter][Letter]</li>	
+        <li>r_name->The [SynthAdjectivesPlayer] [SynthFACT]s</li>			
+	    <li>r_name->The [SynthAdjectivesPlayer] [SynthFACT]-[SynthCITY]</li>		
+		<li>r_name->The [SynthAdjectivesPlayer] [SynthCORP][Letter][Letter]-[SynthCITY]</li>	
+      </rulesStrings> 
+			<rulesRaw>	
+				<li Class="Rule_File">
+					<keyword>SynthFACT</keyword>
+					<path>Faction_Names/FactionNameSynthDesc</path>
+				</li>
+	            <li Class="Rule_File">
+                    <keyword>SynthCORP</keyword>
+                    <path>Faction_Names/FactionsNameSynthBrand</path>
+                </li>			
+	            <li Class="Rule_File">
+                    <keyword>SynthAdjectivesPlayer</keyword>
+                    <path>Synth_Names/AdjectivesRobot</path>
+                </li>	
+                <li Class="Rule_File">
+                    <keyword>Letter</keyword>
+                    <path>Titles/Letters</path>
+                </li>
+                <li Class="Rule_File">
+                    <keyword>Number</keyword>
+                    <path>Titles/Numbers</path>
+                </li>				
+			</rulesRaw>	  
+    </rulePack>
+  </RulePackDef>  
+
+  <RulePackDef>
+    <defName>NamerSettlementSynthetic</defName>
+    <rulePack>
+        <rulesStrings>
+          <li>r_name(p=5)->[synthhaven]</li>
+          <li>r_name(p=3)->[synthhaven_combo]</li>
+          <li>r_name->[synthhaven_near]</li>
+
+		  <li>synthtopic->[Adjective]</li>
+          <li>synthtopic->[Place]</li>
+		  <li>synthtopic->[Color]</li>
+
+          <li>synthhaven(p=2)->[SynthSyll][SynthSyllE]</li>
+          <li>synthhaven(p=2)->[SynthSyll][SynthSyllE][SynthSyllE]</li>
+          <li>synthhaven(p=2)->[SynthSyll][SynthSyllE]</li>
+		  <li>synthhaven->[SynthSyll][SynthSyllE] [Letter]</li>
+		  <li>synthhaven->[SynthSyll][SynthSyllE] [Letter][Letter]</li>
+          <li>synthhaven->[SynthSyll][SynthSyllE][SynthSyllE] [Letter]</li>
+		  <li>synthhaven->[SynthSyll][SynthSyllE][SynthSyllE] [Letter][Letter]</li>
+		  
+          <li>synthhaven_combo->[synthtopic] [Place]</li>
+          <li>synthhaven_combo->[synthtopic] [SynthCITY]</li>
+          <li>synthhaven_combo->[concept_positive]'s [Place]</li>
+          <li>synthhaven_combo->[concept_positive] [Place]</li>
+          <li>synthhaven_combo(p=2)->[SynthPerson]'s [Place]</li>
+		  <li>synthhaven_combo(p=2)->[SynthPerson]'s [SynthCITY]</li>
+ 
+          <li>synthhaven_near->[SynthCITY]-at-the-[Place]</li>
+          <li>synthhaven_near->[SynthCITY]-in-the-[Place]</li>
+          <li>synthhaven_near->[SynthCITY]-on-the-[Place]</li>
+        </rulesStrings>
+			<rulesRaw>	
+                <li Class="Rule_File">
+                    <keyword>SynthSyll</keyword>
+                    <path>Synth_Syllables/SynthName_Syll</path>
+                </li>
+                <li Class="Rule_File">
+                    <keyword>SynthSyllE</keyword>
+                    <path>Synth_Syllables/SynthName_SyllEnd</path>
+                </li>			
+			    <li Class="Rule_File">
+                    <keyword>SynthPerson</keyword>
+                    <path>Synth_Names/Names/NameRobotic</path>
+                </li>			
+	            <li Class="Rule_File">
+                    <keyword>SynthCITY</keyword>
+                    <path>Faction_Names/SynthFactCivil/FactionsNameSynthCity</path>
+                </li>		
+	            <li Class="Rule_File">
+                    <keyword>Adjectives</keyword>
+                    <path>Synth_Names/AdjectivesRobot</path>
+                </li>	
+                <li Class="Rule_File">
+                    <keyword>Letter</keyword>
+                    <path>Titles/Letters</path>
+                </li>
+                <li Class="Rule_File">
+                    <keyword>Number</keyword>
+                    <path>Titles/Numbers</path>
+                </li>			
+                <li Class="Rule_File">
+                    <keyword>Color</keyword>
+                    <path>Titles/Colors</path>
+                </li>
+                <li Class="Rule_File">
+                    <keyword>Place</keyword>
+                    <path>Titles/Places</path>
+                </li>						
+			</rulesRaw>	 
+        </rulePack>
+    </RulePackDef>  
+</Defs>
+

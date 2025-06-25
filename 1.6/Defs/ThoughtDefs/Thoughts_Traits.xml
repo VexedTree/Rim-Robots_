@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Automatonophobia / Transhumanism -->
+
+  <ThoughtDef>
+    <defName>AutomatonophobiaVsSynth</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>VexedThings.ThoughtWorker_AutomatonophobiaVsSynth</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>automatonophobe hates personae</label>
+        <description>automatonophobe hates personae</description>
+        <baseOpinionOffset>-25</baseOpinionOffset>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>SynthVsAutomatonophobia</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>VexedThings.ThoughtWorker_SynthVsAutomatonophobia</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>persona hated by automatonophobe</label>
+        <baseOpinionOffset>-25</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>TranshumanismVsSynth</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>VexedThings.ThoughtWorker_TranshumanismVsSynth</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+	<requiredTraits>
+      <li>Transhumanist</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>transhumanist admires persona</label>
+        <description>transhumanist admires persona</description>
+        <baseOpinionOffset>20</baseOpinionOffset>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>SynthVsTranshumanism</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>VexedThings.ThoughtWorker_SynthVsTranshumanism</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>persona admired by transhumanist</label>
+        <baseOpinionOffset>15</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>  
+  
+  
+  <!-- Anthropophobia / Anthropophilia -->
+  
+  <ThoughtDef>
+    <defName>AnthropophobeVsAnthropophile</defName>
+    <thoughtClass>VexedThings.Thought_AnthropophobeVsAnthropophile</thoughtClass>
+    <workerClass>VexedThings.ThoughtWorker_AnthropophobeVsAnthropophile</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>anthropophobe vs anthropophile</label>
+		<baseOpinionOffset>-25</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>AnthropophobiaVsHuman</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>VexedThings.ThoughtWorker_AnthropophobiaVsHuman</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+	<requiredTraits>
+      <li>Anthropophobia</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>anthropophile loves humanoids</label>
+        <description>anthropophile loves humanoids</description>
+        <baseOpinionOffset>25</baseOpinionOffset>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+      <li>
+        <label>anthropophobe hates humanoids</label>
+        <description>anthropophobe hates humanoids</description>
+        <baseOpinionOffset>-25</baseOpinionOffset>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>HumanVsAnthropophobia</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>VexedThings.ThoughtWorker_HumanVsAnthropophobia</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>humanoid loved by anthropophile</label>
+        <baseOpinionOffset>15</baseOpinionOffset>
+      </li>
+      <li>
+        <label>humanoid hated by anthropophobe</label>
+        <baseOpinionOffset>-25</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

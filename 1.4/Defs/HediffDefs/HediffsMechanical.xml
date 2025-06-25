@@ -9,16 +9,15 @@
         <tendable>false</tendable>		
 		<everCurableByItem>false</everCurableByItem>		
 		<scenarioCanAdd>false</scenarioCanAdd>
-		<initialSeverity>1</initialSeverity>
-		<maxSeverity>1.0</maxSeverity>
-		<defaultLabelColor>(0.6, 0.6, 0.65)</defaultLabelColor>
 		<disablesNeeds>
 		    <li>Comfort</li>
-			<li>Beauty</li>
-		</disablesNeeds>	
+		    <li>Beauty</li>
+		</disablesNeeds>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<defaultLabelColor>(0.6, 0.6, 0.65)</defaultLabelColor>	
 		<stages>
-		    <li>		
-			    <painFactor>0.0</painFactor>			
+		    <li>	
 		        <becomeVisible>false</becomeVisible>
 		    </li>
             <li MayRequire="Dylan.CSL">

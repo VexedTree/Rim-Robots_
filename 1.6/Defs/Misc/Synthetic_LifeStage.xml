@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs> 
+  <LifeStageDef>
+    <defName>RR_SyntheticFullyFormed</defName>
+    <label>synthetic</label>
+    <visible>false</visible>
+    <reproductive>false</reproductive>
+  </LifeStageDef>   
+</Defs> 

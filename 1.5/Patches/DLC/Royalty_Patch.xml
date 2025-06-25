@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Royalty</li>
+    </mods>
+
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/FactionDef[defName="Empire"]/permanentEnemyToEveryoneExcept</xpath>
+
+      <value>
+        <li>PlayerColonySynth</li>
+      </value>
+    </match>
+  </Operation>
+
+    <!-- Civil Synthetics -->  
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Royalty</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+            <!-- Guests -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/QuestScriptDef/root[@Class="QuestNode_Sequence"]/nodes/li[@Class="QuestNode_IsSet"]/node[@Class="QuestNode_GetRandomPawnKindForFaction"]/choices</xpath>
+                    <value>
+                        <li>
+                            <factionDef>SynthCivil</factionDef>
+                            <pawnKinds>
+							    <li>Persona_Villager</li>
+                                <li>Personae_Nexus</li>
+                                <li>Mechanent_Villager</li>
+								<li>Mechanent_Labor</li>
+								<li>Mechanent_Guard</li>	
+                            </pawnKinds>
+                        </li>  
+                        <li>
+                            <factionDef>SynthEvil</factionDef>
+                            <pawnKinds>
+							    <li>Persona_Villager</li>
+                                <li>Personae_Nexus</li>
+                                <li>Mechanent_Villager</li>
+								<li>Mechanent_Labor</li>
+								<li>Mechanent_Guard</li>	
+                            </pawnKinds>
+                        </li> 						
+                    </value>
+                </li>
+                <!-- Mercenaries -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/QuestScriptDef/root[@Class="QuestNode_Sequence"]/nodes/li[@Class="QuestNode_GetRandomPawnKindForFaction"]/choices</xpath>
+                    <value>
+                        <li>
+                            <factionDef>SynthCivil</factionDef>
+                            <pawnKinds>
+                                <li>Mechanent_Guard</li>
+                                <li>Mechanent_Gunner</li>
+                                <li>Mechanent_Charger</li>								
+                                <li>Mechanent_Elite</li>								
+                                <li>Mechanent_Sniper</li>	
+								<li>Mechanent_Spacer_Trooper</li>
+								<li>Mechanent_Spacer_Marine</li>
+								<li>Persona_Spacer_Trooper</li>
+								<li>Persona_Spacer_Marine</li>
+                            </pawnKinds>
+                        </li>  
+                        <li>
+                            <factionDef>SynthEvil</factionDef>
+                            <pawnKinds>
+                                <li>Mechanent_Guard</li>
+                                <li>Mechanent_Gunner</li>
+                                <li>Mechanent_Charger</li>								
+                                <li>Mechanent_Elite</li>								
+                                <li>Mechanent_Sniper</li>	
+								<li>Mechanent_Spacer_Trooper</li>
+								<li>Mechanent_Spacer_Marine</li>
+								<li>Persona_Spacer_Trooper</li>
+								<li>Persona_Spacer_Marine</li>
+                            </pawnKinds>
+                        </li>  						
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>  
+</Patch>

@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Psylink -->
+  <ThingDef MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>PsylinkFormerSynth</defName>
+    <label>overengineered psylink-former</label>
+    <description>A consumable archotech-created device that forms or upgrades a psylink in the user's mind.\n\nThis particular one however has an added interface to accommodate robotic beings, allowing one to tap its persona core directly into the artifact, forming a psychic uplink. Afterwards, the device disintegrates into worthless ash.</description>
+    <descriptionHyperlinks><HediffDef>PsychicAmplifier</HediffDef></descriptionHyperlinks>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <drawerType>MapMeshOnly</drawerType>
+    <techLevel>Archotech</techLevel>
+    <useHitPoints>true</useHitPoints>
+    <pathCost>14</pathCost>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+    <alwaysHaulable>true</alwaysHaulable>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <tradeability>None</tradeability>	
+    <thingCategories>
+      <li>BodyPartsArchotech</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Beauty>-5</Beauty>
+      <Mass>1</Mass>
+      <MarketValue>2600</MarketValue>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <graphicData>
+      <texPath>Items/Prosthetics/SynthPsy</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Use psylink-former to create uplink</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>PsychicAmplifier</hediffDef>
+        <bodyPart>MechanicalBrain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>PsyAmpInstalled</soundOnUsed>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_DestroySelf</compClass>
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+  </ThingDef>
+  
+  <RecipeDef MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>Make_PsylinkFormerSynth</defName>
+    <label>make overengineered psylink-former</label>
+    <description>Attempt to cautiously 'alter' a psychic amplifier to accommodate synthetic beings.</description>
+    <jobString>Overengineering psychic amplifier.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>CrashedShipPart_Ambience</soundWorking>
+    <workAmount>10000</workAmount>
+	<ingredients>
+	    <li>
+			<filter>
+				<thingDefs>
+					<li>PsychicAmplifier</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	    <li>
+			<filter>
+				<thingDefs>
+					<li>ComponentSpacer</li>
+				</thingDefs>
+			</filter>
+			<count>2</count>
+		</li>		
+	</ingredients>
+    <fixedIngredientFilter>
+	    <thingDefs>
+            <li>PsychicAmplifier</li>
+			<li>ComponentIndustrial</li>
+		</thingDefs>
+    </fixedIngredientFilter>	
+    <products>
+      <PsylinkFormerSynth>1</PsylinkFormerSynth>
+    </products>	
+    <researchPrerequisite>AdvancedFabrication</researchPrerequisite>
+    <recipeUsers>
+        <li>FabricationBench</li>
+    </recipeUsers>	
+    <skillRequirements>
+      <Crafting>9</Crafting>
+	  <Intellectual>3</Intellectual>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>	
+  </RecipeDef>  
+
+
+
+
+
+  <!-- Mechlink -->
+  <ThingDef MayRequire="Ludeon.RimWorld.Biotech" ParentName="MechanitorImplantBaseSynth">
+    <defName>MechlinkSynth</defName>
+    <label>mechlink</label>
+    <description>A bionic implant that allows direct control of mechanoids. Mechlinks are used by soldiers to control war mechs, and by workers to control labor mechs. A person with a mechlink is known as a mechanitor.\n\nMechlinks are self-installable - and this one has been augmented to accommodate synthetic beings. It is installed into the base of the helm, where the unit injects itself into the synthspinal tap. There, it threads a web of ultrafine wires throughout nearby control filaments to make the handshake between the AI and the mechanoid control band.\n\nMechlinks are not simply devices for sending radio signals to mechanoids, because mechanoids are not merely robots. In addition to traditional computers, mechanoids have a dim psychic presence, so fluently controlling them requires a psychic connection. By linking mechanitor and mechanoid both psychically and electromagnetically, the mechlink permits deeper control than screen-and-button interfaces.\n\nSince the mechlink interlocks with the AI's persona core, it can only be removed after death.\n\nNote: A mechanitor must be capable of smithing work to gestate mechanoids.</description>
+    <descriptionHyperlinks><HediffDef>MechlinkImplant</HediffDef></descriptionHyperlinks>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Beauty>-4</Beauty>
+      <Mass>1</Mass>
+      <MarketValue>500</MarketValue>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Mechlink</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.65</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>InstallMechlink</useJob>
+        <useLabel>Install {0_label} to become mechanitor</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <compClass>CompUseEffect_InstallImplantMechlink</compClass>
+        <hediffDef>MechlinkImplant</hediffDef>
+        <bodyPart>MechanicalBrain</bodyPart>
+        <requiresPsychicallySensitive>true</requiresPsychicallySensitive>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechlinkInstalled</soundOnUsed>
+      </li>
+      <li Class="CompProperties_UseEffectGiveQuest">
+        <quest>MechanitorStartingMech</quest>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <RecipeDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Make_MechlinkSynth</defName>
+    <label>augment mechlink-former</label>
+    <description>Augment a mechlink to accommodate synthetic beings.</description>
+    <jobString>Augmenting mechlink-former.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>6000</workAmount>
+	<ingredients>
+	    <li>
+			<filter>
+				<thingDefs>
+					<li>Mechlink</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	    <li>
+			<filter>
+				<thingDefs>
+					<li>ComponentIndustrial</li>
+				</thingDefs>
+			</filter>
+			<count>2</count>
+		</li>		
+	</ingredients>
+    <fixedIngredientFilter>
+	    <thingDefs>
+            <li>Mechlink</li>
+			<li>ComponentIndustrial</li>
+		</thingDefs>
+    </fixedIngredientFilter>	
+    <products>
+      <MechlinkSynth>1</MechlinkSynth>
+    </products>	
+    <researchPrerequisite>MechanentCreation</researchPrerequisite>
+    <recipeUsers>
+        <li>TableMachining</li>
+    </recipeUsers>	
+    <skillRequirements>
+      <Crafting>6</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>	
+  </RecipeDef>  
+  
+  
+  
+
+  <ThingDef MayRequire="Ludeon.RimWorld.Biotech" ParentName="ControlSublinkBaseSynth">
+    <defName>ControlSublinkSynth</defName>
+    <label>control sublink (standard)</label>
+    <description>A neural implant which gives a mechanitor an additional control group, augmented to be slotted into synthetic beings. Additionally, the sublink slightly increases the work speed of any mechanoids controlled by the mechanitor.\n\nThis standard-tier sublink can only increase the control group count up to 3. To go higher, a higher-tier sublink implant must be used.\n\nIt can be self-installed without surgery.\n\nThis implant can be installed up to 3 times to increase its effect.</description>
+    <costList>
+      <ControlSublink>1</ControlSublink>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+        <researchPrerequisites>
+	        <li>StandardMechtech</li>
+	        <li>MechanentCreation</li>	  
+	    </researchPrerequisites>	
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Implant sublink</useLabel>
+        <userMustHaveHediff>MechlinkImplant</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>ControlSublinkImplant</hediffDef>
+        <bodyPart>MechanicalBrain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+        <maxSeverity>3</maxSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef MayRequire="Ludeon.RimWorld.Biotech" ParentName="ControlSublinkBaseSynth">
+    <defName>ControlSublinkHighSynth</defName>
+    <label>control sublink (high)</label>
+    <description>A neural implant which gives a mechanitor an additional control group, augmented to be slotted into synthetic beings. Additionally, the sublink slightly increases the work speed of any mechanoids controlled by the mechanitor.\n\nThis high-tier implant can increase the control group count up to 6.\n\nIt can be self-installed without surgery.\n\nThis implant can be installed up to 3 times to increase its effect.</description>
+    <costList>
+      <ControlSublinkHigh>1</ControlSublinkHigh>
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+        <researchPrerequisites>
+	        <li>HighMechtech</li>
+	        <li>MechanentCreation</li>	  
+	    </researchPrerequisites>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Implant high sublink</useLabel>
+        <userMustHaveHediff>MechlinkImplant</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>ControlSublinkImplant</hediffDef>
+        <bodyPart>MechanicalBrain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Remote repairer -->
+  <ThingDef MayRequire="Ludeon.RimWorld.Biotech" ParentName="MechanitorImplantCraftableBaseSynth">
+    <defName>RemoteRepairerSynth</defName>
+    <label>remote repairer</label>
+    <description>A mechlink upgrade which allows the mechanitor to repair mechs from a distance, augmented to be installed in synthetic beings. The user links with the mechanoid and uses their own AI core to psychically guide its self-repair mechanites.\n\nThis implant can be self-installed without surgery.\n\nThis implant can be installed up to 3 times to increase its range.</description>
+    <descriptionHyperlinks><HediffDef>RemoteRepairerImplant</HediffDef></descriptionHyperlinks>
+    <costList>
+      <RemoteRepairer>1</RemoteRepairer>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <MaxInstallCount>3</MaxInstallCount>
+    </statBases>
+    <recipeMaker>
+        <researchPrerequisites>
+	        <li>HighMechtech</li>
+	        <li>MechanentCreation</li>	  
+	    </researchPrerequisites>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Implant {0_label}</useLabel>
+        <userMustHaveHediff>MechlinkImplant</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>RemoteRepairerImplant</hediffDef>
+        <bodyPart>MechanicalBrain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Mech gestation processorr -->
+  <ThingDef MayRequire="Ludeon.RimWorld.Biotech" ParentName="MechanitorImplantCraftableBaseSynth">
+    <defName>MechFormfeederSynth</defName>
+    <label>mech gestation processor</label>
+    <description>An implant which increases the speed at which a mechanitor can produce mechs in a mech gestator, augmented to be installed in synthetic beings. The processor optimizes the behavior of the mechanites in the mech forming tank.\n\nThis implant can be self-installed in the same way as the mechlink.\n\nThis implant can be installed up to 6 times to increase its effect.</description>
+    <descriptionHyperlinks><HediffDef>MechFormfeederImplant</HediffDef></descriptionHyperlinks>
+    <costList>
+      <MechFormfeeder>1</MechFormfeeder>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <MaxInstallCount>6</MaxInstallCount>
+    </statBases>
+    <recipeMaker>
+        <researchPrerequisites>
+	        <li>StandardMechtech</li>
+	        <li>MechanentCreation</li>	  
+	    </researchPrerequisites>	
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Implant {0_label}</useLabel>
+        <userMustHaveHediff>MechlinkImplant</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>MechFormfeederImplant</hediffDef>
+        <bodyPart>MechanicalBrain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+      </li>
+    </comps>
+  </ThingDef>
+
+    <!-- Remote shielder -->
+    <ThingDef MayRequire="Ludeon.RimWorld.Biotech" ParentName="MechanitorImplantCraftableBaseSynth">
+      <defName>RemoteShielderSynth</defName>
+      <label>remote shielder</label>
+      <description>An implant which allows the mechanitor to place a personal defense shield on a mech, augmented to be installed in synthetic beings. The mechanitor must continuously focus on the mech in order to maintain the shield.\n\nPlacing a shield at a distance requires a substantial amount of focused energy. It can be used to save a mech at a critical moment.\n\nThis implant can be self-installed in the same way as the mechlink.\n\nThis implant can be installed up to 3 times to increase its range and shield energy.</description>
+      <descriptionHyperlinks><HediffDef>RemoteShielderImplant</HediffDef></descriptionHyperlinks>
+      <costList>
+        <RemoteShielder>1</RemoteShielder>
+        <ComponentIndustrial>2</ComponentIndustrial>
+      </costList>
+      <recipeMaker>
+        <researchPrerequisites>
+	        <li>HighMechtech</li>
+	        <li>MechanentCreation</li>	  
+	    </researchPrerequisites>	
+      </recipeMaker>
+      <statBases>
+        <MaxInstallCount>3</MaxInstallCount>
+      </statBases>
+      <comps>
+        <li Class="CompProperties_Usable">
+          <compClass>CompUsableImplant</compClass>
+          <useJob>UseItem</useJob>
+          <useLabel>Implant {0_label}</useLabel>
+          <userMustHaveHediff>MechlinkImplant</userMustHaveHediff>
+        </li>
+        <li Class="CompProperties_UseEffectInstallImplant">
+          <hediffDef>RemoteShielderImplant</hediffDef>
+          <bodyPart>MechanicalBrain</bodyPart>
+          <canUpgrade>true</canUpgrade>
+        </li>
+      </comps>
+    </ThingDef>
+
+  <!-- Repair probe --> 
+  <ThingDef MayRequire="Ludeon.RimWorld.Biotech" ParentName="MechanitorImplantCraftableBaseSynth">
+    <defName>RepairProbeSynth</defName>
+    <label>repair probe</label>
+    <description>An implant which increases the speed at which a mechanitor can repair a mechanoid, augmented to be installed in synthetic beings.. This does not affect the overall energy needed to repair a mechanoid.\n\nThe implant allows the mechanitor to plug directly into a mechanoid while they are repairing it. This allows them to more quickly understand the mech's injuries, and better-direct the mech's self-repair mechanites to assist with the repair.\n\nThis implant can be self-installed in the same way as the mechlink.\n\nThis implant can be installed up to 6 times to increase its effect.</description>
+    <descriptionHyperlinks><HediffDef>RepairProbeImplant</HediffDef></descriptionHyperlinks>
+    <costList>
+      <RepairProbe>1</RepairProbe>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+        <researchPrerequisites>
+	        <li>UltraMechtech</li>
+	        <li>MechanentCreation</li>	  
+	    </researchPrerequisites>	
+    </recipeMaker>
+    <statBases>
+      <MaxInstallCount>6</MaxInstallCount>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Implant {0_label}</useLabel>
+        <userMustHaveHediff>MechlinkImplant</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>RepairProbeImplant</hediffDef>
+        <bodyPart>MechanicalBrain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+
+
+  <!-- These parents are required to be changed here as parents are not included under the umbrella of 'MayRequire', and will throw errors without Biotech if calling upon the vanilla parents. Forgive me papa Tynan. --> 
+  
+  <ThingDef MayRequire="Ludeon.RimWorld.Biotech" Abstract="True" Name="MechanitorImplantBaseSynth">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <drawerType>MapMeshOnly</drawerType>
+    <techLevel>Archotech</techLevel>
+    <useHitPoints>true</useHitPoints>
+    <pathCost>14</pathCost>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+    <alwaysHaulable>true</alwaysHaulable>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <thingCategories>
+      <li>BodyPartsMechtech</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>  
+  
+  <ThingDef MayRequire="Ludeon.RimWorld.Biotech" Abstract="True" Name="MechanitorImplantCraftableBaseSynth" ParentName="MechanitorImplantBaseSynth">
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Beauty>-4</Beauty>
+      <Mass>1</Mass>
+      <MarketValue>1200</MarketValue>
+      <DeteriorationRate>0</DeteriorationRate>
+      <WorkToMake>3200</WorkToMake>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(154,124,104)</color>
+    </graphicData>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <displayPriority>650</displayPriority>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+  
+  <ThingDef MayRequire="Ludeon.RimWorld.Biotech" Abstract="True" Name="ControlSublinkBaseSynth" ParentName="MechanitorImplantCraftableBaseSynth">
+    <descriptionHyperlinks><HediffDef>ControlSublinkImplant</HediffDef></descriptionHyperlinks>
+    <statBases>
+      <MaxInstallCount>3</MaxInstallCount>
+    </statBases>
+  </ThingDef>  
+  
+</Defs>

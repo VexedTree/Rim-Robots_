@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>PreferredXenotypeVSSynth</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>VexedThings.ThoughtWorker_Precept_PreferredXenotypeVSPersona_Social</workerClass>
+    <stages>
+      <li>
+        <label>is a persona without a xenotype</label>
+        <baseOpinionOffset>-15</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

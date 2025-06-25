@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Medieval Overhaul</li>
+    </mods>	
+	<match Class="PatchOperationSequence">	
+        <operations>		
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName = "DankPyon_Coal"]/statBases/Nutrition</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "DankPyon_Coal"]/statBases</xpath>
+                <value>
+                    <Nutrition>0.05</Nutrition>
+                </value>
+            </li>			
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[defName = "DankPyon_Coal"]/ingestible</xpath>
+                <success>Invert</success>
+            </li>			
+			<li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "DankPyon_Coal"]</xpath>
+                <value>
+                    <socialPropernessMatters>true</socialPropernessMatters> 
+                    <ingestible>
+		                <foodType>Fluid</foodType>
+		                <preferability>MealLavish</preferability>
+	                 	<ingestSound>WoodFiredGenerator_Ambience</ingestSound>
+						<ingestEffect>SyntheticElectricalArcs</ingestEffect>
+                        <ingestCommandString>Fuel engine with {0}</ingestCommandString>
+                        <ingestReportString>Fueling engine with {0}.</ingestReportString>		
+	                 	<optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
+						<ingestHoldUsesTable>false</ingestHoldUsesTable>
+						<useEatingSpeedStat>false</useEatingSpeedStat>
+		                <chairSearchRadius>0</chairSearchRadius>
+                    </ingestible>
+                </value>
+            </li>			
+        </operations>
+	</match>
+    </Operation>
+</Patch>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <FleckDef Name="RR_PersonaFleckBase" ParentName= "FleckBase_Thrown" Abstract="True">
+        <altitudeLayer>MetaOverlays</altitudeLayer>
+        <fadeInTime>0.08</fadeInTime>
+        <solidTime>1.4</solidTime>
+        <fadeOutTime>1.5</fadeOutTime>
+    </FleckDef>
+    
+    <FleckDef ParentName="RR_PersonaFleckBase">
+        <defName>RR_PersonaFleckCharging</defName>
+        <graphicData>
+            <texPath>Motes/Flecks/ChargeMote</texPath>
+        </graphicData>
+    </FleckDef>
+
+    <FleckDef ParentName="RR_PersonaFleckBase">
+        <defName>RR_PersonaFleckRepair</defName>
+        <graphicData>
+            <texPath>Motes/Flecks/RepairMote</texPath>
+        </graphicData>
+    </FleckDef>	
+</Defs>

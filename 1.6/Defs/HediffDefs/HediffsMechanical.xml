@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef>
+		<defName>MechanentNature_Hediff</defName>
+		<label>Mechanical Body</label>
+		<description>This pawn is of a mechanical nature. It will never need rest, and it will never fall ill to biological ailments or limitations.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+        <tendable>false</tendable>		
+		<everCurableByItem>false</everCurableByItem>		
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<defaultLabelColor>(0.6, 0.6, 0.65)</defaultLabelColor>	
+		<stages>
+		    <li>	
+		        <becomeVisible>false</becomeVisible>
+		    </li>
+            <li MayRequire="Dylan.CSL">
+                <capMods>
+                    <li>
+                        <capacity>Fertility</capacity>
+                        <setMax>0.0</setMax>
+                    </li>
+                </capMods>
+            </li>	
+            <li MayRequire="Safe.Job.World">
+                <capMods>
+                    <li>
+                        <capacity>RJW_Fertility</capacity>
+                        <setMax>0.0</setMax>
+                    </li>
+                </capMods>
+            </li>			
+		</stages>
+        <comps>
+		</comps>	
+	</HediffDef>  
+
+	<HediffDef>
+		<defName>SyntheticNature_Hediff</defName>
+		<label>Synthetic Body</label>
+		<description>This pawn is of a synthetic nature. It will never need sustenance, and it will never fall ill to biological ailments or limitations.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+        <tendable>false</tendable>		
+		<everCurableByItem>false</everCurableByItem>		
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<defaultLabelColor>(0.6, 0.6, 0.70)</defaultLabelColor>
+		<stages>
+		    <li>
+		        <becomeVisible>false</becomeVisible>
+		    </li>
+            <li MayRequire="Dylan.CSL">
+                <capMods>
+                    <li>
+                        <capacity>Fertility</capacity>
+                        <setMax>0.0</setMax>
+                    </li>
+                </capMods>
+            </li>	
+            <li MayRequire="Safe.Job.World">
+                <capMods>
+                    <li>
+                        <capacity>RJW_Fertility</capacity>
+                        <setMax>0.0</setMax>
+                    </li>
+                </capMods>
+            </li>			
+		</stages>
+        <comps>
+		</comps>		
+	</HediffDef> 	
+	
+	<HediffDef>
+		<defName>SynthRecalibration_Hediff</defName>
+		<label>system restart</label>
+		<description>This pawn is currently retracted within their own AI core as the core performs automated calibration and maintenance. They will remain in a semi-comatose state until the process is complete.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+        <tendable>false</tendable>		
+		<everCurableByItem>false</everCurableByItem>		
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<defaultLabelColor>(0.75, 0.6, 0.65)</defaultLabelColor>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-6</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>		
+        <stages>
+            <li>
+                <hungerRateFactor>0.0001</hungerRateFactor>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
+                </capMods>
+				<statOffsets>
+                    <InjuryHealingFactor>1.8</InjuryHealingFactor>		  
+                </statOffsets>				
+            </li>
+        </stages>
+	</HediffDef> 	
+	
+  <HediffDef>
+    <defName>SyntheticBloodLoss</defName>
+    <label>synthblood loss</label>
+    <description>A reduction in the normal synthblood volume. Minor synthblood loss has relatively mild effects, but when it becomes severe - cooling becomes impaired, core-cleansing cannot take place, vital mechanites cannot traverse the body, and the victim loses the ability to move. Extreme synthblood loss leads to death.\n\nSynthblood loss naturally recovers over time as the mechanite hub slowly replenishes supply.</description>
+    <lethalSeverity>1</lethalSeverity>
+    <stages>
+      <li>
+        <label>initial</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+	  
+      <li>
+        <minSeverity>0.15</minSeverity>
+        <label>minor</label>
+		<statOffsets>
+		  <ComfyTemperatureMax>-2</ComfyTemperatureMax>
+		</statOffsets>		
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+	  
+      <li>
+        <minSeverity>0.30</minSeverity>
+        <label>moderate</label>
+		<statOffsets>
+		  <ComfyTemperatureMax>-6</ComfyTemperatureMax>
+		</statOffsets>			
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+	  
+      <li>
+        <minSeverity>0.45</minSeverity>
+        <label>severe</label>
+		<statOffsets>
+		  <ComfyTemperatureMax>-10</ComfyTemperatureMax>
+		</statOffsets>			
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.4</offset>
+          </li>
+        </capMods>
+      </li>
+	  
+      <li>
+        <minSeverity>0.60</minSeverity>
+        <label>extreme</label>
+        <lifeThreatening>true</lifeThreatening>
+		<statOffsets>
+		  <ComfyTemperatureMax>-15</ComfyTemperatureMax>
+		</statOffsets>			
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.4</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>SyntheticHeatstroke</defName>
+    <label>overheating</label>
+    <description>An overload to internal heatsinks caused by excessive and intense heat. The persona becomes weak and confused as internal workings fry. Recovery is quick once chilled, but if the strain caused by the heat continues, it will result in inevitably shutting down.</description>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <lethalSeverity>1</lethalSeverity>
+    <taleOnVisible>HeatstrokeRevealed</taleOnVisible>
+    <stages>
+      <li>
+        <label>warm</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>warm</label>
+        <minSeverity>0.04</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>hot</label>
+        <minSeverity>0.2</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>serious</label>
+        <minSeverity>0.35</minSeverity>
+        <painOffset>0.15</painOffset>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.62</minSeverity>
+        <lifeThreatening>true</lifeThreatening>
+        <painOffset>0.30</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>SyntheticHypothermia</defName>
+    <label>chilblainic damage</label>
+    <description>Staggeringly low internal temperatures. Unless warmed up, ice will begin to shred through synthetic tissue, and contract vital internal metallic components. Recovery is quick once the persona warms up. Avoid chilblains by minimizing exposure to intensely cold environments.</description>
+    <defaultLabelColor>(0.8, 0.8, 1)</defaultLabelColor>
+    <lethalSeverity>1</lethalSeverity>
+    <taleOnVisible>HypothermiaRevealed</taleOnVisible>
+    <stages>
+      <li>
+        <label>chilled</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>chilled</label>
+        <minSeverity>0.04</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.08</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.2</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>serious</label>
+        <minSeverity>0.35</minSeverity>
+        <painOffset>0.15</painOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.62</minSeverity>
+        <lifeThreatening>true</lifeThreatening>
+        <painOffset>0.30</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>  
+	
+  <HediffDef>
+    <defName>RR_HumanlikeMechanoidHibernation</defName>
+    <label>dormancy</label>
+    <description>This persona doesn't have enough energy to remain active, thus it has been forced into dormancy. Unlike simpler mechanoids, dormancy does not have the capability to recharge the persona while it hibernates - meaning it must be brought to a charger, or reactivated with fuel.</description>
+    <isBad>false</isBad>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+  </HediffDef>	
+	
+</Defs>

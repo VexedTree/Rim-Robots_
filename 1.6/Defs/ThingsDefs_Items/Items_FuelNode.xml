@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+
+  <ThingDef Name="PersonaFuelBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <drawerType>MapMeshOnly</drawerType>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <selectable>true</selectable>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>0</Beauty>
+      <Mass>0.44</Mass>
+      <DeteriorationRate>10</DeteriorationRate>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>10</stackLimit>
+	<techLevel>Industrial</techLevel>
+    <tickerType>Rare</tickerType>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+	<tradeTags>
+      <li>SynthFuel</li>
+    </tradeTags>
+    <alwaysHaulable>true</alwaysHaulable>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <pathCost>14</pathCost>
+    <allowedArchonexusCount>20</allowedArchonexusCount>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <uiIconForStackCount>1</uiIconForStackCount>
+    <ingestible>
+      <foodType>Fluid</foodType>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="PersonaFuelBase">
+    <defName>FuelNode_SynthDiet</defName>
+    <label>charge cell</label>
+    <description>A small battery capacitor which holds a large amount of electrical current. Used to charge the internal reactors of persona-avatars, mechanoids, and small star ships.\n\nWhile charge cells can be made at a machining table, it's much more efficient and less costly to simply build a charge pylon to produce industrial amounts of batteries.</description>
+    <descriptionHyperlinks><ThingDef>IndustrialChargePylon</ThingDef></descriptionHyperlinks> 
+    <graphicData>
+      <texPath>Items/Nodes</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+	<statBases>
+	    <Nutrition>1.4</Nutrition>
+		<Mass>0.45</Mass>
+		<MaxHitPoints>20</MaxHitPoints>
+		<DeteriorationRate>1</DeteriorationRate>
+		<Flammability>5.0</Flammability>
+		<MarketValue>36</MarketValue>
+		<WorkToMake>860</WorkToMake>
+	</statBases>	
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+		<foodType>Fluid</foodType>
+	    <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+		<tasteThought>FullyCharged</tasteThought>
+		<preferability>MealLavish</preferability>
+		<ingestEffect>SyntheticElectricalArcs</ingestEffect>
+		<ingestSound>ReactorCharge_Sustained</ingestSound>
+        <ingestCommandString>Charge reactor with {0}</ingestCommandString>
+        <ingestReportString>Charging reactor with {0}.</ingestReportString>		
+	    <optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
+		<ingestHoldUsesTable>false</ingestHoldUsesTable>
+		<useEatingSpeedStat>false</useEatingSpeedStat>
+		<chairSearchRadius>0</chairSearchRadius>
+    </ingestible>					
+    <recipeMaker>
+      <effectWorking>SyntheticElectricalArcs</effectWorking>
+	  <soundWorking>ElectricCharge_Shock</soundWorking>
+      <researchPrerequisite>MechanentCreation</researchPrerequisite>
+      <bulkRecipeCount>4</bulkRecipeCount>	  
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Steel>35</Steel>
+    </costList>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<ResearchTabDef>
+		<defName>RimRobots</defName>
+		<label>Rim Robots</label>
+		<generalTitle>Humanoid-robotics research projects</generalTitle>
+		<generalDescription>Unlock the ability to create your own subpersona mechanoids, and persona avatars.</generalDescription>
+	</ResearchTabDef>
+
+</Defs>

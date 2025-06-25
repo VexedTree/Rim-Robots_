@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <WorkGiverDef>
+    <defName>RR_WorkRepairPersonae</defName>
+    <label>repair personae</label>
+    <giverClass>VexedThings.WorkGiver_RepairPersona</giverClass>
+    <workType>Smithing</workType>
+    <verb>repair</verb>
+    <gerund>repairing</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <priorityInType>185</priorityInType>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef> 
+
+</Defs>

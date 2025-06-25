@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs> 
+
+  <BodyPartDef>
+    <defName>SyntheticHead</defName>
+    <label>synthetic head</label>
+    <hitPoints>25</hitPoints>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <skinCovered>true</skinCovered>
+    <canScarify>true</canScarify>
+    <bleedRate>1</bleedRate>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MetalSkull</defName>
+    <label>alloyed skull</label>
+    <hitPoints>28</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <bleedRate>0</bleedRate>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>SyntheticEye</defName>
+    <label>synthetic eye</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>15</permanentInjuryChanceFactor>
+    <delicate>true</delicate>
+    <socketed>true</socketed>
+    <beautyRelated>true</beautyRelated>
+	<bleedRate>0.2</bleedRate>
+    <tags>
+      <li>SightSource</li>
+    </tags>
+    <hitChanceFactors>
+      <li>
+        <key>Blunt</key>
+        <value>0</value>
+      </li>
+    </hitChanceFactors>
+	<spawnThingOnRemoved>Item_SynthEyeSynth</spawnThingOnRemoved>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>SyntheticEar</defName>
+    <label>synthetic ear</label>
+    <hitPoints>12</hitPoints>
+    <frostbiteVulnerability>5</frostbiteVulnerability>
+    <beautyRelated>true</beautyRelated>
+    <skinCovered>true</skinCovered>
+	<bleedRate>0.2</bleedRate>
+    <tags>
+      <li>HearingSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>SyntheticNose</defName>
+    <label>synthetic nose</label>
+    <hitPoints>10</hitPoints>
+    <frostbiteVulnerability>5</frostbiteVulnerability>
+    <beautyRelated>true</beautyRelated>
+    <skinCovered>true</skinCovered>
+    <bleedRate>0</bleedRate>
+    <permanentInjuryChanceFactor>0.5</permanentInjuryChanceFactor>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>SyntheticJaw</defName>
+    <label>synthetic jaw</label>
+    <hitPoints>20</hitPoints>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0.2</permanentInjuryChanceFactor>
+    <beautyRelated>true</beautyRelated>
+    <skinCovered>true</skinCovered>
+    <bleedRate>0.2</bleedRate>
+    <tags>
+      <li>EatingSource</li>
+      <li>TalkingSource</li>
+    </tags>
+	<spawnThingOnRemoved>Item_SynthJawSynth</spawnThingOnRemoved>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>SyntheticNeck</defName>
+    <label>synthetic neck</label>
+    <hitPoints>25</hitPoints>
+    <bleedRate>0.8</bleedRate>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>BreathingPathway</li>
+      <li>EatingPathway</li>
+      <li>TalkingPathway</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>SyntheticLeg</defName>
+    <label>synthetic leg</label>
+    <hitPoints>30</hitPoints>
+	<bleedRate>0.4</bleedRate>
+    <permanentInjuryChanceFactor>0.1</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>
+    <canScarify>true</canScarify>	
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+	<spawnThingOnRemoved>Item_SynthLegSynth</spawnThingOnRemoved>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>SyntheticFoot</defName>
+    <label>synthetic foot</label>
+    <hitPoints>25</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+	<bleedRate>0.4</bleedRate>
+    <skinCovered>true</skinCovered>
+    <canScarify>true</canScarify>	
+    <tags>
+      <li>MovingLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>SyntheticTongue</defName>
+    <label>synthetic tongue</label>
+    <skinCovered>false</skinCovered>
+    <bleedRate>0</bleedRate>
+    <beautyRelated>true</beautyRelated>
+    <forceAlwaysRemovable>true</forceAlwaysRemovable>
+    <removeRecipeLabelOverride>remove</removeRecipeLabelOverride>
+    <tags>
+      <li>Tongue</li>
+    </tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>SyntheticTorso</defName>
+    <label>synthetic torso</label>
+    <hitPoints>40</hitPoints>
+    <canSuggestAmputation>false</canSuggestAmputation>
+	<bleedRate>0.5</bleedRate>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>SyntheticShoulder</defName>
+    <label>synthetic shoulder</label>
+    <hitPoints>30</hitPoints>
+	<bleedRate>0.4</bleedRate>
+    <permanentInjuryChanceFactor>0.05</permanentInjuryChanceFactor>	
+    <skinCovered>true</skinCovered>
+    <canScarify>true</canScarify>	
+    <tags>
+      <li>ManipulationLimbSegment</li>
+    </tags>
+	<spawnThingOnRemoved>Item_SynthArmSynth</spawnThingOnRemoved>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>SyntheticArm</defName>
+    <label>synthetic arm</label>
+    <hitPoints>30</hitPoints>
+	<bleedRate>0.4</bleedRate>
+    <permanentInjuryChanceFactor>0.1</permanentInjuryChanceFactor>	
+    <skinCovered>true</skinCovered>
+    <canScarify>true</canScarify>	
+    <tags>
+      <li>ManipulationLimbCore</li>
+    </tags>
+	<spawnThingOnRemoved>Item_SynthArmSynth</spawnThingOnRemoved>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>SyntheticHand</defName>
+    <label>synthetic hand</label>
+    <hitPoints>20</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <skinCovered>true</skinCovered>
+    <canScarify>true</canScarify>	
+	<bleedRate>0.4</bleedRate>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>SyntheticFinger</defName>
+    <label>synthetic finger</label>
+    <hitPoints>8</hitPoints>
+    <frostbiteVulnerability>8</frostbiteVulnerability>
+    <pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+    <skinCovered>true</skinCovered>
+    <canScarify>true</canScarify>	
+	<bleedRate>0.2</bleedRate>
+    <tags>
+      <li>ManipulationLimbDigit</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>SyntheticToe</defName>
+    <label>synthetic toe</label>
+    <hitPoints>8</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+	<bleedRate>0.2</bleedRate>
+    <skinCovered>true</skinCovered>
+    <canScarify>true</canScarify>	
+    <tags>
+      <li>MovingLimbDigit</li>
+    </tags>
+  </BodyPartDef>
+  
+
+  <!-- Alloyed Bones -->
+
+  
+  <BodyPartDef>
+    <defName>MetalRibcage</defName>
+    <label>alloyed frame</label>
+    <hitPoints>35</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>BreathingSourceCage</li>
+    </tags>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>  
+  
+  <BodyPartDef>
+    <defName>MetalSpine</defName>
+    <label>alloyed spine</label>
+    <hitPoints>30</hitPoints>
+    <permanentInjuryChanceFactor>6</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <tags>
+      <li>Spine</li>
+    </tags>
+  </BodyPartDef> 
+  
+  <BodyPartDef>
+    <defName>MetalClavicle</defName>
+    <label>alloyed clavicle</label>
+    <hitPoints>25</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+    </tags>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MetalSternum</defName>
+    <label>alloyed sternum</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>BreathingSourceCage</li>
+    </tags>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MetalHumerus</defName>
+    <label>alloyed humerus</label>
+    <hitPoints>28</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MetalRadius</defName>
+    <label>alloyed radius</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MetalPelvis</defName>
+    <label>alloyed pelvis</label>
+    <hitPoints>28</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>Pelvis</li>
+    </tags>
+    <destroyableByDamage>false</destroyableByDamage>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MetalFemur</defName>
+    <label>alloyed femur</label>
+    <hitPoints>28</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>MovingLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MetalTibia</defName>
+    <label>alloyed tibia</label>
+    <hitPoints>28</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>MovingLimbSegment</li>
+    </tags>
+  </BodyPartDef>   
+
+</Defs>

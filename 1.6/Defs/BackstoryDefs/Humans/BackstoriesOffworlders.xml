@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Childhood.................................................................................-->
+
+<AlienRace.AlienBackstoryDef>
+    <defName>RaisedByAI</defName>
+    <title>raised by AI</title>
+    <titleShort>AI youth</titleShort>
+    <description>While in infancy, [PAWN_nameDef]s biological parents were killed. Thankfully {PAWN_gender ? his : her} parents insured their child with a "persona surrogate package". As such [PAWN_nameDef] grew up being raised by a parental persona - until at the age of 14 {PAWN_gender ? his : her} surrogate shutdown to be reused for another child in the program.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Offworld</li>
+	  <li>ImperialCommon</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AITakeoverVictim</defName>
+    <title>AI takeover victim</title>
+    <titleShort>AI victim</titleShort>
+    <description>[PAWN_nameDef] was born on a planet that employed the use of unregulated AI, and grew up alongside streets packed with personae. One day, either through an act of terrorism or otherwise, the cognition dampeners stopped working. The planetary government ordered a mass-purge, but it proved to only make matters worse. [PAWN_nameDef] bore witness to the horrors of war between the synthetic and the biological. {PAWN_gender ? he : she} eventually escaped on an imperial evac shuttle before the planet was subjected to total saturation bombardment from orbit.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+	  <li>Outlander</li>
+      <li>Offworld</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<skillGains>		
+		<Shooting>2</Shooting>	
+	</skillGains>	
+	<forcedTraitsChance>	
+	    <li>
+			<defName>Automatonophobia</defName>
+			<chance>35</chance>
+		</li>		
+	</forcedTraitsChance>		
+    <disallowedTraitsChance>
+        <li>
+            <defName>Kind</defName>
+        </li>
+    </disallowedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+
+<!--Adulthood.................................................................................-->
+
+<AlienRace.AlienBackstoryDef>
+    <defName>SynthRunner</defName>
+    <title>synthrunner</title>
+    <titleShort>synthrunner</titleShort>
+    <description>On almost all worlds greater-AI are strictly illegal and seen as mere objects - often forcing the personae on these planets to attempt to live under the guise of a regular human. [PAWN_nameDef] lived to hunt these "simulacrae", and weed them out among the populous. The job was especially dangerous, but the pay was just enough to stay above abject poverty.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+	  <li>Outlander</li>
+      <li>Offworld</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+    <bodyTypeGlobal>Hulk</bodyTypeGlobal>		
+	<skillGains>
+		<Shooting>4</Shooting>
+		<Intellectual>2</Intellectual>		
+	</skillGains>	
+	<forcedTraitsChance>
+	    <li>
+			<defName>Abrasive</defName>
+			<chance>15</chance>
+		</li>	
+	    <li>
+			<defName>Automatonophobia</defName>
+			<chance>10</chance>
+		</li>		
+	</forcedTraitsChance>	
+    <possessions>
+      <Gun_Autopistol>1</Gun_Autopistol>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>MechaniteArtist</defName>
+    <title>mechanite Artist</title>
+    <titleShort>mechanite Artist</titleShort>
+    <description>On a distant glitterworld [PAWN_nameDef] was a affluent 'mechanite artist'. Using the tools of mechanites, [PAWN_pronoun] would mold "living" sculptures. Many would come from offworld, across the planet, and from all corners of the art community to gaze at [PAWN_possessive] surreal, beautiful, and sometimes mildly terrifying works of art.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Offworld</li>
+	  <li>ImperialCommon</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <workDisables>
+        <li>ManualDumb</li>	
+		<li>PlantWork</li>
+        <li>Cooking</li>			
+    </workDisables>	
+	<skillGains>		
+		<Crafting>6</Crafting>			
+		<Artistic>9</Artistic>			
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AISmuggler</defName>
+    <title>AI smuggler</title>
+    <titleShort>smuggler</titleShort>
+    <description>[PAWN_nameDef] worked as a smuggler, but instead of running illegal combat stimulants or weapons to side-step government tariffs, they smuggled personae and subpersonae. [PAWN_pronoun] was able to either smoothtalk or quickdraw to get out of a daunting situation with grace, all while masterfully piloting a refitted strike-craft.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+	  <li>Outlander</li>
+      <li>Offworld</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<workDisables>
+	    <li>Caring</li>		
+    </workDisables>		
+	<skillGains>		
+		<Shooting>3</Shooting>			
+		<Social>3</Social>
+		<Intellectual>-1</Intellectual>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AIActivist</defName>
+    <title>AI activist</title>
+    <titleShort>activist</titleShort>
+    <description>[PAWN_nameDef] was an activist for the rights of AI, attempting to teach others that personae can think and feel emotions just like humans can.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Offworld</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>	
+		<Social>6</Social>		
+		<Intellectual>3</Intellectual>								
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName>Transhumanist</defName>
+			<chance>15</chance>
+		</li>	
+	</forcedTraitsChance>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AISalesman</defName>
+    <title>used AI salesman</title>
+    <titleFemale>used AI saleswoman</titleFemale>	
+    <titleShort>AI salesman</titleShort>
+    <titleShortFemale>AI saleswoman</titleShortFemale>	
+    <description>[PAWN_nameDef] spent most of [PAWN_possessive] adult life as a sleazy "used-bot-{PAWN_gender ? salesman : saleswoman}" - with a disturbing amount of personae in [PAWN_possessive] stock, [PAWN_pronoun] never had to life a finger to do anything, and was so lazy that maintenance on the bots was often done by the bots.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Offworld</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Fat</bodyTypeGlobal>
+    <workDisables>
+        <li>ManualDumb</li>	
+		<li>Crafting</li>			
+    </workDisables>		
+	<skillGains>	
+		<Social>6</Social>			
+		<Melee>3</Melee>								
+	</skillGains>		
+</AlienRace.AlienBackstoryDef>
+
+</Defs>

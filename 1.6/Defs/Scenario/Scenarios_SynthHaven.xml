@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ScenarioDef>
+    <defName>SyntheticHaven</defName>
+	<label>Crashed Personae</label>
+		<scenario>
+			<name>Crashed Personae</name>
+			<summary>A group of personae search for meaning. Moderately difficult.</summary>
+			<description>You've come from the stars. Sailing a millennium across the void to reach this backwater planet filled with all manors of savagery - your reasons for coming here are hazy, but some greater meaning draws you in, an invisible tug on your syntax. However, upon reaching orbit, your vessel was mistaken for a mechanoid dropship and shot down before it could land on the planet's surface.\n\nIf you manage to survive touchdown, you will need to replenish your numbers by gestating more subpersonae, but you must first fend off the mechanoid-hunters on your trail before building your legion of steel.</description>
+			<playerFaction>
+				<def>PlayerFaction</def>
+				<factionDef>PlayerColonySynth</factionDef>
+			</playerFaction>
+            <surfaceLayer>
+                <def>SurfaceLayerFixed</def>
+                <tag>Surface</tag>
+                <layer>Surface</layer>
+                <settingsDef>Surface</settingsDef>
+                <hide>true</hide>
+                <connections>
+                  <Orbit MayRequire="Ludeon.RimWorld.Odyssey">
+                    <zoomMode>ZoomOut</zoomMode>
+                  </Orbit>
+                </connections>
+            </surfaceLayer>			
+			<parts>
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+					<def>ConfigPage_ConfigureStartingPawns</def>
+					<pawnCount>3</pawnCount>
+					<pawnChoiceCount>6</pawnChoiceCount>
+				</li>
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>DropPods</method>
+				</li>
+				
+				<li Class="ScenPart_GameStartDialog">
+					<def>GameStartDialog</def>
+					<text>After following an invisible tug on your AI core through the vastness of space, the vessel you were traveling on was mistaken for a mechanoid dropship and shot down. As the vessel shattered and hurled through the atmosphere, you barely managed to secure the safety of your most vital asset - the mechanoid casket. 
+
+As you watch what's left of the ship crash into the planet, you must now create a plan to survive and settle on this foreign world with its inhabitants - and fend off the mechanoid hunters hot on your trail.</text>
+					<closeSound>GameStartSting</closeSound>
+				</li>
+
+				<!-- Starting Items -->
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MechCreationCasket</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ComponentMechanent</thingDef>
+					<count>1</count>
+				</li>				
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Chemfuel</thingDef>
+					<count>55</count>
+				</li>				
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Gun_MachinePistol</thingDef>
+					<count>1</count>
+				</li>				
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Weapon_GrenadeEMP</thingDef>
+					<count>1</count>
+				</li>				
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MeleeWeapon_Mace</thingDef>
+					<stuff>Plasteel</stuff>
+				</li>
+				
+				<!-- Starting Research -->
+                <li Class="ScenPart_StartingResearch">
+                    <def>StartingResearch</def>
+                    <project>MechanentCreation</project>
+                </li>	
+                <li Class="ScenPart_StartingResearch">
+                    <def>StartingResearch</def>
+                    <project>BiofuelRefining</project>
+                </li>				
+
+				<!-- Start Near -->
+				<li Class="ScenPart_ScatterThingsAnywhere">
+                    <def>ScatterThingsAnywhere</def>
+                    <thingDef>ShipChunk</thingDef>
+                    <allowRoofed>false</allowRoofed>
+                    <count>4</count>
+                </li>
+		 		<li Class="ScenPart_ScatterThingsAnywhere">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>Steel</thingDef>
+					<count>350</count>
+					<allowRoofed>True</allowRoofed>
+				</li>
+				<li Class="ScenPart_ScatterThingsAnywhere">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>ComponentIndustrial</thingDef>
+					<count>15</count>
+					<allowRoofed>True</allowRoofed>
+				</li>
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>ChunkSlagSteel</thingDef>
+					<count>12</count>
+					<allowRoofed>True</allowRoofed>
+				</li>	
+	 			
+				<!-- Events -->
+				<li Class="ScenPart_CreateIncident">
+					<def>CreateIncident</def>
+					<incident>RaidEnemy</incident>
+					<intervalDays>5</intervalDays>
+					<occurTick>300000</occurTick>
+				</li>
+				<li Class="ScenPart_CreateIncident">
+					<def>CreateIncident</def>
+					<incident>ShipChunkDrop</incident>
+					<intervalDays>0.0001</intervalDays>
+					<occurTick>6</occurTick>
+					<isFinished>False</isFinished>
+				</li>				
+		    </parts>
+		</scenario>	
+</ScenarioDef> 
+</Defs>

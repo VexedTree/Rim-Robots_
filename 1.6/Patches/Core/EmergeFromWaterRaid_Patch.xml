@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+	    <xpath>/Defs/RaidStrategyDef[defName="EmergeFromWater"]/selectionWeightCurvesPerFaction</xpath>
+	    <value>
+    	    <li>
+    	    	<faction>SynthEvil</faction>
+    	        <selectionWeightPerPointsCurve>
+    	            <points>
+    	                <li>(500, 0)</li>
+    	                <li>(1000, 0.25)</li>
+    	            </points>
+    	        </selectionWeightPerPointsCurve>
+            </li>
+	    </value>
+    </Operation>
+
+</Patch>

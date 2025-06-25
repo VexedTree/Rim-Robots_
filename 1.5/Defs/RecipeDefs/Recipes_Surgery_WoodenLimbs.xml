@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Wooden peg leg. -->
+
+  <RecipeDef ParentName="SyntheticHotswapUpgradeBase">
+    <defName>InstallPegLegSynth</defName>
+    <label>install peg leg</label>
+    <description>Install a peg leg.</description>
+    <descriptionHyperlinks><ThingDef>WoodLog</ThingDef></descriptionHyperlinks>
+    <jobString>Installing peg leg.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>	
+	<appliedOnFixedBodyParts>
+		<li>MechLeg</li>
+		<li>SyntheticLeg</li>
+	</appliedOnFixedBodyParts>
+    <addsHediff>PegLeg</addsHediff>
+  </RecipeDef>
+  
+
+  <!-- Wooden hand. -->
+
+  <RecipeDef ParentName="SyntheticHotswapUpgradeBase">
+    <defName>InstallWoodenHandSynth</defName>
+    <label>install wooden hand</label>
+    <description>Install a wooden hand.</description>
+    <descriptionHyperlinks><ThingDef>WoodLog</ThingDef></descriptionHyperlinks>
+    <jobString>Installing wooden hand.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>	
+	<appliedOnFixedBodyParts>
+		<li>MechanicalHand</li>
+		<li>SyntheticHand</li>
+	</appliedOnFixedBodyParts>	
+    <addsHediff>WoodenHand</addsHediff>
+  </RecipeDef>
+
+  
+  <!-- Wooden foot. -->
+
+  <RecipeDef ParentName="SyntheticHotswapUpgradeBase">
+    <defName>InstallWoodenFootSynth</defName>
+    <label>install wooden foot</label>
+    <description>Install a wooden foot.</description>
+    <descriptionHyperlinks><ThingDef>WoodLog</ThingDef></descriptionHyperlinks>
+    <jobString>Installing wooden foot.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>	
+    <workAmount>1000</workAmount>
+	<appliedOnFixedBodyParts>
+		<li>MechanicalFoot</li>
+		<li>SyntheticFoot</li>
+	</appliedOnFixedBodyParts>	
+    <addsHediff>WoodenFoot</addsHediff>
+  </RecipeDef>
+  
+  
+  <!-- Removal. -->
+  
+  <RecipeDef ParentName="SyntheticRemoveUpgradeBase">
+    <defName>RemovePegLegSynth</defName>
+    <label>remove a peg leg</label>
+    <description>Remove peg leg.</description>
+    <descriptionHyperlinks><ThingDef>WoodLog</ThingDef></descriptionHyperlinks>
+    <jobString>Removing peg leg.</jobString>
+    <removesHediff>PegLeg</removesHediff>
+  </RecipeDef>    
+ 
+  <RecipeDef ParentName="SyntheticRemoveUpgradeBase">
+    <defName>RemoveSimpleWoodenHandSynth</defName>
+    <label>remove a wooden hand</label>
+    <description>Remove wooden hand.</description>
+    <descriptionHyperlinks><ThingDef>WoodLog</ThingDef></descriptionHyperlinks>
+    <jobString>Removing wooden hand.</jobString>
+    <removesHediff>WoodenHand</removesHediff>
+  </RecipeDef>  
+  
+  <RecipeDef ParentName="SyntheticRemoveUpgradeBase">
+    <defName>RemoveSimpleWoodenFootSynth</defName>
+    <label>remove a wooden foot</label>
+    <description>Remove wooden foot.</description>
+    <descriptionHyperlinks><ThingDef>WoodLog</ThingDef></descriptionHyperlinks>
+    <jobString>Removing wooden foot.</jobString>
+    <removesHediff>WoodenFoot</removesHediff>
+  </RecipeDef>  
+  
+</Defs>

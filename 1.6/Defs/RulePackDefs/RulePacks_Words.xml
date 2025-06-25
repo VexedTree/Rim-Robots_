@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>SynthNamerMiscWords</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>SecondPersonRelatives->your entire family</li>
+        <li>SecondPersonRelatives->your bloodline</li>
+        <li>SecondPersonRelatives->your children</li>
+        <li>SecondPersonRelatives->your lover</li>
+        <li>SecondPersonRelatives->your kin</li>
+        <li>SecondPersonRelatives->everyone you love</li>
+        <li>Harm->kill</li>
+		<li>Harm->skin</li>
+        <li>Harm->maim</li>
+        <li>Harm->hurt</li>
+        <li>Harm->mutilate</li>
+        <li>Harm->murder</li>
+        <li>Harm->execute</li>
+        <li>Harm->eradicate</li>
+        <li>Harm->end</li>
+        <li>Harm->obliterate</li>
+        <li>Harm->crucify</li>
+        <li>Harm->annihilate</li>
+        <li>Harm->slaughter</li>
+        <li>Harm->dismember</li>
+        <li>Harm->disfigure</li>
+        <li>Harm->brutalize</li>
+		<li>System->system</li>
+		<li>System->coolant infuser</li>
+        <li>System->mechanite-core</li>
+        <li>System->subpersona-core</li>
+        <li>System->hull</li>
+        <li>System->circuit-hub</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+</Defs>

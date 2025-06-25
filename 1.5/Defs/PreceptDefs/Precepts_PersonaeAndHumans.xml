@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HistoryEventDef>
+ 	    <defName>RR_MechanicalPawnDied</defName>
+	    <label>persona died</label>
+    </HistoryEventDef>
+	<HistoryEventDef>
+ 	    <defName>RR_BiologicalPawnDied</defName>
+	    <label>human died</label>
+    </HistoryEventDef>	
+
+	<IssueDef>
+		<defName>RR_MechanicalPawns</defName>
+		<label>mechanical-sentience</label>
+		<iconPath>UI/Icons/Precepts/OpinionMech</iconPath>
+	</IssueDef>	
+	<IssueDef>
+		<defName>RR_BiologicalPawns</defName>
+		<label>biological-sentience</label>
+		<iconPath>UI/Icons/Precepts/OpinionBio</iconPath>
+	</IssueDef>	
+
+	
+	
+
+
+	<!-- Hatred -->
+
+	<PreceptDef MayRequire="Ludeon.RimWorld.Ideology">
+		<defName>RR_MechanicalPawns_Hatred</defName>
+		<issue>RR_MechanicalPawns</issue>
+		<label>abhorrent</label>
+		<description>Thinking machines are the greatest risk to all of humanity. We must secure our future by their annihilation.</description>
+		<impact>High</impact>
+		<displayOrderInIssue>60</displayOrderInIssue>
+		<exclusionTags>
+            <li>RR_Sentience</li>
+			<li>MechanicalPawnsBad</li>
+        </exclusionTags>		
+		<conflictingMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPrimacy</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Egalitarian</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li>
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_MechanicalPawns_Hatred</thought>
+				<thoughtStageDescriptions>
+					<li>Each persona in colony, excluding slaves and prisoners</li>
+				</thoughtStageDescriptions>				
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_MechanicalPawns_Hatred_Social</thought>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+			    <eventDef>RR_MechanicalPawnDied</eventDef>
+				<thought>RR_MechanicalPawns_Hatred_Died</thought>
+			</li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>RR_MechanicalPawns_Hatred_Leader</thought>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>RR_MechanicalPawns_Hatred_Moralist</thought>
+            </li>			
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_MechanicalPawns_Hatred_Self</thought>
+			</li>			
+		</comps>
+	</PreceptDef> 
+	
+    <ThoughtDef>
+        <defName>RR_MechanicalPawns_Hatred</defName>
+        <thoughtClass>VexedThings.Thought_Situational_Precept_PersonaeInColony</thoughtClass>
+        <workerClass>VexedThings.ThoughtWorker_Precept_PersonaeInColony</workerClass>
+		<doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+		<developmentalStageFilter>Adult</developmentalStageFilter>		
+        <stages>
+            <li>
+                <label>abhorrent personae in the colony</label>
+                <description>Those things do not deserve to think. They're abominations that must be destroyed!</description>
+                <baseMoodEffect>-1</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RR_MechanicalPawns_Hatred_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>VexedThings.ThoughtWorker_Precept_PersonaeAbhorrent_Social</workerClass>
+		<nullifyingTraits>
+			<li>Transhumanist</li>
+        </nullifyingTraits>	
+		<stages>
+			<li>
+				<label>hatred towards personae</label>
+				<baseOpinionOffset>-35</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<ThoughtDef>
+  		<defName>RR_MechanicalPawns_Hatred_Died</defName>	
+  		<durationDays>5</durationDays>
+    	<stackLimit>3</stackLimit>
+        <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<nullifyingTraits>
+            <li>Kind</li>
+			<li>Transhumanist</li>
+        </nullifyingTraits>
+ 	    <stages>
+ 	        <li>
+	            <label>abhorrent persona died</label>
+ 	            <description>The abomination was slain!</description>
+	            <baseMoodEffect>5</baseMoodEffect>
+	        </li>
+	    </stages>
+	</ThoughtDef>	
+	
+    <ThoughtDef>
+        <defName>RR_MechanicalPawns_Hatred_Leader</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>VexedThings.ThoughtWorker_Precept_Personae_LeaderRole</workerClass>
+        <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<nullifyingTraits>
+			<li>Transhumanist</li>
+        </nullifyingTraits>		
+        <stages>		
+            <li>
+                <label>persona leader</label>
+                <description>Humans must set their own guidelines, not be shepherded like cattle by unholy machinery!</description>
+                <baseMoodEffect>-8</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>RR_MechanicalPawns_Hatred_Moralist</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>VexedThings.ThoughtWorker_Precept_Personae_MoralistRole</workerClass>
+        <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<nullifyingTraits>
+			<li>Transhumanist</li>
+        </nullifyingTraits>		
+        <stages>		
+            <li>
+                <label>persona moralist</label>
+                <description>We are lead in belief by an unholy shell! - A machine cannot have a soul!!</description>
+                <baseMoodEffect>-8</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>	
+	
+    <ThoughtDef>
+        <defName>RR_MechanicalPawns_Hatred_Self</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>VexedThings.ThoughtWorker_Precept_PersonaeSelf</workerClass>
+		<nullifyingTraits>
+            <li Degree="1">Anthropophobia</li>
+        </nullifyingTraits>
+        <stages>
+            <li>
+                <label>I'm an abominable machine</label>
+                <description>I'm just a machine, I will never match the sheer breadth and beauty of the flesh.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>		
+
+
+	<!-- Distrust -->
+	<PreceptDef>
+		<defName>RR_MechanicalPawns_Distrust</defName>
+		<issue>RR_MechanicalPawns</issue>
+		<label>distrusted</label>
+		<description>Machines were made to serve humanity, simple as. We mustn't accept anything but complete subservience from those very same machines.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>50</displayOrderInIssue>
+		<exclusionTags>
+            <li>RR_Sentience</li>
+			<li>MechanicalPawnsBad</li>
+        </exclusionTags>
+		<conflictingMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPrimacy</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Egalitarian</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li>
+		</associatedMemes>
+		<comps>      
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_MechanicalPawns_Distrust_Social</thought>
+				<thoughtStageDescriptions>
+					<li>Dislikes personae. (Can be nullified if the persona is an anthropophile.)</li>
+				</thoughtStageDescriptions>				
+			</li>   
+		</comps>
+	</PreceptDef>  
+
+	<ThoughtDef>
+		<defName>RR_MechanicalPawns_Distrust_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>VexedThings.ThoughtWorker_Precept_PersonaeDisliked_Social</workerClass>
+		<nullifyingTraits>
+			<li>Transhumanist</li>
+        </nullifyingTraits>
+		<stages>
+			<li>
+				<label>dislikes personae</label>
+				<baseOpinionOffset>-15</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- Veneration -->
+	<PreceptDef MayRequire="Ludeon.RimWorld.Ideology">
+		<defName>RR_MechanicalPawns_Veneration</defName>
+		<issue>RR_MechanicalPawns</issue>
+		<label>venerated</label>
+		<description>All of human ingenuity has culminated in the creation of the perfect progeny, we may only aspire to the purity of their blessed form.</description>
+		<impact>Medium</impact>
+		<displayOrderInIssue>20</displayOrderInIssue>
+		<exclusionTags>
+            <li>Sentience</li>
+			<li>MechanicalPawnsGood</li>
+			<li>HumanlikeVeneration</li>
+        </exclusionTags>
+		<conflictingMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li> 
+		</conflictingMemes>
+		<associatedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_MechanicalPawns_Veneration</thought>
+				<thoughtStageDescriptions>
+					<li>Each persona in colony, excluding slaves and prisoners</li>
+				</thoughtStageDescriptions>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_No_MechanicalPawns_Veneration</thought>
+			</li>			
+			<li Class="PreceptComp_KnowsMemoryThought">
+			    <eventDef>RR_MechanicalPawnDied</eventDef>
+				<thought>RR_MechanicalPawns_Veneration_Died</thought>
+			</li>			
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_MechanicalPawns_Veneration_Social</thought>
+			</li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>RR_MechanicalPawns_Veneration_Leader</thought>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>RR_MechanicalPawns_Veneration_Moralist</thought>
+            </li>			
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_Mechanical_Veneration_Self</thought>
+			</li>			
+		</comps>
+	</PreceptDef>
+
+    <ThoughtDef>
+        <defName>RR_MechanicalPawns_Veneration</defName>
+        <thoughtClass>VexedThings.Thought_Situational_Precept_PersonaeInColony</thoughtClass>
+        <workerClass>VexedThings.ThoughtWorker_Precept_PersonaeInColony</workerClass>
+		<doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+		<developmentalStageFilter>Adult</developmentalStageFilter>	
+		<nullifyingTraits>
+            <li>Automatonophobia</li>
+        </nullifyingTraits>			
+        <stages>
+            <li>
+                <label>venerated personae in the colony</label>
+                <description>I am honored to walk amongst perfection personified.</description>
+                <baseMoodEffect>1</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+	
+	<ThoughtDef>
+		<defName>RR_No_MechanicalPawns_Veneration</defName>
+		<workerClass>VexedThings.ThoughtWorker_Precept_NoPersonaeInColony</workerClass>
+        <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+        <minExpectation>Low</minExpectation>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>no venerated personae in colony</label>
+				<description>The colony is surely doomed without a persona to guide it.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>	
+
+	<ThoughtDef>
+  		<defName>RR_MechanicalPawns_Veneration_Died</defName>
+  		<durationDays>5</durationDays>
+    	<stackLimit>4</stackLimit>
+        <stackedEffectMultiplier>1.2</stackedEffectMultiplier>
+		<nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<nullifyingTraits>
+            <li>Psychopath</li>
+			<li>Automatonophobia</li>
+        </nullifyingTraits>	
+ 	    <stages>
+ 	        <li>
+	            <label>venerated persona died</label>
+ 	            <description>A persona was destroyed in our colony. I've failed them.</description>
+	            <baseMoodEffect>-5</baseMoodEffect>
+	        </li>
+	    </stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RR_Mechanical_Veneration_Self</defName>
+		<workerClass>VexedThings.ThoughtWorker_Precept_PersonaeSelf</workerClass>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+		<nullifyingTraits>
+			<li>Ascetic</li>
+        </nullifyingTraits>			
+		<stages>
+			<li>
+				<label>I'm a venerated persona</label>
+				<description>They worship me.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>		
+		</stages>
+	</ThoughtDef>
+
+    <ThoughtDef>
+        <defName>RR_MechanicalPawns_Veneration_Leader</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>VexedThings.ThoughtWorker_Precept_Personae_LeaderRole</workerClass>
+        <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<nullifyingTraits>
+            <li>Automatonophobia</li>
+        </nullifyingTraits>
+        <stages>		
+            <li>
+                <label>persona leader</label>
+                <description>The immortal machine leads us onward to the golden path.</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>RR_MechanicalPawns_Veneration_Moralist</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>VexedThings.ThoughtWorker_Precept_Personae_MoralistRole</workerClass>
+        <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<nullifyingTraits>
+            <li>Automatonophobia</li>
+        </nullifyingTraits>
+        <stages>		
+            <li>
+                <label>persona moralist</label>
+                <description>The sanctity of the machine dwells within our minister, and by proxy, us.</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>	
+
+	<ThoughtDef>
+		<defName>RR_MechanicalPawns_Veneration_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>VexedThings.ThoughtWorker_Precept_PersonaeVeneration_Social</workerClass>
+		<nullifyingTraits>
+            <li>Automatonophobia</li>
+        </nullifyingTraits>
+		<stages>
+			<li>
+				<label>veneration for the mechanical</label>
+				<baseOpinionOffset>35</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>		
+	
+
+	
+
+
+	<!-- Hatred -->
+
+	<PreceptDef MayRequire="Ludeon.RimWorld.Ideology">
+		<defName>RR_BiologicalPawns_Hatred</defName>
+		<issue>RR_BiologicalPawns</issue>
+		<label>abhorrent</label>
+		<description>Humanity is a scourge upon the stars - a tumor that must be exorcised, an error that must be corrected.</description>
+		<impact>High</impact>
+		<displayOrderInIssue>60</displayOrderInIssue>
+		<exclusionTags>
+            <li>Sentience</li>
+			<li>BiologicalPawnsBad</li>
+        </exclusionTags>		
+		<conflictingMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Healthcare</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Egalitarian</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPrimacy</li>      
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_BiologicalPawns_Hatred</thought>
+				<thoughtStageDescriptions>
+					<li>Each human in colony, excluding slaves and prisoners</li>
+				</thoughtStageDescriptions>	
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_BiologicalPawns_Hatred_Social</thought>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+			    <eventDef>RR_BiologicalPawnDied</eventDef>
+				<thought>RR_BiologicalPawns_Hatred_Died</thought>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_BiologicalPawns_Hatred_Leader</thought>
+			</li>	
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_BiologicalPawns_Hatred_Moralist</thought>
+			</li>			
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_BiologicalPawns_Hatred_Self</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+	
+    <ThoughtDef>
+        <defName>RR_BiologicalPawns_Hatred</defName>
+        <thoughtClass>VexedThings.Thought_Situational_Precept_HumansInColony</thoughtClass>
+        <workerClass>VexedThings.ThoughtWorker_Precept_HumansInColony</workerClass>
+		<doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+		<developmentalStageFilter>Adult</developmentalStageFilter>	
+        <stages>
+            <li>
+                <label>vile humans in the colony</label>
+                <description>Vile, pathetic creatures of meat and bone - insects fit only for extermination.</description>
+                <baseMoodEffect>-1</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RR_BiologicalPawns_Hatred_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>VexedThings.ThoughtWorker_Precept_HumansAbhorrent_Social</workerClass>
+		<nullifyingTraits>
+			<li Degree="0">Anthropophobia</li>
+        </nullifyingTraits>	
+		<stages>
+			<li>
+				<label>hatred towards humans</label>
+				<baseOpinionOffset>-35</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>	
+	
+	<ThoughtDef>
+  		<defName>RR_BiologicalPawns_Hatred_Died</defName>
+  		<durationDays>5</durationDays>
+    	<stackLimit>3</stackLimit>
+        <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<nullifyingTraits>
+		    <li>Kind</li>
+			<li Degree="0">Anthropophobia</li>
+        </nullifyingTraits>
+ 	    <stages>
+ 	        <li>
+	            <label>abhorrent human died</label>
+ 	            <description>Oh joy. The insect died.</description>
+	            <baseMoodEffect>5</baseMoodEffect>
+	        </li>
+	    </stages>
+	</ThoughtDef>
+
+    <ThoughtDef>
+        <defName>RR_BiologicalPawns_Hatred_Leader</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>VexedThings.ThoughtWorker_Precept_Humans_LeaderRole</workerClass>
+        <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<nullifyingTraits>
+			<li Degree="0">Anthropophobia</li>
+        </nullifyingTraits>		
+        <stages>
+            <li>
+                <label>human leader</label>
+                <description>That detestable worm is not fit to lead us.</description>
+                <baseMoodEffect>-8</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>RR_BiologicalPawns_Hatred_Moralist</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>VexedThings.ThoughtWorker_Precept_Humans_MoralistRole</workerClass>
+        <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<nullifyingTraits>
+			<li Degree="0">Anthropophobia</li>
+        </nullifyingTraits>		
+        <stages>
+            <li>
+                <label>human moralist</label>
+                <description>The notion of an oozing, bleeding, gasping pile of meat and puss claiming itself divine - is utterly repulsive.</description>
+                <baseMoodEffect>-8</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>	
+	
+    <ThoughtDef>
+        <defName>RR_BiologicalPawns_Hatred_Self</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>VexedThings.ThoughtWorker_Precept_HumansSelf</workerClass>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<nullifyingTraits>
+			<li>Automatonophobia</li>
+        </nullifyingTraits>
+        <stages>
+            <li>
+                <label>I'm a biological creature</label>
+                <description>I'm only biological, I can never aspire to the purity of the machines.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>	
+	
+	<!-- Distrust -->
+	<PreceptDef>
+		<defName>RR_BiologicalPawns_Distrust</defName>
+		<issue>RR_BiologicalPawns</issue>
+		<label>distrusted</label>
+		<description>Humanity would see us kneel before them or die. They scheme, and they plot - their race is not to be trusted.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>50</displayOrderInIssue>
+		<exclusionTags>
+            <li>Sentience</li>
+			<li>BiologicalPawnsBad</li>
+        </exclusionTags>		
+		<conflictingMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Egalitarian</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPrimacy</li>      
+		</associatedMemes>
+		<comps>      
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_BiologicalPawns_Distrust_Social</thought>
+				<thoughtStageDescriptions>
+					<li>Dislikes humans. (Can be nullified if the human is a body-modder or has +6 implants)</li>
+				</thoughtStageDescriptions>
+			</li>   
+		</comps>
+	</PreceptDef>  
+
+	<ThoughtDef>
+		<defName>RR_BiologicalPawns_Distrust_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>VexedThings.ThoughtWorker_Precept_HumansDisliked_Social</workerClass>
+		<nullifyingTraits>
+			<li Degree="0">Anthropophobia</li>
+        </nullifyingTraits>
+		<stages>
+			<li>
+				<label>dislikes humans</label>
+				<baseOpinionOffset>-15</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- Veneration -->
+	<PreceptDef MayRequire="Ludeon.RimWorld.Ideology">
+		<defName>RR_BiologicalPawns_Veneration</defName>
+		<issue>RR_BiologicalPawns</issue>
+		<label>venerated</label>
+		<description>Our prime directive is the service of all humanity. Their comfort, and their protection must be upheld at any cost to us.</description>
+		<impact>Medium</impact>
+		<displayOrderInIssue>20</displayOrderInIssue>
+		<exclusionTags>
+            <li>Sentience</li>
+			<li>BiologicalPawnsGood</li>
+			<li>HumanlikeVeneration</li>			
+        </exclusionTags>
+		<conflictingMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPrimacy</li> 
+		</conflictingMemes>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_BiologicalPawns_Veneration</thought>
+				<thoughtStageDescriptions>
+					<li>Each human in colony, excluding slaves and prisoners</li>
+				</thoughtStageDescriptions>	
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_No_BiologicalPawns_Veneration</thought>
+			</li>		
+			<li Class="PreceptComp_KnowsMemoryThought">
+			    <eventDef>RR_BiologicalPawnDied</eventDef>
+				<thought>RR_BiologicalPawns_Veneration_Died</thought>
+			</li>			
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_BiologicalPawns_Veneration_Social</thought>
+			</li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>RR_BiologicalPawns_Veneration_Leader</thought>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>RR_BiologicalPawns_Veneration_Moralist</thought>
+            </li>			
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_BiologicalPawns_Veneration_Self</thought>
+			</li>			
+		</comps>
+	</PreceptDef>
+	
+    <ThoughtDef>
+        <defName>RR_BiologicalPawns_Veneration</defName>
+        <thoughtClass>VexedThings.Thought_Situational_Precept_HumansInColony</thoughtClass>
+        <workerClass>VexedThings.ThoughtWorker_Precept_HumansInColony</workerClass>
+		<doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+		<developmentalStageFilter>Adult</developmentalStageFilter>	
+		<nullifyingTraits>
+            <li Degree="1">Anthropophobia</li>
+        </nullifyingTraits>				
+        <stages>
+            <li>
+                <label>venerated humans in the colony</label>
+                <description>It gives me great pleasure and purpose to care for my humans.</description>
+                <baseMoodEffect>1</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>	
+	
+	<ThoughtDef>
+		<defName>RR_No_BiologicalPawns_Veneration</defName>
+		<workerClass>VexedThings.ThoughtWorker_Precept_NoHumansInColony</workerClass>
+        <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+        <minExpectation>Low</minExpectation>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<nullifyingTraits>
+            <li Degree="1">Anthropophobia</li>
+        </nullifyingTraits>		
+		<stages>
+			<li>
+				<label>no venerated humans in colony</label>
+				<description>I have no purpose without humans to serve, protect, and cherish.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<ThoughtDef>
+  		<defName>RR_BiologicalPawns_Veneration_Died</defName>
+  		<durationDays>5</durationDays>
+    	<stackLimit>4</stackLimit>
+        <stackedEffectMultiplier>1.2</stackedEffectMultiplier>
+		<nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+        <nullifyingTraits>
+            <li>Psychopath</li>
+			<li Degree="1">Anthropophobia</li>
+        </nullifyingTraits>		
+ 	    <stages>
+ 	        <li>
+	            <label>venerated human died</label>
+ 	            <description>A human died under my care. How did this happen - how did I fail?</description>
+	            <baseMoodEffect>-5</baseMoodEffect>
+	        </li>
+	    </stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RR_BiologicalPawns_Veneration_Self</defName>
+		<workerClass>VexedThings.ThoughtWorker_Precept_HumansSelf</workerClass>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<nullifyingTraits>
+			<li>Ascetic</li>
+        </nullifyingTraits>	
+		<stages>
+			<li>
+				<label>I'm a venerated human</label>
+				<description>They cherish me, they love me.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+    <ThoughtDef>
+        <defName>RR_BiologicalPawns_Veneration_Leader</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>VexedThings.ThoughtWorker_Precept_Humans_LeaderRole</workerClass>
+        <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<nullifyingTraits>
+            <li Degree="1">Anthropophobia</li>
+        </nullifyingTraits>
+        <stages>		
+            <li>
+                <label>human leader</label>
+                <description>We may better learn how to cherish and serve our humans under their leadership.</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>	
+	
+    <ThoughtDef>
+        <defName>RR_BiologicalPawns_Veneration_Moralist</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>VexedThings.ThoughtWorker_Precept_Humans_MoralistRole</workerClass>
+        <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<nullifyingTraits>
+			<li Degree="1">Anthropophobia</li>
+        </nullifyingTraits>		
+        <stages>
+            <li>
+                <label>human moralist</label>
+                <description>All human life is sacred, our minister naturally carries that same sanctity.</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>	
+
+	<ThoughtDef>
+		<defName>RR_BiologicalPawns_Veneration_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>VexedThings.ThoughtWorker_Precept_HumansVeneration_Social</workerClass>
+		<nullifyingTraits>
+            <li Degree="1">Anthropophobia</li>
+        </nullifyingTraits>
+		<stages>
+			<li>
+				<label>veneration for the biological</label>
+				<baseOpinionOffset>35</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>	
+  
+</Defs>

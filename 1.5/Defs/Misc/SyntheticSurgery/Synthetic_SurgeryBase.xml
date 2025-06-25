@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+  <RecipeDef Abstract="True" Name="SurgeryMechanical">
+    <effectWorking>Repair</effectWorking>
+    <soundWorking>Interact_Repair</soundWorking>
+    <workSpeedStat>AdjustmentSuccessChance_Synth</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+	<anesthetize>false</anesthetize>
+  </RecipeDef>
+  
+  <!-- Base workerClass. -->   
+  <RecipeDef Name="SyntheticInstallUpgradeBase" ParentName="SurgeryMechanical" Abstract="True">
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <workAmount>2500</workAmount>
+    <skillRequirements>
+      <Crafting>5</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>Mechanent</li>
+	  <li>Personae_</li>
+    </recipeUsers>
+	<ingredients>
+	    <li>
+			<filter>
+				<thingDefs>
+					<li>ComponentIndustrial</li>
+				</thingDefs>
+			</filter>
+			<count>2</count>
+		</li>
+	</ingredients>
+    <fixedIngredientFilter>
+	    <thingDefs>
+            <li>ComponentIndustrial</li>
+		</thingDefs>
+    </fixedIngredientFilter>	
+  </RecipeDef>
+  
+  <!-- Hotswap workerClass. -->   
+  <RecipeDef Name="SyntheticHotswapUpgradeBase" ParentName="SurgeryMechanical" Abstract="True">
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <workAmount>2500</workAmount>
+    <skillRequirements>
+      <Crafting>4</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>Mechanent</li>
+	  <li>Personae_</li>
+    </recipeUsers>
+  </RecipeDef>  
+
+  <!-- Archotech workerClass. -->  
+  <RecipeDef Name="SyntheticInstallArchotechUpgradeBase" ParentName="SurgeryMechanical" Abstract="True">
+    <workerClass>Recipe_InstallArchotechImplant</workerClass>
+    <workAmount>3200</workAmount>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>Mechanent</li>
+	  <li>Personae_</li>
+    </recipeUsers>
+	<ingredients>
+	    <li>
+			<filter>
+				<thingDefs>
+					<li>ComponentSpacer</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+    <fixedIngredientFilter>
+	    <thingDefs>
+            <li>ComponentSpacer</li>
+		</thingDefs>
+    </fixedIngredientFilter>	
+  </RecipeDef>   
+  
+  <!-- Covers bionics, and other foreign implants. --> 
+  <RecipeDef Name="SurgeryInstallUpgradePartAddedBase" ParentName="SyntheticInstallUpgradeBase" Abstract="True">
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+	<recipeUsers>
+      <li>Mechanent</li>
+	  <li>Personae_</li>
+    </recipeUsers>	
+  </RecipeDef>    
+  
+  <!-- Covers natural body parts. --> 
+  <RecipeDef Name="SurgeryInstallUpgradePartNaturalBase" ParentName="SyntheticInstallUpgradeBase" Abstract="True">
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+	<recipeUsers>
+      <li>Mechanent</li>
+	  <li>Personae_</li>
+    </recipeUsers>	
+  </RecipeDef>
+  
+  <!-- Covers implants used exclusively by mechanents. --> 
+  <RecipeDef Name="SurgeryInstallMechanoidPartAddedBase" ParentName="SyntheticInstallUpgradeBase" Abstract="True">
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+	<recipeUsers>
+      <li>Mechanent</li>
+    </recipeUsers>	
+  </RecipeDef>  
+
+  <!-- Remove workerClass. -->  
+  <RecipeDef Name="SyntheticRemoveUpgradeBase" ParentName="SurgeryMechanical" Abstract="True">
+    <defName>RemovePartSynthetic</defName>
+	<description>Remove mechanical part.</description>
+    <workerClass>Recipe_RemoveImplant</workerClass>
+    <workAmount>2500</workAmount>
+    <isViolation>true</isViolation>
+    <skillRequirements>
+      <Crafting>5</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>Mechanent</li>
+	  <li>Personae_</li>
+    </recipeUsers>
+	<ingredients>
+	    <li>
+			<filter>
+				<thingDefs>
+					<li>ComponentIndustrial</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+    <fixedIngredientFilter>
+	    <thingDefs>
+            <li>ComponentIndustrial</li>
+		</thingDefs>
+    </fixedIngredientFilter>	
+  </RecipeDef> 
+
+  <RecipeDef ParentName="SurgeryMechanical">
+    <defName>RemoveBodyPartSynthetic</defName>
+    <label>remove part</label>
+    <description>Remove mechanical part.</description>
+    <workerClass>Recipe_RemoveBodyPart</workerClass>
+    <jobString>Removing part.</jobString>
+    <workAmount>2000</workAmount>
+    <surgerySuccessChanceFactor>1.2</surgerySuccessChanceFactor>
+    <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    <recipeUsers>
+      <li>Mechanent</li>
+	  <li>Personae_</li>
+    </recipeUsers>	
+	<ingredients>
+	    <li>
+			<filter>
+				<thingDefs>
+					<li>ComponentIndustrial</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+    <fixedIngredientFilter>
+	    <thingDefs>
+            <li>ComponentIndustrial</li>
+		</thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>  
+
+</Defs>

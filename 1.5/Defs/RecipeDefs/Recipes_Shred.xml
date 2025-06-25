@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <RecipeDef ParentName="ButcherCorpseMechanoidBase">
+    <defName>ShredCorpseSynthetic</defName>
+    <label>shred persona</label>
+    <description>Shred a dead persona to try to salvage usable material.</description>
+    <jobString>Shredding persona.</jobString>
+    <workAmount>300</workAmount>
+    <soundWorking>Recipe_ButcherCorpseMechanoid</soundWorking>
+	<fixedIngredientFilter>
+		<specialFiltersToAllow>
+			<li>AllowCorpsesColonist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">AllowCorpsesSlave</li>
+			<li>AllowCorpsesStranger</li>
+		</specialFiltersToAllow>
+		<thingDefs>
+            <li>Corpse_Mechanent</li>
+			<li>Corpse_Personae_</li>
+		</thingDefs>
+	</fixedIngredientFilter>	
+  </RecipeDef>
+  
+  <RecipeDef ParentName="ButcherCorpseMechanoidBase">
+    <defName>SmashCorpseSynthetic</defName>
+    <label>smash persona</label>
+    <description>Smash a dead persona with simple hand tools to salvage usable material.</description>
+    <jobString>Smashing persona.</jobString>
+    <workAmount>450</workAmount>
+    <soundWorking>Recipe_SmashCorpseMechanoid</soundWorking>
+	<fixedIngredientFilter>
+		<specialFiltersToAllow>
+			<li>AllowCorpsesColonist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">AllowCorpsesSlave</li>
+			<li>AllowCorpsesStranger</li>
+		</specialFiltersToAllow>
+		<thingDefs>
+            <li>Corpse_Mechanent</li>
+			<li>Corpse_Personae_</li>
+		</thingDefs>
+	</fixedIngredientFilter>	
+  </RecipeDef>
+  
+</Defs>

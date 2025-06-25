@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+    <RR_EnergyNeed>Energy</RR_EnergyNeed>
+	<RR_EnergyNeedDescription>Energy is the amount of retained charge output from the internal reactor. If it hits zero, the persona will enter an inefficient low-power mode. If charge is not restored, hardware will eventually critically malfunction, and the persona will cease functioning.</RR_EnergyNeedDescription>
+    <RR_MemoryNeed>Memory</RR_MemoryNeed>
+	<RR_MemoryNeedDescription>Memory is the amount of time between each system defragment. Advanced personae must regularly enter a semi-comatose state to purge useless info from their AI cores to avoid memory overloads. If they go too long without it, they will involuntarily shutdown until excess memory is purged.</RR_MemoryNeedDescription>
+
+	<RR_ResurrectingPersona>Resurrecting {0}</RR_ResurrectingPersona>
+	<RR_ResurrectedPersona>Resurrected {0}</RR_ResurrectedPersona>
+	<RR_LowEnergySelfShutdown>{PAWN_nameDef} is in self-shutdown from low energy.</RR_LowEnergySelfShutdown>
+	
+	<RR_FuelRestriction>Fuel restriction</RR_FuelRestriction>
+    <RR_FuelRestrictionShort>Fuel</RR_FuelRestrictionShort>
+	<RR_ManageFuelRestrictions>Manage fuel restrictions</RR_ManageFuelRestrictions>
+	
+	<RR_SelfRepair>Self-repair</RR_SelfRepair>
+	<RR_SelfRepairTip>{0} with self-repair enabled will automatically repair themselves on the spot at {1} the normal efficiency.</RR_SelfRepairTip>
+    <RR_Repair>Repair {PAWN_nameDef}</RR_Repair>
+	<RR_SelfRepairDisabled>self-repair disabled</RR_SelfRepairDisabled>
+	<RR_MustBeAssignedToRepair>To self-repair, {1_labelShort} must also be assigned to Smithing work.</RR_MustBeAssignedToRepair>
+	<RR_MustBeCapableToRepair>{1_labelShort} must be capable of smithing to make repairs.</RR_MustBeCapableToRepair>
+	<RR_MustHaveEnergyToRepair>{1_labelShort} must have energy to be able to self-repair.</RR_MustHaveEnergyToRepair>
+	<RR_CannotRepair>{PAWN_nameDef} is incapable of repairing.</RR_CannotRepair>
+
+	<RR_UnsuitableFuel>Unsuitable fuel</RR_UnsuitableFuel>
+    <RR_UnsuitableIngestDrug_Personae>Unsuitable drug for personae</RR_UnsuitableIngestDrug_Personae>
+	<RR_UnsuitableIngestDrug_Humans>Unsuitable drug for humans</RR_UnsuitableIngestDrug_Humans>
+	
+	<RR_SynthCannotUtilize>Personae cannot utilize this.</RR_SynthCannotUtilize>
+    <RR_BioNotSynthetic>{PAWN_nameDef} must be synthetic to be able to use this.</RR_BioNotSynthetic>
+	<RR_SynthNotBiological>{PAWN_nameDef} must be biological to be able to use this.</RR_SynthNotBiological>
+    <RR_SynthCannotBeImplanted>{PAWN_nameDef} cannot be genetically altered.</RR_SynthCannotBeImplanted>
+    <RR_SynthCannotBeUnnatHealed>Cannot use unnatural healing: {PAWN_nameDef} is not biological.</RR_SynthCannotBeUnnatHealed>		
+	<RR_SynthCannotBeFleshshaped>Cannot target: {PAWN_nameDef} cannot be biologically altered or mutated.</RR_SynthCannotBeFleshshaped>
+	<RR_SynthCorpseCannotBeFleshshaped>Cannot target: targeted corpse is not biological.</RR_SynthCorpseCannotBeFleshshaped>
+    <RR_SynthMutatorObeliskFailedLetter>While interacting with the obelisk, {PAWN_nameDef} suddenly felt {PAWN_possessive} body buckle for a few moments. The feeling quickly passed.\n\nThe obelisk tried, but cannot mutate {PAWN_nameDef}.</RR_SynthMutatorObeliskFailedLetter>
+	<RR_SynthNotGenetic>Personae do not carry a genetic code.</RR_SynthNotGenetic>
+	<RR_SynthCannotBeScanned>Personae do not have viable neuro-patterns.</RR_SynthCannotBeScanned>
+	<RR_SynthIsIncapableOfLove>{PAWN_nameDef} is incapable of complex emotions.</RR_SynthIsIncapableOfLove> 
+	<RR_SynthVsVampire>{PAWN_nameDef} is bloodless.</RR_SynthVsVampire>	
+	<RR_SynthVsDevourer>The devourer would not be able to digest {PAWN_nameDef}.</RR_SynthVsDevourer>	
+	
+    <SynthFactionGreetingHostile>Cmn.cntact_{0}\n\nPinging...\n\nContact_unsuccessful\n\nReason___failed.connection</SynthFactionGreetingHostile>
+    <SynthFactionGreetingHostileAppreciative>Cmn.cntact_{0}\n\nPinging...\n\nContact_unsuccessful\n\nReason___failed.goodwill_=_val.(0)</SynthFactionGreetingHostileAppreciative>
+    <SynthFactionGreetingWary>Cmn.cntact_{0}\n\nPinging...\n\nContact_successful\n\nResult___{NEGOTIATOR_labelShort}.return.query</SynthFactionGreetingWary>
+    <SynthFactionGreetingWarm>Cmn.cntact_{0}\n\nPinging...\n\nContact_successful\n\nResult___{NEGOTIATOR_labelShort}.translate.(CONTACT RECEIVED, WHAT BUSINESS DO YOU WISH TO CONTUCT)</SynthFactionGreetingWarm>
+    <SynthMilitaryAidSent>Re.militaid_{0}\n\nRequesting...\n\nRequest_successful\n\nResult___{NEGOTIATOR_labelShort}.translate.(CONTACT RECEIVED, MILITARY AID SENT)</SynthMilitaryAidSent>	
+</LanguageData>

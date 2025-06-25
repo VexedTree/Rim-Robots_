@@ -4,12 +4,12 @@
 	<IssueDef>
 		<defName>RR_MechanicalPawns</defName>
 		<label>mechanical-sentience</label>
-		<iconPath>Icons/Precepts/OpinionMech</iconPath>
+		<iconPath>UI/Icons/Precepts/OpinionMech</iconPath>
 	</IssueDef>	
 	<IssueDef>
 		<defName>RR_BiologicalPawns</defName>
 		<label>biological-sentience</label>
-		<iconPath>Icons/Precepts/OpinionBio</iconPath>
+		<iconPath>UI/Icons/Precepts/OpinionBio</iconPath>
 	</IssueDef>	
 
 	
@@ -59,7 +59,7 @@
 			<li>
 				<label>personae in colony</label>
 				<description>Those things do not deserve to "think". They're abominations that must be destroyed before they can turn against us.</description>
-				<baseMoodEffect>-5</baseMoodEffect>
+				<baseMoodEffect>-8</baseMoodEffect>
 			</li>    
 		</stages>
 	</ThoughtDef>
@@ -148,6 +148,9 @@
 		<comps>
 			<li Class="PreceptComp_SituationalThought">
 				<thought>RR_MechanicalPawns_Veneration</thought>
+			</li>	
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_MechanicalPawns_Veneration_Died</thought>
 			</li>			
 			<li Class="PreceptComp_SituationalThought">
 				<thought>RR_MechanicalPawns_Veneration_Social</thought>
@@ -168,6 +171,20 @@
 				<baseMoodEffect>5</baseMoodEffect>
 			</li>
 		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+  		<defName>RR_MechanicalPawns_Veneration_Died</defName>
+  		<durationDays>5</durationDays>
+    	<stackLimit>3</stackLimit>
+        <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+ 	    <stages>
+ 	        <li>
+	            <label>venerated persona died</label>
+ 	            <description>A persona was destroyed in our colony. We've failed them.</description>
+	            <baseMoodEffect>-5</baseMoodEffect>
+	        </li>
+	    </stages>
 	</ThoughtDef>	
 
 	<ThoughtDef>
@@ -229,7 +246,7 @@
 			<li>
 				<label>humans in colony</label>
 				<description>Vile, pathetic creatures of meat and bone - insects fit only for extermination. They have no place among us.</description>
-				<baseMoodEffect>-5</baseMoodEffect>
+				<baseMoodEffect>-8</baseMoodEffect>
 			</li>
 		</stages>
 	</ThoughtDef>
@@ -240,7 +257,7 @@
 		<workerClass>VexedThings.ThoughtWorker_Precept_HumansAbhorrent_Social</workerClass>
 		<stages>
 			<li>
-				<label>hatred for humans</label>
+				<label>hatred towards humans</label>
 				<baseOpinionOffset>-35</baseOpinionOffset>
 			</li>
 		</stages>
@@ -314,6 +331,9 @@
 		<comps>
 			<li Class="PreceptComp_SituationalThought">
 				<thought>RR_BiologicalPawns_Veneration</thought>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>RR_BiologicalPawns_Veneration_Died</thought>
 			</li>			
 			<li Class="PreceptComp_SituationalThought">
 				<thought>RR_BiologicalPawns_Veneration_Social</thought>
@@ -335,6 +355,20 @@
 			</li>
 		</stages>
 	</ThoughtDef>
+	
+	<ThoughtDef>
+  		<defName>RR_BiologicalPawns_Veneration_Died</defName>
+  		<durationDays>5</durationDays>
+    	<stackLimit>3</stackLimit>
+        <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+ 	    <stages>
+ 	        <li>
+	            <label>venerated human died</label>
+ 	            <description>A human died under our care. How did this happen - how did we fail?</description>
+	            <baseMoodEffect>-5</baseMoodEffect>
+	        </li>
+	    </stages>
+	</ThoughtDef>	
 
 	<ThoughtDef>
 		<defName>RR_BiologicalPawns_Veneration_Social</defName>

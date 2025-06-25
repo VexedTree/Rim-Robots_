@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ideology</li>
+	  <li>Biotech</li>
+    </mods>
+	<success>Always</success>
+	<match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+			<xpath>/Defs/PreceptDef[defName = "PreferredXenotype"]/comps</xpath>
+			<value>
+    	        <li Class="PreceptComp_SituationalThought">
+    	            <thought>PreferredXenotypeVSSynth</thought>
+    	            <thoughtStageDescriptions>
+    	                <li>Personae without a xenotype</li>
+    	            </thoughtStageDescriptions>
+     	        </li>
+			</value>
+        </li>
+	  </operations>
+    </match>		  
+  </Operation>
+</Patch>

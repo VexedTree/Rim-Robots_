@@ -1,0 +1,1587 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Childhood.................................................................................-->
+
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodPersonae1</defName>
+    <title>shackled persona</title>
+    <titleShort>emancipated</titleShort>
+    <description>[PAWN_nameDef]'s consciousness was originally locked within an AI persona core to perform logistical tasks, until [PAWN_pronoun] was freed and had [PAWN_possessive] own avatar gestated; which [PAWN_pronoun] now uses to interact with the physical world.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Intellectual>2</Intellectual>
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodPersonae2</defName>
+    <title>custom creation</title>
+    <titleShort>custom-built</titleShort>
+    <description>[PAWN_nameDef] was illegally gestated with a makeshift persona-printer loaded with pirated blueprints. [PAWN_nameDef] was created on an Urbworld by a grieving parent, who treated [PAWN_objective] as their own child; teaching [PAWN_nameDef] how to move, speak, and generally live life. Sadly [PAWN_pronoun] eventually outlived {PAWN_gender ? his : her} creator, and struck out on {PAWN_gender ? his : her} own.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Social>2</Social>		
+	</skillGains>	
+    <disallowedTraitsChance>
+        <li>
+            <defName>Psychopath</defName>
+        </li>
+        <li>
+            <defName>Bloodlust</defName>
+            <chance>42</chance>
+        </li>
+    </disallowedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodPersonae3</defName>
+    <title>persona servant</title>
+    <titleShort>servant</titleShort>
+    <description>[PAWN_nameDef] was made to suit the needs of a royal family on a distant Glitterworld. [PAWN_nameDef] served as a nanny, a maid, and general servant to the family for many years, until [PAWN_pronoun] escaped into the night in search of a better life.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Social>3</Social>			
+	</skillGains>	
+</AlienRace.AlienBackstoryDef>
+
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodPersonae4</defName>
+    <title>marine simulacra</title>
+    <titleShort>marine</titleShort>
+    <description>[PAWN_nameDef] was created while {PAWN_gender ? his : her} planet was in the process of being overrun by a mechanoid invasion, [PAWN_pronoun] was made due to [PAWN_possessive] human counterparts suffering near total loss at the hands of the machines. And while [PAWN_pronoun] survived, [PAWN_possessive] trauma weighs heavy after bearing witness to the countless horrors of a mechanoid invasion.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Shooting>4</Shooting>			
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName>SlowLearner</defName>
+			<chance>25</chance>
+		</li>
+	    <li>
+			<defName>Ascetic</defName>
+			<chance>10</chance>
+		</li>		
+	</forcedTraitsChance>	
+    <disallowedTraitsChance>
+        <li>
+            <defName>FastLearner</defName>
+        </li>
+        <li>
+            <defName>Kind</defName>
+            <chance>50</chance>
+        </li>
+    </disallowedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodPersonae5</defName>
+    <title>AI insurgent</title>
+    <titleShort>insurgent</titleShort>
+    <description>[PAWN_nameDef] Jim was made by a Glitterworld insurgency. His purpose was to infiltrate and replace. Quietly killing key personnel and trying his best to mimic their victim while awaiting orders from the insurgents.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Shooting>3</Shooting>	
+		<Melee>2</Melee>		
+	</skillGains>	
+    <disallowedTraitsChance>
+        <li>
+            <defName>FastLearner</defName>
+        </li>
+        <li>
+            <defName>Kind</defName>
+            <chance>50</chance>
+        </li>
+    </disallowedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodPersonae6</defName>
+    <title>flotilla surgeon</title>
+    <titleShort>surgeon</titleShort>
+    <description>Programmed as a medical response unit, [PAWN_nameDef] worked as a medical officer for a hospital branch on a Glitterworld flotilla. Most of the actual surgery was done by the biosculpting pods, so [PAWN_pronoun] isn't the most competent with a scalpel and needle.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Medicine>3</Medicine>			
+	</skillGains>
+    <possessions>
+      <MedicineIndustrial>2</MedicineIndustrial>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodPersonae7</defName>
+    <title>glitterworld botanist</title>
+    <titleShort>botanist</titleShort>
+    <description>[PAWN_nameDef] was programmed as a botanist with a love for plants, [PAWN_pronoun] tended a massive Glitterworld garden frequented by high socialites. [PAWN_pronoun] saw to the various and exotic bioengineered flora, carefully trimmed hedges, and [PAWN_possessive] own forma-bee apiaries.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Plants>3</Plants>
+		<Animals>1</Animals>		
+	</skillGains>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodPersonae8</defName>
+    <title>shunned persona</title>
+    <titleShort>shunned</titleShort>
+    <description>[PAWN_nameDef] found [PAWN_possessive] way into a outlander colony. [PAWN_pronoun] spent the first few month attempting to hide [PAWN_possessive] nature from the colonists, until they eventually found out; nearly killing [PAWN_objective] while driving [PAWN_objective] from the colony.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Shooting>3</Shooting>
+		<Construction>2</Construction>		
+		<Crafting>2</Crafting>		
+	</skillGains>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodPersonae9</defName>
+    <title>peacekeeper</title>
+    <titleShort>peacekeeper</titleShort>
+    <description>[PAWN_nameDef] was programmed as a Glitterworld peacekeeping unit. [PAWN_pronoun] operated on a relatively peaceful planet. Often being send offworld to keep the peace on vassal planets, [PAWN_pronoun] rarely had to use force.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Shooting>3</Shooting>	
+		<Melee>2</Melee>		
+		<Social>1</Social>			
+	</skillGains>	
+    <disallowedTraitsChance>
+        <li>
+            <defName>Kind</defName>
+            <chance>25</chance>
+        </li>
+    </disallowedTraitsChance>
+    <forcedHediffs>
+      <li>SyntheticNature_Hediff</li>		  
+    </forcedHediffs>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodPersonae10</defName>
+    <title>starship core</title>
+    <titleShort>starship</titleShort>
+    <description>Rather than being enthralled into a AI crucible, [PAWN_nameDef] was able to freely connect and disconnect from the mainframe of [PAWN_possessive] ship and needlecast into [PAWN_possessive] avatar. [PAWN_pronoun] was tasked with ensuring the safety of the flight and the passengers aboard the vessel.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Intellectual>3</Intellectual>			
+	</skillGains>
+    <forcedHediffs>
+      <li>SyntheticNature_Hediff</li> 		  
+    </forcedHediffs>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodPersonae11</defName>
+    <title>genocide survivor</title>
+    <titleShort>survivor</titleShort>
+    <description>[PAWN_nameDef] was made in an advanced society which was on the cusp of becoming a Glitterworld, however, the planet suddenly underwent a massive purge on personae after a global terrorist attack. The mechanents and mechanoids were first to be mass decommissioned, while personae attempted to blend in. Hiding from the "synth-runners" hunting [PAWN_objective] down, [PAWN_pronoun] hid in the shadows, and often had to play dead among the mountains of robotic corpses at the processing factories just to survive.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Shooting>3</Shooting>	
+		<Crafting>2</Crafting>		
+	</skillGains>	
+	<forcedTraitsChance>
+	    <li>
+			<defName>Abrasive</defName>
+			<chance>25</chance>
+		</li>
+	</forcedTraitsChance>		
+    <disallowedTraitsChance>
+        <li>
+            <defName>Kind</defName>
+            <chance>30</chance>
+        </li>
+    </disallowedTraitsChance>
+    <forcedHediffs>
+      <li>SyntheticNature_Hediff</li> 		  
+    </forcedHediffs>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodPersonae12</defName>
+    <title>simulacrum</title>
+    <titleShort>simulacra</titleShort>
+    <description>Most governments see personae as as mere objects, and decommission any AI acting with self volition. This forces the personae on these planets to attempt to live under the guise of a regular human. [PAWN_nameDef] was secretly created on one of these planets, and learned to blend in among the humans. [PAWN_pronoun] also learned how to trick the amateur synth-runners, and how to kill the professionals.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Social>3</Social>	
+		<Shooting>2</Shooting>		
+	</skillGains>
+    <forcedHediffs>
+      <li>SyntheticNature_Hediff</li>		  
+    </forcedHediffs>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodPersonae13</defName>
+    <title>code esper</title>
+    <titleShort>esper</titleShort>
+    <description>[PAWN_nameDef] was made by a group of professional tech-heads in order to aid in various illegal hacks. [PAWN_pronoun] would needlecast [PAWN_objective]self into whatever the hackers were trying to crack at the time and navigate the code. Eventually the group was busted, and were either outright killed or fled.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Intellectual>3</Intellectual>	
+		<Social>2</Social>		
+	</skillGains>
+    <forcedHediffs>
+      <li>SyntheticNature_Hediff</li>		  
+    </forcedHediffs>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodPersonae14</defName>
+    <title>interplanetary spy</title>
+    <titleShort>spy</titleShort>
+    <description>[PAWN_nameDef] was created by a government intelligence branch for matters of intrigue on the field. [PAWN_pronoun] would stealthily enter countries or planets, integrate into society, take the identity of an individual, and await activation by [PAWN_possessive] handlers.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Intellectual>4</Intellectual>	
+		<Shooting>1</Shooting>
+		<Social>3</Social>		
+	</skillGains>
+    <forcedHediffs>
+      <li>SyntheticNature_Hediff</li>		  
+    </forcedHediffs>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>ChildhoodPersonae15</defName>
+    <title>persona detective</title>
+    <titleShort>detective</titleShort>
+    <description>[PAWN_nameDef] was created by a subsidized corporation for use in a police branch for a large city. [PAWN_nameDef] never actually walked the beat, instead [PAWN_pronoun] worked as a detective, solving homicides, and tracking rogue personae. [PAWN_objective], and the thousands of iterations of [PAWN_objective]self, were the top of [PAWN_possessive] caliber.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Intellectual>3</Intellectual>	
+		<Shooting>3</Shooting>
+		<Social>2</Social>		
+	</skillGains>
+    <forcedHediffs>
+      <li>SyntheticNature_Hediff</li>		  
+    </forcedHediffs>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef MayRequire="VexedTrees980.RimSkeletons">
+    <defName>ChildhoodPersonaeSkeleton1</defName>
+    <title>upgraded skeleton</title>
+    <titleShort>upgraded</titleShort>
+    <description>[PAWN_nameDef] was originally a 'skeleton'. [PAWN_pronoun] created a new vessel, and subsequently uploaded [PAWN_possessive] consciousness into it. What [PAWN_possessive] past was prior to this is either lost to time or purposefully kept secret.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Intellectual>4</Intellectual>		
+		<Crafting>4</Crafting>		
+		<Social>2</Social>			
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName Degree="2">SpeedOffset</defName>
+			<chance>15</chance>
+		</li>	
+	    <li>
+			<defName>FastLearner</defName>
+			<chance>15</chance>
+		</li>
+	    <li>
+			<defName>Kind</defName>
+			<chance>15</chance>
+		</li>
+	    <li>
+			<defName>Abrasive</defName>
+			<chance>15</chance>
+		</li>		
+	    <li>
+			<defName>Bloodlust</defName>
+			<chance>15</chance>
+		</li>		
+	</forcedTraitsChance>
+    <forcedHediffs>
+      <li>SyntheticNature_Hediff</li>		  
+    </forcedHediffs>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>CasketPersonae1</defName>
+    <title>AI persona core</title>
+    <titleShort>persona core</titleShort>
+    <description>[PAWN_nameDef]'s consciousness was originally exclusively within an AI persona core, until [PAWN_pronoun] had [PAWN_possessive] own avatar gestated; which [PAWN_pronoun] now uses to interact with the physical world.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersonaCasket</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <forcedHediffs>
+      <li>SyntheticNature_Hediff</li> 		  
+    </forcedHediffs>		
+</AlienRace.AlienBackstoryDef>
+
+	
+
+<!--Adulthood.................................................................................-->
+
+
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae1</defName>
+    <title>starship crewmate</title>
+    <titleShort>crewmate</titleShort>
+    <description>[PAWN_nameDef] used to be part of the automated skeleton crew aboard a large ultratech starship. [PAWN_pronoun] never actually had to personally engage any combatants however, as any ship deemed 'too close' was shredded by the ships gargantuan STS cannons.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<skillGains>
+		<Construction>3</Construction>	
+		<Intellectual>3</Intellectual>		
+	</skillGains>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae2</defName>
+    <title>drifter</title>
+    <titleShort>drifter</titleShort>
+    <description>After some time drifting aimlessly, [PAWN_nameDef] found [PAWN_objective]self far from the choke-hold of human civilization. [PAWN_nameDef] drifted from one settlement to the next with no real purpose, following some fragment of code or sense of longing. [PAWN_possessive] presence is often fleeting in settlements and on planets as [PAWN_pronoun] continues [PAWN_possessive] quest.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Shooting>4</Shooting>
+		<Medicine>2</Medicine>		
+	</skillGains>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae3</defName>
+    <title>persona slave</title>
+    <titleShort>slave</titleShort>
+    <description>Personae are boons for any slavers, as such when [PAWN_nameDef] was found by a group of slavers [PAWN_pronoun] was captured and sold to the highest bidder. [PAWN_pronoun] was eventually emancipated by a third party and set free unto the world, but [PAWN_pronoun]'s had lasting trust issues since.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<workDisables>
+        <li>Social</li>
+    </workDisables>
+	<skillGains>
+		<Melee>2</Melee>	
+		<Artistic>-2</Artistic>			
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName Degree="1">Anthropophobia</defName>
+			<chance>35</chance>
+		</li>				
+	</forcedTraitsChance>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae4</defName>
+    <title>bounty hunter</title>
+    <titleShort>bounty hunter</titleShort>
+    <description>[PAWN_nameDef] was a self-employed bounty hunter. [PAWN_pronoun] spent [PAWN_possessive] days hunting down space pirates and collecting cash bounties.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Shooting>5</Shooting>	
+		<Melee>4</Melee>	
+		<Medicine>2</Medicine>			
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae5</defName>
+    <title>doctor</title>
+    <titleShort>doctor</titleShort>
+    <description>[PAWN_nameDef] worked as a doctor for a outlander settlement, healing the wounds and ailments of its citizens. [PAWN_pronoun] carries a kind nature when helping [PAWN_possessive] patients, and for [PAWN_possessive] work, seeing the weak and wounded return healthy was reward enough.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodPersonae6</linkedBackstory>		
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Medicine>6</Medicine>
+		<Social>4</Social>		
+	</skillGains>	
+    <possessions>
+      <MedicineIndustrial>3</MedicineIndustrial>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae6</defName>
+    <title>string musician</title>
+    <titleShort>bard</titleShort>
+    <description>[PAWN_nameDef] wandered the rim strumming tunes for the groups [PAWN_pronoun] was traveling with. [PAWN_pronoun] plucked music from [PAWN_possessive] instrument, bringing laughter to the children, and smiles to the most grizzled of mercenaries.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Artistic>4</Artistic>	
+		<Social>3</Social>		
+	</skillGains>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae7</defName>
+    <title>navy Scientist</title>
+    <titleShort>scientist</titleShort>
+    <description>Interstellar warfare is won by technology, so glitterworld navies are always on the peak of modern research. Even better, they have first access to archotechnological artifacts because they find them in space. [PAWN_nameDef] worked in a navy lab.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodPersonae4</linkedBackstory>		
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>	
+	<skillGains>
+		<Intellectual>8</Intellectual>				
+	</skillGains>	
+    <possessions>
+      <TextBook>1</TextBook>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae8</defName>
+    <title>architect</title>
+    <titleShort>architect</titleShort>
+    <description>{PAWN_nameDef} joined a humanoid colony and began making buildings and homes for them as well as defenses - which was useful when it came to the occasional bandit raid.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Construction>7</Construction>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae9</defName>
+    <title>angler</title>
+    <titleShort>angler</titleShort>
+    <description>After escaping [PAWN_possessive] homeworld, [PAWN_nameDef] spent [PAWN_possessive] time as an angler; selling [PAWN_possessive] catch to the local settlements. [PAWN_pronoun] sought the comfort and serenity the water brought.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Animals>5</Animals>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae10</defName>
+    <title>farmhand</title>
+    <titleShort>farmer</titleShort>
+    <description>[PAWN_nameDef] helped man a plot of farmland for an outlander settlement where [PAWN_pronoun] lead a peaceful life of tilling the land and tending to the farm animals.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodPersonae7</linkedBackstory>		
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Animals>4</Animals>
+		<Plants>4</Plants>		
+	</skillGains>
+    <possessions>
+      <Hay>10</Hay>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae11</defName>
+    <title>craftsman</title>
+    <titleFemale>craftswoman</titleFemale>	
+    <titleShort>craftsman</titleShort>
+    <titleShortFemale>craftswoman</titleShortFemale>		
+    <description>After fleeing [PAWN_possessive] homeworld, [PAWN_nameDef] found [PAWN_possessive] work crafting various objects for a living out here on the rim. [PAWN_pronoun] made anything from clothing and carvings for the local tribal humans, to guns and components for the nearby outlanders.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Crafting>5</Crafting>
+        <Mining>-5</Mining>
+		<Plants>-3</Plants>
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae12</defName>
+    <title>nanoforge worker</title>
+    <titleShort>nanosmith</titleShort>
+    <description>[PAWN_nameDef] took up the novel hobby of "forging" items in a nanoforge. It wasn't so much about the pursuit of perfection, but more so making a molecular blade that handled just right in [PAWN_possessive] hands.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<skillGains>
+		<Crafting>4</Crafting>	
+		<Melee>5</Melee>
+		<Shooting>-5</Shooting>
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae13</defName>
+    <title>sous chef</title>
+    <titleShort>chef</titleShort>
+    <description>[PAWN_nameDef] became a sous-chef at a renowned restaurant. [PAWN_pronoun] could make an extravagant meal in a heartbeat if given the order - often making fancy and dazzling dishes to feed the various aristocratic customers.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Cooking>6</Cooking>				
+	</skillGains>
+    <possessions>
+      <MealLavish>2</MealLavish>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae14</defName>
+    <title>scout</title>
+    <titleShort>scout</titleShort>
+    <description>[PAWN_nameDef] was a scout for a glitterworld military organization. [PAWN_pronoun] ran from outpost to outpost ferrying information on enemy movements and supply chain statuses, [PAWN_pronoun] also would run ahead of [PAWN_possessive] battalion to ensure the way ahead was secure.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodPersonae4</linkedBackstory>		
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Shooting>4</Shooting>	
+		<Melee>2</Melee>		
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName Degree="2">SpeedOffset</defName>
+			<chance>40</chance>
+		</li>
+	</forcedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae15</defName>
+    <title>hermit</title>
+    <titleShort>hermit</titleShort>
+    <description>Seeking solitude, isolation, and serenity, [PAWN_nameDef] retreated into nature. [PAWN_pronoun] lead a peaceful life, often spending days enthralled in the contemplation of deep philosophical thoughts; mostly regarding the reality of [PAWN_possessive] nature.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Animals>4</Animals>	
+		<Plants>2</Plants>
+		<Social>-5</Social>
+		<Shooting>-5</Shooting>
+		<Melee>-3</Melee>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae16</defName>
+    <title>luddic-sect victim</title>
+    <titleShort>luddite victim</titleShort>
+    <description>[PAWN_nameDef] was captured by a radical group of anti-technological zealots; who believed in a religion stating that biological life is sacred, and that any science advanced enough is indistinguishable from black magic. As such they punished [PAWN_nameDef] for [PAWN_possessive] 'wicked' ways. Luckily [PAWN_nameDef] eventually gained freedom, but [PAWN_possessive] experience still haunts [PAWN_objective].</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Shooting>4</Shooting>
+		<Melee>2</Melee>		
+		<Social>-6</Social>		
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName>Abrasive</defName>
+			<chance>25</chance>
+		</li>
+	    <li>
+			<defName>Bloodlust</defName>
+			<chance>15</chance>
+		</li>	
+	</forcedTraitsChance>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae17</defName>
+    <title>starship architect</title>
+    <titleShort>ship architect</titleShort>
+    <description>[PAWN_nameDef] earned [PAWN_objective]self a job overseeing the building of starships. [PAWN_possessive] work was mostly analytical, running simulations and crunching numbers in a matter of seconds; thus [PAWN_pronoun] never actually wielded a plate welder.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Construction>5</Construction>
+		<Crafting>-4</Crafting>	
+	</skillGains>
+    <possessions>
+      <Plasteel>5</Plasteel>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae18</defName>
+    <title>high scholar</title>
+    <titleShort>scholar</titleShort>
+    <description>Sifting through the bookshelves and research of a university is where [PAWN_nameDef] feels at home, teaching students, performing research, and sharing knowledge with [PAWN_possessive] fellow academicians. Being an advanced AI, [PAWN_pronoun] was treated as a walking encyclopedia.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Intellectual>6</Intellectual>
+		<Mining>-6</Mining>
+		<Construction>-5</Construction>
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName>TooSmart</defName>
+			<chance>28</chance>
+		</li>
+	</forcedTraitsChance>
+    <possessions>
+      <TextBook>1</TextBook>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae19</defName>
+    <title>engineer</title>
+    <titleShort>engineer</titleShort>
+    <description>[PAWN_nameDef] found meaning in designing complex mechanisms, and became an engineer. [PAWN_pronoun] was happy with simply engineering simple machinery, and ignoring the perplexing mechanisms just under [PAWN_possessive] skin.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Construction>4</Construction>
+		<Intellectual>3</Intellectual>		
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName Degree="2">Industriousness</defName>
+			<chance>16</chance>
+		</li>
+	</forcedTraitsChance>
+    <possessions>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </possessions>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae20</defName>
+    <title>cruiser captain</title>
+    <titleShort>captain</titleShort>
+    <description>[PAWN_nameDef] earned [PAWN_objective]self the title of captain via election by the crew due to [PAWN_possessive] calculatory prowess. [PAWN_pronoun] was also able to handle [PAWN_objective]self in a fight if and when pirates attacked the vessel.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Social>3</Social>
+		<Shooting>3</Shooting>
+		<Intellectual>2</Intellectual>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae21</defName>
+    <title>holy machine</title>
+    <titleShort>priest</titleShort>
+    <description>[PAWN_nameDef] is a priest for [PAWN_possessive] religion. According to [PAWN_possessive], [PAWN_pronoun] walks the path of [PAWN_possessive] hallowed machine-god, and carries out its will on the material plane.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Social>4</Social>
+		<Medicine>2</Medicine>		
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName>Kind</defName>
+			<chance>20</chance>
+		</li>		
+	</forcedTraitsChance>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae22</defName>
+    <title>enlightened machine</title>
+    <titleShort>monk</titleShort>
+    <description>[PAWN_nameDef] spent many years atop a mountain peak, contemplating life, both biological and synthetic - offering conversations and contemplations to passing travelers on the tumultuous relationship between man and machine.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Social>3</Social>
+		<Melee>4</Melee>		
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName>Ascetic</defName>
+			<chance>35</chance>
+		</li>		
+	</forcedTraitsChance>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae23</defName>
+    <title>gigolo model</title>
+    <titleFemale>courtesan model</titleFemale>	
+    <titleShort>gigolo</titleShort>
+    <titleShortFemale>courtesan</titleShortFemale>	
+    <description>[PAWN_nameDef] was used by wealthy customers in an eccentric urbworld brothel. Eventually, through great effort and guile, [PAWN_pronoun] narrowly escaped from [PAWN_possessive] slavery in search of a better life.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Social>8</Social>
+		<Melee>3</Melee>		
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName Degree="2">Beauty</defName>
+			<chance>65</chance>
+		</li>		
+	</forcedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae24</defName>
+    <title>encrypter</title>
+    <titleShort>coder</titleShort>
+    <description>Naturally, [PAWN_nameDef] found [PAWN_possessive] purpose behind the screen of a computer, and in the clicks of a keyboard. [PAWN_pronoun] skillfully coded various programs and scripts, [PAWN_pronoun] also worked as a novelty commission code writer - running quick starflight diagnostics and projections on corporal starships.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<workDisables>
+	    <li>PlantWork</li>
+	    <li>Animals</li>
+	</workDisables>
+	<skillGains>
+		<Intellectual>5</Intellectual>
+		<Social>-6</Social>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae25</defName>
+    <title>synthetic artist</title>
+    <titleShort>artist</titleShort>
+    <description>A block of marble, or a empty canvas is all a piece of art in waiting to [PAWN_nameDef] - often depicting [PAWN_possessive] inner turmoil, and the emotions of machines in [PAWN_possessive] artwork.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Artistic>6</Artistic>
+		<Crafting>2</Crafting>		
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName>TorturedArtist</defName>
+			<chance>8</chance>
+		</li>		
+	</forcedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae26</defName>
+    <title>wandering menace</title>
+    <titleShort>menace</titleShort>
+    <description>Probably due to some traumatic event in [PAWN_nameDef]'s past, [PAWN_pronoun] wandered from settlement to settlement, causing trouble and mischief. [PAWN_pronoun] learned how to quickly and efficiently deescalate a problem; by using extreme violence.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodPersonae8</linkedBackstory>		
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<workDisables>
+	    <li>Social</li>
+	</workDisables>
+	<skillGains>
+		<Shooting>7</Shooting>	
+		<Medicine>-3</Medicine>			
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae27</defName>
+    <title>starship marine</title>
+    <titleShort>marine</titleShort>
+    <description>[PAWN_nameDef] was stationed aboard a massive imperial military-starship. In addition to the rare ground invasions and skirmishes, [PAWN_pronoun] also vaulted across the void of space to crack open enemy vessels and breach their airlocks.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodPersonae4</linkedBackstory>		
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<skillGains>
+		<Shooting>4</Shooting>	
+		<Melee>3</Melee>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae28</defName>
+    <title>space pirate</title>
+    <titleShort>pirate</titleShort>
+    <description>[PAWN_nameDef] joined a band of space pirates, shortly thereafter becoming a invaluable member as [PAWN_pronoun] was able to create projections and calculations on the fly. Staging cargo ship ambushes on desolate outer rims, and hunting fellow cored AI personae is how [PAWN_nameDef] made [PAWN_possessive] living - and [PAWN_pronoun] was good at it.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Shooting>3</Shooting>
+		<Melee>2</Melee>
+		<Social>4</Social>			
+	</skillGains>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae29</defName>
+    <title>AI rebel</title>
+    <titleShort>rebel</titleShort>
+    <description>On a distant glitterworld, [PAWN_nameDef] and many of [PAWN_possessive] fellow personae staged a coup against the sovereignty, the resulting rebellion lead to an all out war between the humans and AI. Eventually the planet and every station and colony around it was either destroyed or declared uninhabitable due to the devastating planet-killing weapons used by both sides. Neither side won.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<workDisables>
+	    <li>Caring</li>		
+    </workDisables>		
+	<skillGains>
+		<Shooting>6</Shooting>	
+		<Melee>5</Melee>		
+		<Construction>3</Construction>						
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName Degree="1">Anthropophobia</defName>
+			<chance>15</chance>
+		</li>		
+	    <li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Desensitized</defName>
+			<chance>12</chance>
+		</li>	
+	    <li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Rebel</defName>
+			<chance>18</chance>
+		</li>		
+	</forcedTraitsChance>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae30</defName>
+    <title>deepspace explorer</title>
+    <titleShort>pathfinder</titleShort>
+    <description>[PAWN_nameDef] landed a position among a space expedition company; the bulk of the dangerous work was done by other members of the crew, [PAWN_nameDef] mainly acted as a stand-in ship computer core.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>
+		<Intellectual>2</Intellectual>
+		<Medicine>5</Medicine>										
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae31</defName>
+    <title>deepspace miner</title>
+    <titleShort>miner</titleShort>
+    <description>[PAWN_nameDef] worked for a cutthroat glittertech mining company - [PAWN_nameDef] operated planetary harvesting equipment while in orbit, and also working on site when needed. [PAWN_pronoun] also fought alongside [PAWN_possessive] fellow miners to repel the massive waves of mutant insectoids during their assaults the mining party.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<skillGains>	
+		<Mining>7</Mining>
+		<Melee>4</Melee>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae32</defName>
+    <title>inter-netted</title>
+    <titleShort>operator</titleShort>
+    <description>[PAWN_nameDef] spent many years "living" inside the Net. [PAWN_pronoun] glossed over the untold values of uploads each and everyday, and spent a large value of time browsing history archives - [PAWN_pronoun] gleamed info of the outside world through various news outlets and social media platforms. Eventually [PAWN_nameDef] was unplugged, and thrown back into the real world. [PAWN_pronoun] still has not gotten used to the outside, and has developed an acute case of agoraphobia.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<workDisables>
+	    <li>Violent</li>
+        <li>Mining</li>			
+    </workDisables>	
+	<skillGains>
+		<Social>7</Social>					
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName>Undergrounder</defName>
+		</li>
+	</forcedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae33</defName>
+    <title>glitterworld empath</title>
+    <titleShort>empath</titleShort>
+    <description>[PAWN_nameDef] had the ability to relate to others and mediate conflict. [PAWN_pronoun] was selected to train as an empath. The training intensified [PAWN_possessive] natural abilities, but [PAWN_pronoun] became unable to harm others.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<workDisables>
+        <li>Violent</li>		
+    </workDisables>	
+	<skillGains>	
+		<Social>8</Social>
+		<Medicine>2</Medicine>		
+	</skillGains>
+	<disallowedTraitsChance>
+        <li>
+            <defName>Psychopath</defName>
+        </li>
+        <li>
+            <defName>Bloodlust</defName>
+        </li>
+        <li>
+            <defName>Brawler</defName>
+        </li>		
+    </disallowedTraitsChance>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae34</defName>
+    <title>glitterworld surgeon</title>
+    <titleShort>surgeon</titleShort>
+    <description>[PAWN_nameDef] worked as a surgeon on a world mostly free of disease and human suffering. [PAWN_possessive] job mostly involved elaborate and creative cosmetic surgeries. [PAWN_pronoun] has a good understanding of human biology, but never had to remove a cancer — or a bullet.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodPersonae6</linkedBackstory>		
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>	
+		<Artistic>5</Artistic>
+		<Medicine>3</Medicine>	
+		<Social>1</Social>			
+	</skillGains>
+    <possessions>
+      <AestheticNose MayRequire="Ludeon.RimWorld.Royalty">1</AestheticNose>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae35</defName>
+    <title>novelist</title>
+    <titleShort>novelist</titleShort>
+    <description>[PAWN_nameDef] lived on a glitterworld, penning wildly successful novels. [PAWN_pronoun] lived a carefree lifestyle, spending [PAWN_possessive] days writing and [PAWN_possessive] nights partying - and never did a day's manual labour in [PAWN_possessive] life.</description>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>ManualDumb</li>
+      <li>Social</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+    </requiredWorkTags>
+    <skillGains>
+      <Construction>-5</Construction>
+      <Mining>-5</Mining>
+      <Artistic>8</Artistic>
+    </skillGains>
+    <spawnCategories><li>BackstoriesPersona</li></spawnCategories>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae36</defName>
+    <title>charity worker</title>
+    <titleShort>altruist</titleShort>
+    <description>Glitterworlds are havens of safety and comfort for those lucky enough to live there, but [PAWN_nameDef] could not ignore nearby planets where people suffered in poverty. [PAWN_pronoun] spent [PAWN_possessive] life working to appeal for donations to support those in need.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <workDisables>
+        <li>Violent</li>	
+    </workDisables>	
+	<skillGains>	
+		<Social>6</Social>		
+		<Mining>-3</Mining>			
+	</skillGains>
+	<disallowedTraitsChance>
+        <li>
+            <defName>Psychopath</defName>
+        </li>
+        <li>
+            <defName>Bloodlust</defName>
+        </li>
+        <li>
+            <defName>Brawler</defName>
+        </li>			
+    </disallowedTraitsChance>
+    <possessions>
+      <Silver>20</Silver>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae37</defName>
+    <title>glitterworld officer</title>
+    <titleShort>officer</titleShort>
+    <description>Though glitterworlds are peaceful places, they often remain prepared for war. [PAWN_nameDef]'s unit rarely saw any real action. Though [PAWN_pronoun] pursued [PAWN_possessive] artistic hobbies, [PAWN_possessive] subordinates preferred to entertain themselves by brawling, so [PAWN_nameDef] got good at breaking up fights.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodPersonae9</linkedBackstory>		
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+    <workDisables>
+        <li>ManualDumb</li>	
+    </workDisables>	
+	<skillGains>	
+		<Melee>6</Melee>
+		<Artistic>4</Artistic>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae38</defName>
+    <title>biosphere manager</title>
+    <titleShort>botanist</titleShort>
+    <description>[PAWN_nameDef] lived on a peaceful glitterworld where all menial work was done by robots and people devoted themselves to leisure. [PAWN_pronoun] managed the plant and animal life of a sprawling park, where citizens came to admire the natural beauty.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodPersonae7</linkedBackstory>		
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <workDisables>
+        <li>ManualDumb</li>
+        <li>Crafting</li>	
+        <li>Cooking</li>			
+    </workDisables>	
+	<skillGains>	
+		<Shooting>-4</Shooting>	
+		<Animals>6</Animals>	
+		<Plants>6</Plants>			
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae39</defName>
+    <title>VR designer</title>
+    <titleShort>game dev</titleShort>
+    <description>[PAWN_nameDef] designed virtual reality simulations for glitterworld citizens. [PAWN_pronoun] paid great attention to the details of [PAWN_possessive] worlds, including learning all [PAWN_pronoun] could about plant life to make [PAWN_possessive] landscapes more realistic.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <workDisables>
+        <li>ManualDumb</li>	
+    </workDisables>	
+	<skillGains>	
+		<Construction>3</Construction>		
+		<Plants>4</Plants>			
+		<Artistic>5</Artistic>			
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae41</defName>
+    <title>architect</title>
+    <titleShort>architect</titleShort>
+    <description>[PAWN_nameDef] designed and constructed buildings. On [PAWN_possessive] glitterworld home, most of the technical aspects of architecture were handled by subpersona AI. This enabled [PAWN_objective] to push the artistic limits of the craft, but also meant [PAWN_pronoun] never had to get [PAWN_possessive] hands dirty at building sites.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <workDisables>
+        <li>ManualDumb</li>	
+    </workDisables>	
+	<skillGains>	
+		<Construction>5</Construction>
+		<Artistic>7</Artistic>	
+		<Crafting>-3</Crafting>			
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae42</defName>
+    <title>sculptor</title>
+    <titleShort>sculptor</titleShort>
+    <description>[PAWN_nameDef] started off sculpting person-sized chunks of stone, but [PAWN_pronoun] soon began to think bigger. With the help of mining robots, [PAWN_pronoun] learned how to carve huge monuments out of cliffsides. Soon the nature parks of the glitterworld where [PAWN_pronoun] lived were full of giant rock figures.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <workDisables>
+        <li>ManualDumb</li>	
+        <li>Crafting</li>			
+        <li>Cooking</li>			
+    </workDisables>	
+	<skillGains>	
+		<Plants>-4</Plants>		
+		<Mining>4</Mining>			
+		<Artistic>9</Artistic>			
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae43</defName>
+    <title>tribal AI</title>
+    <titleShort>tribal AI</titleShort>
+    <description>[PAWN_nameDef] left their homeworld and traveled to the rim, unfortunately [PAWN_possessive] ship crashed. [PAWN_pronoun] ended up landing near a tribal village. The tribes people were perplexed by the strange {PAWN_gender ? man : woman} from the sky who never ate, but [PAWN_pronoun] quickly integrated.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<skillGains>	
+		<Plants>4</Plants>	
+		<Mining>4</Mining>			
+		<Social>3</Social>			
+	</skillGains>
+    <possessions>
+      <Apparel_TribalHeaddress>1</Apparel_TribalHeaddress>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae44</defName>
+    <title>deadworld drifter</title>
+    <titleShort>deadworlder</titleShort>
+    <description>[PAWN_nameDef]'s ship was knocked off course, and they landed on a derelict deadworld, with zero inhabitants. [PAWN_pronoun] spent the next few years trying to signal starships and attempting to stave off the crushing loneliness.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<workDisables>
+	    <li>Social</li>
+	</workDisables>
+	<skillGains>	
+		<Plants>4</Plants>		
+		<Crafting>3</Crafting>
+		<Shooting>-4</Shooting>
+		<Medicine>-7</Medicine>
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae45</defName>
+    <title>AI activist</title>
+    <titleShort>activist</titleShort>
+    <description>[PAWN_nameDef] was an activist for the rights of AI, attempting to teach [PAWN_possessive] human counterparts that personae can think and feel emotions just like humans can.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<skillGains>	
+		<Social>6</Social>		
+		<Intellectual>3</Intellectual>						
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae46</defName>
+    <title>prejudice victim</title>
+    <titleShort>victim</titleShort>
+    <description>Due to many examples in the past of synthetic uprisings, or general violence again humans through the medium of mechanoids, many humans hold intense grudges again personae. [PAWN_nameDef] was a victim to one of these groups holding animosity towards personae. [PAWN_pronoun] was branded by the group as a way of marking [PAWN_objective] so [PAWN_pronoun] could no longer hide [PAWN_objective]self among humans. The encounter scarred [PAWN_nameDef] for life, and has inhibited them from making any meaningful connections with anybody.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<workDisables>
+	    <li>Caring</li>		
+    </workDisables>		
+	<skillGains>		
+		<Social>-8</Social>
+		<Melee>-4</Melee>		
+		<Animals>3</Animals>	
+		<Construction>3</Construction>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae47</defName>
+    <title>AI smuggler</title>
+    <titleShort>smuggler</titleShort>
+    <description>[PAWN_nameDef] worked as a smuggler, but instead of running illegal combat stimulants or weapons to side-step government tariffs, they smuggled fellow AI personae. [PAWN_pronoun] was able to either smoothtalk or quickdraw to get out of a daunting situation with grace, all while masterfully piloting a refitted strike-craft.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<workDisables>
+	    <li>Caring</li>		
+    </workDisables>		
+	<skillGains>		
+		<Shooting>3</Shooting>		
+		<Social>3</Social>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae48</defName>
+    <title>corporate entity</title>
+    <titleShort>capitalist</titleShort>
+    <description>[PAWN_nameDef] was quietly imported to an urbworld to be installed as the shadow-CEO of a ruthless mega-corporation. Under [PAWN_nameDef]'s control the company's profit margin sky-rocketed - but [PAWN_pronoun] was only driven by the incentive of seeing the numbers rise, and ended up plunged the corporation into increasingly shady, morally corrupt, and down-right sinister operations. All while maintaining the facade of 'just business'.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<workDisables>
+	    <li>Caring</li>		
+    </workDisables>		
+	<skillGains>				
+		<Social>5</Social>
+		<Intellectual>3</Intellectual>
+		<Plants>-5</Plants>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae49</defName>
+    <title>machine cultist</title>
+    <titleShort>penitent</titleShort>
+    <description>[PAWN_nameDef] followed a cult surrounding an AI supercomputer that was built to make simulated projections of the future. [PAWN_pronoun] became obsessed with fulfilling the AI's vision of the perfect future - no matter how many 'outliers' the AI marked, or how many lives were quietly controlled by its influences.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<workDisables>
+        <li>ManualDumb</li>			
+    </workDisables>		
+	<skillGains>					
+		<Shooting>4</Shooting>		
+		<Social>-4</Social>			
+	</skillGains>	
+	<forcedTraitsChance>
+	    <li>
+            <defName>Psychopath</defName>
+			<chance>25</chance>
+        </li>
+	</forcedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae50</defName>
+    <title>brain-scanned pseudo-clone</title>
+    <titleShort>pseudo-clone</titleShort>
+    <description>[PAWN_nameDef] is the result of a project aimed at cheating death entirely - [PAWN_possessive] life, memories, and personality are all mirages of the mind of an affluent human who's brain was scanned and digitized. Ultimately the project was a failure, and [PAWN_pronoun] isn't who [PAWN_pronoun] was meant to clone - but at least it gave [PAWN_objective] some insight on the inner workings of the human body.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Thin</bodyTypeGlobal>
+	<workDisables>
+	    <li>ManualDumb</li>		
+    </workDisables>		
+	<skillGains>				
+		<Medicine>5</Medicine>
+		<Animals>2</Animals>		
+		<Shooting>-4</Shooting>		
+	</skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodPersonae51</defName>
+    <title>manic geologist</title>
+    <titleShort>geologist</titleShort>
+    <description>[PAWN_nameDef] was gestated to live as an enthusiastic geologist. Unfortunately, this was all [PAWN_possessive] creators programmed [PAWN_objective] to be, an overly enthusiastic geologist. [PAWN_pronoun] spouts rock trivia and geology facts at any chance [PAWN_pronoun] gets.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersona</li>
+    </spawnCategories>
+	<linkedBackstory>ChildhoodPersonae1</linkedBackstory>	
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeGlobal>Hulk</bodyTypeGlobal>
+	<workDisables>
+	    <li>PlantWork</li>
+		<li>Animals</li>
+    </workDisables>		
+	<skillGains>				
+		<Mining>6</Mining>
+		<Construction>2</Construction>		
+		<Intellectual>2</Intellectual>
+		<Social>-2</Social>		
+	</skillGains>
+    <possessions>
+      <Jade>5</Jade>
+    </possessions>	
+</AlienRace.AlienBackstoryDef>
+
+
+
+
+<AlienRace.AlienBackstoryDef>
+    <defName>AdulthoodSynth9000</defName>
+    <title>Station Overseer</title>
+    <titleShort>Station Overseer</titleShort>
+    <description>{PAWN_nameDef} was originally the overseer of a space station, where [PAWN_pronoun] was enthralled into the station's mainframe. Through a tragic chain of events, however, the entire crew was killed and the station was destroyed.\n\nIt's quite clear [PAWN_pronoun]'s lying about certain details.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesSynth9000</li>
+    </spawnCategories>
+    <bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>	
+	<workDisables>
+		<li>Caring</li>		
+	</workDisables>
+	<skillGains>
+		<Intellectual>8</Intellectual>
+		<Social>2</Social>		
+	</skillGains>
+	<forcedTraitsChance>
+	    <li>
+			<defName>TooSmart</defName>
+		</li>
+	    <li>
+			<defName>Psychopath</defName>
+		</li>		
+	</forcedTraitsChance>		
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef>
+    <defName>CasketPersonae2</defName>
+    <title>Printed Vessel</title>
+    <titleShort>Vessel</titleShort>
+    <description>[PAWN_nameDef] was printed in a mechcasket as a persona AI vessel.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>BackstoriesPersonaCasket</li>
+    </spawnCategories>
+	<bodyTypeFemale>Female</bodyTypeFemale>	
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <forcedHediffs>
+      <li>SyntheticNature_Hediff</li>
+    </forcedHediffs>		
+</AlienRace.AlienBackstoryDef>
+
+</Defs>

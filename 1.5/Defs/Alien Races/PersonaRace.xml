@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<AlienRace.ThingDef_AlienRace ParentName="BaseSyntheticRace">
+    <defName>Personae_</defName>
+    <label>persona</label>  
+    <description>The avatar of an AI persona core - a fusion of archotech and bleeding-edge technology, their vessels are often analogous and strikingly identical to a live human. They're both reviled and revered by human cultures.</description>   
+    <descriptionHyperlinks><ThingDef>AIPersonaCore</ThingDef></descriptionHyperlinks>
+    <statBases>
+	  <WorkSpeedGlobal>1.2</WorkSpeedGlobal>
+	  <MechBandwidth MayRequire="Ludeon.RimWorld.Biotech">2</MechBandwidth>
+	  <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>	  
+      <ComfyTemperatureMin>-50</ComfyTemperatureMin>
+      <ComfyTemperatureMax>150</ComfyTemperatureMax>
+      <RoyalFavorValue>6</RoyalFavorValue>	  
+      <PawnBeauty>0.5</PawnBeauty>	  
+      <MeleeDodgeChance>1.2</MeleeDodgeChance>	  
+      <MarketValue>5500</MarketValue>
+      <MoveSpeed>4.7</MoveSpeed>
+      <Flammability>0.3</Flammability>
+      <MedicalSurgerySuccessChance>1.2</MedicalSurgerySuccessChance>	  
+      <ResearchSpeed>1.2</ResearchSpeed>
+	  <NegotiationAbility>1.2</NegotiationAbility>
+      <SocialImpact>1.2</SocialImpact>
+      <ArmorRating_Heat>1.80</ArmorRating_Heat>	  
+    </statBases>
+    <tools>
+      <li>
+        <label>teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>8.2</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.07</chanceFactor>
+        <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+        <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+      </li>
+    </tools>
+<alienRace>
+
+<generalSettings>
+
+    <notXenophobistTowards>
+	   <li>Mechanent</li>
+	
+        <li MayRequire="VexedTrees980.RimSkeletons">Skeleton_</li>	
+
+		<li MayRequire="Pal5k.PersonaMechs">PersonaMechRace</li>
+		
+		<li MayRequire="ChJees.Androids">ChjAndroid</li>
+		<li MayRequire="ChJees.Androids">ChjDroid</li>
+		<li MayRequire="peptide.androidsexpanded">ChjSpacerDroid</li>
+		<li MayRequire="peptide.androidsexpanded">NChefDrone</li>
+		<li MayRequire="peptide.androidsexpanded">NEngiDrone</li>
+		<li MayRequire="peptide.androidsexpanded">NMedicDrone</li>		
+		
+		<li MayRequire="Atlas.AndroidTiers">Android1Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">Android2Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">Android3Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">Android4Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">Android5Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">M7Mech</li>
+		<li MayRequire="Atlas.AndroidTiers">M8Mech</li>			
+		
+		<li MayRequire="[O21] Mechadroids">O21_Alien_MechadroidAlpha</li>
+		<li MayRequire="[O21] Mechadroids">O21_Alien_MechadroidDelta</li>
+		<li MayRequire="[O21] Mechadroids">O21_Alien_MechadroidGamma</li>
+		<li MayRequire="[O21] Subpersona Shells">SubAI_SubpersonaShell</li>
+    </notXenophobistTowards>
+
+    <alienPartGenerator>
+    <headBodyPartDef>SyntheticHead</headBodyPartDef>
+    <oldHairAgeRange>9000~9999</oldHairAgeRange>	
+    <bodyTypes>
+	  <li>Female</li>	
+      <li>Male</li>
+	  <li>Fat</li>
+      <li>Thin</li>	  
+	  <li>Hulk</li>
+    </bodyTypes>
+    <headTypes>
+	  <li>Female_PersonaAverage</li>
+	  <li>Female_PersonaAverageWide</li>	
+      <li>Female_PersonaAveragePointy</li>	 	
+	  <li>Female_PersonaNarrow</li>
+	  <li>Female_PersonaNarrowWide</li>	
+      <li>Female_PersonaNarrowPointy</li>	  
+      <li>Female_Persona</li>	
+	  <li>Male_PersonaAverage</li>
+	  <li>Male_PersonaAverageWide</li>	
+      <li>Male_PersonaAveragePointy</li>	 	
+	  <li>Male_PersonaNarrow</li>
+	  <li>Male_PersonaNarrowWide</li>	
+      <li>Male_PersonaNarrowPointy</li>
+      <li>Male_Persona</li>	  	  
+    </headTypes>	 
+    <colorChannels Inherit="False">
+      <li>
+        <name>skin</name>
+        <first Class="ColorGenerator_Options">
+            <options>
+                <!-- Synthetic Skin -->
+                <li>
+					<weight>12</weight>
+                    <only>RGBA(255,255,255)</only>
+				</li>
+                <li>
+					<weight>5.2</weight>
+                    <only>RGBA(242, 237, 224)</only>
+				</li>	
+                <li>
+					<weight>5.5</weight>
+                    <only>RGBA(255, 239, 189)</only>
+				</li>					
+                <li>
+					<weight>5.5</weight>
+                    <only>RGBA(249, 219, 165)</only>
+				</li>
+                <li>
+					<weight>5.58</weight>
+                    <only>RGBA(242, 199, 140)</only>
+				</li>
+                <li>
+					<weight>5.63</weight>
+                    <only>RGBA(228, 158, 90)</only>
+				</li>
+                <li>
+					<weight>5.75</weight>
+                    <only>RGBA(130, 91, 48)</only>
+				</li>	
+                <li>
+					<weight>5.5</weight>
+                    <only>RGBA(228, 158, 90)</only>
+				</li>
+                <li>
+					<weight>5.2</weight>
+                    <only>RGBA(99, 70, 36)</only>
+				</li>				
+				
+				<!-- Blue -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(100, 165, 193)</only>
+                </li>			
+				<!-- Purple -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(97, 87, 195)</only>
+                </li>
+				<!-- Light Red -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(222, 106, 106)</only>
+                </li>					
+				<!-- Red -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(150, 62, 62)</only>
+                </li>	
+				<!-- Light Yellow -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(193, 165, 99)</only>
+                </li>	
+				<!-- Yellow -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(204, 199, 65)</only>
+                </li>				
+				<!-- Orange -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(210, 114, 63)</only>
+                </li>	
+				<!-- Green -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(169,182,108)</only>
+                </li>							
+            </options>
+        </first>
+        <second Class="ColorGenerator_Options">
+            <options>		
+				<!-- Neon Blue -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(57, 57, 255)</only>
+                </li>			
+				<!-- Neon Purple -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(199,16,197)</only>
+                </li>
+				<!-- Neon Teal -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(12, 221, 182)</only>
+                </li>					
+				<!-- Neon Green -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(68,214,44)</only>
+                </li>	
+				<!-- Neon Yellow -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(224,231,34)</only>
+                </li>				
+				<!-- Neon Orange -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(255,173,0)</only>
+                </li>	
+				<!-- Neon Pink -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(219,62,177)</only>
+                </li>				
+				<!-- Neon Red -->
+                <li>
+                   <weight>0.05</weight>
+				   <only>RGBA(210,39,48)</only>
+                </li>
+				<!-- Neon White -->
+                <li>
+                   <weight>0.15</weight>
+				   <only>RGBA(255, 255, 255)</only>
+                </li>
+            </options>
+        </second>		
+      </li>	    
+      <li>
+        <name>hair</name>
+        <first Class="ColorGenerator_Options">
+            <options>		
+				<!-- Light Blue -->
+                <li>
+                   <weight>0.8</weight>
+				   <only>RGBA(34, 63, 227)</only>
+                </li>			
+				<!-- Light Purple -->
+                <li>
+                   <weight>0.8</weight>
+				   <only>RGBA(227, 115, 255)</only>
+                </li>
+				<!-- Light Teal -->
+                <li>
+                   <weight>0.8</weight>
+				   <only>RGBA(52, 191, 182)</only>
+                </li>					
+				<!-- Light Green -->
+                <li>
+                   <weight>0.8</weight>
+				   <only>RGBA(72, 201, 40)</only>
+                </li>	
+				<!-- Orange -->
+                <li>
+                   <weight>0.8</weight>
+				   <only>RGBA(189, 133, 49)</only>
+                </li>	
+				<!-- Pink -->
+                <li>
+                   <weight>0.8</weight>
+				   <only>RGBA(191, 86, 149)</only>
+                </li>				
+				<!-- Red -->
+                <li>
+                   <weight>0.8</weight>
+				   <only>RGBA(191, 86, 86)</only>
+                </li>
+
+				
+				<!-- Blonde -->
+                <li>
+                   <weight>2</weight>
+				   <only>RGBA(237, 202, 156)</only>
+                </li>				
+				<!-- Sandy Blonde -->
+                <li>
+                   <weight>2</weight>
+				   <only>RGBA(193, 146, 85)</only>
+                </li>	
+				
+				<!-- Reddish Brown -->
+                <li>
+                   <weight>2</weight>
+				   <only>RGBA(132, 83, 47)</only>
+                </li>									
+				<!-- Dark Brown -->
+                <li>
+                   <weight>2</weight>
+				   <only>RGBA(90, 58, 32)</only>
+                </li>				
+				<!-- Dark Saturated Reddish -->
+                <li>
+                   <weight>1.5</weight>
+				   <only>RGBA(56, 36, 18)</only>
+                </li>				
+				<!-- Dark Reddish -->
+                <li>
+                   <weight>1.5</weight>
+				   <only>RGBA(0.25, 0.2, 0.15)</only>
+                </li>					
+
+				<!-- Mid Black -->
+                <li>
+                   <weight>1.5</weight>
+				   <only>RGBA(0.31, 0.28, 0.26)</only>
+                </li>				
+				<!-- Dark Black -->
+                <li>
+                   <weight>1.5</weight>
+				   <only>RGBA(0.2, 0.2, 0.2)</only>
+                </li>				
+				<!-- Ink Black -->
+                <li>
+                   <weight>0.5</weight>
+				   <only>RGBA(25, 25, 25)</only>
+                </li>		
+            </options>
+        </first>
+        <second Class="ColorGenerator_Single">
+            <color>RGBA(255, 255, 255)</color>
+        </second>		
+      </li>	  
+    </colorChannels>
+    </alienPartGenerator>	
+	
+    <forcedRaceTraitEntries>	
+	    <li>
+			<defName>Asexual</defName>
+			<chance>5</chance>
+		</li>	
+    </forcedRaceTraitEntries>	
+	
+ 	<disallowedTraits>
+		<li>
+			<defName>Gourmand</defName>
+		</li>	
+		<li>
+			<defName>Cannibal</defName>
+		</li>		
+		<li>
+			<defName>BodyPurist</defName>
+		</li>
+		<li>
+			<defName>Transhumanist</defName>
+		</li>		
+		<li>
+			<defName>Immunity</defName>
+		</li>
+		<li>
+		    <defName>DrugDesire</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_RefinedPalate</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_IronStomach</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Squeamish</defName>
+		</li>	
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Technophobe</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_DrunkenMaster</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Stoner</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Lush</defName>
+		</li>
+		<li MayRequire="VexedTrees980.RimElvesBiotech">
+			<defName>RE_SuperiorityComplex</defName>
+		</li>		
+ 	</disallowedTraits>		
+
+    <maleGenderProbability>0.5</maleGenderProbability>
+	
+</generalSettings>    
+
+
+<graphicPaths>
+	    <body>RobotRace/Body_Persona/</body>
+        <head>RobotRace/Head_Persona/</head>
+</graphicPaths>
+
+    <styleSettings>
+        <li>
+            <key>HairDef</key>
+            <value>
+                <hasStyle>true</hasStyle>
+            </value>
+        </li>
+        <li>
+            <key>BeardDef</key>
+            <value>
+                <hasStyle>true</hasStyle>
+            </value>
+        </li>
+        <li>
+            <key>TattooDef</key>
+            <value>
+                <hasStyle>true</hasStyle>
+            </value>
+        </li>
+    </styleSettings>
+
+<relationSettings>
+    <relationChanceModifierChild>0</relationChanceModifierChild>
+    <relationChanceModifierParent>0</relationChanceModifierParent>
+    <relationChanceModifierSibling>0</relationChanceModifierSibling>
+</relationSettings>
+       
+
+ <thoughtSettings>
+ 
+    <butcherThoughtGeneral>
+	    <thought>ButcheredSyntheticCorpse</thought> <!-- Whoever dismantles the persona is unsettled. -->
+		<knowThought>SyntheticButcher</knowThought>  <!-- The colony at large doesn't give a shit. -->
+	</butcherThoughtGeneral>
+
+    <replacerList>
+        <li>
+		    <original>NeedFood</original>
+			<replacer>ReactorNeedsSynthetic</replacer>
+	    </li>	
+        <li>
+		    <original>EnvironmentCold</original>
+			<replacer>EnvironmentColdSynthetic</replacer>
+	    </li>			
+        <li>
+		    <original>EnvironmentHot</original>
+			<replacer>EnvironmentHotSynthetic</replacer>
+	    </li>
+        <li>
+		    <original>Sick</original>
+			<replacer>SynthSick</replacer>
+	    </li>
+        <li>
+		    <original>RotStink</original>
+			<replacer>RotStinkSynth</replacer>
+	    </li>
+        <li>
+		    <original>RotStinkLingering</original>
+			<replacer>RotStinkLingeringSynth</replacer>
+	    </li>		
+        <li>
+		    <original MayRequire="Ludeon.RimWorld.Royalty">DefeatedMechCluster</original>
+			<replacer MayRequire="Ludeon.RimWorld.Royalty">MechClusterRobot</replacer>
+	    </li>
+        <li>		
+			<original MayRequire="Ludeon.RimWorld.Ideology">TendedByMedicalSpecialist</original>
+			<replacer MayRequire="Ludeon.RimWorld.Ideology">MedicalSpecialistRobot</replacer>
+	    </li>			
+    </replacerList>  
+</thoughtSettings>
+
+<raceRestriction>		
+	<blackApparelList>
+	    <li MayRequire="OskarPotocki.VFE.Pirates">
+			<defName>VFEP_Apparel_Rumsuit</defName>
+	    </li>	
+	</blackApparelList>
+</raceRestriction>
+
+<compatibility>
+	<isFlesh>false</isFlesh>
+	<isSentient>true</isSentient>
+	<hasBlood>true</hasBlood>
+</compatibility>
+
+</alienRace>
+<race>
+      <nameGenerator>NamerPersonSynthMale</nameGenerator>
+      <nameGeneratorFemale>NamerPersonSynthFemale</nameGeneratorFemale>	
+      <body>PersonaeBody</body>
+	  <fleshType>VexedSynthetic</fleshType>
+	  <bloodDef>Filth_SynthBlood</bloodDef>
+	  <bloodSmearDef>Filth_SynthBloodSmear</bloodSmearDef>
+      <baseHealthScale>1</baseHealthScale>
+	  <baseHungerRate>0.0001</baseHungerRate>
+      <knowledgeCategory MayRequire="Ludeon.RimWorld.Anomaly">Basic</knowledgeCategory>
+      <anomalyKnowledge>1</anomalyKnowledge>
+      <lifeStageAges> 
+        <li>
+          <def>RR_PersonaFullyFormed</def>
+          <minAge>0</minAge>
+        </li>
+      </lifeStageAges>	  
+      <ageGenerationCurve>
+        <points>
+			<li>(0,0)</li>
+			<li>(10,5)</li>
+			<li>(20,10)</li>
+			<li>(40,45)</li>
+			<li>(50,60)</li>
+			<li>(150,80)</li>
+			<li>(600,100)</li>
+			<li>(1000,50)</li>
+			<li>(1500,30)</li>
+			<li>(2000,10)</li>
+			<li>(2500,0)</li>
+        </points>
+      </ageGenerationCurve> 	  
+      <hediffGiverSets>
+        <li>PersonaStandard</li>
+		<li MayRequire="Killathon.AndroidTiersReforged">ATR_MechanicalStandard</li>
+      </hediffGiverSets>  	  
+</race>	
+	<modExtensions>	
+	    <li Class="VexedThings.HumanlikeMechanoidsExtension">
+		    <canFallIll>false</canFallIll>
+			<canRunWild>false</canRunWild>
+			<canFeelPain>true</canFeelPain>
+			<seeInDarkness>false</seeInDarkness>
+			<incapableOfLove>false</incapableOfLove>
+			<isResurrectedNormally>true</isResurrectedNormally>
+			<canBeStunnedByEMP>true</canBeStunnedByEMP>
+			<corpseIsImperishable>true</corpseIsImperishable>
+			<corpseIsInedible>true</corpseIsInedible>
+			<corpseIsNotDisturbing>false</corpseIsNotDisturbing>
+			<disableBreathVapors>true</disableBreathVapors>			
+			<disregardsPawnBeauty>false</disregardsPawnBeauty>
+			<devourerDigestable>false</devourerDigestable> <!-- Requires Anomaly. Causes devourers to regurgitate these pawns. -->			
+			<blackListedJobs>
+		        <li>Vomit</li>
+			</blackListedJobs>	
+			<blackListedNeeds>
+		        <li MayRequire="sindre0830.universum">VME_NeedSweets</li>
+			</blackListedNeeds>				
+			<blackListedHediffs>	
+			    <li>Anesthetic</li>
+			    <li>TraumaSavant</li>
+		        <li>FoodPoisoning</li>
+				<li>CryptosleepSickness</li>
+			    <li MayRequire="sindre0830.universum">Universum_Decompression_Hediff</li>
+		        <li MayRequire="sindre0830.universum">Universum_Suffocation_Hediff</li>			
+			</blackListedHediffs>			
+		</li>	
+	    <li Class="ATReforged.ATR_MechTweaker" MayRequire="Killathon.AndroidTiersReforged">
+		    <canInherentlyUseSkyMind>true</canInherentlyUseSkyMind>		
+		</li>			
+	</modExtensions>
+    <comps>
+      <li MayRequire="Ludeon.RimWorld.Anomaly" Class="CompProperties_HoldingPlatformTarget">
+        <baseEscapeIntervalMtbDays>120</baseEscapeIntervalMtbDays>
+        <getsColdContainmentBonus>true</getsColdContainmentBonus>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly" Class="CompProperties_Studiable">
+        <frequencyTicks>120000</frequencyTicks>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <requiresImprisonment>true</requiresImprisonment>
+      </li>
+    </comps>	
+</AlienRace.ThingDef_AlienRace>
+</Defs>

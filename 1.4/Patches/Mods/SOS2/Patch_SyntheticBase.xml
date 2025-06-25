@@ -6,6 +6,7 @@
     </mods>
     <match Class="PatchOperationAdd">
       <xpath>/Defs/AlienRace.ThingDef_AlienRace[@name="BaseSyntheticPawn"]</xpath>
+	  <value>
         <tradeTags>
           <li>AnimalInsectSpace</li>
         </tradeTags>

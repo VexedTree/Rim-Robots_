@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <RecipeDef Name="RR_BaseSubpersonaResurrectionRecipe" ParentName="RR_BaseSubpersonaRecipe" Abstract="True">
+    <mechResurrection>true</mechResurrection>
+    <jobString>Resurrecting subpersona.</jobString>
+    <fixedIngredientFilter>
+      <specialFiltersToAllow>
+        <li>AllowCorpsesSyntheticlikeFriendly</li>
+      </specialFiltersToAllow>
+    </fixedIngredientFilter>
+    <forceHiddenSpecialFilters>
+      <li>AllowCorpsesSyntheticlikeFriendly</li>
+    </forceHiddenSpecialFilters>
+  </RecipeDef>  
+
+  <RecipeDef Name="RR_BasePersonaResurrectionRecipe" ParentName="RR_BasePersonaRecipe" Abstract="True">
+    <mechResurrection>true</mechResurrection>
+    <jobString>Resurrecting persona.</jobString>
+    <fixedIngredientFilter>
+      <specialFiltersToAllow>
+        <li>AllowCorpsesSyntheticlikeFriendly</li>
+      </specialFiltersToAllow>
+    </fixedIngredientFilter>
+    <forceHiddenSpecialFilters>
+      <li>AllowCorpsesSyntheticlikeFriendly</li>
+    </forceHiddenSpecialFilters>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RR_BaseSubpersonaResurrectionRecipe">
+    <defName>ResurrectMechanent</defName>
+    <label>resurrect mechanent</label>
+    <description>Resurrect a friendly mechanent of the humanoid class. So long as the mechanent's body is not completely destroyed, it can be resurrected.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Corpses</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>175</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Corpse_Mechanent</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RR_BasePersonaResurrectionRecipe">
+    <defName>ResurrectPersonae_</defName>
+    <label>resurrect persona</label>
+    <description>Resurrect a friendly persona of the humanoid class. So long as the personae' body is not completely destroyed, it can be resurrected.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Corpses</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>120</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Corpse_Personae_</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+</Defs>

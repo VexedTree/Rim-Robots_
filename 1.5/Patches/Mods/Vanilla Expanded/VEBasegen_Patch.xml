@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch> 
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Base Generation Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/FactionDef[defName="SynthCivil"]</xpath>
+					<value>
+						<li Class="KCSG.CustomGenOption">
+    			            <chooseFromSettlements>
+     			                <li>VBGE_OutlanderProduction</li>
+     			                <li>VBGE_OutlanderMining</li>
+     			                <li>VBGE_OutlanderLogging</li>
+     			                <li>VBGE_OutlanderDefence</li>
+      			                <li>VBGE_OutlanderFields</li>
+       			            </chooseFromSettlements>
+       			            <preventBridgeable>true</preventBridgeable>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/FactionDef[defName="SynthEvil"]</xpath>
+					<value>
+						<li Class="KCSG.CustomGenOption">
+    			            <chooseFromSettlements>
+     			                <li>VBGE_OutlanderProduction</li>
+     			                <li>VBGE_OutlanderMining</li>
+      			                <li>VBGE_OutlanderSlavery</li>
+								<li>VBGE_PirateSlavery</li>
+     			                <li>VBGE_OutlanderLogging</li>
+     			                <li>VBGE_OutlanderDefence</li>
+								<li>VBGE_PiratesDefence</li>
+       			            </chooseFromSettlements>
+       			            <preventBridgeable>true</preventBridgeable>
+							<symbolResolvers>
+       			                <li>kcsg_randomfilth</li>
+       			            </symbolResolvers>
+       			            <filthTypes>
+       			                <li>Filth_Dirt</li>
+       			                <li>Filth_Trash</li>
+       			                <li>Filth_RubbleBuilding</li>
+       			            </filthTypes>
+						</li>
+					</value>
+				</li>				
+			</operations>
+		</match>
+	</Operation>  
+</Patch>

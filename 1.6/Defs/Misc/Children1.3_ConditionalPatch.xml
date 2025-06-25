@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<BabiesAndChildren.AlienChildDef MayRequire="babies.and.children.continued.13">
+		<defName>Mechanent</defName>
+		<disableBackstories>true</disableBackstories>
+	</BabiesAndChildren.AlienChildDef>
+
+	<BabiesAndChildren.AlienChildDef MayRequire="babies.and.children.continued.13">
+		<defName>Personae_</defName>
+		<disableBackstories>true</disableBackstories>
+	</BabiesAndChildren.AlienChildDef>
+</Defs>

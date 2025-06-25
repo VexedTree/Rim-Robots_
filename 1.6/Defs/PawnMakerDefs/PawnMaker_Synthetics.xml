@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="RRSpawnerBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>ThingWithComps</thingClass>
+    <passability>Standable</passability>
+    <selectable>false</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+	<tickerType>Normal</tickerType>
+  </ThingDef>
+
+    <!-- Mechanents -->
+    <ThingDef ParentName="RRSpawnerBase">
+        <defName>Printed_Mechanent_Spawner</defName>
+		<label>mechanent</label>
+        <thingClass>Building</thingClass>
+        <graphicData>
+            <texPath>Buildings/Blank/Null</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+        </graphicData>		
+        <size>(1,1)</size>	
+        <comps>
+            <li Class="VexedThings.CompProps_SynthMaker">
+                <pawnKinds>
+				    <li>Printed_Mechanent</li>
+				</pawnKinds>
+            </li>
+        </comps>		
+    </ThingDef>	
+
+    <!-- Personae -->		
+    <ThingDef ParentName="RRSpawnerBase">
+        <defName>Printed_Persona_Spawner</defName>
+		<label>persona</label>
+        <thingClass>Building</thingClass>
+        <graphicData>
+            <texPath>Buildings/Blank/Null</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>		
+        </graphicData>		
+        <size>(1,1)</size>
+        <comps>
+            <li Class="VexedThings.CompProps_SynthMaker">
+                <pawnKinds>
+				    <li>Printed_Persona</li>
+				</pawnKinds>
+            </li>
+        </comps>
+    </ThingDef>	
+</Defs>

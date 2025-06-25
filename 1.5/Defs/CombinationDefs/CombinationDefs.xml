@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ItemProcessor.CombinationDef>
+		<defName>RR_PrintPawnMechanent</defName>
+		<building>MechCreationCasket</building>	
+		<items>
+			<li>ComponentMechanent</li>
+		</items>			
+		<amount>
+			<li>1</li>
+		</amount>
+		<result>Printed_Mechanent_Spawner</result>	
+		<yield>1</yield>		
+		<useQualityIncreasing>false</useQualityIncreasing>
+		<singleTimeIfNotQualityIncreasing>0.1</singleTimeIfNotQualityIncreasing>
+	</ItemProcessor.CombinationDef>
+			
+	<ItemProcessor.CombinationDef>
+		<defName>RR_PrintPawnPersona</defName>
+		<building>MechCreationCasket</building>
+		<items>
+			<li>ComponentPersona</li>
+		</items>			
+		<amount>
+			<li>1</li>
+		</amount>
+		<result>Printed_Persona_Spawner</result>
+		<yield>1</yield>
+		<useQualityIncreasing>false</useQualityIncreasing>
+		<singleTimeIfNotQualityIncreasing>0.1</singleTimeIfNotQualityIncreasing>
+	</ItemProcessor.CombinationDef>	
+	
+	<ItemProcessor.CombinationDef>
+		<defName>RR_ChargePowerCell</defName>
+		<building>IndustrialChargePylon</building>
+		<items>
+			<li>Steel</li>
+		</items>			
+		<amount>
+			<li>15</li>
+		</amount>
+		<result>FuelNode_SynthDiet</result>
+		<yield>1</yield>
+		<useQualityIncreasing>false</useQualityIncreasing>
+		<singleTimeIfNotQualityIncreasing>0.1</singleTimeIfNotQualityIncreasing>
+	</ItemProcessor.CombinationDef>	
+</Defs>

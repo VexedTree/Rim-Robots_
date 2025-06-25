@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>RR_SyntaxGlitch_Collapse</defName>
+    <workerClass>ThoughtWorker_HediffThoughtRandom</workerClass>
+    <developmentalStageFilter>Adult</developmentalStageFilter>
+    <hediff>RR_HumanlikeMechanoidResurrectionMadness</hediff>
+    <labelInBracketsExtraForHediff>collapse</labelInBracketsExtraForHediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>behavioral error collapse</label>
+        <description>Ha-a-at-red... Wh--at... T--hey di-i-id to me.</description>
+        <baseMoodEffect>-14</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RR_SyntaxGlitch_Down</defName>
+    <workerClass>ThoughtWorker_HediffThoughtRandom</workerClass>
+    <developmentalStageFilter>Adult</developmentalStageFilter>
+    <hediff>RR_HumanlikeMechanoidResurrectionMadness</hediff>
+    <labelInBracketsExtraForHediff>down</labelInBracketsExtraForHediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>behavioral error down</label>
+        <description>Ha--rd metal. Hurt. M-min-d my..</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RR_SyntaxGlitch_Up</defName>
+    <workerClass>ThoughtWorker_HediffThoughtRandom</workerClass>
+    <developmentalStageFilter>Adult</developmentalStageFilter>
+    <labelInBracketsExtraForHediff>happy</labelInBracketsExtraForHediff>
+    <hediff>RR_HumanlikeMechanoidResurrectionMadness</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>behavioral error happy</label>
+        <description>Wh-a-at a lov--ely. Flo--ati-ng.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RR_SyntaxGlitch_High</defName>
+    <thoughtClass>ThoughtWorker_HediffThoughtRandom</thoughtClass>
+    <developmentalStageFilter>Adult</developmentalStageFilter>
+    <hediff>RR_HumanlikeMechanoidResurrectionMadness</hediff>
+    <labelInBracketsExtraForHediff>euphoric</labelInBracketsExtraForHediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>behavioral error euphoric</label>
+        <description>Fl--ow.. Rea-ach ou-t. T-t-tou-ch lo-ove.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

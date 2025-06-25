@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<AlienRace.ThingDef_AlienRace ParentName="BaseSyntheticRace">
+    <defName>Mechanent</defName>
+    <label>mechanent</label>  
+    <description>A humanlike-mechanoid that utilizes a highly sophisticated subpersona core to approach a live human in its thought complexity; however, their "minds" are of a very different nature, and are incapable of emulating complex emotions.\n\nWhile they possess a degree of individuality, mechanents are not fully sentient - relying on mimicry of human behavior to appear less mechanical.</description>   	
+    <statBases>
+	  <WorkSpeedGlobal>0.8</WorkSpeedGlobal>
+	  <MechBandwidth MayRequire="Ludeon.RimWorld.Biotech">1</MechBandwidth>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
+      <MoveSpeed>4.5</MoveSpeed>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>250</ComfyTemperatureMax>
+	  <RoyalFavorValue>3</RoyalFavorValue>
+      <MarketValue>4500</MarketValue>	      
+      <CarryingCapacity>85</CarryingCapacity>
+      <MentalBreakThreshold>0.2</MentalBreakThreshold>
+      <PainShockThreshold>0.9</PainShockThreshold>
+      <ResearchSpeed>0.8</ResearchSpeed>
+      <SocialImpact>0.5</SocialImpact>
+      <PlantHarvestYield>0.8</PlantHarvestYield>
+      <ConstructionSpeed>1.2</ConstructionSpeed>
+      <ArmorRating_Blunt>0.072</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.185</ArmorRating_Sharp>
+      <ArmorRating_Heat>2.00</ArmorRating_Heat>	 	  
+    </statBases>				
+<alienRace>
+
+<generalSettings>
+
+    <notXenophobistTowards>
+	   <li>Personae_</li>
+	
+        <li MayRequire="VexedTrees980.RimSkeletons">Skeleton_</li>	
+		
+		<li MayRequire="Pal5k.PersonaMechs">PersonaMechRace</li>	
+		
+		<li MayRequire="ChJees.Androids">ChjAndroid</li>
+		<li MayRequire="ChJees.Androids">ChjDroid</li>
+		<li MayRequire="peptide.androidsexpanded">ChjSpacerDroid</li>
+		<li MayRequire="peptide.androidsexpanded">NChefDrone</li>
+		<li MayRequire="peptide.androidsexpanded">NEngiDrone</li>
+		<li MayRequire="peptide.androidsexpanded">NMedicDrone</li>		
+		
+		<li MayRequire="Atlas.AndroidTiers">Android1Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">Android2Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">Android3Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">Android4Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">Android5Tier</li>
+		<li MayRequire="Atlas.AndroidTiers">M7Mech</li>
+		<li MayRequire="Atlas.AndroidTiers">M8Mech</li>			
+		
+		<li MayRequire="[O21] Mechadroids">O21_Alien_MechadroidAlpha</li>
+		<li MayRequire="[O21] Mechadroids">O21_Alien_MechadroidDelta</li>
+		<li MayRequire="[O21] Mechadroids">O21_Alien_MechadroidGamma</li>
+		<li MayRequire="[O21] Subpersona Shells">SubAI_SubpersonaShell</li>
+    </notXenophobistTowards>
+
+    <alienPartGenerator>
+    <headBodyPartDef>MechanicalHead</headBodyPartDef>	
+    <bodyTypes>
+	  <li>Female</li>	
+      <li>Male</li>
+	  <li>Fat</li>
+      <li>Thin</li>	
+      <li>Hulk</li>	  
+    </bodyTypes>
+    <headTypes>  <!-- (16 headtypes)  Making this note just so I can be lazy and not keep track so much. -->	
+      <li>None_Basic</li>
+      <li>None_Labor</li>
+      <li>None_Logic</li>	  
+      <li>None_Medic</li>	  
+      <li>None_Recon</li>
+      <li>None_Ghost</li> 
+	  <li>None_Combat</li> 
+	  <li>None_Hakita</li>	
+      <li>None_Bipede</li>
+	  <li>None_Legion</li>	
+      <li>None_Scyther</li>	  	  
+	  <li>None_Drifter</li>
+	  <li>None_Nuclear</li>
+	  <li>None_Slasher</li>
+	  <li>None_Penitent</li>
+	  <li>None_Socialist</li>
+      <li>None_Wayfinder</li>	  
+    </headTypes>
+    <colorChannels Inherit="False">
+      <li>
+        <name>skin</name>
+        <first Class="ColorGenerator_Options">
+            <options>
+			    <!-- Mechanoid White -->
+                <li>
+					<weight>12</weight>
+                    <only>RGBA(1.0,1.0,1.0)</only>
+                </li>			
+			    <!-- Mechanoid Pale -->
+                <li>
+                   <weight>12</weight>
+				   <only>RGBA(203,207,195)</only>
+                </li>	
+			    <!-- Mechanoid -->
+                <li>
+                   <weight>8</weight>
+				   <only>RGBA(178,183,162)</only>
+                </li>	
+			    <!-- Mechanoid Dark -->
+                <li>
+                   <weight>6</weight>
+				   <only>RGBA(158,163,142)</only>
+                </li>																
+            </options>
+        </first>
+		<second Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>100</weight>
+					<only>RGBA(255, 255, 255, 255)</only>
+				</li>
+			</options>
+		</second>		
+      </li>
+    </colorChannels>
+    </alienPartGenerator>
+	
+    <forcedRaceTraitEntries/>	
+    
+ 	<disallowedTraits>
+		<li>
+			<defName>NightOwl</defName>
+		</li>			
+		<li>
+			<defName>Nudist</defName>
+		</li>	
+		<li>
+			<defName>Wimp</defName>
+		</li>
+		<li>
+			<defName>Greedy</defName>
+		</li>		
+		<li>
+			<defName>CreepyBreathing</defName>
+		</li>		
+		<li>
+		    <defName>Gay</defName>
+		</li>		
+		<li>
+			<defName>Bisexual</defName>
+		</li>	
+		<li>
+		    <defName>Asexual</defName>
+		</li>		
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_ThinSkinned</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_ThickSkinned</defName>
+		</li>	
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_HeavySleeper</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Insomniac</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Insatiable</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Prude</defName>
+		</li>
+		<li MayRequire="divineDerivative.Romance">
+			<defName>Faithful</defName>
+		</li>
+		<li MayRequire="divineDerivative.Romance">
+			<defName>Philanderer</defName>
+		</li>	
+		<li MayRequire="divineDerivative.Romance">
+			<defName>BiAce</defName>
+		</li>
+		<li MayRequire="divineDerivative.Romance">
+			<defName>HomoAce</defName>
+		</li>
+		<li MayRequire="divineDerivative.Romance">
+			<defName>HeteroAce</defName>
+		</li>
+		<li MayRequire="divineDerivative.Romance">
+			<defName>Straight</defName>
+		</li>
+		<li>
+			<defName>Gourmand</defName>
+		</li>	
+		<li>
+			<defName>Cannibal</defName>
+		</li>		
+		<li>
+			<defName>BodyPurist</defName>
+		</li>
+		<li>
+			<defName>Transhumanist</defName>
+		</li>		
+		<li>
+			<defName>Immunity</defName>
+		</li>
+		<li>
+		    <defName>DrugDesire</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_RefinedPalate</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_IronStomach</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Squeamish</defName>
+		</li>	
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Technophobe</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_DrunkenMaster</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Stoner</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Lush</defName>
+		</li>
+		<li MayRequire="VexedTrees980.RimElvesBiotech">
+			<defName>RE_SuperiorityComplex</defName>
+		</li>			
+ 	</disallowedTraits>
+	
+</generalSettings>    
+
+
+<graphicPaths>
+    	<body>RobotRace/Body_Mechanent/</body>
+        <head>RobotRace/Head_Mechanent/</head>
+    	<stump>RobotRace/Stump_Mechanent/SynthNeck</stump>  <!-- This leads to a blank item canvas, so when this pawn is decapitated it won't show a 'fleshy' neck. -->
+        <skinShader>Cutout</skinShader>
+</graphicPaths>
+
+    <styleSettings Inherit="False">
+        <li>
+            <key>HairDef</key>
+            <value>
+                <hasStyle>false</hasStyle>
+            </value>
+        </li>
+        <li>
+            <key>BeardDef</key>
+            <value>
+                <hasStyle>false</hasStyle>
+            </value>
+        </li>
+        <li>
+            <key>TattooDef</key>
+            <value>
+                <hasStyle>false</hasStyle>
+            </value>
+        </li>
+    </styleSettings>
+
+<relationSettings>
+    <relationChanceModifierChild>0</relationChanceModifierChild>
+    <relationChanceModifierExLover>0</relationChanceModifierExLover>
+    <relationChanceModifierExSpouse>0</relationChanceModifierExSpouse>
+    <relationChanceModifierFiance>0</relationChanceModifierFiance>
+    <relationChanceModifierLover>0</relationChanceModifierLover>
+    <relationChanceModifierParent>0</relationChanceModifierParent>
+    <relationChanceModifierSibling>0</relationChanceModifierSibling>
+    <relationChanceModifierSpouse>0</relationChanceModifierSpouse>
+</relationSettings> 
+
+ <thoughtSettings Inherit="False">
+    <cannotReceiveThoughts>
+          <li>Naked</li>
+		  <li>Pain</li>
+		  <li>InsultedMood</li>
+		  <li>KindWordsMood</li>		  
+		  <li>AteWithoutTable</li>	  
+		  <li>AteRawHumanlikeMeat</li>
+		  <li>ButcheredHumanlikeCorpse</li>
+		  <li>KnowButcheredHumanlikeCorpse</li>	
+		  <li>ButcheredHumanlikeCorpseOpinion</li>
+		  <li>KnowButcheredHumanlikeCorpse</li>
+		  <li>DeadMansApparel</li>
+		  <li>HumanLeatherApparelSad</li>
+		  <li>HumanLeatherApparelHappy</li>
+		  <li>NeedOutdoors</li>
+		  <li>SoakingWet</li>
+		  <li>SleepDisturbed</li>
+		  <li>WrongApparelGender</li>
+		  <li>WantToSleepWithSpouseOrLover</li>	  
+		  <li>NewColonyOptimism</li>
+		  <li>NewColonyHope</li>
+	      <li>SleptOnGround</li>
+          <li>FreedFromSlavery</li>
+		  <li>KnowPrisonerSold</li>
+		  <li>ReleasedHealthyPrisoner</li>
+		  <li>KnowGuestOrganHarvested</li>
+		  <li>KnowColonistOrganHarvested</li>
+		  <li>KnowBuriedInSarcophagus</li>
+		  <li>Nuzzled</li>
+		  <li>ObservedLayingCorpse</li>	
+	      <li>RotStink</li>
+	      <li>RotStinkLingering</li>		  
+		  <li>WitnessedDeathFamily</li>	  
+		  <li>WitnessedDeathNonAlly</li>
+		  <li>DeniedJoining</li>
+		  <li>ColonistBanished</li>		  		  
+		  <li>ColonistBanishedToDie</li>			  
+		  <li>PrisonerBanishedToDie</li>	
+		  <li>SoldMyLovedOne</li>
+		  <li>SoldMyBondedAnimalMood</li>
+		  <li>GotSomeLovin</li>
+		  <li>RebuffedMyRomanceAttemptMood</li>		  
+		  <li>Rescued</li>
+		  <li>RescuedRelative</li>
+		  <li>FailedToRescueRelative</li>
+		  
+		  <li MayRequire="Ludeon.RimWorld.Royalty">AteFoodInappropriateForTitle</li>
+		  <li MayRequire="Ludeon.RimWorld.Royalty">DefeatedMechCluster</li>
+
+		  <li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPawns_Hatred_Died</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPawns_Veneration_Died</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">NeedNeuralSupercharge</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">BioSculpterDespised</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">BiosculpterPleasure</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">MasochistWearingCollar</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">MasochistWearingBodyStrap</li>	
+		  <li MayRequire="Ludeon.RimWorld.Ideology">SleptInRoomWithSlave</li>	  
+		  <li MayRequire="Ludeon.RimWorld.Ideology">ButcheredHuman_Abhorrent</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">ButcheredHuman_Know_Abhorrent</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">ButcheredHuman_Know_Abhorrent_Opinion</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">HumanLeatherApparel_Abhorrent</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">ButcheredHuman_Horrible</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">ButcheredHuman_Know_Horrible</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">ButcheredHuman_Know_Horrible_Opinion</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">HumanLeatherApparel_Horrible</li>	
+		  <li MayRequire="Ludeon.RimWorld.Ideology">ButcheredHuman_Disapproved</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">ButcheredHuman_Know_Disapproved</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">ButcheredHuman_Know_Disapproved_Opinion</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">HumanLeatherApparel_Disapproved</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">HumanLeatherApparel_Preferred</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">HumanLeatherApparel_RequiredStrong</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AteNonCannibalFood_Know_Horrible</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AteNonCannibalFood_Know_Abhorrent</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">HumanLeatherApparel_RequiredRavenous</li>		  
+		  
+		  <li MayRequire="Ludeon.RimWorld.Biotech">GigglingBaby</li>
+		  <li MayRequire="Ludeon.RimWorld.Biotech">MyGigglingBaby</li>	
+		  <li MayRequire="Ludeon.RimWorld.Biotech">CryingBaby</li>		  
+		  <li MayRequire="Ludeon.RimWorld.Biotech">MyCryingBaby</li>			  
+		  <li MayRequire="Ludeon.RimWorld.Biotech">KilledChild</li>	  
+		  <li MayRequire="Ludeon.RimWorld.Biotech">NoxiousHaze</li>
+
+		  <li MayRequire="Ludeon.RimWorld.Anomaly">DeathPall</li>			  
+		  <li MayRequire="Ludeon.RimWorld.Anomaly">GrayPall</li>
+          <li MayRequire="Ludeon.RimWorld.Anomaly">SpokeToDisturbingMood</li>		  
+		  <li MayRequire="Ludeon.RimWorld.Anomaly">UnnaturalCorpse</li>
+		  <li MayRequire="Ludeon.RimWorld.Anomaly">UnnaturalDarkness</li>
+		  <li MayRequire="Ludeon.RimWorld.Anomaly">SleepSuppressor</li>			  
+		  <li MayRequire="Ludeon.RimWorld.Anomaly">WearingDreadLeather</li>	  
+		  <li MayRequire="Ludeon.RimWorld.Anomaly">DeadlifeDust</li>
+		  <li MayRequire="Ludeon.RimWorld.Anomaly">Chimera</li>
+		  <li MayRequire="Ludeon.RimWorld.Anomaly">ImprisonedWithEntity</li>		  
+		  <li MayRequire="Ludeon.RimWorld.Anomaly">PsychicRitualGuilt</li>	  
+		  <li MayRequire="Ludeon.RimWorld.Anomaly">HeardInhumanRambling</li>
+		  <li MayRequire="Ludeon.RimWorld.Anomaly">BecameGhoul</li>		  
+		  
+		  <li MayRequire="ReGrowth.BOTR.Core">RG_Wet</li>		  
+          <li MayRequire="ReGrowth.BOTR.Core">RG_ExtremelyWet</li>  
+		  <li MayRequire="ReGrowth.BOTR.Core">RG_HotSpringWet</li>
+    </cannotReceiveThoughts>	
+
+    <butcherThoughtGeneral>
+	    <thought>SyntheticButcher</thought>          <!-- The colony at large doesn't care if this pawn is dismantled, unless Ideology is running. -->
+		<knowThought>SyntheticButcher</knowThought>
+	</butcherThoughtGeneral>    
+	
+    <ateThoughtSpecific/>
+
+    <replacerList>
+        <li>
+		    <original>NeedFood</original>
+			<replacer>ReactorNeedsSynthetic</replacer>
+	    </li>
+        <li>
+		    <original>Sick</original>
+			<replacer>SynthSick</replacer>
+	    </li>
+        <li>
+		    <original>MyOrganHarvested</original>
+			<replacer>MyPartsHarvestedRobot</replacer>
+	    </li>	
+        <li>
+		    <original>WasImprisoned</original>
+			<replacer>WasImprisonedRobot</replacer>
+	    </li>
+        <li>
+		    <original>ObservedLayingRottingCorpse</original>
+			<replacer>ObservedLayingRottingCorpseRobot</replacer>
+	    </li>	
+        <li>
+		    <original>WitnessedDeathAlly</original>
+			<replacer>WitnessedDeathAllyRobot</replacer>
+	    </li>		
+        <li>
+		    <original>WitnessedDeathBloodlust</original>
+			<replacer>WitnessedDeathBloodlustRobot</replacer>
+	    </li>
+        <li>
+		    <original>KilledHumanlikeBloodlust</original>
+			<replacer>KilledHumanlikeBloodlustRobot</replacer>
+	    </li>	
+        <li>
+		    <original>ColonyPrisonerEscaped</original>
+			<replacer>ColonyPrisonerEscapedRobot</replacer>
+	    </li>	
+        <li>
+		    <original>Catharsis</original>
+			<replacer>CatharsisRobot</replacer>
+	    </li>	
+        <li>
+		    <original>RescuedMeByOfferingHelp</original>
+			<replacer>RescuedMeByOfferingHelpRobot</replacer>
+	    </li>	
+        <li>
+		    <original>SleptOutside</original>
+			<replacer>SleptOutsideRobot</replacer>
+	    </li>		
+        <li>
+		    <original>DefeatedInsectHive</original>
+			<replacer>DefeatedInsectHiveRobot</replacer>
+	    </li>
+        <li>
+		    <original MayRequire="Ludeon.RimWorld.Royalty">AnimaScream</original>
+			<replacer MayRequire="Ludeon.RimWorld.Royalty">AnimaScreamRobot</replacer>
+	    </li>		
+        <li>
+		    <original MayRequire="Ludeon.RimWorld.Royalty">Joyfuzz</original>
+			<replacer MayRequire="Ludeon.RimWorld.Royalty">JoyfuzzRobot</replacer>
+	    </li>		
+        <li>		
+			<original MayRequire="Ludeon.RimWorld.Ideology">TendedByMedicalSpecialist</original>
+			<replacer MayRequire="Ludeon.RimWorld.Ideology">MedicalSpecialistRobot</replacer>
+	    </li>		
+        <li>		
+			<original MayRequire="Ludeon.RimWorld.Anomaly">VoidFascination</original>
+			<replacer MayRequire="Ludeon.RimWorld.Anomaly">VoidFascinationRobot</replacer>
+	    </li>
+        <li>		
+			<original MayRequire="Ludeon.RimWorld.Anomaly">VoidPleasure</original>
+			<replacer MayRequire="Ludeon.RimWorld.Anomaly">VoidPleasureRobot</replacer>			
+	    </li>
+        <li>
+		    <original MayRequire="Ludeon.RimWorld.Anomaly">VoidCuriosity</original>
+			<replacer MayRequire="Ludeon.RimWorld.Anomaly">VoidCuriosityRobot</replacer>
+	    </li>		
+        <li>
+		    <original MayRequire="Ludeon.RimWorld.Anomaly">VoidCuriositySatisfied</original>
+			<replacer MayRequire="Ludeon.RimWorld.Anomaly">VoidCuriositySatisfiedRobot</replacer>
+	    </li>		
+        <li>		
+			<original MayRequire="Ludeon.RimWorld.Anomaly">EmbracedTheVoid</original>
+			<replacer MayRequire="Ludeon.RimWorld.Anomaly">EmbracedTheVoidRobot</replacer>
+	    </li>
+        <li>		
+			<original MayRequire="Ludeon.RimWorld.Anomaly">ClosedTheVoid</original>
+			<replacer MayRequire="Ludeon.RimWorld.Anomaly">ClosedTheVoidRobot</replacer>			
+	    </li>
+        <li>		
+			<original MayRequire="Ludeon.RimWorld.Anomaly">VoidClosed</original>
+			<replacer MayRequire="Ludeon.RimWorld.Anomaly">VoidClosedRobot</replacer>			
+	    </li>		
+		
+        <li>
+		    <original MayRequire="ReGrowth.BOTR.Core">RG_Sandy</original>
+			<replacer MayRequire="ReGrowth.BOTR.Core">RG_Sandy_Synth</replacer>
+	    </li>		
+    </replacerList>  	
+</thoughtSettings>
+
+<raceRestriction>	
+	<blackApparelList>
+	    <li>Apparel_PsychicFoilHelmet</li>
+	    <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_PsyfocusHelmet</li>
+	    <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_EltexSkullcap</li>	  	  
+	    <li MayRequire="Ludeon.RimWorld.Ideology">Apparel_TortureCrown</li>	   
+	    <li MayRequire="Ludeon.RimWorld.Biotech">Apparel_ClothMask</li>	 	
+	    <li MayRequire="Ludeon.RimWorld.Biotech">Apparel_GasMask</li>	 		
+
+	    <li MayRequire="CETeam.CombatExtended">
+			<defName>CE_Apparel_GasMask</defName>
+	    </li>
+	    <li MayRequire="CETeam.CombatExtended">
+			<defName>CE_Apparel_ImprovGasMask</defName>
+	    </li>	    
+	    <li MayRequire="VanillaExpanded.VanillaApparelExpanded">
+			<defName>VAE_Headgear_GasMask</defName>
+	    </li> 	 		
+	    <li MayRequire="VanillaExpanded.VanillaArmourExpanded">
+			<defName>VAE_Headgear_HAZMATMask</defName>
+	    </li> 	 		
+	    <li MayRequire="VanillaExpanded.VanillaArmourExpanded">
+			<defName>VAE_Apparel_HAZMATSuit</defName>
+	    </li>	
+	    <li MayRequire="OskarPotocki.VFE.Pirates">
+			<defName>VFEP_Apparel_Rumsuit</defName>
+	    </li>		
+	</blackApparelList>
+</raceRestriction>
+
+<compatibility>
+	<isFlesh>false</isFlesh>
+	<isSentient>true</isSentient>
+	<hasBlood>true</hasBlood>
+</compatibility>
+
+</alienRace>  
+<race>
+	  <nameGenerator>NamerPersonSynthNonGendered</nameGenerator>
+      <body>CasteBody</body>
+	  <fleshType>VexedMechanical</fleshType>
+	  <bloodDef>Filth_MachineBits</bloodDef>
+      <baseHealthScale>1.15</baseHealthScale>
+	  <baseHungerRate>0.5</baseHungerRate>
+	  <needsRest>false</needsRest>
+	  <hasGenders>false</hasGenders>
+      <knowledgeCategory MayRequire="Ludeon.RimWorld.Anomaly">Basic</knowledgeCategory>
+      <anomalyKnowledge>1</anomalyKnowledge>		
+      <lifeStageAges>	  
+        <li>
+          <def>RR_PersonaFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>BulletImpact_Metal</soundWounded>
+          <soundDeath>BulletImpact_Metal</soundDeath>
+        </li>	
+      </lifeStageAges> 
+      <ageGenerationCurve>
+        <points>
+			<li>(0,0)</li>
+			<li>(10,6)</li>
+			<li>(20,18)</li>
+			<li>(40,45)</li>
+			<li>(50,68)</li>
+			<li>(150,100)</li>
+			<li>(600,100)</li>
+			<li>(1000,60)</li>
+			<li>(1500,18)</li>
+			<li>(2000,10)</li>
+			<li>(2500,3)</li>
+			<li>(3000,0)</li>
+        </points>
+      </ageGenerationCurve>		   
+      <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+      <hediffGiverSets>
+        <li>MechanentStandard</li>
+		<li MayRequire="Killathon.AndroidTiersReforged">ATR_MechanicalStandard</li>
+      </hediffGiverSets>  	  
+</race>
+	<modExtensions>	
+	    <li Class="VexedThings.HumanlikeMechanoidsExtension">	
+		    <canFallIll>false</canFallIll>
+			<canRunWild>false</canRunWild>
+			<canFeelPain>false</canFeelPain>
+			<seeInDarkness>true</seeInDarkness>
+			<incapableOfLove>true</incapableOfLove>
+			<isResurrectedNormally>false</isResurrectedNormally>
+			<canBeStunnedByEMP>true</canBeStunnedByEMP>
+			<corpseIsImperishable>true</corpseIsImperishable>
+			<corpseIsInedible>true</corpseIsInedible>
+			<corpseIsNotDisturbing>true</corpseIsNotDisturbing>
+			<disableBreathVapors>true</disableBreathVapors>			
+			<disregardsPawnBeauty>true</disregardsPawnBeauty>
+			<revenantTargetable>false</revenantTargetable> <!-- Requires Anomaly. Stops revenants from kidnapping these pawns. -->
+			<devourerDigestable>false</devourerDigestable> <!-- Requires Anomaly. Causes devourers to regurgitate these pawns. -->
+			<whiteListedDrugs>
+		        <li>Luciferium</li>
+			</whiteListedDrugs>		
+			<blackListedJobs>
+		        <li>Vomit</li>
+			</blackListedJobs>
+			<blackListedNeeds>
+		        <li>Comfort</li>
+		        <li>Outdoors</li>
+				<li>Beauty</li>
+			</blackListedNeeds>				
+			<blackListedHediffs>
+			    <li>Anesthetic</li>
+			    <li>TraumaSavant</li>
+		        <li>FoodPoisoning</li>
+				<li>CryptosleepSickness</li>
+				<li MayRequire="Ludeon.RimWorld.Royalty">PsychicVertigo</li>
+				<li MayRequire="Ludeon.RimWorld.Anomaly">PainField</li>
+				<li MayRequire="Ludeon.RimWorld.Anomaly">AgonyPulse</li>
+			    <li MayRequire="sindre0830.universum">Universum_Decompression_Hediff</li>
+		        <li MayRequire="sindre0830.universum">Universum_Suffocation_Hediff</li>						
+			</blackListedHediffs>				
+		</li>	
+	</modExtensions>
+    <comps>
+      <li MayRequire="Ludeon.RimWorld.Anomaly" Class="CompProperties_HoldingPlatformTarget">
+        <baseEscapeIntervalMtbDays>120</baseEscapeIntervalMtbDays>
+        <getsColdContainmentBonus>false</getsColdContainmentBonus>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly" Class="CompProperties_Studiable">
+        <frequencyTicks>120000</frequencyTicks>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <requiresImprisonment>true</requiresImprisonment>
+      </li>
+    </comps>	
+</AlienRace.ThingDef_AlienRace>
+</Defs>

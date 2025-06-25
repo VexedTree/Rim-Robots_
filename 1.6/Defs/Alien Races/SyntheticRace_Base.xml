@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="BaseSyntheticPawn" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <containedPawnsSelectable>true</containedPawnsSelectable>
+    <containedItemsSelectable>true</containedItemsSelectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+	<drawHighlight>true</drawHighlight>
+    <statBases>
+      <Mass>60</Mass>
+    </statBases>
+    <race>
+      <renderTree>Misc</renderTree>
+    </race>	
+    <inspectorTabs>
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Training</li>
+      <li>ITab_Pawn_Social</li>
+      <li>ITab_Pawn_Guest</li>
+      <li>ITab_Pawn_Prisoner</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">ITab_Pawn_Slave</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">ITab_Pawn_Feeding</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">ITab_Entity</li>
+      <li>ITab_Pawn_FormingCaravan</li>
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Log</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+  </ThingDef>
+  
+<AlienRace.ThingDef_AlienRace ParentName="BaseSyntheticPawn"  Name="BaseSyntheticRace" Abstract="True">
+    <statBases>
+	  <Fertility MayRequire="Ludeon.RimWorld.Biotech">0</Fertility>
+	  <DecompressionResistance MayRequire="kentington.saveourship2">1</DecompressionResistance>
+	  <HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+	  <VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
+      <ToxicResistance>1</ToxicResistance>
+	  <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance> 
+	  <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1</VacuumResistance>
+	  <PersonaEnergyLossPerHP>0.02</PersonaEnergyLossPerHP>
+	  <TendSpeed_Synth>1</TendSpeed_Synth>
+	  <MeatAmount>0</MeatAmount>	  
+      <LeatherAmount>0</LeatherAmount>	
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>	
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>	  
+    </tools>	
+    <comps/>	
+<alienRace>
+<generalSettings>
+    
+	<minAgeForAdulthood>0</minAgeForAdulthood>
+    <humanRecipeImport>false</humanRecipeImport>
+    <allowHumanBios>false</allowHumanBios>
+    <immuneToAge>false</immuneToAge>		
+    <corpseCategory>CorpsesSyntheticlike</corpseCategory>
+	
+</generalSettings>        
+
+ <thoughtSettings>
+	
+    <ateThoughtSpecific/> 
+	
+    <cannotReceiveThoughts>	
+	      <li>NeedFood</li>
+		  <li>EnvironmentDark</li>
+		  <li>EnvironmentCold</li>
+		  <li>EnvironmentHot</li>		  
+
+		  <li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPawns_Hatred_Died</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPawns_Veneration_Died</li>		  
+		  <li MayRequire="Ludeon.RimWorld.Ideology">NoRecentHumanMeat_Preferred</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">NoRecentHumanMeat_RequiredStrong</li>		  
+		  <li MayRequire="Ludeon.RimWorld.Ideology">NoRecentHumanMeat_RequiredRavenous</li>	
+		  <li MayRequire="Ludeon.RimWorld.Ideology">HAR_NoRecentAlienMeat_Preferred</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">HAR_NoRecentAlienMeat_RequiredStrong</li>		  		  
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AteNonCannibalFood_Horrible</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AteNonCannibalFood_Know_Horrible</li>	
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AteNonCannibalFood_Abhorrent</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AteNonCannibalFood_Know_Abhorrent</li>		  
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AgeReversalReceived</li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">AgeReversalDemanded</li>	  
+    </cannotReceiveThoughts>	
+	
+    <restrictedThoughts>
+	   <li>SynthSick</li>
+	   <li>FullyCharged</li>
+       <li>ReactorNeedsSynthetic</li>
+       <li>EnvironmentColdSynthetic</li>
+       <li>EnvironmentHotSynthetic</li>	  
+	   <li>BrawlerUnhappyRobot</li>
+	   <li>RotStinkSynth</li>
+	   <li>RotStinkLingeringSynth</li>
+	   <li>MyPartsHarvestedRobot</li>	
+       <li>WasImprisonedRobot</li>	   
+	   <li>CatharsisRobot</li>
+	   <li>ColonyPrisonerEscapedRobot</li>
+	   <li>KilledHumanlikeBloodlustRobot</li>
+	   <li>WitnessedDeathBloodlustRobot</li>
+	   <li>ObservedLayingRottingCorpseRobot</li>	
+	   <li>RescuedMeByOfferingHelpRobot</li>
+	   <li>SleptOutsideRobot</li>
+	   <li>DefeatedInsectHiveRobot</li>
+       <li MayRequire="Ludeon.RimWorld.Royalty">MechClusterRobot</li>
+	   <li MayRequire="Ludeon.RimWorld.Royalty">AnimaScreamRobot</li>
+	   <li MayRequire="Ludeon.RimWorld.Royalty">JoyfuzzRobot</li>
+	   
+       <li MayRequire="Ludeon.RimWorld.Ideology">MedicalSpecialistRobot</li>
+	   <li MayRequire="Ludeon.RimWorld.Ideology">NoRecentHumanMeat_Preferred</li>
+	   <li MayRequire="Ludeon.RimWorld.Ideology">NoRecentHumanMeat_RequiredStrong</li>
+	   <li MayRequire="Ludeon.RimWorld.Ideology">NoRecentHumanMeat_RequiredRavenous</li>	   
+	   <li MayRequire="Ludeon.RimWorld.Ideology">AteNonCannibalFood_Horrible</li>
+	   <li MayRequire="Ludeon.RimWorld.Ideology">AteNonCannibalFood_Abhorrent</li>	   
+	   
+       <li MayRequire="Ludeon.RimWorld.Anomaly">BloodRageRobot</li>
+	   <li MayRequire="Ludeon.RimWorld.Anomaly">CubeWithdrawlRobot</li>
+	   <li MayRequire="Ludeon.RimWorld.Anomaly">VoidFascinationRobot</li>
+	   <li MayRequire="Ludeon.RimWorld.Anomaly">VoidPleasureRobot</li>
+	   <li MayRequire="Ludeon.RimWorld.Anomaly">VoidCuriosityRobot</li>
+	   <li MayRequire="Ludeon.RimWorld.Anomaly">VoidCuriositySatisfiedRobot</li>
+	   <li MayRequire="Ludeon.RimWorld.Anomaly">EmbracedTheVoidRobot</li>
+	   <li MayRequire="Ludeon.RimWorld.Anomaly">ClosedTheVoidRobot</li>	
+	   <li MayRequire="Ludeon.RimWorld.Anomaly">VoidClosedRobot</li>	
+	   
+       <li MayRequire="ReGrowth.BOTR.Core">RG_Sandy_Synth</li>		   
+    </restrictedThoughts>		   	
+</thoughtSettings>
+
+<raceRestriction>	
+    <foodList>
+	   <li>Chemfuel</li>
+	   <li>Uranium</li>
+	   <li>FuelNode_SynthDiet</li>
+	   <li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_Coal</li>
+    </foodList>	
+	
+    <traitList>
+        <li>Anthropophobia</li>
+    </traitList>
+    <blackTraitList>
+        <li>Automatonophobia</li>
+    </blackTraitList>	
+	
+    <onlyEatRaceRestrictedFood>true</onlyEatRaceRestrictedFood>		
+    <onlyUseRaceRestrictedXenotypes>true</onlyUseRaceRestrictedXenotypes>
+	<onlyHaveRaceRestrictedGenes>true</onlyHaveRaceRestrictedGenes>
+    <canReproduce>false</canReproduce>
+	
+    <whiteXenotypeList>
+	    <li MayRequire="Ludeon.RimWorld.Biotech">Baseliner</li>
+    </whiteXenotypeList>
+    <whiteGeneList>
+	    <li MayRequire="vanillaracesexpanded.android">VREA_SyntheticBody</li>
+    </whiteGeneList>	
+	
+    <blackEndoCategories MayRequire="Ludeon.RimWorld.Biotech">
+        <li>Melanin</li>
+        <li>HairColor</li>		
+        <li>Ears</li>
+        <li>Nose</li>		
+        <li>Jaw</li>
+        <li>Hands</li>
+        <li>Headbone</li>
+        <li>Head</li>		
+        <li>Voice</li>		
+    </blackEndoCategories>
+	
+</raceRestriction>
+<relationSettings>
+    <renamer>
+        <li>
+            <relation>Parent</relation>
+            <label>Creator</label>
+        </li>
+    </renamer>
+</relationSettings>
+</alienRace>   
+<race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>2500</lifeExpectancy>
+	  <hasMeat>false</hasMeat>
+      <nameCategory>HumanStandard</nameCategory>
+      <renderTree>Humanlike</renderTree>
+	  <canBePredatorPrey>false</canBePredatorPrey>
+	  <canBeVacuumBurnt>false</canBeVacuumBurnt>
+	  <isImmuneToInfections>true</isImmuneToInfections>
+      <baseBodySize>1</baseBodySize>
+	  <foodType>4</foodType>	  <!-- Note: The reason why we have just the number 4 here is because the bit-value 4 is a 'void' diet, meaning they eat nothing - however with Royalty enabled we HAVE to have a functioning diet as recreation & meditation needs are lumped into the diet value for some unknown reason. -->
+      <gestationPeriodDays>18</gestationPeriodDays>
+      <manhunterOnDamageChance>0.50</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.10</manhunterOnTameFailChance>
+      <soundCallIntervalRange>2000~5000</soundCallIntervalRange>
+      <canBecomeShambler>false</canBecomeShambler>
+      <knowledgeCategory MayRequire="Ludeon.RimWorld.Anomaly">Basic</knowledgeCategory>
+      <anomalyKnowledge>1</anomalyKnowledge>	  	   	  
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <specialShadowData>
+        <volume>(0.3, 0.8, 0.4)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </specialShadowData>  
+</race>
+    <recipes>
+      <li>AdministerMechSerumHealer</li>	  
+    </recipes>
+    <ingredient>
+      <mergeCompatibilityTags>
+        <li>HumanMeat</li>
+      </mergeCompatibilityTags>
+    </ingredient>	
+    <butcherProducts>
+      <Steel>45</Steel>
+      <Plasteel>30</Plasteel>
+    </butcherProducts>			
+</AlienRace.ThingDef_AlienRace>
+</Defs>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RecipeDef MayRequire="Ludeon.RimWorld.Anomaly" ParentName="SurgeryMechanical">
+    <defName>RR_MechanicalInspection</defName>
+    <label>mechanical inspection</label>
+    <description>An invasive inspection to find any hidden abnormalities within a persona.</description>
+    <workerClass>Recipe_SurgicalInspection</workerClass>
+    <jobString>Surgically inspecting TargetA.</jobString>
+    <workAmount>2000</workAmount>
+	<anesthetize>false</anesthetize>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <targetsBodyPart>false</targetsBodyPart>
+    <isViolation>false</isViolation>
+    <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+    <surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+    <uiIconPath>Motes/Flecks/RepairMote</uiIconPath>
+    <recipeUsers>
+      <li>Mechanent</li>
+	  <li>Personae_</li>
+    </recipeUsers>	
+    <skillRequirements>
+      <Crafting>3</Crafting>
+    </skillRequirements>
+	<ingredients>
+	    <li>
+			<filter>
+				<thingDefs>
+					<li>ComponentIndustrial</li>
+				</thingDefs>
+			</filter>
+			<count>2</count>
+		</li>
+	</ingredients>
+    <fixedIngredientFilter>
+	    <thingDefs>
+            <li>ComponentIndustrial</li>
+		</thingDefs>
+    </fixedIngredientFilter>
+    <surgeryOutcomeEffect>SurgeryOutcomeMinorFailure</surgeryOutcomeEffect>
+  </RecipeDef>
+
+</Defs>

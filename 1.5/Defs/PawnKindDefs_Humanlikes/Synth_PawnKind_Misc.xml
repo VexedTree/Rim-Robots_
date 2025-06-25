@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+  
+  <PawnKindDef>
+    <defName>Printed_Mechanent</defName>
+    <label>mechanent</label>
+	<labelPlural>mechanents</labelPlural>
+	<race>Mechanent</race>	
+    <combatPower>5</combatPower>		
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>BackstoriesMechanentCasket</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <chronologicalAgeRange>0~0.001</chronologicalAgeRange>	
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <gearHealthRange>0</gearHealthRange>
+    <apparelMoney>0</apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <techHediffsChance>0</techHediffsChance>
+    <initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>5~10</initialResistanceRange>	
+    <pawnGroupDevelopmentStage>Adult</pawnGroupDevelopmentStage>	
+  </PawnKindDef>
+  
+  <PawnKindDef>
+    <defName>Printed_Persona</defName>
+    <label>persona</label>
+	<labelPlural>personae</labelPlural>
+	<race>Personae_</race>
+    <combatPower>5</combatPower>		
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>BackstoriesPersonaCasket</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+	<chronologicalAgeRange>0~0.001</chronologicalAgeRange>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <gearHealthRange>0</gearHealthRange>
+    <apparelMoney>0</apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <techHediffsChance>0</techHediffsChance>
+    <initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>5~10</initialResistanceRange>	
+    <pawnGroupDevelopmentStage>Adult</pawnGroupDevelopmentStage>	
+  </PawnKindDef>  
+</Defs>

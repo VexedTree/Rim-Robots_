@@ -211,6 +211,12 @@
     <graphicPath>RobotRace/Head_Mechanent/Penitent</graphicPath>
     <gender>None</gender>
   </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AverageBaseSynth">
+    <defName>None_Socialist</defName>
+    <graphicPath>RobotRace/Head_Mechanent/Socialist</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>   
 
   <HeadTypeDef ParentName="AverageBaseSynth">
     <defName>None_Wayfinder</defName>

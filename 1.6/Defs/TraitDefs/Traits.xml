@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <TraitDef>
+        <defName>Automatonophobia</defName>
+        <commonality>0.4</commonality>
+        <degreeDatas>
+            <li>
+                <label>automatonophobe</label>
+                <description>[PAWN_nameDef] despises artificial humanoids. {PAWN_pronoun} sees them as the potential downfall of all biological sentience.</description>
+            </li>
+        </degreeDatas>
+		<conflictingTraits>
+            <li>Anthropophobia</li>
+        </conflictingTraits>
+    </TraitDef>
+	
+    <TraitDef>
+        <defName>Anthropophobia</defName>
+        <commonality>0.8</commonality>
+        <degreeDatas>
+            <li>
+                <label>anthropophobe</label>
+                <description>[PAWN_nameDef] despises biological humanoids. {PAWN_pronoun} sees them as a disease that must be snuffed out.</description>
+                <degree>1</degree>
+                <commonality>0.6</commonality>
+            </li>
+            <li>
+                <label>anthropophile</label>
+                <description>[PAWN_nameDef] exists to serve humanity. {PAWN_pronoun} has an unshakable yet endearing infatuation with biological sentience.</description>
+                <degree>0</degree>
+                <commonality>0.45</commonality>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Automatonophobia</li>
+        </conflictingTraits>		
+    </TraitDef>	
+</Defs>

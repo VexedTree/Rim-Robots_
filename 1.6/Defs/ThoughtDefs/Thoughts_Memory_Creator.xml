@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--===================== Creator Death =====================-->
+
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyCreatorDiedMale</defName>
+	<nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>my creator {0} died</label>
+        <description>My creator died. He made me, and now he's gone.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyCreatorDiedFemale</defName>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>	
+    <stages>
+      <li>
+        <label>my creator {0} died</label>
+        <description>My creator died. She made me, and now she's gone.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <!--===================== Creator Lost =====================-->  
+  
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyCreatorLostMale</defName>
+    <stages>
+      <li>
+        <label>my creator {0} lost</label>
+        <description>My creator has been lost. I hope he will return to us someday.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>  
+  
+  <ThoughtDef ParentName="LostMemoryFamily">
+    <defName>MyCreatorLostFemale</defName>
+    <stages>
+      <li>
+        <label>my creator {0} lost</label>
+        <description>My creator has been lost. I hope she will return to us someday.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>   
+  
+  <!--===================== Creator Killed By =====================-->  
+ 
+  <ThoughtDef>
+    <defName>KilledMyCreator</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>120</durationDays>
+    <stackLimit>300</stackLimit>
+    <stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>killed my creator</label>
+        <baseOpinionOffset>-60</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <!--===================== Creator Sold =====================-->   
+  
+  <ThoughtDef>
+    <defName>SoldMyCreator</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>120</durationDays>
+    <stackLimit>10</stackLimit>
+    <stackLimitForSameOtherPawn>2</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>creator was sold</label>
+        <labelSocial>sold my creator</labelSocial>
+        <description>My creator was sold to a trader like cattle.</description>
+        <baseOpinionOffset>-10</baseOpinionOffset>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>  
+   
+</Defs>

@@ -14,7 +14,7 @@
       <PawnBeauty>0.5</PawnBeauty>	  
       <MeleeDodgeChance>1.2</MeleeDodgeChance>	  
       <MarketValue>5500</MarketValue>
-      <MoveSpeed>5.0</MoveSpeed>
+      <MoveSpeed>4.7</MoveSpeed>
       <Flammability>0.3</Flammability>
       <MedicalSurgerySuccessChance>1.2</MedicalSurgerySuccessChance>
       <InjuryHealingFactor>0.8</InjuryHealingFactor>	  
@@ -308,6 +308,51 @@
 			<chance>5</chance>
 		</li>	
     </forcedRaceTraitEntries>	
+	
+ 	<disallowedTraits>
+		<li>
+			<defName>Gourmand</defName>
+		</li>	
+		<li>
+			<defName>Cannibal</defName>
+		</li>		
+		<li>
+			<defName>BodyPurist</defName>
+		</li>
+		<li>
+			<defName>Transhumanist</defName>
+		</li>		
+		<li>
+			<defName>Immunity</defName>
+		</li>
+		<li>
+		    <defName>DrugDesire</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_RefinedPalate</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_IronStomach</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Squeamish</defName>
+		</li>	
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Technophobe</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_DrunkenMaster</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Stoner</defName>
+		</li>
+		<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+			<defName>VTE_Lush</defName>
+		</li>
+		<li MayRequire="VexedTrees980.RimElvesBiotech">
+			<defName>RE_SuperiorityComplex</defName>
+		</li>		
+ 	</disallowedTraits>		
 
     <maleGenderProbability>0.5</maleGenderProbability>
 	
@@ -353,8 +398,6 @@
 	    <thought>ButcheredSyntheticCorpse</thought> <!-- Whoever dismantles the persona is unsettled. -->
 		<knowThought>SyntheticButcher</knowThought>  <!-- The colony at large doesn't give a shit. -->
 	</butcherThoughtGeneral>
-	
-    <ateThoughtSpecific/>
 
     <replacerList>
         <li>
@@ -407,7 +450,7 @@
       <body>PersonaeBody</body>
       <fleshType>VexedSynthetic</fleshType>	  
       <bloodDef>Filth_SynthBlood</bloodDef>
-      <baseHealthScale>0.9</baseHealthScale>  	    
+      <baseHealthScale>0.95</baseHealthScale>  	    
       <baseHungerRate>0.0001</baseHungerRate>	  
       <needsRest>true</needsRest>	  
 	  <hasGenders>true</hasGenders>	  	  
@@ -430,5 +473,34 @@
 		<li MayRequire="Killathon.AndroidTiersReforged">ATR_MechanicalStandard</li>
       </hediffGiverSets>  	  
 </race>	
+	<modExtensions>	
+	    <li Class="VexedThings.HumanlikeMechanoidsExtension">
+		    <canFallIll>true</canFallIll>
+			<canRunWild>false</canRunWild>
+			<canFeelPain>true</canFeelPain>
+			<seeInDarkness>false</seeInDarkness>
+			<incapableOfLove>false</incapableOfLove>
+			<isResurrectedNormally>true</isResurrectedNormally>
+			<canBeStunnedByEMP>true</canBeStunnedByEMP>
+			<corpseIsImperishable>true</corpseIsImperishable>
+			<corpseIsInedible>true</corpseIsInedible>
+			<corpseIsNotDisturbing>false</corpseIsNotDisturbing>
+			<disableBreathVapors>true</disableBreathVapors>			
+			<disregardsPawnBeauty>false</disregardsPawnBeauty>
+			<blackListedJobs>
+		        <li>Vomit</li>
+			</blackListedJobs>	
+			<blackListedHediffs>		
+			    <li>TraumaSavant</li>
+		        <li>FoodPoisoning</li>
+				<li>CryptosleepSickness</li>
+			    <li MayRequire="sindre0830.universum">Universum_Decompression_Hediff</li>
+		        <li MayRequire="sindre0830.universum">Universum_Suffocation_Hediff</li>			
+			</blackListedHediffs>			
+		</li>	
+	    <li Class="ATReforged.ATR_MechTweaker" MayRequire="Killathon.AndroidTiersReforged">
+		    <canInherentlyUseSkyMind>true</canInherentlyUseSkyMind>		
+		</li>			
+	</modExtensions>
 </AlienRace.ThingDef_AlienRace>
 </Defs>

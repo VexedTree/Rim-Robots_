@@ -1,0 +1,587 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>MyPartsHarvestedRobot</defName>
+    <durationDays>8</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>my components harvested</label>
+        <description>The colony has removed some of my parts. They're breaking me down.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>WasImprisonedRobot</defName>
+    <durationDays>12</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>was imprisoned</label>
+        <description>I was deemed to be apprehended and incarcerated.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>  
+
+  <ThoughtDef>
+    <defName>SynthSick</defName>
+    <workerClass>ThoughtWorker_Sick</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>mechanite affliction</label>
+        <description>Mechanites are invading my circuitry.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>BrawlerUnhappyRobot</defName>
+    <workerClass>ThoughtWorker_IsCarryingRangedWeapon</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <requiredTraits>
+      <li>Brawler</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>brawler has ranged weapon</label>
+        <description>Ranged combat is non-optimal. I was programmed to kill in close quarters.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>ObservedLayingRottingCorpseRobot</defName>
+    <icon>Things/Mote/ThoughtSymbol/Skull</icon>
+    <showBubble>true</showBubble>
+    <thoughtClass>Thought_MemoryObservation</thoughtClass>
+    <durationDays>0.5</durationDays>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stackLimit>5</stackLimit>
+    <nullifyingTraits>
+      <li>Bloodlust</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>observed rotting corpse</label>
+        <description>Disgusting.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>WitnessedDeathAllyRobot</defName>
+    <icon>Things/Mote/ThoughtSymbol/Skull</icon>
+    <showBubble>true</showBubble>
+    <durationDays>2</durationDays>
+    <stackLimit>5</stackLimit>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+      <li>Bloodlust</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>witnessed ally's death</label>
+        <description>They died. How jarring.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>WitnessedDeathBloodlustRobot</defName>
+    <icon>Things/Mote/ThoughtSymbol/Skull</icon>
+    <showBubble>true</showBubble>
+    <durationDays>4</durationDays>
+    <stackLimit>5</stackLimit>
+    <requiredTraits>
+      <li>Bloodlust</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>witnessed death with bloodlust</label>
+        <description>Insect. Pathetic creatures of meat and bone.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>KilledHumanlikeBloodlustRobot</defName>
+    <icon>Things/Mote/ThoughtSymbol/Skull</icon>
+    <showBubble>true</showBubble>
+    <durationDays>4</durationDays>
+    <stackLimit>5</stackLimit>
+    <requiredTraits>
+      <li>Bloodlust</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>killed someone</label>
+        <description>Blood is fuel.</description>
+        <baseMoodEffect>12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>  
+ 
+  <ThoughtDef>
+    <defName>ColonyPrisonerEscapedRobot</defName>
+    <durationDays>6</durationDays>
+    <stackLimit>5</stackLimit>
+    <showBubble>true</showBubble>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>Colonist prisoner escaped</label>
+        <description>They have made a mistake.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef> 
+
+  <ThoughtDef>
+    <defName>CatharsisRobot</defName>
+    <durationDays>3</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>recalibrating</label>
+        <description>My sub-personal systems have experienced a catastrophic meltdown. Recalibration in progress..</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>  
+
+  <ThoughtDef>
+    <defName>RescuedMeByOfferingHelpRobot</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>30</durationDays>
+    <stackLimit>300</stackLimit>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+    <showBubble>true</showBubble>
+    <stages>
+      <li>
+        <label>rescued me</label>
+        <description>I was rescued by someone. Socialization code dictates that I express gratitude.</description>
+        <baseOpinionOffset>15</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>RotStinkSynth</defName>
+    <workerClass>ThoughtWorker_RotStink</workerClass>
+	<nullifyingTraits>
+      <li>Psychopath</li>
+	  <li>Bloodlust</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>rot stink</label>
+        <description>A rotten stink invades my nostrils and sticks to my skin. Sure glad I won't decay like that..</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+      <li>
+        <label>awful rot stink</label>
+        <description>The stench of rot is so thick I almost feel like I'm swimming in it. This is absolutely horrendous!</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RotStinkLingeringSynth</defName>
+    <workerClass>ThoughtWorker_RotStinkLingering</workerClass>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+	  <li>Bloodlust</li>
+    </nullifyingTraits>	
+    <stages>
+      <li>
+        <label>rot stink lingering</label>
+        <description>That rot stink was horrible - and it feels like it's still stuck to me.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef> 
+
+  <ThoughtDef>
+    <defName>SleptOutsideRobot</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <nullifyingPrecepts>
+      <li MayRequire="Ludeon.RimWorld.Ideology">RoughLiving_Welcomed</li>
+    </nullifyingPrecepts>
+    <stages>
+      <li>
+        <label>laid outside</label>
+        <description>I had to lay outdoors without any protection from the elements.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>  
+  
+ 
+  <!-- Ideology -->
+  
+  <ThoughtDef>
+    <defName>MedicalSpecialistRobot</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>4</durationDays>
+    <stages>
+      <li>
+        <label>tended by {0}</label>
+        <description>I received "medical aid" from the healer of my ideoligion.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+	
+  <ThoughtDef>
+    <defName>DefeatedInsectHiveRobot</defName>
+    <icon>Things/Mote/ThoughtSymbol/Skull</icon>
+    <showBubble>true</showBubble>
+    <durationDays>10</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>defeated insect hive</label>
+        <description>The loathsome vermin have been exterminated.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>	
+	
+  <!-- Royalty -->	
+  
+  <ThoughtDef>
+    <defName>MechClusterRobot</defName>
+    <icon>Things/Mote/ThoughtSymbol/Skull</icon>
+    <showBubble>true</showBubble>
+    <durationDays>10</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>defeated mech cluster</label>
+        <description>A hostile mechanoid cluster was defeated.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>  
+
+  <ThoughtDef>
+    <defName>AnimaScreamRobot</defName>
+    <durationDays>5</durationDays>
+    <stackLimit>3</stackLimit>
+    <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
+    <stages>
+      <li>
+        <label>anima scream</label>
+        <description>Since the tree died my core has been experiencing psychic feedback.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>JoyfuzzRobot</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>Joyfuzz</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>joyfuzz</label>
+        <description>I am experiencing a foreign syntax - processing...</description>
+        <baseMoodEffect>25</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>	
+  
+  
+  
+  <!-- Biotech --> 
+  
+  
+  <!-- Anomaly -->
+  
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>BloodRageRobot</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>BloodRage</hediff>
+    <stackLimit>1</stackLimit>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>blood rage</label>
+        <baseMoodEffect>0</baseMoodEffect>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>blood rage</label>
+        <description>Hate... Maim... Hurt...</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+      <li>
+        <label>blood rage</label>
+        <description>BURNING HATERED.</description>
+        <baseMoodEffect>-16</baseMoodEffect>
+      </li>
+      <li>
+        <label>blood rage</label>
+        <description>NEED TO HURT SOMETHING.</description>
+        <baseMoodEffect>-22</baseMoodEffect>
+      </li>
+      <li>
+        <label>blood rage</label>
+        <description>ERADICATE.</description>
+        <baseMoodEffect>-28</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>CubeWithdrawlRobot</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>CubeWithdrawal</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>cube withdrawal</label>
+        <description>The cube has embedded itself in my syntax. I require it to function.</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+      <li>
+        <label>cube withdrawal</label>
+        <description>ERR DETECT: Null except-tion.. c-cube.. CUBE. I N-EED IT.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+      <li>
+        <label>cube withdrawal</label>
+        <description>CRIT ERR DETECT: W-WHE-RE IS MY C-C-CUBE.</description>
+        <baseMoodEffect>-30</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>VoidFascinationRobot</defName>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <workerClass>ThoughtWorker_VoidFascination</workerClass>
+    <stages>
+      <li>
+        <label>captured entity</label>
+        <description>A magnificent specimen. The perfect candidate for vivisection.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+    <requiredTraits>
+      <li>VoidFascination</li>
+    </requiredTraits>
+  </ThoughtDef>  
+  
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>VoidPleasureRobot</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <hediff>Inhumanized</hediff>
+    <stages>
+      <li>
+        <label>void pleasure</label>
+        <description>The endless black sea. It leaks into my syntax.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>VoidCuriosityRobot</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>10</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>Void curiosity</label>
+        <description>ERR DETECT: Drawn to endless expanse, performance of void provocation ritual.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>VoidCuriositySatisfiedRobot</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>10</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>Void curiosity satisfied</label>
+        <description>I saw.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>  
+  
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>EmbracedTheVoidRobot</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>60</durationDays>
+    <stages>
+      <li>
+        <label>embraced the void</label>
+        <description>Ennd-Le-sss blac- conNscio-us-ss-nesS. T-oo r-R-raw for my mi-iIm-icry of a mi-Nd. AsCe-en-ssion w-IT-thin gRaa-Asp.</description>
+        <baseMoodEffect>14</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>  
+  
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>ClosedTheVoidRobot</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>60</durationDays>
+    <stages>
+      <li>
+        <label>closed the void</label>
+        <description>An error in reality. No more.</description>
+        <baseMoodEffect>14</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>  
+
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>VoidClosedRobot</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>30</durationDays>
+    <stages>
+      <li>
+        <label>void closed</label> 
+        <description>The error in reality was corrected.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>  
+  
+  
+  <!-- Range -->  
+  
+  <ThoughtDef>
+    <defName>ReactorNeedsSynthetic</defName>
+    <workerClass>ThoughtWorker_NeedFood</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>fuel need</label>
+        <description>My deposits needs fuel.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+      <li>
+        <label>fuel deficiency</label>
+        <description>My fuel deposits are running low.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+      <li>
+        <label>fuel deprivation</label>
+        <description>I've burnt through most of my fuel deposits. I need to refuel.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+      <li>
+        <label>fuel starvation</label>
+        <description>My deposits will only last me a few more days, I must refuel urgently.</description>
+        <baseMoodEffect>-16</baseMoodEffect>
+      </li>
+      <li>
+        <label>extreme fuel starvation</label>
+        <description>Fuel deposits depleted. Death imminent.</description>
+        <baseMoodEffect>-24</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>   
+  
+  <ThoughtDef>
+    <defName>EnvironmentColdSynthetic</defName>
+    <workerClass>ThoughtWorker_Cold</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>chilly</label>
+        <description>I'm uncomfortably chilled.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+       <li>
+        <label>cold</label>
+        <description>I'm so cold, my reactor can't keep up.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>   
+        <li>
+        <label>cracklingly cold</label>
+        <description>I can't keep myself warm. My skin is cracking. All I can think of is warming up.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+      <li>
+        <label>absolutely frozen</label>
+        <description>My skin is totally cracked, it hurts to move, I can barely speak. I need to get warm.</description>
+        <baseMoodEffect>-16</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>EnvironmentHotSynthetic</defName>
+    <workerClass>ThoughtWorker_Hot</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>warm</label>
+        <description>It's too hot here. I can't keep my components cool.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+      <li>
+        <label>hot</label>
+        <description>It's way too hot here. I might suffer internal damage if I stay this hot.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>    
+        <li>
+        <label>burningly hot</label>
+        <description>I feel like I'm being cooked! I'm not sure how long my components can handle this..</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+      <li>
+        <label>blistering hot</label>
+        <description>This place is searing hot. I think my core could fry!</description>
+        <baseMoodEffect>-16</baseMoodEffect>
+      </li>     
+    </stages>
+  </ThoughtDef> 
+ 
+
+ 
+  <!-- Modded Thoughts. -->  
+  
+	<ThoughtDef MayRequire="ReGrowth.BOTR.Core">
+		<defName>RG_Sandy_Synth</defName>
+		<durationDays>0.5</durationDays>
+		<stackLimit>1</stackLimit>
+		<nullifyingPrecepts>
+			<li MayRequire="Ludeon.RimWorld.Ideology">RoughLiving_Welcomed</li>
+		</nullifyingPrecepts>
+		<stages>
+			<li>
+				<label>sandy</label>
+				<description>The undesirable silt is chocking my intakes and hindering my heatsinks.</description>
+				<baseMoodEffect>-7</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>  
+  
+</Defs>

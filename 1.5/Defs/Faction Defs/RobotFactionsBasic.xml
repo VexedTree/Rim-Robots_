@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <FactionDef Name="SynthFactionBase" Abstract="True">
+    <categoryTag>Outlander</categoryTag>
+    <listOrderPriority>35</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+	<earliestRaidDays>50</earliestRaidDays>
+    <leaderTitle>prime nexus</leaderTitle>
+    <factionIconPath>UI/WorldIcon/RobotsNeutral</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>	
+    <factionNameMaker>NamerFactionSynth</factionNameMaker>
+    <settlementNameMaker>NamerSettlementSynthetic</settlementNameMaker>
+    <allowedCultures><li>Astropolitan</li></allowedCultures>
+    <dialogFactionGreetingHostile>SynthFactionGreetingHostile</dialogFactionGreetingHostile>
+    <dialogFactionGreetingHostileAppreciative>SynthFactionGreetingHostileAppreciative</dialogFactionGreetingHostileAppreciative>
+    <dialogFactionGreetingWary>SynthFactionGreetingWary</dialogFactionGreetingWary>
+    <dialogFactionGreetingWarm>SynthFactionGreetingWarm</dialogFactionGreetingWarm>	
+	<dialogMilitaryAidSent>SynthMilitaryAidSent</dialogMilitaryAidSent>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">AnimalPersonhood</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">TreeConnection</li>		
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+      <li MayRequire="VanillaExpanded.VMemesE">VME_HolyDiseases</li>
+      <li MayRequire="VanillaExpanded.VMemesE">VME_Vegan</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>	  
+    </disallowedMemes>	
+    <disallowedPrecepts>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_CoveringAnythingButGroinDisapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPawns_Hatred</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPawns_Distrust</li>  
+    </disallowedPrecepts>	
+    <structureMemeWeights>
+      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">0.5</Structure_TheistEmbodied>
+      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistAbstract>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">4</Structure_Ideological>
+      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">6</Structure_Archist>
+      <Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginChristian>
+      <Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginIslamic>
+      <Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginHindu>
+      <Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginBuddhist>
+    </structureMemeWeights>	
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+        <commonality>0.95</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+        <commonality>0.05</commonality>
+      </li>
+    </backstoryFilters>	
+    <techLevel>Industrial</techLevel>
+    <caravanTraderKinds>
+      <li>Caravan_Synthetic_BulkGoods</li>
+      <li>Caravan_Synthetic_CombatSupplier</li>
+      <li>Caravan_Synthetic_Exotic</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Outlander_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Synthetic_Standard</li>
+    </baseTraderKinds>
+    <pawnGroupMakers/>	
+    <allowedArrivalTemperatureRange>-70~75</allowedArrivalTemperatureRange>
+    <raidLootMaker>SynthRaidLootMaker</raidLootMaker>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <raidLootValueFromPointsCurve>
+      <points>
+        <li>(35,     15)</li>
+        <li>(100,   120)</li>
+        <li>(1000,  500)</li>
+        <li>(2000,  800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>	
+  </FactionDef>
+ 
+  <FactionDef ParentName="SynthFactionBase">
+    <defName>SynthCivil</defName>
+    <label>civil mech union</label>
+    <description>This self government of synthetics have been on this planet for decades, or even centuries. They are technologically on par with outlander settlements, and thus lack the means to leave the planet. They work with advanced machinery and large factories, and they defend themselves with advanced gunpowder weapons.\n\nUnlike most mech unions, they are open to trade and civil actions with their neighbors.\n\nThis particular group is open to non-hostile organics, and even has some humans among their ranks.</description>
+    <pawnSingular>outlander</pawnSingular>
+    <colorSpectrum>
+      <li>(238, 242, 228)</li>
+      <li>(203, 207, 195)</li>
+    </colorSpectrum>	
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>	  
+    </requiredMemes>	
+    <disallowedPrecepts>
+      <li MayRequire="Ludeon.RimWorld.Ideology">RR_BiologicalPawns_Hatred</li>
+    </disallowedPrecepts>		
+    <xenotypeSet>
+      <xenotypeChances>
+	    <Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.98</Baseliner>
+        <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.05</Hussar>
+        <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.05</Dirtmole>
+        <Genie MayRequire="Ludeon.RimWorld.Biotech">0.025</Genie>
+        <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.025</Neanderthal>
+      </xenotypeChances>
+    </xenotypeSet>	
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>35</configurationListOrderPriority>	
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fight, standard mix. -->
+        <kindDef>Combat</kindDef>
+        <options>
+          <Villager>0.1</Villager>
+          <Town_Guard>0.3</Town_Guard>
+          <Grenadier_Destructive>0.1</Grenadier_Destructive>
+          <Mercenary_Slasher>0.4</Mercenary_Slasher>
+          <Mercenary_Gunner>0.6</Mercenary_Gunner>
+          <Mercenary_Elite>0.6</Mercenary_Elite>		
+          <Mechanent_Villager>4</Mechanent_Villager>
+          <Mechanent_Guard>8</Mechanent_Guard>
+          <Mechanent_Grenadier_Destructive>0.3</Mechanent_Grenadier_Destructive>
+		  <Mechanent_Grenadier_EMP>0.2</Mechanent_Grenadier_EMP>
+          <Mechanent_Charger>5</Mechanent_Charger>
+          <Mechanent_Gunner>9</Mechanent_Gunner>
+		  <Mechanent_Elite>5</Mechanent_Elite>
+		  <Mechanent_Sniper>5</Mechanent_Sniper>
+          <Mechanent_Heavy>2</Mechanent_Heavy>
+          <Personae_Nexus>1</Personae_Nexus>
+		  <Mechanent_Spacer_Trooper>0.5</Mechanent_Spacer_Trooper>
+		  <Mechanent_Spacer_Marine>0.2</Mechanent_Spacer_Marine> 
+        </options>
+      </li>  
+      <li>
+        <!-- Explosives with ranged mixed in. -->
+        <kindDef>Combat</kindDef>
+        <commonality>15</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <Town_Guard>0.07</Town_Guard>
+          <Grenadier_Destructive>0.03</Grenadier_Destructive>
+          <Mercenary_Slasher>0.2</Mercenary_Slasher>
+          <Mercenary_Gunner>0.3</Mercenary_Gunner>
+          <Mercenary_Elite>0.3</Mercenary_Elite>				
+          <Mechanent_Grenadier_EMP>0.2</Mechanent_Grenadier_EMP>
+          <Mechanent_Grenadier_Destructive>8</Mechanent_Grenadier_Destructive>
+          <Mechanent_Gunner>5</Mechanent_Gunner>
+          <Mechanent_Heavy>3</Mechanent_Heavy>
+          <Mechanent_Elite>2</Mechanent_Elite>
+          <Mechanent_Spacer_Trooper>0.4</Mechanent_Spacer_Trooper>
+        </options>
+      </li> 
+      <li>
+        <!-- Melee only. -->
+        <kindDef>Combat</kindDef>
+        <commonality>2.5</commonality>
+        <maxTotalPoints>1000</maxTotalPoints>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>		
+        <options>
+          <Mechanent_Charger>10</Mechanent_Charger>
+		  <Mercenary_Slasher>0.2</Mercenary_Slasher>
+        </options>
+      </li>	  
+	  
+      <li>
+        <!-- Peaceful. -->	  
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <Villager>1</Villager>
+          <Town_Guard>3</Town_Guard>	
+          <Mechanent_Villager>13</Mechanent_Villager>
+          <Mechanent_Guard>8</Mechanent_Guard>
+		  <Persona_Villager>1</Persona_Villager>
+          <Personae_Nexus>2</Personae_Nexus>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <Mechanent_Trader>1</Mechanent_Trader>
+          <Nexus_Trader>0.3</Nexus_Trader>
+        </traders>
+        <carriers>
+          <Horse>7</Horse>		
+          <Muffalo>6</Muffalo>
+          <Donkey>4.5</Donkey>
+          <Yak>3</Yak>		  
+          <Dromedary>2</Dromedary>
+        </carriers>
+        <guards>
+          <Town_Guard>0.07</Town_Guard>
+          <Mercenary_Slasher>0.2</Mercenary_Slasher>
+          <Mercenary_Gunner>0.3</Mercenary_Gunner>		
+          <Mechanent_Villager>3</Mechanent_Villager>
+          <Mechanent_Guard>8</Mechanent_Guard>
+          <Mechanent_Grenadier_Destructive>0.5</Mechanent_Grenadier_Destructive>
+          <Mechanent_Charger>7</Mechanent_Charger>
+          <Mechanent_Gunner>6</Mechanent_Gunner>
+		  <Mechanent_Elite>3</Mechanent_Elite>
+		  <Mechanent_Sniper>2</Mechanent_Sniper>
+          <Mechanent_Heavy>2</Mechanent_Heavy>
+		  <Mechanent_Spacer_Trooper>1</Mechanent_Spacer_Trooper>
+		  <Mechanent_Spacer_Marine>0.5</Mechanent_Spacer_Marine>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Villager>2</Villager>
+          <Town_Guard>0.5</Town_Guard>
+          <Mercenary_Slasher>0.4</Mercenary_Slasher>
+          <Mercenary_Gunner>0.6</Mercenary_Gunner>
+          <Mercenary_Elite>0.6</Mercenary_Elite>			
+          <Mechanent_Villager>7</Mechanent_Villager>
+          <Mechanent_Guard>10</Mechanent_Guard>
+          <Mechanent_Grenadier_Destructive>1.5</Mechanent_Grenadier_Destructive>
+          <Mechanent_Charger>7</Mechanent_Charger>
+          <Mechanent_Gunner>10</Mechanent_Gunner>
+		  <Mechanent_Elite>10</Mechanent_Elite>
+          <Mechanent_Heavy>3</Mechanent_Heavy>
+		  <Persona_Villager>2</Persona_Villager>
+          <Personae_Nexus>5</Personae_Nexus>
+		  <Mechanent_Spacer_Trooper>1.4</Mechanent_Spacer_Trooper>
+		  <Mechanent_Spacer_Marine>1</Mechanent_Spacer_Marine>
+		  <Persona_Spacer_Trooper>1</Persona_Spacer_Trooper>
+		  <Persona_Spacer_Marine>0.5</Persona_Spacer_Marine> 			  
+        </options>
+      </li>	
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Miners</kindDef>
+        <commonality>1.3</commonality>
+        <options>
+          <Mechanent_Miner>1</Mechanent_Miner>
+		  <Mechanent_Guard>0.4</Mechanent_Guard>
+		  <Mech_Tunneler MayRequire="Ludeon.RimWorld.Biotech">2</Mech_Tunneler>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Loggers</kindDef>
+        <commonality>0.9</commonality>
+        <options>
+          <Mechanent_Logger>1</Mechanent_Logger>
+		  <Mechanent_Guard>0.8</Mechanent_Guard>
+		  <Mech_Agrihand MayRequire="Ludeon.RimWorld.Biotech">0.5</Mech_Agrihand>	
+        </options> 
+	  </li>
+    </pawnGroupMakers>	
+  </FactionDef>
+
+  <FactionDef ParentName="SynthFactionBase">
+    <defName>SynthEvil</defName>
+    <label>hostile mechlegion</label>
+    <description>This mechlegion has been occupying this planet for a few decades. They are technologically more advanced than regular outlanders but choose not to leave. They work with advanced machinery and massive factories, utilizing charge weaponry and whatever armaments they can get to fuel their frequent assaults.\n\nMechlegions can be caused by self-replicating subpersonae with damaged code or personae heralding a mechhive. These legions are always hostile to anything around them.\n\nThis particular one is hostile to all forms of biological life and those associated with it, going so far as to mass-produce mechanoids to burn it out where it might hide.</description>
+    <pawnSingular>persona</pawnSingular>
+    <pawnsPlural>personae</pawnsPlural>
+    <colorSpectrum>
+      <li>(74,75,71)</li>
+      <li>(41,40,41)</li>
+    </colorSpectrum>	
+    <requiredMemes>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">RR_MechanicalPrimacy</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>	  
+    </requiredMemes>		
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>35</configurationListOrderPriority>	
+	<requiredCountAtGameStart>0</requiredCountAtGameStart>
+	<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+	<permanentEnemyToEveryoneExcept>
+	    <li>PlayerColonySynth</li>
+	    <li MayRequire="Atlas.AndroidTiers">AndroidRebellionAtlas</li>		
+	</permanentEnemyToEveryoneExcept>	
+	<caravanTraderKinds>
+      <li>Caravan_Synthetic_BulkGoods</li>
+      <li>Caravan_Synthetic_CombatSupplier</li>
+      <li>Caravan_Synthetic_Exotic</li>
+	  <li>Caravan_Synthetic_PirateMerchant</li>
+    </caravanTraderKinds>
+    <factionIconPath>UI/WorldIcon/RobotsHostile</factionIconPath>	
+    <factionNameMaker>NamerFactionSynthEvil</factionNameMaker>		
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fight, standard mix. -->
+        <kindDef>Combat</kindDef>
+        <options>
+          <Mechanent_Villager>4</Mechanent_Villager>
+          <Mechanent_Guard>8</Mechanent_Guard>
+          <Mechanent_Grenadier_Destructive>0.3</Mechanent_Grenadier_Destructive>
+		  <Mechanent_Grenadier_EMP>0.2</Mechanent_Grenadier_EMP>
+          <Mechanent_Charger>5</Mechanent_Charger>
+          <Mechanent_Gunner>9</Mechanent_Gunner>
+		  <Mechanent_Elite>5</Mechanent_Elite>
+		  <Mechanent_Sniper>5</Mechanent_Sniper>
+          <Mechanent_Heavy>2</Mechanent_Heavy>
+          <Personae_Nexus>1</Personae_Nexus>
+		  <Mechanent_Spacer_Trooper>0.5</Mechanent_Spacer_Trooper>
+		  <Mechanent_Spacer_Marine>0.2</Mechanent_Spacer_Marine> 
+		  <Mech_Scyther>2</Mech_Scyther>
+		  <Mech_Lancer>0.5</Mech_Lancer>
+		  <Mech_Pikeman>0.1</Mech_Pikeman>
+		  <Mech_Militor MayRequire="Ludeon.RimWorld.Biotech">8</Mech_Militor>
+          <Mech_Legionary MayRequire="Ludeon.RimWorld.Biotech">0.02</Mech_Legionary>
+        </options>
+      </li>  
+      <li>
+        <!-- Explosives with ranged mixed in. -->
+        <kindDef>Combat</kindDef>
+        <commonality>15</commonality>
+        <options>
+          <Mechanent_Grenadier_EMP>0.2</Mechanent_Grenadier_EMP>
+          <Mechanent_Grenadier_Destructive>8</Mechanent_Grenadier_Destructive>
+          <Mechanent_Gunner>5</Mechanent_Gunner>
+          <Mechanent_Heavy>3</Mechanent_Heavy>
+          <Mechanent_Elite>2</Mechanent_Elite>
+          <Mechanent_Spacer_Trooper>0.4</Mechanent_Spacer_Trooper>
+		  <Mech_Lancer>0.5</Mech_Lancer>
+		  <Mech_Pikeman>0.1</Mech_Pikeman>
+          <Mech_Scorcher MayRequire="Ludeon.RimWorld.Biotech">0.2</Mech_Scorcher>			  
+		  <Mech_Tesseron MayRequire="Ludeon.RimWorld.Biotech">0.01</Mech_Tesseron>
+        </options>
+      </li> 
+      <li>
+        <!-- Bio-extermination squad. -->
+        <kindDef>Combat</kindDef>
+        <commonality>6</commonality>
+        <options>
+		  <Mechanent_Gunner>4</Mechanent_Gunner>
+		  <Mechanent_Charger>2</Mechanent_Charger>
+		  <Mechanent_Elite>2</Mechanent_Elite>
+          <Mechanent_Heavy>0.6</Mechanent_Heavy>
+		  <Mechanent_Spacer_Trooper>5</Mechanent_Spacer_Trooper>
+		  <Mechanent_Spacer_Marine>4</Mechanent_Spacer_Marine> 
+		  <Persona_Spacer_Trooper>0.3</Persona_Spacer_Trooper>
+		  <Persona_Spacer_Marine>0.2</Persona_Spacer_Marine> 	
+          <Mech_CentipedeBurner>0.01</Mech_CentipedeBurner>
+          <Mech_Scorcher MayRequire="Ludeon.RimWorld.Biotech">2</Mech_Scorcher>			  
+		  <Mech_Tesseron MayRequire="Ludeon.RimWorld.Biotech">0.8</Mech_Tesseron>	  
+        </options>
+      </li> 	  
+      <li>
+        <!-- Melee only. -->
+        <kindDef>Combat</kindDef>
+        <commonality>2.5</commonality>
+        <maxTotalPoints>1000</maxTotalPoints>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>		
+        <options>
+          <Mechanent_Charger>10</Mechanent_Charger>
+		  <Mech_Scyther>5</Mech_Scyther>
+		  <Mech_Tunneler MayRequire="Ludeon.RimWorld.Biotech">0.08</Mech_Tunneler>
+        </options>
+      </li>	
+	  
+        <!-- Base. -->	  
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Mechanent_Villager>10</Mechanent_Villager>
+          <Mechanent_Guard>10</Mechanent_Guard>
+          <Mechanent_Grenadier_Destructive>1.5</Mechanent_Grenadier_Destructive>
+          <Mechanent_Charger>7</Mechanent_Charger>
+          <Mechanent_Gunner>10</Mechanent_Gunner>
+		  <Mechanent_Elite>10</Mechanent_Elite>
+          <Mechanent_Heavy>3</Mechanent_Heavy>
+          <Personae_Nexus>10</Personae_Nexus>
+		  <Mechanent_Spacer_Trooper>2</Mechanent_Spacer_Trooper>
+		  <Mechanent_Spacer_Marine>1.5</Mechanent_Spacer_Marine>
+		  <Persona_Spacer_Trooper>1</Persona_Spacer_Trooper>
+		  <Persona_Spacer_Marine>0.5</Persona_Spacer_Marine> 	
+		  <Mech_Scyther>0.8</Mech_Scyther>
+		  <Mech_Lancer>2</Mech_Lancer>
+		  <Mech_Pikeman>0.2</Mech_Pikeman>
+		  <Mech_CentipedeGunner>0.01</Mech_CentipedeGunner>
+		  <Mech_Militor MayRequire="Ludeon.RimWorld.Biotech">5</Mech_Militor>
+          <Mech_Legionary MayRequire="Ludeon.RimWorld.Biotech">0.4</Mech_Legionary>
+        </options>
+      </li>	
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Miners</kindDef>
+        <commonality>1.3</commonality>
+        <options>
+          <Mechanent_Miner>1</Mechanent_Miner>
+		  <Mechanent_Guard>0.4</Mechanent_Guard>
+		  <Mech_Tunneler MayRequire="Ludeon.RimWorld.Biotech">2</Mech_Tunneler>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Loggers</kindDef>
+        <commonality>0.9</commonality>
+        <options>
+          <Mechanent_Logger>1</Mechanent_Logger>
+		  <Mechanent_Guard>0.8</Mechanent_Guard>
+		  <Mech_Agrihand MayRequire="Ludeon.RimWorld.Biotech">0.6</Mech_Agrihand>	
+		  <Mech_Militor MayRequire="Ludeon.RimWorld.Biotech">5</Mech_Militor>
+        </options>
+      </li>  
+    </pawnGroupMakers>	
+  </FactionDef>
+  
+  
+  <ThingSetMakerDef>
+    <defName>SynthRaidLootMaker</defName>
+    <root Class="ThingSetMaker_MarketValue">
+      <fixedParams>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+            <li>Steel</li>				
+            <li>ComponentIndustrial</li>
+            <li>Chemfuel</li>
+            <li>Neutroamine</li>
+            <li>FuelNode_SynthDiet</li>			
+          </thingDefs>
+        </filter>
+      </fixedParams>
+    </root>
+  </ThingSetMakerDef>
+  
+</Defs>  

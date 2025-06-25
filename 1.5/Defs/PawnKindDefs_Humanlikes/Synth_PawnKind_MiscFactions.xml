@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+   <!-- Mechanents -->       
+
+  <PawnKindDef ParentName="MechanentBase">
+    <defName>Mechanent_Labor</defName>
+    <label>labor unit</label>
+	<labelPlural>labor units</labelPlural>
+    <combatPower>65</combatPower>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>	
+            <li>BackstoriesMechanoidCasket</li>
+        </categories>
+      </li>			
+    </backstoryFiltersOverride>		
+    <gearHealthRange>1~1</gearHealthRange>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>	
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+    <isFighter>false</isFighter>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+      <li>ManualSkilled</li>
+      <li>Cleaning</li>
+      <li>Hauling</li>
+      <li>Mining</li>
+      <li>Firefighting</li>
+    </requiredWorkTags>
+    <weaponMoney>600~1500</weaponMoney>		
+    <weaponTags>
+      <li>SimpleGun</li>
+    </weaponTags>
+    <apparelMoney>0</apparelMoney>	
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <techHediffsChance>0.6</techHediffsChance>	
+    <techHediffsMoney>50~800</techHediffsMoney>
+    <techHediffsTags>
+      <li>ConsciousnessBolt</li>
+    </techHediffsTags>
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>6~10</initialResistanceRange>
+  </PawnKindDef>
+   
+  <PawnKindDef Name="SpacerMechanentBase" Abstract="True">
+    <race>Mechanent</race>	
+    <defaultFactionType>SynthCivil</defaultFactionType>
+    <combatPower>45</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>BackstoriesMechanent</li>
+        </categories>
+      </li>	
+      <li>
+        <categories>
+          <li>BackstoriesMechanoidCasket</li>
+        </categories>
+		<commonality>0.08</commonality>
+      </li>
+    </backstoryFiltersOverride>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <invNutrition>2.55</invNutrition>
+    <itemQuality>Normal</itemQuality>
+    <weaponMoney>1200~2500</weaponMoney>
+    <apparelAllowHeadgearChance>0.2</apparelAllowHeadgearChance>
+    <apparelMoney>1300~2500</apparelMoney>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+    </apparelTags>
+    <styleItemTags>
+      <li>
+        <tag>Soldier</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+    </styleItemTags>	
+    <techHediffsChance>0.3</techHediffsChance>
+    <techHediffsMoney>1000~1500</techHediffsMoney>
+    <biocodeWeaponChance>0.15</biocodeWeaponChance>
+	<initialWillRange>5~10</initialWillRange>
+    <initialResistanceRange>15~24</initialResistanceRange>	
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="SpacerMechanentBase">
+    <defName>Mechanent_Spacer_Trooper</defName>
+    <label>mechanent trooper</label>
+	<labelPlural>mechanent troopers</labelPlural>	
+    <combatPower>140</combatPower>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+	<chemicalAddictionChance>0</chemicalAddictionChance>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <apparelMoney>2800~3500</apparelMoney>		
+    <apparelColor>(100,100,100)</apparelColor>		
+    <apparelRequired>
+      <li>Apparel_FlakVest</li>
+	  <li>Apparel_FlakJacket</li>
+      <li>Apparel_FlakPants</li>
+    </apparelRequired>	
+    <specificApparelRequirements>
+      <li MayRequire="Ludeon.RimWorld.Royalty">
+        <bodyPartGroup>UpperHead</bodyPartGroup>
+        <alternateTagChoices>
+          <li>
+            <tag>Gunlink</tag>
+            <chance>0.2</chance>
+          </li>
+        </alternateTagChoices>
+      </li>
+    </specificApparelRequirements>	
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>5~10</range>
+      </li>
+    </skills>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+    <techHediffsTags>
+      <li>CommonUpgrade</li>
+    </techHediffsTags>	
+  </PawnKindDef>  
+  
+  <PawnKindDef ParentName="SpacerMechanentBase">
+    <defName>Mechanent_Spacer_Marine</defName>
+    <label>mechanent marine</label>
+	<labelPlural>mechanent marines</labelPlural>	
+    <combatPower>160</combatPower>
+    <weaponMoney>1800~3000</weaponMoney>	
+    <weaponTags>
+      <li>SpacerGun</li>	
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <apparelColor>(80,80,80)</apparelColor>		
+    <apparelMoney>5500~8500</apparelMoney>	
+    <apparelTags>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>SpacerMilitary</li>	  
+    </apparelTags>	
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>6~14</range>
+      </li>
+    </skills>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+    <techHediffsTags>
+      <li>CommonUpgrade</li>
+      <li>UltratechUpgrade</li>	
+      <li>ConsciousnessBolt</li>
+    </techHediffsTags>	
+  </PawnKindDef>  
+
+ 
+  <PawnKindDef Name="MechanentPirateTierBase" Abstract="True">
+    <race>Mechanent</race>	
+    <defaultFactionType>SynthEvil</defaultFactionType>
+    <combatPower>75</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>BackstoriesMechanent</li>
+        </categories>
+      </li>	
+      <li>
+        <categories>
+          <li>BackstoriesMechanoidCasket</li>
+        </categories>
+		<commonality>0.2</commonality>		
+      </li>
+    </backstoryFiltersOverride>
+    <invNutrition>2.55</invNutrition>
+    <gearHealthRange>0.2~0.6</gearHealthRange>	
+    <itemQuality>Poor</itemQuality>
+    <weaponMoney>1200~2500</weaponMoney>
+    <weaponTags>
+      <li>MedievalMeleeBasic</li>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>	
+    <apparelAllowHeadgearChance>0.2</apparelAllowHeadgearChance>	
+    <apparelMoney>90~280</apparelMoney>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <techHediffsChance>0.4</techHediffsChance>
+    <techHediffsMoney>50~50</techHediffsMoney>	
+    <biocodeWeaponChance>0.1</biocodeWeaponChance>	
+    <initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>7~12</initialResistanceRange>
+  </PawnKindDef> 
+
+  <PawnKindDef ParentName="MechanentPirateTierBase">
+    <defName>Mechanent_Scavenger</defName>
+    <label>mechanent scavenger</label>
+	<labelPlural>mechanent scavengers</labelPlural>
+    <apparelMoney>300~500</apparelMoney>
+    <weaponMoney>200~300</weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MechanentPirateTierBase">
+    <defName>Mechanent_Thrasher</defName>
+    <label>mechanent thrasher</label>
+	<labelPlural>mechanent thrashers</labelPlural>
+    <canBeSapper>true</canBeSapper>
+    <apparelMoney>300~800</apparelMoney>
+    <apparelTags>
+      <li>Outlander</li>
+    </apparelTags>
+    <weaponMoney>100~160</weaponMoney>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+      <li>MedievalMeleeBasic</li>
+      <li>MedievalMeleeDecent</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MechanentPirateTierBase">
+    <defName>Mechanent_Pirate</defName>	
+    <label>mechanent pirate</label>
+	<labelPlural>mechanent pirates</labelPlural>
+    <combatPower>130</combatPower>	
+    <gearHealthRange>0.7~2.3</gearHealthRange>
+    <apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>	
+    <apparelMoney>400~1000</apparelMoney>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+    </apparelTags>
+    <weaponMoney>250~345</weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsMoney>50~800</techHediffsMoney>
+    <techHediffsTags>
+      <li>CommonUpgrade</li>
+      <li>ConsciousnessBolt</li>
+    </techHediffsTags>	
+    <biocodeWeaponChance>0.2</biocodeWeaponChance>
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>15~24</initialResistanceRange>		
+  </PawnKindDef>   
+
+  
+ 
+   <!-- Personae -->  
+
+
+  <PawnKindDef Name="SpacerPersonaBase" Abstract="True">
+    <race>Personae_</race>	
+    <defaultFactionType>SynthCivil</defaultFactionType>
+    <combatPower>55</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>BackstoriesPersona</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <invNutrition>2.55</invNutrition>
+    <itemQuality>Normal</itemQuality>
+    <weaponMoney>1200~2500</weaponMoney>
+    <apparelAllowHeadgearChance>0.2</apparelAllowHeadgearChance>
+    <apparelMoney>1300~2500</apparelMoney>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+    </apparelTags>
+    <styleItemTags>
+      <li>
+        <tag>Soldier</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+    </styleItemTags>	
+    <techHediffsChance>0.3</techHediffsChance>
+    <techHediffsMoney>1000~1500</techHediffsMoney>
+    <biocodeWeaponChance>0.15</biocodeWeaponChance>
+	<initialWillRange>5~10</initialWillRange>
+    <initialResistanceRange>15~24</initialResistanceRange>	
+  </PawnKindDef> 
+
+  <PawnKindDef ParentName="SpacerPersonaBase">
+    <defName>Persona_Spacer_Trooper</defName>
+    <label>persona trooper</label>
+	<labelPlural>persona troopers</labelPlural>	
+    <combatPower>145</combatPower>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <apparelMoney>2800~3500</apparelMoney>		
+    <apparelColor>(100,100,100)</apparelColor>		
+    <apparelRequired>
+      <li>Apparel_FlakVest</li>
+	  <li>Apparel_FlakJacket</li>
+      <li>Apparel_FlakPants</li>
+    </apparelRequired>	
+    <specificApparelRequirements>
+      <li MayRequire="Ludeon.RimWorld.Royalty">
+        <bodyPartGroup>UpperHead</bodyPartGroup>
+        <alternateTagChoices>
+          <li>
+            <tag>Gunlink</tag>
+            <chance>0.2</chance>
+          </li>
+        </alternateTagChoices>
+      </li>
+    </specificApparelRequirements>	
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>5~10</range>
+      </li>
+    </skills>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+    <techHediffsTags>
+      <li>Simple</li>
+	  <li>Good</li>	  
+      <li>Advanced</li>
+      <li>ImplantEmpireCommon</li>	
+      <li>CommonUpgrade</li>
+    </techHediffsTags>	
+  </PawnKindDef>  
+  
+  <PawnKindDef ParentName="SpacerPersonaBase">
+    <defName>Persona_Spacer_Marine</defName>
+    <label>persona marine</label>
+	<labelPlural>persona marines</labelPlural>	
+    <combatPower>160</combatPower>
+    <weaponMoney>1800~3000</weaponMoney>	
+    <weaponTags>
+      <li>SpacerGun</li>	
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <apparelColor>(80,80,80)</apparelColor>		
+    <apparelMoney>5500~8500</apparelMoney>	
+    <apparelTags>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>SpacerMilitary</li>	  
+    </apparelTags>	
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>6~14</range>
+      </li>
+    </skills>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+    <techHediffsTags>
+      <li>Simple</li>
+	  <li>Good</li>	  
+      <li>Advanced</li>
+      <li>ImplantEmpireCommon</li>
+      <li>CommonUpgrade</li>
+      <li>UltratechUpgrade</li>		  
+    </techHediffsTags>	
+  </PawnKindDef>  
+
+ 
+  <PawnKindDef Name="PersonaPirateTierBase" Abstract="True">
+    <race>Personae_</race>	
+    <defaultFactionType>SynthEvil</defaultFactionType>
+    <combatPower>55</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>BackstoriesPersona</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <invNutrition>2.55</invNutrition>
+    <gearHealthRange>0.2~0.6</gearHealthRange>	
+    <itemQuality>Poor</itemQuality>
+    <weaponMoney>1200~2500</weaponMoney>
+    <weaponTags>
+      <li>MedievalMeleeBasic</li>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>	
+    <apparelAllowHeadgearChance>0.2</apparelAllowHeadgearChance>	
+    <apparelMoney>90~280</apparelMoney>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <techHediffsChance>0.4</techHediffsChance>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>		
+    <biocodeWeaponChance>0.1</biocodeWeaponChance>	
+    <initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>7~12</initialResistanceRange>
+  </PawnKindDef> 
+
+  <PawnKindDef ParentName="PersonaPirateTierBase">
+    <defName>Persona_Pirate</defName>	
+    <label>persona pirate</label>
+	<labelPlural>persona pirates</labelPlural>
+    <combatPower>105</combatPower>	
+    <gearHealthRange>0.7~2.3</gearHealthRange>
+    <apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>	
+    <apparelMoney>400~1000</apparelMoney>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+    </apparelTags>
+    <weaponMoney>250~345</weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsMoney>50~800</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+	  <li>CommonUpgrade</li>
+      <li>UltratechUpgrade</li>	
+    </techHediffsTags>
+    <biocodeWeaponChance>0.2</biocodeWeaponChance>
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>15~24</initialResistanceRange>		
+  </PawnKindDef>   
+</Defs>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BuildingBase">
+		<defName>MechCreationCasket</defName>
+		<label>mechanoid-casket</label>
+		<description>An ultratech gestation chamber capable of printing both mechanents and synthetics. If given the correct materials, and enough time, the mechanites within the casket will print a subpersona-mechanent. If a AI persona core is provided, it will print a strikingly human avatar for the persona.\n\nOn most worlds mechanoid-casket and mechanents are the pillar of human industry and ingenuity. On others they are outright banned.\n\nThe casket is hardcoded to never print combat class mechanoids.</description>
+		<graphicData>
+			<texPath>Buildings/Synth_Casket</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3.2,4.3)</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<costList>
+			<Steel>350</Steel>
+			<Plasteel>130</Plasteel>
+			<ComponentIndustrial>8</ComponentIndustrial>			
+			<ComponentSpacer>2</ComponentSpacer>			
+		</costList>
+		<building>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+		</building>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<rotatable>true</rotatable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<uiIconScale>0.8</uiIconScale>
+		<fillPercent>0.5</fillPercent>
+	    <techLevel>Ultra</techLevel>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<Mass>100</Mass>
+			<WorkToBuild>15000</WorkToBuild>
+			<MaxHitPoints>380</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<size>(2,3)</size>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <designationCategory>Production</designationCategory>
+        <constructEffect>ConstructMetal</constructEffect>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,2)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>false</shortCircuitInRain>
+				<basePowerConsumption>750</basePowerConsumption>
+			</li>
+            <li Class="CompProperties_AmbientSound">
+                <sound>GeothermalPlant_Ambience</sound>
+                <disabledOnUnpowered>true</disabledOnUnpowered>
+            </li>			
+			<li Class="CompProperties_Flickable" />
+		</comps>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<researchPrerequisites Inherit='False'>
+			<li>PersonaCreation</li>
+		</researchPrerequisites>
+		<modExtensions>
+		</modExtensions>
+   		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+	</ThingDef>
+</Defs>
