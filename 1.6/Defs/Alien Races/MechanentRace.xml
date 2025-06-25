@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-<AlienRace.ThingDef_AlienRace ParentName="Human">
+<AlienRace.ThingDef_AlienRace ParentName="BaseSyntheticRace">
     <defName>Mechanent</defName>
     <label>mechanent</label>  
     <description>A humanlike-mechanoid that utilizes a highly sophisticated subpersona core to approach a live human in its thought complexity; however, their "minds" are of a very different nature, and are incapable of emulating complex emotions.\n\nWhile they possess a degree of individuality, mechanents are not fully sentient - relying on mimicry of human behavior to appear less mechanical.</description>   	
